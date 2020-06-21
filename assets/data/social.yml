@@ -501,9 +501,17 @@ email:
   Icon:
     Class: far fa-envelope fa-fw
 
-# 064: RSS
-rss:
+# 064: Resume
+resume:
   Weight: 64
+  Prefix: https://goo.gl/
+  Title: Download Resume
+  Icon:
+    Class: fas fa-user-circle fa-fw
+
+# 065: RSS
+rss:
+  Weight: 65
   Url: /index.xml
   Title: RSS
   Newtab: true

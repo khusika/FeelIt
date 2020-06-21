@@ -221,6 +221,7 @@ enableEmoji = true
         Matrix = ""
         Bilibili = ""
         Email = "xxxx@xxxx.com"
+        Resume = "" #goo.gl id
         RSS = true
         [languages.en.params.social.Mastodon]
           id = "@xxxx"
@@ -422,6 +423,7 @@ enableEmoji = true
         Matrix = ""
         Bilibili = "xxxx"
         Email = "xxxx@xxxx.com"
+        Resume = "" #goo.gl id
         RSS = true
 
   [languages.fr]
@@ -618,6 +620,7 @@ enableEmoji = true
         Matrix = ""
         Bilibili = ""
         Email = "xxxx@xxxx.com"
+        Resume = "" #goo.gl id
         RSS = true
 
 [params]
