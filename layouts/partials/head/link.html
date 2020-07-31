@@ -49,3 +49,16 @@
 {{- $source := $cdn.animateCSS | default "lib/animate/animate.min.css" -}}
 {{- $style := dict "Source" $source "Fingerprint" $fingerprint -}}
 {{- partial "plugin/style.html" $style -}}
+
+{{- $analytics := .Scratch.Get "analytics" | default dict -}}
+{{- if $analytics.enable -}}
+    {{- with $analytics.google.id -}}
+        {{- if $analytics.google.gtag -}}
+            <link href="https://www.googletagmanager.com" rel="preconnect" crossorigin>
+            <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+        {{- else -}}
+            <link href="https://www.google-analytics.com" rel="preconnect" crossorigin>
+            <link rel="dns-prefetch" href="https://www.google-analytics.com">
+        {{- end -}}
+    {{- end -}}
+{{- end -}}
