@@ -30,14 +30,14 @@
       font-size: 1.25rem;
       font-weight: bold;
       margin: 0;
-      padding: .5rem;
+      padding: .1rem;
     }
 
     .home-subtitle {
       font-size: 1rem;
       font-weight: normal;
       margin: 0;
-      padding: .5rem;
+      padding: .1rem;
     }
 
     .links {
@@ -46,6 +46,7 @@
 
       a * {
         vertical-align: text-bottom;
+        padding: 0 .25rem;
       }
 
       img {
@@ -80,14 +81,14 @@
   }
 
   .summary {
-    padding-top: 1rem;
+    background-color: #fff;
     padding-bottom: .8rem;
+    @include border-radius(0.5rem);
     color: $global-font-color;
-    border-bottom: 1px dashed $global-border-color;
 
     [theme=dark] & {
+      background-color: #333333;
       color: $global-font-color-dark;
-      border-bottom: 1px dashed $global-border-color-dark;
     }
 
     .featured-image-preview {
@@ -104,6 +105,7 @@
         left: 0;
         top: 0;
         @include object-fit(none);
+        @include border-radius(0.5rem 0.5rem 0 0);
       }
 
       img.lazyloaded {
@@ -118,14 +120,21 @@
     .single-title {
       font-size: 1.25rem;
       line-height: 140%;
-      margin: 0.4rem 0;
+      margin: 0.4rem 1rem;
+    }
+
+    .post-meta {
+      margin: 0 1rem;
+    }
+
+    p {
+      margin: .5rem 0;
     }
 
     .content {
       @include box(vertical);
       -webkit-line-clamp: 3;
-      margin-top: .3rem;
-      width: 100%;
+      margin: .3rem 1rem 0 1rem;
       overflow: hidden;
       text-overflow: ellipsis;
       @include overflow-wrap(break-word);
@@ -167,7 +176,7 @@
     }
 
     .post-footer {
-      margin-top: .4rem;
+      margin: .4rem 1rem 0 1rem;
       display: flex;
       justify-content: space-between;
       align-items: center;

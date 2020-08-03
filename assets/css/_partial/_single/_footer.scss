@@ -1,5 +1,5 @@
 .post-footer {
-  margin-top: 3rem;
+  margin: 3rem 1rem 0;
 
   .post-info {
     border-bottom: 1px solid $global-border-color;
@@ -68,6 +68,10 @@
   .post-nav {
     &::before,
     &::after {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
       content: ' ';
       display: table;
     }
