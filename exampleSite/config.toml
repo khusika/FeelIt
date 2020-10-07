@@ -664,6 +664,9 @@ enableEmoji = true
       # whether to use typeit animation for title name
       # 是否为标题显示打字机动画
       typeit = false
+      # whether to show RSS icon
+      # 是否显示RSS图标
+      rss = true
 
   # Footer config
   # 页面底部信息配置
