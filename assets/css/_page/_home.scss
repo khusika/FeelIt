@@ -70,7 +70,7 @@
   }
 }
 
-.home[posts] {
+.home[data-home=posts] {
   .home-profile {
     @include transform(translateY(0));
     padding-top: 2rem;
