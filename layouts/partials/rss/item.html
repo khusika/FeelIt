@@ -9,9 +9,11 @@
     <pubDate>
         {{- .Page.Date.Format "Mon, 02 Jan 2006 15:04:05 -0700"  -}}
     </pubDate>
-    <author>
-        {{- $params.author | default (T "author") -}}
-    </author>
+    {{- with .Site.Author.email -}}
+        <author>
+            {{- . }}{{ with $.Site.Author.name }} ({{ . }}){{ end -}}
+        </author>
+    {{- end -}}
     <guid>
         {{- .Page.Permalink -}}
     </guid>
