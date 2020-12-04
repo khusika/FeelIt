@@ -27,14 +27,22 @@
             {{- range $pages.PageGroups -}}
                 <h3 class="group-title">{{ .Key }}</h3>
                 {{- range .Pages -}}
-                    <article class="archive-item">
-                        <a href="{{ .RelPermalink }}" class="archive-item-link">
-                            {{- .Title -}}
-                        </a>
-                        <span class="archive-item-date">
-                            {{- $.Site.Params.list.dateFormat | default "01-02" | .Date.Format -}}
-                        </span>
-                    </article>
+                <div class="archive-timeline">
+                    <div class="archive-circle">
+                        <article>
+                            <div class="archive-item">
+                                <a href="{{ .RelPermalink }}" class="archive-item-link">
+                                    {{- .Title -}}
+                                </a>
+                            </div>
+                            <div class="archive-item">
+                                <span class="archive-item-date">
+                                    Published&nbsp;on&nbsp;{{- $.Site.Params.list.dateFormat | default "01-02" | .Date.Format -}}
+                                </span>
+                            </div>
+                        </article>
+                    </div>
+                </div>
                 {{- end -}}
             {{- end -}}
             {{- partial "paginator.html" . -}}

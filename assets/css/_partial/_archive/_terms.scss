@@ -39,12 +39,37 @@
   }
 }
 
-.archive-item {
+.categories-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
   margin: .25rem 0 .25rem 1.5rem;
+}
+
+.categories-item-link {
+  min-width: 10%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+
+  &:hover {
+    color: $global-link-hover-color;
+    background-color: transparent;
+  }
+
+  [theme=dark] & {
+    color: $global-link-color-dark;
+
+    &:hover {
+      color: $global-link-hover-color-dark;
+    }
+  }
+}
+
+.archive-item {
+  align-items: center;
+  margin-left: 1.5rem;
 }
 
 .archive-item-link {
@@ -68,12 +93,51 @@
 }
 
 .archive-item-date {
-  width: 4em;
-  text-align: right;
+  font-size: .875rem;
+  text-align: left;
   color: $global-font-secondary-color;
 
   [theme=dark] & {
     color: $global-font-secondary-color-dark;
+  }
+}
+
+.archive-timeline {
+  position: relative;
+  overflow: hidden;
+  &::before {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 5px;
+    background: $global-font-secondary-color;
+    width: 2px;
+    height: 100%;
+    z-index: 1;
+    [theme=dark] & {
+      background: $global-font-secondary-color-dark;
+    }
+  }
+}
+
+.archive-circle {
+  margin: 20px 0;
+  &::before {
+    content: '';
+    background: $global-font-secondary-color;
+    display: inline-block;
+    position: absolute;
+    top: 42.5%;
+    border: 2px solid $global-background-color;
+    border-radius: 50%;
+    width: .5rem;
+    height: .5rem;
+    z-index: 2;
+    [theme=dark] & {
+      background: $global-font-secondary-color-dark;
+      border: 2px solid $global-background-color-dark;
+    }
   }
 }
 
