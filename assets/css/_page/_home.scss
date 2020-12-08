@@ -85,6 +85,11 @@
     padding-bottom: .8rem;
     @include border-radius(0.5rem);
     color: $global-font-color;
+    @include transition(transform 0.4s ease);
+
+    &:hover {
+      @include transform(scale(1.01));
+    }
 
     [theme=dark] & {
       background-color: #333333;
@@ -96,7 +101,6 @@
       padding: 30% 0 0;
       position: relative;
       margin: 0.6rem auto;
-      @include transition(transform 0.4s ease);
 
       img {
         position: absolute;
@@ -110,10 +114,6 @@
 
       img.lazyloaded {
         @include object-fit(cover);
-      }
-
-      &:hover {
-        @include transform(scale(1.01));
       }
     }
 
