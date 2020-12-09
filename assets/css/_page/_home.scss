@@ -81,9 +81,9 @@
   }
 
   .summary {
-    background-color: #fff;
+    background-color: $global-background-card-color;
     padding-bottom: .8rem;
-    @include border-radius(0.5rem);
+    @include border-radius(.5rem);
     color: $global-font-color;
     @include transition(transform 0.4s ease);
 
@@ -92,7 +92,7 @@
     }
 
     [theme=dark] & {
-      background-color: #333333;
+      background-color: $global-background-card-color-dark;
       color: $global-font-color-dark;
     }
 
@@ -109,7 +109,7 @@
         left: 0;
         top: 0;
         @include object-fit(none);
-        @include border-radius(0.5rem 0.5rem 0 0);
+        @include border-radius(.5rem .5rem 0 0);
       }
 
       img.lazyloaded {

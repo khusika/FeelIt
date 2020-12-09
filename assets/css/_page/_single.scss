@@ -1,10 +1,10 @@
 @import "../_partial/_single/toc";
 
 .single {
-  @include border-radius(0 0 0.5rem 0.5rem);
-  background-color: #fff;
+  @include border-radius(0 0 .5rem .5rem);
+  background-color: $global-background-card-color;
   [theme=dark] & {
-    background-color: #333333;
+    background-color: $global-background-card-color-dark;
   }
 
   .single-title {
@@ -51,7 +51,7 @@
       height: auto;
       margin: 0 auto;
       overflow: hidden;
-      @include border-radius(0.5rem);
+      @include border-radius(.5rem);
     }
 
     img.lazyloaded {
