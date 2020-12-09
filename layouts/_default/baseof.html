@@ -25,7 +25,11 @@
         <div class="wrapper">
             {{- partial "header.html" . -}}
             <main class="main">
+                {{- if .IsPage -}}
+                <div class="container-post">
+                {{- else -}}
                 <div class="container">
+                {{- end -}}
                     {{- block "content" . }}{{ end -}}
                 </div>
             </main>

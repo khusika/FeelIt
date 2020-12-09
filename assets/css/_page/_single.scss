@@ -1,21 +1,15 @@
 @import "../_partial/_single/toc";
 
 .single {
-  @include border-radius(0 0 .5rem .5rem);
-  background-color: $global-background-card-color;
-  [theme=dark] & {
-    background-color: $global-background-card-color-dark;
-  }
-
   .single-title {
-    margin: 1rem 1rem .5rem;
+    margin: 1rem 0 .5rem;
     font-size: 1.6rem;
     font-weight: bold;
     line-height: 140%;
   }
 
   .single-subtitle {
-    margin: .4rem 1rem;
+    margin: .4rem 0;
     font-size: 1.2rem;
     font-weight: normal;
     font-style: italic;
@@ -23,7 +17,6 @@
   }
 
   .post-meta {
-    margin: 0 1rem;
     font-size: .875rem;
     color: $global-font-secondary-color;
 
@@ -43,7 +36,7 @@
   }
 
   .featured-image {
-    margin: .5rem 1rem 1rem;
+    margin: .5rem 0 1rem 0;
 
     img {
       display: block;
@@ -98,7 +91,7 @@
     h5,
     h6 {
       font-weight: bold;
-      margin: 1.2rem 1rem;
+      margin: 1.2rem 0;
 
       [theme=dark] & {
         font-weight: bolder;
@@ -126,7 +119,7 @@
     }
 
     p {
-      margin: .5rem 1rem;
+      margin: .5rem 0;
     }
 
     b, strong {
@@ -152,7 +145,7 @@
     }
 
     ul, ol {
-      margin: .5rem 1rem;
+      margin: .5rem 0;
       padding-left: 2.5rem;
     }
 
@@ -178,7 +171,6 @@
 
     .table-wrapper {
       overflow-x: auto;
-      margin: 0 1rem;
 
       &::-webkit-scrollbar {
         background-color: $table-background-color;
@@ -225,7 +217,7 @@
     }
 
     figure {
-      margin: .5rem 1rem;
+      margin: .5rem;
       text-align: center;
 
       .image-caption:not(:empty) {
@@ -255,7 +247,7 @@
       border-left: .5rem solid $blockquote-color;
       background-color: rgba($blockquote-color, .2);
       padding: .25rem .75rem;
-      margin: 1rem 1rem;
+      margin: 1rem 0;
 
       [theme=dark] & {
         border-left-color: $blockquote-color-dark;
@@ -271,7 +263,7 @@
       }
 
       p {
-        margin: .25rem 1rem;
+        margin: .25rem 0;
       }
     }
 
@@ -284,7 +276,7 @@
     @import "../_partial/_single/bilibili";
 
     hr {
-      margin: 1rem 1rem;
+      margin: 1rem 0;
       position: relative;
       border-top: 1px dashed $global-border-color;
       border-bottom: none;
