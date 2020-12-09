@@ -2,6 +2,11 @@
   .page {
     width: 56%;
   }
+
+  #header-desktop .header-wrapper {
+    padding: 0 1rem;
+  }
+
 }
 
 @media only screen and (max-width: 1200px) {
@@ -9,9 +14,12 @@
     width: 52%;
   }
 
+  .page-post {
+    width: 78%;
+  }
+
   #header-desktop .header-wrapper {
-    padding-right: 1rem;
-    padding-left: 1rem;
+    padding: 0 1rem;
   }
 
   .search-dropdown.desktop {
@@ -28,8 +36,13 @@
     display: block;
   }
 
-  .page {
-    width: 80%;
+  .page-post {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .page-post {
+    max-width: 800px;
   }
 
   #header-desktop .header-wrapper {
@@ -50,7 +63,7 @@
     overflow: hidden;
   }
 
-  .page {
+  .page, .page-post {
     width: 100%;
 
     [data-header-mobile] & {
@@ -66,6 +79,10 @@
         width: 100%;
       }
     }
+  }
+
+  .page-post {
+    max-width: 800px;
   }
 
   .copyright {

@@ -15,6 +15,26 @@
   @include blur;
 }
 
+.page-post {
+  position: relative;
+  max-width: 100%;
+  width: 80%;
+
+  &[data-toc=disable] {
+    margin: 0 auto;
+  }
+
+  [data-header-desktop] & {
+    padding-top: $header-height;
+  }
+
+  [data-header-desktop=normal] & {
+    padding-top: 0;
+  }
+
+  @include blur;
+}
+
 @import "_single";
 @import "_special";
 @import "_archive";

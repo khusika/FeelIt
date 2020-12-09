@@ -18,7 +18,7 @@
         </div>
     {{- end -}}
 
-    <div class="page single special">
+    <div class="page-post single special" data-toc="{{ if ne $toc.enable true }}disable{{ else }}enable{{ end }}">
         {{- /* Title */ -}}
         <h1 class="single-title animated pulse faster">
             {{- .Title -}}
