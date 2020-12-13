@@ -46,7 +46,7 @@
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags">
+        <div class="post-tags">
             {{- with .Params.tags -}}
                 <i class="fas fa-tags fa-fw"></i>&nbsp;
                 {{- range $index, $value := . -}}
@@ -55,10 +55,10 @@
                     <a href="{{ $tag.RelPermalink }}">{{ $tag.Title }}</a>
                 {{- end -}}
             {{- end -}}
-        </section>
-        <section>
+        </div>
+        <div>
             <span><a href="javascript:void(0);" onclick="window.history.back();">{{ T "back" }}</a></span>&nbsp;|&nbsp;<span><a href="{{ .Site.Home.RelPermalink }}">{{ T "home" }}</a></span>
-        </section>
+        </div>
     </div>
 
     <div class="post-nav">
