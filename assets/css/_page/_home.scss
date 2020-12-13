@@ -83,6 +83,7 @@
   .summary {
     background-color: $global-background-card-color;
     padding-bottom: .8rem;
+    margin-bottom: 1rem;
     @include border-radius(.5rem);
     color: $global-font-color;
     @include transition(transform 0.4s ease);
@@ -100,7 +101,7 @@
       width: 100%;
       padding: 30% 0 0;
       position: relative;
-      margin: 0.6rem auto;
+      margin: 0 auto;
 
       img {
         position: absolute;
@@ -121,6 +122,7 @@
       font-size: 1.25rem;
       line-height: 140%;
       margin: 0.4rem 1rem;
+      padding-top: 1rem;
     }
 
     .post-meta {
