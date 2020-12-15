@@ -1,0 +1,1 @@
+module.exports={title:"FeatHub",slug:"feathub",svg:'<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>FeatHub icon</title><path d="M8.73.01h6.54v6.867H8.73V.01zm0 17.113h6.54v6.867H8.73v-6.867zM.01 8.73h23.98v6.54H.01V8.73z"/></svg>',get path(){return this.svg.match(/<path\s+d="([^"]*)/)[1]},source:"http://feathub.com/",hex:"9B9B9B"};

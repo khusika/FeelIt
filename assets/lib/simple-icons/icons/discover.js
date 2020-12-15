@@ -1,0 +1,1 @@
+module.exports={title:"Discover",slug:"discover",svg:'<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Discover icon</title><path d="M12 0A12 12 0 1 0 12 24A12 12 0 1 0 12 0Z"/></svg>',get path(){return this.svg.match(/<path\s+d="([^"]*)/)[1]},source:"https://www.discovernetwork.com/en-us/business-resources/free-signage-logos",hex:"FF6000"};

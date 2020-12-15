@@ -46,7 +46,7 @@
 {{- partial "plugin/style.html" $style -}}
 
 {{- /* Animate.css */ -}}
-{{- $source := $cdn.animateCSS | default "lib/animate/animate.min.css" -}}
+{{- $source := $cdn.animateCSS | default "lib/animate/animate.compat.css" -}}
 {{- $style := dict "Source" $source "Fingerprint" $fingerprint -}}
 {{- partial "plugin/style.html" $style -}}
 
