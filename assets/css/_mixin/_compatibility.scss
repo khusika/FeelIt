@@ -39,11 +39,9 @@
 @mixin box($orient) {
   display: -moz-box;
   display: -webkit-box;
-  display: box;
 
   -webkit-box-orient: $orient;
   -moz-box-orient: $orient;
-  box-orient: $orient;
 }
 
 @mixin placeholder($color) {
@@ -71,7 +69,6 @@
 @mixin max-content($property) {
   #{$property}: -webkit-max-content;
   #{$property}: -moz-max-content;
-  #{$property}: intrinsic;
   #{$property}: max-content;
 }
 

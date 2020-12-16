@@ -1,7 +1,6 @@
 html {
   font-family: $global-font-family;
   font-weight: $global-font-weight;
-  font-display: swap;
   font-size: $global-font-size;
   line-height: $global-line-height;
   width:100%;
@@ -33,7 +32,6 @@ body {
   background-color: $global-background-color;
   color: $global-font-color;
   @include overflow-wrap(break-word);
-  scrollbar-color: auto;
 
   &[theme=dark] {
     color: $global-font-color-dark;
