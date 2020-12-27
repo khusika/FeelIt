@@ -187,10 +187,18 @@
       @include link(false, false);
 
       .post-tags {
-        padding: 0;
-
+        margin-top: 6px;
         @include link(true, true);
       }
+        .border-tags {
+          padding: 6px 12px;
+          margin-right: 6px;
+          @include border-radius(20px);
+          border: 1px solid $global-font-secondary-color;
+            [theme=dark] & {
+              border: 1px solid $global-font-secondary-color-dark;
+            }
+        }
     }
   }
 }

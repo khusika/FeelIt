@@ -50,24 +50,22 @@
     </div>
 
     {{- /* Summary content */ -}}
-    <div class="content">
+    <a class="content" href="{{ .RelPermalink }}">
         {{- with .Summary -}}
             {{- dict "Content" . "Ruby" $params.ruby "Fraction" $params.fraction "Fontawesome" $params.fontawesome | partial "function/content.html" | safeHTML -}}
         {{- else -}}
             {{- .Description | safeHTML -}}
         {{- end -}}
-    </div>
+    </a>
 
     {{- /* Footer */ -}}
     <div class="post-footer">
-        <a href="{{ .RelPermalink }}">{{ T "readMore" }}</a>
         {{- with .Params.tags -}}
             <div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;
                 {{- range $index, $value := . -}}
-                    {{- if gt $index 0 }},&nbsp;{{ end -}}
+                    {{- if gt $index 0 }}{{ end -}}
                     {{- $tag := partialCached "function/path.html" $value $value | printf "/tags/%v" | $.Site.GetPage -}}
-                    <a href="{{ $tag.RelPermalink }}">{{ $tag.Title }}</a>
+                    <a class="border-tags" href="{{ $tag.RelPermalink }}">{{ $tag.Title }}</a>
                 {{- end -}}
             </div>
         {{- end -}}
