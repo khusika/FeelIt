@@ -50,8 +50,8 @@
 #toc-auto {
   display: block;
   position: absolute;
-  width: $MAX_LENGTH;
-  max-width: 0;
+  width: 14.5%;
+  max-width: 100%;
   padding: 0 .8rem;
   border-left: 4px solid $global-border-color;
   @include overflow-wrap(break-word);

@@ -412,8 +412,8 @@ class Theme {
             const $toc = document.getElementById('toc-auto');
             const $page = document.getElementsByClassName('page-post')[0];
             const rect = $page.getBoundingClientRect();
-            $toc.style.left = `${rect.left + rect.width + 40}px`;
-            $toc.style.maxWidth = `${$page.getBoundingClientRect().left + 175}px`;
+            $toc.style.left = `${rect.left + rect.width + 15}px`;
+            $toc.style.maxWidth = `${$page.getBoundingClientRect().left + 130}px`;
             $toc.style.visibility = 'visible';
             const $tocLinkElements = $tocCore.querySelectorAll('a:first-child');
             const $tocLiElements = $tocCore.getElementsByTagName('li');

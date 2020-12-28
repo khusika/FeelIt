@@ -18,7 +18,8 @@
 .page-post {
   position: relative;
   max-width: 100%;
-  width: 80%;
+  width: 70%;
+  margin: 0 auto;
 
   &[data-toc=disable] {
     margin: 0 auto;
