@@ -7,14 +7,14 @@
     "source-map-resolve": "^0.6.0"
   },
   "devDependencies": {
-    "@babel/cli": "^7.12.10",
-    "@babel/core": "^7.12.10",
-    "@babel/preset-env": "^7.12.11",
+    "@babel/cli": "^7.12.13",
+    "@babel/core": "^7.12.13",
+    "@babel/preset-env": "^7.12.13",
     "babel-preset-minify": "^0.5.1",
     "babelify": "^10.0.0",
     "browserify": "^16.5.2",
-    "core-js": "^3.8.1",
-    "husky": "^4.3.6",
+    "core-js": "^3.8.3",
+    "husky": "^4.3.8",
     "minimist": "^1.2.5",
     "segmentit": "^2.0.3"
   },
