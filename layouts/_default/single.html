@@ -19,46 +19,48 @@
     {{- end -}}
 
     <div class="page-post single special" data-toc="{{ if ne $toc.enable true }}disable{{ else }}enable{{ end }}">
-        {{- /* Title */ -}}
-        <h2 class="single-title animated pulse faster">
-            {{- .Title -}}
-        </h2>
+        <div class="single-card">
+            {{- /* Title */ -}}
+            <h2 class="single-title animated pulse faster">
+                {{- .Title -}}
+            </h2>
 
-        {{- /* Subtitle */ -}}
-        {{- with $params.subtitle -}}
-            <h2 class="single-subtitle">{{ . }}</h2>
-        {{- end -}}
+            {{- /* Subtitle */ -}}
+            {{- with $params.subtitle -}}
+                <h2 class="single-subtitle">{{ . }}</h2>
+            {{- end -}}
 
-        {{- /* Featured image */ -}}
-        {{- $image := $params.featuredimage -}}
-        {{- with .Resources.GetMatch "featured-image" -}}
-            {{- $image = .RelPermalink -}}
-        {{- end -}}
-        {{- with $image -}}
-            <div class="featured-image">
-                {{- dict "Src" . "Title" $.Description "Resources" $.Resources | partial "plugin/image.html" -}}
-            </div>
-        {{- end -}}
-
-        {{- /* Static TOC */ -}}
-        {{- if ne $toc.enable false -}}
-            <div class="details toc" id="toc-static"  data-kept="{{ if $toc.keepStatic }}true{{ end }}">
-                <div class="details-summary toc-title">
-                    <span>{{ T "contents" }}</span>
-                    <span><i class="details-icon fas fa-angle-right"></i></span>
+            {{- /* Featured image */ -}}
+            {{- $image := $params.featuredimage -}}
+            {{- with .Resources.GetMatch "featured-image" -}}
+                {{- $image = .RelPermalink -}}
+            {{- end -}}
+            {{- with $image -}}
+                <div class="featured-image">
+                    {{- dict "Src" . "Title" $.Description "Resources" $.Resources | partial "plugin/image.html" -}}
                 </div>
-                <div class="details-content toc-content" id="toc-content-static">
-                    {{- dict "Content" .TableOfContents "Ruby" $params.ruby "Fraction" $params.fraction "Fontawesome" $params.fontawesome | partial "function/content.html" | safeHTML -}}
-                </div>
-            </div>
-        {{- end -}}
+            {{- end -}}
 
-        {{- /* Content */ -}}
-        <div class="content" id="content">
-            {{- dict "Content" .Content "Ruby" $params.ruby "Fraction" $params.fraction "Fontawesome" $params.fontawesome | partial "function/content.html" | safeHTML -}}
+            {{- /* Static TOC */ -}}
+            {{- if ne $toc.enable false -}}
+                <div class="details toc" id="toc-static"  data-kept="{{ if $toc.keepStatic }}true{{ end }}">
+                    <div class="details-summary toc-title">
+                        <span>{{ T "contents" }}</span>
+                        <span><i class="details-icon fas fa-angle-right"></i></span>
+                    </div>
+                    <div class="details-content toc-content" id="toc-content-static">
+                        {{- dict "Content" .TableOfContents "Ruby" $params.ruby "Fraction" $params.fraction "Fontawesome" $params.fontawesome | partial "function/content.html" | safeHTML -}}
+                    </div>
+                </div>
+            {{- end -}}
+
+            {{- /* Content */ -}}
+            <div class="content" id="content">
+                {{- dict "Content" .Content "Ruby" $params.ruby "Fraction" $params.fraction "Fontawesome" $params.fontawesome | partial "function/content.html" | safeHTML -}}
+            </div>
+
+            <div id="post-footer"></div>
         </div>
-
-        <div id="post-footer"></div>
 
         {{- /* Comment */ -}}
         {{- partial "comment.html" . -}}

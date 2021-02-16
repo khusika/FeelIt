@@ -11,14 +11,5 @@
     .container {
       padding: 0 1rem;
     }
-    .container-post {
-      padding: 0 1rem;
-      min-height: 100vh;
-      @include border-radius(0 0 .5rem .5rem);
-      background-color: $global-background-card-color;
-      [theme=dark] & {
-        background-color: $global-background-card-color-dark;
-      }
-    }
   }
 }

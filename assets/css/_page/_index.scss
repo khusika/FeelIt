@@ -36,6 +36,16 @@
   @include blur;
 }
 
+.single-card {
+  padding: 1rem;
+  margin: 1rem 0;
+  @include border-radius(.5rem);
+  background-color: $global-background-card-color;
+  [theme=dark] & {
+    background-color: $global-background-card-color-dark;
+  }
+}
+
 @import "_single";
 @import "_special";
 @import "_archive";

@@ -4,11 +4,11 @@
 {{- $commentConfig := dict -}}
 
 {{- if $comment.enable -}}
-    <div id="comments">
+    <div id="comments" class="single-card">
         {{- /* Disqus Comment System */ -}}
         {{- $disqus := $comment.disqus | default dict -}}
         {{- if $disqus.enable -}}
-            <div id="disqus_thread" class="comment"></div>
+            <div id="disqus_thread"></div>
             {{- $source := printf "https://%v.disqus.com/embed.js" $disqus.shortname -}}
             {{- dict "Source" $source "Defer" true | dict "Scratch" .Scratch "Data" | partial "scratch/script.html" -}}
             <noscript>
@@ -19,7 +19,7 @@
         {{- /* Gitalk Comment System */ -}}
         {{- $gitalk := $comment.gitalk | default dict -}}
         {{- if $gitalk.enable -}}
-            <div id="gitalk" class="comment"></div>
+            <div id="gitalk"></div>
             {{- $source := $cdn.gitalkCSS | default "lib/gitalk/gitalk.css" -}}
             {{- dict "Source" $source "Minify" true "Fingerprint" $fingerprint | dict "Scratch" .Scratch "Data" | partial "scratch/style.html" -}}
             {{- $source := $cdn.gitalkJS | default "lib/gitalk/gitalk.min.js" -}}
@@ -33,7 +33,7 @@
         {{- /* Valine Comment System */ -}}
         {{- $valine := $comment.valine | default dict -}}
         {{- if $valine.enable -}}
-            <div id="valine" class="comment"></div>
+            <div id="valine"></div>
             {{- $options := dict "targetPath" "lib/valine/valine.min.css" -}}
             {{- dict "Source" "lib/valine/valine.scss" "ToCSS" $options | dict "Scratch" .Scratch "Data" | partial "scratch/style.html" -}}
             {{- $source := $cdn.valineJS | default "lib/valine/Valine.min.js" -}}
@@ -60,7 +60,7 @@
         {{- /* Facebook Comment System */ -}}
         {{- $facebook := $comment.facebook | default dict -}}
         {{- if $facebook.enable -}}
-            <div id="fb-root" class="comment"></div>
+            <div id="fb-root"></div>
             <div
                 class="fb-comments"
                 data-href="{{ .Permalink }}"
@@ -77,7 +77,7 @@
         {{- /* Telegram Comments System */ -}}
         {{- $telegram := $comment.telegram | default dict -}}
         {{- if $telegram.enable -}}
-            <div id="telegram-comments" class="comment">
+            <div id="telegram-comments">
             {{- $attr := printf `data-comments-app-website="%v"` $telegram.siteID -}}
             {{- $attr = printf `%v data-limit="%v"` $attr ($telegram.limit | default 5) -}}
             {{- with $telegram.height -}}
