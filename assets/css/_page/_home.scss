@@ -195,9 +195,15 @@
           margin-right: 6px;
           @include border-radius(20px);
           border: 1px solid $global-font-secondary-color;
-            [theme=dark] & {
-              border: 1px solid $global-font-secondary-color-dark;
+          &:hover {
+            background-color: $global-background-color;
+          }
+          [theme=dark] & {
+            border: 1px solid $global-font-secondary-color-dark;
+            &:hover {
+              background-color: $global-background-color-dark;
             }
+          }
         }
     }
   }
