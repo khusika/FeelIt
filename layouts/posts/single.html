@@ -19,7 +19,19 @@
     {{- end -}}
 
     <article class="page-post single" data-toc="{{ if ne $toc.enable true }}disable{{ else }}enable{{ end }}">
-        <div class="single-card">
+
+        {{- /* Featured image */ -}}
+        {{- $image := $params.featuredimage -}}
+        {{- with .Resources.GetMatch "featured-image" -}}
+            {{- $image = .RelPermalink -}}
+        {{- end -}}
+        {{- with $image -}}
+            <div class="featured-image">
+                {{- dict "Src" . "Title" $.Description "Resources" $.Resources | partial "plugin/image.html" -}}
+            </div>
+        {{- end -}}
+
+        <div class="single-card" {{ with $image }}data-image="true"{{ end }}>
             {{- /* Title */ -}}
             <h2 class="single-title animated flipInX">{{ .Title }}</h2>
 
@@ -63,17 +75,8 @@
                     {{- end -}}
                 </div>
             </div>
-
-            {{- /* Featured image */ -}}
-            {{- $image := $params.featuredimage -}}
-            {{- with .Resources.GetMatch "featured-image" -}}
-                {{- $image = .RelPermalink -}}
-            {{- end -}}
-            {{- with $image -}}
-                <div class="featured-image">
-                    {{- dict "Src" . "Title" $.Description "Resources" $.Resources | partial "plugin/image.html" -}}
-                </div>
-            {{- end -}}
+            
+            <hr>
 
             {{- /* Static TOC */ -}}
             {{- if ne $toc.enable false -}}

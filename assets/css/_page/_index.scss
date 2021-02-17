@@ -44,6 +44,10 @@
   [theme=dark] & {
     background-color: $global-background-card-color-dark;
   }
+  &[data-image=true] {
+    margin-top: 0;
+    @include border-radius(0 0 .5rem .5rem);
+  }
 }
 
 @import "_single";

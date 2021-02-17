@@ -2,7 +2,7 @@
 
 .single {
   .single-title {
-    margin: 1rem 0 .5rem;
+    margin: .5rem 0;
     font-size: 1.6rem;
     font-weight: bold;
     line-height: 140%;
@@ -36,7 +36,7 @@
   }
 
   .featured-image {
-    margin: .5rem 0 1rem 0;
+    margin: 1rem 0 0;
 
     img {
       display: block;
@@ -44,7 +44,7 @@
       height: auto;
       margin: 0 auto;
       overflow: hidden;
-      @include border-radius(.5rem);
+      @include border-radius(.5rem .5rem 0 0);
     }
 
     img.lazyloaded {
