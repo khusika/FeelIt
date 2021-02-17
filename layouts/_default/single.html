@@ -19,17 +19,18 @@
     {{- end -}}
 
     <div class="page-post single special" data-toc="{{ if ne $toc.enable true }}disable{{ else }}enable{{ end }}">
+
+        {{- /* Title */ -}}
+        <h2 class="single-title animated fadeInDown faster">
+            {{- .Title -}}
+        </h2>
+
+        {{- /* Subtitle */ -}}
+        {{- with $params.subtitle -}}
+            <h2 class="single-subtitle animated fadeInDown faster">{{ . }}</h2>
+        {{- end -}}
+
         <div class="single-card">
-            {{- /* Title */ -}}
-            <h2 class="single-title animated fadeInDown faster">
-                {{- .Title -}}
-            </h2>
-
-            {{- /* Subtitle */ -}}
-            {{- with $params.subtitle -}}
-                <h2 class="single-subtitle">{{ . }}</h2>
-            {{- end -}}
-
             {{- /* Featured image */ -}}
             {{- $image := $params.featuredimage -}}
             {{- with .Resources.GetMatch "featured-image" -}}

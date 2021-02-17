@@ -1,5 +1,32 @@
 .special {
+  .single-title {
+    font-size: 1.8rem;
+    overflow: hidden;
+  }
   .single-title, .single-subtitle {
-    text-align: right;
+    text-align: center;
+  }
+  .single-title:before,
+  .single-title:after {
+    background-color: $global-font-color;
+    content: "";
+    display: inline-block;
+    height: 2px;
+    position: relative;
+    vertical-align: middle;
+    width: 5%;
+    [theme=dark] & {
+      background-color: $global-font-color-dark;
+    }
+  }
+
+  .single-title:before {
+    right: 0.5em;
+    margin-left: -50%;
+  }
+
+  .single-title:after {
+    left: 0.5em;
+    margin-right: -50%;
   }
 }
