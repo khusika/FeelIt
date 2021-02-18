@@ -22,18 +22,16 @@
                 {{- range .Pages -}}
                 <div class="archive-timeline">
                     <div class="archive-circle">
-                        <article>
-                            <div class="archive-item">
-                                <a href="{{ .RelPermalink }}" class="archive-item-link">
-                                    {{- .Title -}}
-                                </a>
-                            </div>
-                            <div class="archive-item">
-                                <span class="archive-item-date">
-                                    Published&nbsp;on&nbsp;{{- $.Site.Params.section.dateFormat | default "01-02" | .Date.Format -}}
-                                </span>
-                            </div>
-                        </article>
+                        <div class="archive-item">
+                            <a href="{{ .RelPermalink }}" class="archive-item-link">
+                                {{- .Title -}}
+                            </a>
+                        </div>
+                        <div class="archive-item">
+                            <span class="archive-item-date">
+                                Published&nbsp;on&nbsp;{{- $.Site.Params.section.dateFormat | default "01-02" | .Date.Format -}}
+                            </span>
+                        </div>
                     </div>
                 </div>
                 {{- end -}}
