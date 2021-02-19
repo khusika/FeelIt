@@ -40,7 +40,7 @@
                     <span class="menu-item delimiter"></span>
                 {{- end -}}
                 {{- if .Site.IsMultiLingual -}}
-                    <a href="javascript:void(0);" class="menu-item language" title="{{ T "selectLanguage" }}">
+                    <span class="menu-item language" title="{{ T "selectLanguage" }}">
                         {{- .Language.LanguageName -}}
                         <i class="fas fa-chevron-right fa-fw"></i>
                         <select class="language-select" id="language-select-desktop" onchange="location = this.value;">
@@ -60,7 +60,7 @@
                                 {{- end -}}
                             {{- end -}}
                         </select>
-                    </a>
+                    </span>
                 {{- end -}}
                 {{- if .Site.Params.search.enable -}}
                     <span class="menu-item search" id="search-desktop">
@@ -159,7 +159,7 @@
                 </a>
             </div>
             {{- if .Site.IsMultiLingual -}}
-                <a href="javascript:void(0);" class="menu-item" title="{{ T "selectLanguage" }}">
+                <span class="menu-item language" title="{{ T "selectLanguage" }}">
                     {{- .Language.LanguageName -}}
                     <i class="fas fa-chevron-right fa-fw"></i>
                     <select class="language-select" onchange="location = this.value;">
@@ -179,7 +179,7 @@
                             {{- end -}}
                         {{- end -}}
                     </select>
-                </a>
+                </span>
             {{- end -}}
         </div>
     </div>

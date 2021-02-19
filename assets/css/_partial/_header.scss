@@ -183,6 +183,12 @@ header {
 
         &.language {
           margin-right: 0;
+          &:hover {
+            color: $global-link-hover-color;
+            [theme=dark] & {
+              color: $global-link-hover-color-dark;
+            }
+          }
         }
 
         &.search {
@@ -313,6 +319,14 @@ header {
       .menu-item {
         display: block;
         line-height: 2.5rem;
+        &.language {
+          &:hover {
+            color: $global-link-hover-color;
+            [theme=dark] & {
+              color: $global-link-hover-color-dark;
+            }
+          }
+        }
       }
 
       &.active {
