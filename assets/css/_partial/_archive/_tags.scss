@@ -1,12 +1,13 @@
 .tag-cloud-tags {
-  margin: 10px 0;
+  text-align: center;
+  margin: 3rem 0 10px;
 
   @include link(true, true);
 
   a {
     display: inline-block;
     position: relative;
-    margin: 5px 10px;
+    margin: 5px 15px;
     @include overflow-wrap(break-word);
     @include transition(all ease-out 0.3s);
 
