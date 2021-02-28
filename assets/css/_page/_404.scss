@@ -1,6 +1,42 @@
 #content-404 {
   font-size: 1.8rem;
-  line-height: 3rem;
-  @include transform(translateY(30vh));
   text-align: center;
+  position: absolute;
+  padding-top: 0;
+  left: 50%;
+  top: 50%;
+  @include transform(translate(-50%, -50%));
+
+  h2 {
+    font-size: 10rem;
+    font-weight: 900;
+    color: $global-font-color;
+    letter-spacing: 1rem;
+    margin-bottom: 5rem;
+    [theme=dark] & {
+      color: $global-font-color-dark;
+    }
+  }
+
+  p {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  a {
+    font-size: .9rem;
+    padding: 12px 24px;
+    font-weight: 700;
+    background-color: $global-font-color;
+    color: $global-background-color;
+    @include border-radius(.5rem);
+    @include transition(0.2s all);
+    [theme=dark] & {
+      background-color: $global-font-color-dark;
+      color: $global-background-color-dark;
+    }
+    &:hover {
+      opacity: 0.8;
+    }
+  }
 }

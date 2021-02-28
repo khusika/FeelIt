@@ -4,16 +4,11 @@
 
 {{- define "content" -}}
     <div class="page" id="content-404">
-        <h1 id="error-emoji"></h1>
-        <p class="error-text">
-            {{- T "pageNotFoundText" -}}&nbsp;
-            <a href="javascript:void(0);" title="{{ T `back` }}" onclick="window.history.back();"><i class="far fa-hand-point-left fa-fw"></i></a>
+        <h2>404</h2>
+        <p>
+            {{- T "pageNotFoundText" -}}
         </p>
+        <a href="{{ .Site.Home.RelPermalink }}" title="{{ T `home` }}">{{ T `home` }}</a>
+        <a href="javascript:void(0);" title="{{ T `back` }}" onclick="window.history.back();">{{ T `back` }}</a>
     </div>
-    <script>
-        (function() {
-            var emojiArray = ['\\(o_o)/', '(˚Δ˚)b', '(^-^*)', '(≥o≤)', '(^_^)b', '(·_·)','(=\'X\'=)', '(>_<)', '(;-;)'];
-            document.getElementById('error-emoji').appendChild(document.createTextNode(emojiArray[Math.floor(Math.random() * emojiArray.length)]));
-        })();
-    </script>
 {{- end -}}
