@@ -1,0 +1,5 @@
+{{- $appId := .Site.Params.Instagram.AppId -}}
+{{- $clientToken := .Site.Params.Instagram.ClientToken -}}
+{{ $id := .Get 0 }}
+{{ $hideCaption := cond (eq (.Get 1) "hidecaption") "1" "0" }}
+{{ with getJSON "https://graph.facebook.com/v8.0/instagram_oembed/?url=https://instagram.com/p/" $id "/&hidecaption=" $hideCaption "&access_token=" $appId "|" $clientToken }}{{ .html | safeHTML }}{{ end }}
