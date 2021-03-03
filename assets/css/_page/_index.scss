@@ -1,7 +1,6 @@
 .page {
   position: relative;
-  max-width: 800px;
-  width: 60%;
+  max-width: 100%;
   margin: 0 auto;
 
   [data-header-desktop] & {
@@ -38,7 +37,7 @@
 
 .single-card {
   padding: 1rem;
-  margin: 1rem 0;
+  margin: 1rem 0 0;
   @include border-radius(.5rem);
   background-color: $global-background-card-color;
   [theme=dark] & {
