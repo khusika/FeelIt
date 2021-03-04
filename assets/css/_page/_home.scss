@@ -180,32 +180,42 @@
 
     .post-footer {
       margin: .4rem 1rem 0 1rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
       font-size: .875rem;
 
-      @include link(false, false);
-
       .post-tags {
-        margin-top: 6px;
-        @include link(true, true);
-      }
-        .border-tags {
-          padding: 6px 12px;
-          margin-right: 6px;
-          @include border-radius(20px);
-          border: 1px solid $global-font-secondary-color;
+        list-style: none;
+        margin: 0;
+        overflow: hidden;
+        padding: 0;
+        li {
+          float: left;
+        }
+
+        a {
+          color: $global-font-secondary-color;
+          display: inline-block;
+          height: 26px;
+          line-height: 26px;
+          padding: 0 10px;
+          position: relative;
+          margin: 0 5px 5px 0;
+          text-decoration: none;
+          -webkit-transition: color 0.2s;
+          @include border-radius(.25rem);
+          border: 1px solid;
           &:hover {
             background-color: $global-background-color;
+            color: $global-link-hover-color;
           }
           [theme=dark] & {
-            border: 1px solid $global-font-secondary-color-dark;
+            border: 1px solid;
             &:hover {
               background-color: $global-background-color-dark;
+              color: $global-link-hover-color-dark;
             }
           }
         }
+      }
     }
   }
 }

@@ -61,13 +61,13 @@
     {{- /* Footer */ -}}
     <div class="post-footer">
         {{- with .Params.tags -}}
-            <div class="post-tags">
+            <ul class="post-tags">
                 {{- range $index, $value := . -}}
                     {{- if gt $index 0 }}{{ end -}}
                     {{- $tag := partialCached "function/path.html" $value $value | printf "/tags/%v" | $.Site.GetPage -}}
-                    <a class="border-tags" href="{{ $tag.RelPermalink }}">{{ $tag.Title }}</a>
+                    <li><a href="{{ $tag.RelPermalink }}">{{ $tag.Title }}</a></li>
                 {{- end -}}
-            </div>
+            </ul>
         {{- end -}}
     </div>
 </article>
