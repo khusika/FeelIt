@@ -157,6 +157,17 @@ enableEmoji = true
           enable = true
           # special amount of posts in each home posts page
           paginate = 6
+
+      [languages.en.params.oembed]
+        # Instagram config
+        [languages.en.params.oembed.instagram]
+          # Facebook Aplication Identity
+          appId = ""
+          # Facebook Aplication Client Token
+          clientToken = ""
+          # Privacy config (https://gohugo.io/about/hugo-and-gdpr/)
+          privacy = false
+
       # Social config in home page
       [languages.en.params.social]
         GitHub = "xxxx"
@@ -358,6 +369,17 @@ enableEmoji = true
           enable = true
           # 主页每页显示文章数量
           paginate = 6
+
+      [languages.zh-cn.params.oembed]
+        # Instagram config
+        [languages.zh-cn.params.oembed.instagram]
+          # Facebook Aplication Identity
+          appId = ""
+          # Facebook Aplication Client Token
+          clientToken = ""
+          # Privacy config (https://gohugo.io/about/hugo-and-gdpr/)
+          privacy = false
+
       # 主页的社交信息设置
       [languages.zh-cn.params.social]
         GitHub = "xxxx"
@@ -555,6 +577,17 @@ enableEmoji = true
           enable = true
           # special amount of posts in each home posts page
           paginate = 6
+
+        [languages.fr.params.oembed]
+        # Instagram config
+        [languages.fr.params.oembed.instagram]
+          # Facebook Aplication Identity
+          appId = ""
+          # Facebook Aplication Client Token
+          clientToken = ""
+          # Privacy config (https://gohugo.io/about/hugo-and-gdpr/)
+          privacy = false
+
       # Social config in home page
       [languages.fr.params.social]
         GitHub = "xxxx"
@@ -1107,6 +1140,9 @@ enableEmoji = true
   # privacy of the Google Analytics (replaced by params.analytics.google)
   # Google Analytics 相关隐私 (被 params.analytics.google 替代)
   [privacy.googleAnalytics]
+    # ...
+  # privacy of the Intagram (replaced by params.oembed.instagram)
+  [privacy.instagram]
     # ...
   [privacy.twitter]
     enableDNT = true
