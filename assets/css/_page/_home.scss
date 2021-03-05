@@ -42,17 +42,19 @@
     }
 
     .links {
-      padding: .5rem;
+      padding: .25rem;
       font-size: 1.5rem;
 
       a * {
         vertical-align: text-bottom;
         padding: 0 .25rem;
+        margin: 0 .125rem .75rem;
       }
 
       img {
         height: 1.5rem;
         padding: 0 .25rem;
+        margin: 0 .125rem .75rem;
       }
     }
 
@@ -208,7 +210,7 @@
             color: $global-link-hover-color;
           }
           [theme=dark] & {
-            border: 1px solid;
+            color: $global-font-secondary-color-dark;
             &:hover {
               background-color: $global-background-color-dark;
               color: $global-link-hover-color-dark;
