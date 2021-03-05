@@ -16,6 +16,39 @@
             </noscript>
         {{- end -}}
 
+        {{- /* Vssue Comment System */ -}}
+        {{- $vssue := $comment.vssue | default dict -}}
+        {{- if $vssue.enable -}}
+            <div id="vssue"></div>
+            {{- $source := $cdn.vssueCSS | default "lib/vue/vssue/vssue.css" -}}
+            {{- dict "Source" $source "Minify" true "Fingerprint" $fingerprint | dict "Scratch" .Scratch "Data" | partial "scratch/style.html" -}}
+            {{- $source := $cdn.vueJS | default "lib/vue/vue.runtime.js" -}}
+            {{- dict "Source" $source "Fingerprint" $fingerprint | dict "Scratch" .Scratch "Data" | partial "scratch/script.html" -}}
+            {{- if eq $vssue.platform "bitbucket" -}}
+                {{- $source := $cdn.vssueBitbucket | default "lib/vue/vssue/vssue.bitbucket.min.js" -}}
+                {{- dict "Source" $source "Fingerprint" $fingerprint | dict "Scratch" .Scratch "Data" | partial "scratch/script.html" -}}
+            {{- else if eq $vssue.platform "gitea" -}}
+                {{- $source := $cdn.vssueGitea | default "lib/vue/vssue/vssue.gitea.min.js" -}}
+                {{- dict "Source" $source "Fingerprint" $fingerprint | dict "Scratch" .Scratch "Data" | partial "scratch/script.html" -}}
+            {{- else if eq $vssue.platform "gitee" -}}
+                {{- $source := $cdn.vssueGitee | default "lib/vue/vssue/vssue.gitee.min.js" -}}
+                {{- dict "Source" $source "Fingerprint" $fingerprint | dict "Scratch" .Scratch "Data" | partial "scratch/script.html" -}}
+            {{- else if eq $vssue.platform "github" -}}
+                {{- $source := $cdn.vssueGithub | default "lib/vue/vssue/vssue.github.min.js" -}}
+                {{- dict "Source" $source "Fingerprint" $fingerprint | dict "Scratch" .Scratch "Data" | partial "scratch/script.html" -}}
+            {{- else if eq $vssue.platform "github-v4" -}}
+                {{- $source := $cdn.vssueGithubv4 | default "lib/vue/vssue/vssue.github-v4.min.js" -}}
+                {{- dict "Source" $source "Fingerprint" $fingerprint | dict "Scratch" .Scratch "Data" | partial "scratch/script.html" -}}
+            {{- else if eq $vssue.platform "gitlab" -}}
+                {{- $source := $cdn.vssueGitlab | default "lib/vue/vssue/vssue.gitlab.min.js" -}}
+                {{- dict "Source" $source "Fingerprint" $fingerprint | dict "Scratch" .Scratch "Data" | partial "scratch/script.html" -}}
+            {{- end -}}
+            {{- $commentConfig = dict "title" .Title "clientID" $vssue.clientId "clientSecret" $vssue.clientSecret "repo" $vssue.repo "owner" $vssue.owner | dict "vssue" | merge $commentConfig -}}
+            <noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://github.com/meteorlxy/vssue">Vssue</a>.
+            </noscript>
+        {{- end -}}
+
         {{- /* Gitalk Comment System */ -}}
         {{- $gitalk := $comment.gitalk | default dict -}}
         {{- if $gitalk.enable -}}

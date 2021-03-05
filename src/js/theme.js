@@ -595,6 +595,23 @@ class Theme {
                 const gitalk = new Gitalk(this.config.comment.gitalk);
                 gitalk.render('gitalk');
             }
+            if (this.config.comment.vssue) {
+                const vssueConfig = this.config.comment.vssue;
+                new Vue({
+                    el: '#vssue',
+                    render: h => h('Vssue', {
+                      props: {
+                        title: (vssueConfig.title),
+                        options: {
+                          owner: (vssueConfig.owner),
+                          repo: (vssueConfig.repo),
+                          clientId: (vssueConfig.clientID),
+                          clientSecret: (vssueConfig.clientSecret),
+                        },
+                      }
+                    })
+                })
+            }
             if (this.config.comment.valine) new Valine(this.config.comment.valine);
             if (this.config.comment.utterances) {
                 const utterancesConfig = this.config.comment.utterances;

@@ -54,6 +54,16 @@ libFiles:
   aplayerJS: aplayer@1.10.1/dist/APlayer.min.js
   # meting@2.0.1 https://github.com/metowolf/MetingJS
   metingJS: meting@2.0.1/dist/Meting.min.js
+  # vue@2.6.12 https://github.com/vuejs/vue
+  vueJS: vue@2.6.12/dist/vue.runtime.js
+  # vssue@1.4.8 https://github.com/meteorlxy/vssue
+  vssueCSS: vssue@1.4.8/dist/vssue.min.css
+  vssueBitbucket: vssue@1.4.8/dist/vssue.bitbucket.min.js
+  vssueGitea: vssue@1.4.8/dist/vssue.gitea.min.js
+  vssueGitee: vssue@1.4.8/dist/vssue.gitee.min.js
+  vssueGithub: vssue@1.4.8/dist/vssue.github.min.js
+  vssueGithubv4: vssue@1.4.8/dist/vssue.github-v4.min.js
+  vssueGitlab: vssue@1.4.8/dist/vssue.gitlab.min.js
   # gitalk@1.7.2 https://github.com/gitalk/gitalk
   gitalkCSS: gitalk@1.7.2/dist/gitalk.min.css
   gitalkJS: gitalk@1.7.2/dist/gitalk.min.js

@@ -671,6 +671,17 @@ googleAnalytics = ""
         # Disqus shortname to use Disqus in posts
         # Disqus 的 shortname，用来在文章中启用 Disqus 评论系统
         shortname = ""
+      # Vssue comment config (https://github.com/meteorlxy/vssue)
+      # Vssue 评论系统设置 (https://github.com/meteorlxy/vssue)
+      [params.page.comment.vssue]
+        enable = false
+        # Vssue platform API ("bitbucket", "gitea", "gitee", "github", "github-v4", "gitlab")
+        # Vssue 平台 API ("bitbucket", "gitea", "gitee", "github", "github-v4", "gitlab")
+        platform = ""
+        owner = ""
+        repo = ""
+        clientId = ""
+        clientSecret = ""
       # Gitalk comment config (https://github.com/gitalk/gitalk)
       # Gitalk 评论系统设置 (https://github.com/gitalk/gitalk)
       [params.page.comment.gitalk]
