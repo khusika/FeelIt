@@ -22,6 +22,8 @@ enableGitInfo = true
 # whether to use emoji code
 # 是否使用 emoji 代码
 enableEmoji = true
+# UA-PROPERTY_ID or G-MEASUREMENT_ID google analytics code
+googleAnalytics = ""
 
 [languages]
   [languages.en]
@@ -868,17 +870,6 @@ enableEmoji = true
   # 网站分析配置
   [params.analytics]
     enable = false
-    # Google Analytics
-    [params.analytics.google]
-      # [UA-XXXXXXXX-X] google analytics code
-      # [UA-XXXXXXXX-X] 谷歌分析代号
-      id = ""
-      # whether to use gtag linked
-      # 是否使用gtag链接
-      gtag = false
-      # whether to anonymize IP
-      # 是否匿名化用户 IP
-      anonymizeIP = true
     # Fathom Analytics
     [params.analytics.fathom]
       id = ""
@@ -979,10 +970,13 @@ enableEmoji = true
 # Privacy config (https://gohugo.io/about/hugo-and-gdpr/)
 # 隐私信息配置 (https://gohugo.io/about/hugo-and-gdpr/)
 [privacy]
-  # privacy of the Google Analytics (replaced by params.analytics.google)
-  # Google Analytics 相关隐私 (被 params.analytics.google 替代)
+  # privacy of the Google Analytics
+  # Google Analytics 相关隐私
   [privacy.googleAnalytics]
-    # ...
+    anonymizeIP = false
+    disable = false
+    respectDoNotTrack = false
+    useSessionStorage = false
   # privacy of the Intagram (replaced by params.oembed.instagram)
   [privacy.instagram]
     # ...
