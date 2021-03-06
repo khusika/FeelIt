@@ -7,7 +7,7 @@
     padding: 1rem 0 0.3rem;
 
     [theme=dark] & {
-      border-bottom: 1px solid $global-border-color-dark;
+      border-bottom-color: $global-border-color-dark;
     }
 
     .post-info-line {

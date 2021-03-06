@@ -42,19 +42,17 @@
     }
 
     .links {
-      padding: .25rem;
       font-size: 1.5rem;
+      padding-top: 0.25rem;
 
       a * {
         vertical-align: text-bottom;
-        padding: 0 .25rem;
-        margin: 0 .125rem .75rem;
+        margin: 0 .125rem .25rem;
       }
 
       img {
         height: 1.5rem;
-        padding: 0 .25rem;
-        margin: 0 .125rem .75rem;
+        margin: 0 .125rem .25rem;
       }
     }
 
@@ -85,7 +83,6 @@
 
   .summary {
     background-color: $global-background-card-color;
-    padding-bottom: .8rem;
     margin-bottom: 1rem;
     @include border-radius(.5rem);
     color: $global-font-color;

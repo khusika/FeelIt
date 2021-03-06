@@ -131,12 +131,12 @@
     top: 42.5%;
     border: 2px solid $global-background-color;
     border-radius: 50%;
-    width: .5rem;
-    height: .5rem;
+    width: .75rem;
+    height: .75rem;
     z-index: 2;
     [theme=dark] & {
       background: $global-font-secondary-color-dark;
-      border: 2px solid $global-background-color-dark;
+      border-color: $global-background-color-dark;
     }
   }
 }
