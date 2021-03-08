@@ -29,6 +29,21 @@
     <link rel="feed" href="{{ .RelPermalink }}" type="application/rss+xml" title="{{ $.Site.Title }}">
 {{- end -}}
 
+{{- if not .IsHome -}}
+{{- /* page.min.css */ -}}
+{{- if .Site.Params.SourceMap -}}
+{{- $style := dict "Source" "css/page.scss" "Fingerprint" $fingerprint -}}
+{{- $options := dict "targetPath" "css/page.min.css" "enableSourceMap" true -}}
+{{- $style = dict "Context" . "ToCSS" $options | merge $style -}}
+{{- partial "plugin/style.html" $style -}}
+{{- else -}}
+{{- $style := dict "Source" "css/page.scss" "Fingerprint" $fingerprint -}}
+{{- $options := dict "targetPath" "css/page.min.css" "enableSourceMap" false -}}
+{{- $style = dict "Context" . "ToCSS" $options | merge $style -}}
+{{- partial "plugin/style.html" $style -}}
+{{- end -}}
+{{- end -}}
+
 {{- /* style.min.css */ -}}
 {{- if .Site.Params.SourceMap -}}
 {{- $style := dict "Source" "css/style.scss" "Fingerprint" $fingerprint -}}

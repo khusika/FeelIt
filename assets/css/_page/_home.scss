@@ -84,6 +84,7 @@
   .summary {
     background-color: $global-background-card-color;
     margin-bottom: 1rem;
+    padding-bottom: 1rem;
     @include border-radius(.5rem);
     color: $global-font-color;
     @include transition(transform 0.4s ease);
@@ -126,7 +127,23 @@
     }
 
     .post-meta {
+      font-size: .875rem;
       margin: 0 1rem;
+      color: $global-font-secondary-color;
+
+      span {
+        display: inline-block;
+      }
+
+      [theme=dark] & {
+        color: $global-font-secondary-color-dark;
+      }
+
+      @include link(false, true);
+
+      .author {
+        font-size: 1.05rem;
+      }
     }
 
     p {
