@@ -29,11 +29,6 @@
     <link rel="feed" href="{{ .RelPermalink }}" type="application/rss+xml" title="{{ $.Site.Title }}">
 {{- end -}}
 
-{{- /* normalize.css */ -}}
-{{- $source := $cdn.modernNormalizeCSS | default "lib/modern-normalize/modern-normalize.min.css" -}}
-{{- $style := dict "Source" $source "Fingerprint" $fingerprint -}}
-{{- partial "plugin/style.html" $style -}}
-
 {{- /* style.min.css */ -}}
 {{- if .Site.Params.SourceMap -}}
 {{- $style := dict "Source" "css/style.scss" "Fingerprint" $fingerprint -}}
