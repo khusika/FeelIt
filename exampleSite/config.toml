@@ -94,8 +94,6 @@ enableEmoji = true
       description = "About LoveIt Theme"
       # site keywords
       keywords = ["Theme", "Hugo"]
-      # whether to enable CSS and JS source mapping
-      SourceMap = true
       # App icon config
       [languages.en.params.app]
         # optional site title override for the app when added to an iOS home screen or Android launcher
@@ -306,8 +304,6 @@ enableEmoji = true
       description = "关于 LoveIt 主题"
       # 网站关键词
       keywords = ["Theme", "Hugo"]
-      # whether to enable CSS and JS source mapping
-      SourceMap = true
       # 应用图标配置
       [languages.zh-cn.params.app]
         # 当添加到 iOS 主屏幕或者 Android 启动器时的标题, 覆盖默认标题
@@ -514,8 +510,6 @@ enableEmoji = true
       description = "À propos du thème LoveIt"
       # site keywords
       keywords = ["Thème", "Hugo"]
-      # whether to enable CSS and JS source mapping
-      SourceMap = true
       # App icon config
       [languages.fr.params.app]
         # optional site title override for the app when added to an iOS home screen or Android launcher
@@ -675,6 +669,8 @@ enableEmoji = true
   # website images for Open Graph and Twitter Cards
   # 网站图片, 用于 Open Graph 和 Twitter Cards
   images = ["/logo.png"]
+  # whether to enable CSS and JS source mapping
+  SourceMap = true
 
   # Header config
   # 页面头部导航栏配置
