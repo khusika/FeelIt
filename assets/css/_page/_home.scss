@@ -128,7 +128,7 @@
 
     .post-meta {
       font-size: .875rem;
-      margin: 0 1rem;
+      margin: 0 1rem .5rem;
       color: $global-font-secondary-color;
 
       span {
@@ -153,7 +153,7 @@
     .content {
       @include box(vertical);
       -webkit-line-clamp: 3;
-      margin: .3rem 1rem 0 1rem;
+      margin: 0 1rem 0 1rem;
       overflow: hidden;
       text-overflow: ellipsis;
       @include overflow-wrap(break-word);
