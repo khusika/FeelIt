@@ -108,7 +108,7 @@ other = "Conteúdos"
 [publishedOnDate]
 other = "publicado em {{ .Date }}"
 
-[includedInCategories]
+[publishedInCategories]
 other = "incluido em {{ .Categories }}"
 
 [wordCount]

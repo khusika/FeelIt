@@ -107,7 +107,7 @@ other = "Nội dung"
 [publishedOnDate]
 other = "đăng ngày {{ .Date }}"
 
-[includedInCategories]
+[publishedInCategories]
 other = "trong {{ .Categories }}"
 
 [wordCount]

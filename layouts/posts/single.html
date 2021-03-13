@@ -57,7 +57,7 @@
                     {{- end -}}
                     {{- with delimit $categories "&nbsp;" -}}
                         &nbsp;<span class="post-category">
-                            {{- dict "Categories" . | T "includedInCategories" | safeHTML -}}
+                            {{- dict "Categories" . | T "publishedInCategories" | safeHTML -}}
                         </span>
                     {{- end -}}
                 </div>

@@ -111,7 +111,7 @@ other = "目录"
 [publishedOnDate]
 other = "发布于 {{ .Date }}"
 
-[includedInCategories]
+[publishedInCategories]
 other = "收录于 {{ .Categories }}"
 
 [wordCount]

@@ -96,7 +96,7 @@ other = "Spis treści"
 [publishedOnDate]
 other = "opublikowano {{ .Date }}"
 
-[includedInCategories]
+[publishedInCategories]
 other = "zawarty w {{ .Categories }}"
 
 [wordCount]
