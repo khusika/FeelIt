@@ -25,7 +25,6 @@
     "build-lunr-segmentit": "browserify src/lib/lunr.segmentit.js -o assets/lib/lunr/lunr.segmentit.js -t babelify --presets @babel/preset-env --presets minify",
     "start": "npm run babel && hugo server --source=exampleSite --themesDir ../.. -D --disableFastRender",
     "start-production": "npm run babel && hugo server --source=exampleSite --themesDir ../.. -D --disableFastRender -e production",
-    "check": "htmlproofer exampleSite/public --check-html --allow-hash-href --empty-alt-ignore --disable-external",
     "copy": "rm -rf resources && cp -rf exampleSite/resources resources",
     "reinstall": "rm -rf node_modules && npm install"
   },
