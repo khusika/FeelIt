@@ -9,7 +9,7 @@
                         {{- dict "Date" . | T "updatedOnDate" -}}
                         {{- if $.Site.Params.gitRepo -}}
                             {{- with $.GitInfo -}}
-                                &nbsp;<a class="git-hash" href="{{ printf `%v/commit/%v` $.Site.Params.gitRepo .Hash }}" target="_blank" title="commit by {{ .AuthorName }}({{ .AuthorEmail }}) {{ .Hash }}: {{ .Subject }}">
+                                &nbsp;<a class="git-hash" href="{{ printf `%v/commit/%v` $.Site.Params.gitRepo .Hash }}" target="_blank" title="committed&nbsp;by&nbsp;{{ .AuthorName }}({{ .AuthorEmail }})&nbsp;{{- .AbbreviatedHash -}}:&nbsp;{{ .Subject }}">
                                     <i class="fas fa-hashtag fa-fw"></i>{{- .AbbreviatedHash -}}
                                 </a>
                             {{- end -}}
