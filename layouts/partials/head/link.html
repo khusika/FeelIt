@@ -44,15 +44,15 @@
 {{- end -}}
 {{- end -}}
 
-{{- /* style.min.css */ -}}
+{{- /* home.min.css */ -}}
 {{- if .Site.Params.SourceMap -}}
-{{- $style := dict "Source" "css/style.scss" "Fingerprint" $fingerprint -}}
-{{- $options := dict "targetPath" "css/style.min.css" "enableSourceMap" true -}}
+{{- $style := dict "Source" "css/home.scss" "Fingerprint" $fingerprint -}}
+{{- $options := dict "targetPath" "css/home.min.css" "enableSourceMap" true -}}
 {{- $style = dict "Context" . "ToCSS" $options | merge $style -}}
 {{- partial "plugin/style.html" $style -}}
 {{- else -}}
-{{- $style := dict "Source" "css/style.scss" "Fingerprint" $fingerprint -}}
-{{- $options := dict "targetPath" "css/style.min.css" "enableSourceMap" false -}}
+{{- $style := dict "Source" "css/home.scss" "Fingerprint" $fingerprint -}}
+{{- $options := dict "targetPath" "css/home.min.css" "enableSourceMap" false -}}
 {{- $style = dict "Context" . "ToCSS" $options | merge $style -}}
 {{- partial "plugin/style.html" $style -}}
 {{- end -}}
