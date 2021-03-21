@@ -1,19 +1,53 @@
 .post-footer {
-  margin-top: 3rem;
+  margin-top: 1rem;
   padding-bottom: 1rem;
 
   .post-info {
-    border-bottom: 1px solid $global-border-color;
-    padding: 1rem 0 0.3rem;
+    border-top: 1px solid $global-border-color;
+    padding: 1rem 0 .5rem;
 
     [theme=dark] & {
-      border-bottom-color: $global-border-color-dark;
+      border-top-color: $global-border-color-dark;
+    }
+
+    .post-info-share {
+      a * {
+        font-size: 1.5rem;
+        vertical-align: text-bottom;
+        margin: 0 5px 5px 0;
+      }
+    }
+
+    .post-info-tag {
+      font-size: .875rem;
+      a {
+        color: $global-font-secondary-color;
+        display: inline-block;
+        height: 26px;
+        line-height: 26px;
+        padding: 0 10px;
+        position: relative;
+        margin: 0 5px 5px 0;
+        text-decoration: none;
+        -webkit-transition: color 0.2s;
+        @include border-radius(.25rem);
+        border: 1px solid;
+        &:hover {
+          background-color: $global-background-color;
+          color: $global-link-hover-color;
+        }
+        [theme=dark] & {
+          color: $global-font-secondary-color-dark;
+          &:hover {
+            background-color: $global-background-color-dark;
+            color: $global-link-hover-color-dark;
+          }
+        }
+      }
     }
 
     .post-info-line {
-      display: flex;
-      justify-content: space-between;
-
+      padding-bottom: .5rem;
       .post-info-mod {
         font-size: 0.8em;
         color: $global-font-secondary-color;
@@ -24,45 +58,6 @@
 
         @include link(false, false);
       }
-
-      .post-info-license {
-        font-size: 0.8em;
-        color: $global-font-secondary-color;
-
-        [theme=dark] & {
-          color: $global-font-secondary-color-dark;
-        }
-
-        @include link(false, false);
-      }
-
-      .post-info-md {
-        font-size: 0.8rem;
-        width: 8rem;
-
-        @include link(false, false);
-      }
-
-      .post-info-share {
-        a * {
-          vertical-align: text-bottom;
-        }
-      }
-    }
-  }
-
-  .post-info-more {
-    padding: 0.3rem 0 1rem;
-    display: flex;
-    justify-content: space-between;
-    font-size: 0.9rem;
-  }
-
-  .post-tags {
-    max-width: 65%;
-
-    * {
-      display: inline;
     }
   }
 

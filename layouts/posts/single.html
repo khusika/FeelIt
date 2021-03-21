@@ -63,10 +63,13 @@
                 </div>
                 <div class="post-meta-line">
                     {{- with .Site.Params.dateformat | default "2006-01-02" | .PublishDate.Format -}}
-                        <i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="{{ . }}">{{ . }}</time>&nbsp;
+                    <span><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="{{ . }}">{{ . }}</time></span>&nbsp;
                     {{- end -}}
-                    <i class="fas fa-pencil-alt fa-fw"></i>&nbsp;{{ T "wordCount" .WordCount }}&nbsp;
-                    <i class="far fa-clock fa-fw"></i>&nbsp;{{ T "readingTime" .ReadingTime }}&nbsp;
+                    {{- with $params.license | string -}}
+                    <span><i class="fas fa-balance-scale fa-fw"></i>&nbsp;{{- . | safeHTML -}}</span>&nbsp;
+                    {{- end -}}
+                    <span><i class="fas fa-pencil-alt fa-fw"></i>&nbsp;{{ T "wordCount" .WordCount }}</span>&nbsp;
+                    <span><i class="far fa-clock fa-fw"></i>&nbsp;{{ T "readingTime" .ReadingTime }}</span>&nbsp;
                     {{- $comment := .Scratch.Get "comment" | default dict -}}
                     {{- if $comment.enable | and $comment.valine.enable | and $comment.valine.visitor -}}
                         <span id="{{ .RelPermalink }}" class="leancloud_visitors" data-flag-title="{{ .Title }}">

@@ -88,7 +88,7 @@
     {{- /* 013: Line */ -}}
     {{- if $share.Line -}}
         <a href="javascript:void(0);" title="{{ T `shareOn` }} Line" data-sharer="line" data-url="{{ .Permalink }}" data-title="{{ .Title }}">
-            {{- dict "Simpleicons" "line" "Prefix" (.Scratch.Get "cdn" | default dict).simpleIconsPrefix | partial "plugin/icon.html" -}}
+            {{- dict "Class" "fab fa-line fa-fw" | partial "plugin/icon.html" -}}
         </a>
     {{- end -}}
 
