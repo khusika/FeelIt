@@ -156,86 +156,6 @@ enableEmoji = true
           # special amount of posts in each home posts page
           paginate = 6
 
-      [languages.en.params.oembed]
-        # Instagram config
-        [languages.en.params.oembed.instagram]
-          # Facebook Aplication Identity
-          appId = ""
-          # Facebook Aplication Client Token
-          clientToken = ""
-          # Privacy config (https://gohugo.io/about/hugo-and-gdpr/)
-          privacy = false
-
-      # Social config in home page
-      [languages.en.params.social]
-        GitHub = "xxxx"
-        Linkedin = ""
-        Twitter = "xxxx"
-        Instagram = "xxxx"
-        Facebook = "xxxx"
-        Telegram = "xxxx"
-        Medium = ""
-        Gitlab = ""
-        Youtubelegacy = "xxxx"
-        Youtubecustom = ""
-        Youtubechannel = ""
-        Tumblr = ""
-        Quora = ""
-        Keybase = ""
-        Pinterest = ""
-        Reddit = ""
-        Codepen = ""
-        FreeCodeCamp = ""
-        Bitbucket = ""
-        Stackoverflow = ""
-        Weibo = ""
-        Odnoklassniki = ""
-        VK = ""
-        Flickr = ""
-        Xing = ""
-        Snapchat = ""
-        Soundcloud = ""
-        Spotify = ""
-        Bandcamp = ""
-        Paypal = ""
-        Fivehundredpx = ""
-        Mix = ""
-        Goodreads = ""
-        Lastfm = ""
-        Foursquare = ""
-        Hackernews = ""
-        Kickstarter = ""
-        Patreon = ""
-        Steam = ""
-        Twitch = ""
-        Strava = ""
-        Skype = ""
-        Whatsapp = ""
-        Zhihu = ""
-        Douban = ""
-        Angellist = ""
-        Slidershare = ""
-        Jsfiddle = ""
-        Deviantart = ""
-        Behance = ""
-        Dribbble = ""
-        Wordpress = ""
-        Vine = ""
-        Googlescholar = ""
-        Researchgate = ""
-        Thingiverse = ""
-        Devto = ""
-        Gitea = ""
-        XMPP = ""
-        Matrix = ""
-        Bilibili = ""
-        Email = "xxxx@xxxx.com"
-        Resume = "" #goo.gl id
-        RSS = true
-        [languages.en.params.social.Mastodon]
-          id = "@xxxx"
-          prefix = "https://mastodon.technology/"
-
   [languages.zh-cn]
     weight = 2
     # 网站语言, 仅在这里 CN 大写
@@ -366,84 +286,6 @@ enableEmoji = true
           # 主页每页显示文章数量
           paginate = 6
 
-      [languages.zh-cn.params.oembed]
-        # Instagram config
-        [languages.zh-cn.params.oembed.instagram]
-          # Facebook Aplication Identity
-          appId = ""
-          # Facebook Aplication Client Token
-          clientToken = ""
-          # Privacy config (https://gohugo.io/about/hugo-and-gdpr/)
-          privacy = false
-
-      # 主页的社交信息设置
-      [languages.zh-cn.params.social]
-        GitHub = "xxxx"
-        Linkedin = ""
-        Twitter = ""
-        Instagram = ""
-        Facebook = ""
-        Telegram = ""
-        Medium = ""
-        Gitlab = ""
-        Youtubelegacy = ""
-        Youtubecustom = ""
-        Youtubechannel = ""
-        Tumblr = ""
-        Quora = ""
-        Keybase = ""
-        Pinterest = ""
-        Reddit = ""
-        Codepen = ""
-        FreeCodeCamp = ""
-        Bitbucket = ""
-        Stackoverflow = ""
-        Weibo = "xxxx"
-        Odnoklassniki = ""
-        VK = ""
-        Flickr = ""
-        Xing = ""
-        Snapchat = ""
-        Soundcloud = ""
-        Spotify = ""
-        Bandcamp = ""
-        Paypal = ""
-        Fivehundredpx = ""
-        Mix = ""
-        Goodreads = ""
-        Lastfm = ""
-        Foursquare = ""
-        Hackernews = ""
-        Kickstarter = ""
-        Patreon = ""
-        Steam = "xxxx"
-        Twitch = ""
-        Strava = ""
-        Skype = ""
-        Whatsapp = ""
-        Zhihu = "xxxx"
-        Douban = "xxxx"
-        Angellist = ""
-        Slidershare = ""
-        Jsfiddle = ""
-        Deviantart = ""
-        Behance = ""
-        Dribbble = ""
-        Wordpress = ""
-        Vine = ""
-        Googlescholar = ""
-        Researchgate = ""
-        Mastodon = ""
-        Thingiverse = ""
-        Devto = "xxxx"
-        Gitea = ""
-        XMPP = ""
-        Matrix = ""
-        Bilibili = "xxxx"
-        Email = "xxxx@xxxx.com"
-        Resume = "" #goo.gl id
-        RSS = true
-
   [languages.fr]
     weight = 3
     # language code
@@ -572,84 +414,6 @@ enableEmoji = true
           # special amount of posts in each home posts page
           paginate = 6
 
-        [languages.fr.params.oembed]
-        # Instagram config
-        [languages.fr.params.oembed.instagram]
-          # Facebook Aplication Identity
-          appId = ""
-          # Facebook Aplication Client Token
-          clientToken = ""
-          # Privacy config (https://gohugo.io/about/hugo-and-gdpr/)
-          privacy = false
-
-      # Social config in home page
-      [languages.fr.params.social]
-        GitHub = "xxxx"
-        Linkedin = "xxxx"
-        Twitter = "xxxx"
-        Instagram = ""
-        Facebook = ""
-        Telegram = ""
-        Medium = ""
-        Gitlab = ""
-        Youtubelegacy = ""
-        Youtubecustom = ""
-        Youtubechannel = ""
-        Tumblr = ""
-        Quora = ""
-        Keybase = ""
-        Pinterest = ""
-        Reddit = ""
-        Codepen = ""
-        FreeCodeCamp = ""
-        Bitbucket = ""
-        Stackoverflow = ""
-        Weibo = ""
-        Odnoklassniki = ""
-        VK = ""
-        Flickr = ""
-        Xing = ""
-        Snapchat = "xxxx"
-        Soundcloud = ""
-        Spotify = ""
-        Bandcamp = ""
-        Paypal = ""
-        Fivehundredpx = ""
-        Mix = ""
-        Goodreads = ""
-        Lastfm = ""
-        Foursquare = ""
-        Hackernews = "xxxx"
-        Kickstarter = ""
-        Patreon = ""
-        Steam = ""
-        Twitch = ""
-        Strava = ""
-        Skype = ""
-        Whatsapp = ""
-        Zhihu = ""
-        Douban = ""
-        Angellist = ""
-        Slidershare = ""
-        Jsfiddle = ""
-        Deviantart = ""
-        Behance = ""
-        Dribbble = "xxxx"
-        Wordpress = ""
-        Vine = ""
-        Googlescholar = ""
-        Researchgate = ""
-        Mastodon = ""
-        Thingiverse = ""
-        Devto = ""
-        Gitea = ""
-        XMPP = ""
-        Matrix = ""
-        Bilibili = ""
-        Email = "xxxx@xxxx.com"
-        Resume = "" #goo.gl id
-        RSS = true
-
 [params]
   # LoveIt theme version
   # LoveIt 主题版本
@@ -754,6 +518,17 @@ enableEmoji = true
     # amount of RSS pages
     # RSS 文章数目
     rss = 10
+
+  # oEmbed config
+  [params.oembed]
+    # Instagram config
+    [params.oembed.instagram]
+      # Facebook Aplication Identity
+      appId = ""
+      # Facebook Aplication Client Token
+      clientToken = ""
+      # Privacy config (https://gohugo.io/about/hugo-and-gdpr/)
+      privacy = false
 
   # Page config
   # 文章页面配置
@@ -982,6 +757,77 @@ enableEmoji = true
       [params.page.seo.publisher]
         name = "xxxx"
         logoUrl = "/images/avatar.png"
+
+  # Social config in home page
+  # 主页的社交信息设置
+  [params.social]
+    GitHub = "xxxx"
+    Linkedin = ""
+    Twitter = "xxxx"
+    Instagram = "xxxx"
+    Facebook = "xxxx"
+    Telegram = "xxxx"
+    Medium = ""
+    Gitlab = ""
+    Youtubelegacy = "xxxx"
+    Youtubecustom = ""
+    Youtubechannel = ""
+    Tumblr = ""
+    Quora = ""
+    Keybase = ""
+    Pinterest = ""
+    Reddit = ""
+    Codepen = ""
+    FreeCodeCamp = ""
+    Bitbucket = ""
+    Stackoverflow = ""
+    Weibo = ""
+    Odnoklassniki = ""
+    VK = ""
+    Flickr = ""
+    Xing = ""
+    Snapchat = ""
+    Soundcloud = ""
+    Spotify = ""
+    Bandcamp = ""
+    Paypal = ""
+    Fivehundredpx = ""
+    Mix = ""
+    Goodreads = ""
+    Lastfm = ""
+    Foursquare = ""
+    Hackernews = ""
+    Kickstarter = ""
+    Patreon = ""
+    Steam = ""
+    Twitch = ""
+    Strava = ""
+    Skype = ""
+    Whatsapp = ""
+    Zhihu = ""
+    Douban = ""
+    Angellist = ""
+    Slidershare = ""
+    Jsfiddle = ""
+    Deviantart = ""
+    Behance = ""
+    Dribbble = ""
+    Wordpress = ""
+    Vine = ""
+    Googlescholar = ""
+    Researchgate = ""
+    Thingiverse = ""
+    Devto = ""
+    Gitea = ""
+    XMPP = ""
+    Matrix = ""
+    Bilibili = ""
+    Email = "xxxx@xxxx.com"
+    Resume = "" #goo.gl id
+    RSS = true
+    [params.social.Mastodon]
+      id = "@xxxx"
+      prefix = "https://mastodon.technology/"
 
   # TypeIt config
   # TypeIt 配置
