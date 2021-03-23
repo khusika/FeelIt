@@ -1,13 +1,8 @@
 {{- $ig := .Site.Params.oembed.Instagram -}}
 {{- $appId := .Site.Params.Oembed.Instagram.AppId -}}
 {{- $clientToken := .Site.Params.Oembed.Instagram.ClientToken -}}
-{{- $simpleStyle := (eq (.Get 1) "simple") -}}
 {{- if not $ig.privacy -}}
-{{- if $simpleStyle -}}
-{{ template "shortcodes/instagram_simple.html" . }}
-{{- else -}}
 {{ $id := .Get 0 }}
 {{ $hideCaption := cond (eq (.Get 1) "hidecaption") "1" "0" }}
 {{ with getJSON "https://graph.facebook.com/v10.0/instagram_oembed/?url=https://instagram.com/p/" $id "/&hidecaption=" $hideCaption "&access_token=" $appId "|" $clientToken }}{{ .html | safeHTML }}{{ end }}
-{{- end -}}
 {{- end -}}
