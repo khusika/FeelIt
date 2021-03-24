@@ -96,7 +96,9 @@
 
             {{- /* Content */ -}}
             <div class="content" id="content">
-                {{- dict "Content" .Content "Ruby" $params.ruby "Fraction" $params.fraction "Fontawesome" $params.fontawesome | partial "function/content.html" | safeHTML -}}
+                {{- $content := .Content -}}
+                {{- $content = dict "Content" .Content "Ruby" $params.ruby "Fraction" $params.fraction "Fontawesome" $params.fontawesome | partial "function/content.html" -}}
+                {{- $content | replaceRE "<p><figure>" "<figure>" | replaceRE "(?s:</figure>\n?</p>)" "</figure>" | replaceRE "https://www.w3.org/" "http://www.w3.org/"| replaceRE "font-weight:550" "font-weight:500" | replaceRE "<section" "<div" | replaceRE "</section" "</div" | safeHTML }}
             </div>
 
             {{- /* Footer */ -}}
