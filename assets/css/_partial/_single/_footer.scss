@@ -4,10 +4,11 @@
 
   .post-info {
     border-top: 1px solid $global-border-color;
+    border-bottom: 1px solid $global-border-color;
     padding: 1rem 0 .5rem;
 
     [theme=dark] & {
-      border-top-color: $global-border-color-dark;
+      border-color: $global-border-color-dark;
     }
 
     .post-info-share {
@@ -62,6 +63,7 @@
   }
 
   .post-nav {
+    padding-top: 1rem;
     &::before,
     &::after {
       display: flex;
