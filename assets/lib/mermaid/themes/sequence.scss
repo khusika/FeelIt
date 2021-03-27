@@ -14,13 +14,13 @@ text.actor {
 
 .messageLine0 {
   stroke-width: 1.5;
-  stroke-dasharray: '2 2';
+  stroke-dasharray: 2,2;
   stroke: $signalColor;
 }
 
 .messageLine1 {
   stroke-width: 1.5;
-  stroke-dasharray: '2 2';
+  stroke-dasharray: 2,2;
   stroke: $signalColor;
 }
 
@@ -63,7 +63,7 @@ text.actor {
 
 .loopLine {
   stroke-width: 2;
-  stroke-dasharray: '2 2';
+  stroke-dasharray: 2,2;
   stroke: $labelBoxBorderColor;
 }
 
