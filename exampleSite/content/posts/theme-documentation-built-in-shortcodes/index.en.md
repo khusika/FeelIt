@@ -37,18 +37,18 @@ Hugo ships with a set of predefined shortcodes that represent very common usage.
 Example `figure` input:
 
 ```markdown
-{{</* figure src="/images/lighthouse.jpg" title="Lighthouse (figure)" */>}}
+{{</* figure src="/images/lighthouse.jpg" alt="/images/lighthouse.jpg" title="Lighthouse (figure)" */>}}
 ```
 
 The rendered output looks like this:
 
-{{< figure src="/images/lighthouse.jpg" title="Lighthouse (figure)" >}}
+{{< figure src="/images/lighthouse.jpg" alt="/images/lighthouse.jpg" title="Lighthouse (figure)" >}}
 
 The HTML looks like this:
 
 ```html
 <figure>
-    <img src="/images/lighthouse.jpg"/>
+    <img src="/images/lighthouse.jpg" alt="/images/lighthouse.jpg" />
     <figcaption>
         <h4>Lighthouse (figure)</h4>
     </figcaption>

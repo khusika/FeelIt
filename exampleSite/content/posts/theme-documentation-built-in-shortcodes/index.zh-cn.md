@@ -38,18 +38,18 @@ Hugo 附带了一组预定义的 shortcodes, 它们实现了一些非常常见�
 一个 `figure` 示例:
 
 ```markdown
-{{</* figure src="/images/lighthouse.jpg" title="Lighthouse (figure)" */>}}
+{{</* figure src="/images/lighthouse.jpg" alt="/images/lighthouse.jpg" title="Lighthouse (figure)" */>}}
 ```
 
 呈现的输出效果如下:
 
-{{< figure src="/images/lighthouse.jpg" title="Lighthouse (figure)" >}}
+{{< figure src="/images/lighthouse.jpg" alt="/images/lighthouse.jpg" title="Lighthouse (figure)" >}}
 
 输出的 HTML 看起来像这样:
 
 ```html
 <figure>
-    <img src="/images/lighthouse.jpg"/>
+    <img src="/images/lighthouse.jpg" alt="/images/lighthouse.jpg" />
     <figcaption>
         <h4>Lighthouse (figure)</h4>
     </figcaption>
