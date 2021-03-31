@@ -47,8 +47,18 @@
     display: block;
   }
 
-  .page-post {
+  .page, .page-post {
     width: 85%;
+
+    .categories-card {
+      .card-item {
+        width: 85%;
+        min-height: 10rem;
+        .card-item-wrapper {
+          padding-bottom: 1rem;
+        }
+      }
+    }
   }
 
   #header-desktop .header-wrapper {
@@ -83,7 +93,6 @@
     .categories-card {
       .card-item {
         width: 100%;
-        min-height: 10rem;
       }
     }
   }
