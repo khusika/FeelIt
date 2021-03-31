@@ -25,6 +25,7 @@
   padding: 1rem;
   margin: 1rem 0 0;
   @include border-radius(.5rem);
+  @include box-shadow(0 2px 4px -1px rgba(0, 0, 0, 0.2));
   background-color: $global-background-card-color;
   [theme=dark] & {
     background-color: $global-background-card-color-dark;

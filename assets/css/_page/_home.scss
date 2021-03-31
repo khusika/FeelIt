@@ -88,6 +88,7 @@
     @include border-radius(.5rem);
     color: $global-font-color;
     @include transition(transform 0.4s ease);
+    @include box-shadow(0 2px 4px -1px rgba(0, 0, 0, 0.2));
 
     &:hover {
       @include transform(scale(1.01));
