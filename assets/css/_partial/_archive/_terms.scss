@@ -12,21 +12,30 @@
     text-align: left;
     width: 45%;
     display: flex;
-    margin-top: 2rem;
-    min-height: 10rem;
+    margin-top: 1rem;
+    min-height: 15rem;
     padding: 0 2%;
     position: relative;
+    background-color: $global-background-card-color;
+    @include border-radius(.5rem);
+    [theme=dark] & {
+      background-color: $global-background-card-color-dark;
+    }
 
     .card-item-wrapper {
       width: 100%;
       overflow: hidden;
+      text-align: center;
 
       .card-item-title {
         font-size: 1.2rem;
         font-weight: bold;
-        display: inline-block;
         margin-top: 1rem;
-        margin-bottom: .75rem;
+        padding-bottom: .75rem;
+        border-bottom: 2px solid $global-border-color;
+        [theme=dark] & {
+          border-color: $global-border-color-dark;
+        }
       }
 
       span {

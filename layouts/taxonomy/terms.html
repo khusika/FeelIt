@@ -24,13 +24,13 @@
                         <div class="card-item-wrapper">
                             <h3 class="card-item-title">
                                 <a href="{{ .RelPermalink }}">
-                                    <i class="far fa-folder fa-fw"></i>&nbsp;{{ .Page.Title }}
+                                    {{ .Page.Title }}
                                 </a>
                             </h3>
                             {{- range first 5 $pages -}}
                                 <div class="categories-item">
                                     <a href="{{ .RelPermalink }}" class="categories-item-link">
-                                        {{- .Title -}}
+                                        <i class="fas fa-angle-right fa-fw"></i>&nbsp;{{- .Title -}}
                                     </a>
                                 </div>
                             {{- end -}}
