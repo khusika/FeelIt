@@ -1,7 +1,7 @@
 {
-  "name": "privateit-src",
+  "name": "feelit-src",
   "version": "0.2.0",
-  "description": "PrivateIt theme source file",
+  "description": "FeelIt theme source file",
   "private": true,
   "dependencies": {
     "source-map-resolve": "^0.6.0"
