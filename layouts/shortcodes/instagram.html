@@ -2,7 +2,8 @@
 {{- $appId := .Site.Params.Oembed.Instagram.AppId -}}
 {{- $clientToken := .Site.Params.Oembed.Instagram.ClientToken -}}
 {{- if not $ig.privacy -}}
-{{ $id := .Get 0 }}
-{{ $hideCaption := cond (eq (.Get 1) "hidecaption") "1" "0" }}
-{{ with getJSON "https://graph.facebook.com/v10.0/instagram_oembed/?url=https://instagram.com/p/" $id "/&hidecaption=" $hideCaption "&access_token=" $appId "|" $clientToken }}{{ .html | safeHTML }}{{ end }}
+{{ $type := .Get 0 }}
+{{ $id := .Get 1 }}
+{{ $hideCaption := cond (eq (.Get 2) "hidecaption") "1" "0" }}
+{{ with getJSON "https://graph.facebook.com/v10.0/instagram_oembed/?url=https://instagram.com/" $type "/" $id "/&hidecaption=" $hideCaption "&access_token=" $appId "|" $clientToken }}{{ .html | safeHTML }}{{ end }}
 {{- end -}}
