@@ -521,16 +521,14 @@ googleAnalytics = ""
     # RSS 文章数目
     rss = 10
 
-  # oEmbed config
+  # oEmbed config for Facebook and Instagram
   [params.oembed]
-    # Instagram config
-    [params.oembed.instagram]
-      # Facebook Aplication Identity
-      appId = "450796413028489"
-      # Facebook Aplication Client Token
-      clientToken = "5d9f4f095e5b441333e9877b02b709f2"
-      # Privacy config (https://gohugo.io/about/hugo-and-gdpr/)
-      privacy = false
+    # Facebook Aplication Identity
+    appId = "450796413028489"
+    # Facebook Aplication Client Token
+    clientToken = "5d9f4f095e5b441333e9877b02b709f2"
+    # Privacy config (https://gohugo.io/about/hugo-and-gdpr/)
+    privacy = false
 
   # Page config
   # 文章页面配置

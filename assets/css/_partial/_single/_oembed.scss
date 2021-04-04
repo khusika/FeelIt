@@ -1,0 +1,20 @@
+iframe.instagram-media {
+  min-width: 100px !important;
+  [theme=dark] & {
+    border: none !important;
+  }
+}
+
+.fb_iframe_widget {
+  & > span, & iframe {
+    @include border-radius(.25rem !important);
+    max-width: calc(100vw - 50px) !important;
+    height: 100%;
+  }
+}
+
+.fb-post {
+  [theme=dark] & {
+    background: $global-background-card-color;
+  }
+}

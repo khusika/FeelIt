@@ -1303,21 +1303,21 @@ console.log('Hello FeelIt!');
    12.1.1 Sample input of Instagram Post
    
    ```markdown
-   {{</* instagram "p" "BWNjjyYFxVx" "hidecaption" */>}}
+   {{</* oembed "ig" "p" "BWNjjyYFxVx" "hidecaption" */>}}
    ```
 
    12.1.2 Sample output of Instagram Post
    
-   {{< instagram "p" "BWNjjyYFxVx" "hidecaption" >}}
+   {{< oembed "ig" "p" "BWNjjyYFxVx" "hidecaption" >}}
 
 ### 12.2 Embed Instagram TV
 
    12.2.1 Sample input of Instagram TV
    
    ```markdown
-   {{</* instagram "tv" "BkQUbR8h1sp" "hidecaption" */>}}
+   {{</* oembed "ig" "tv" "BkQUbR8h1sp" "hidecaption" */>}}
    ```
 
    12.2.2 Sample output of Instagram TV
    
-   {{< instagram "tv" "BkQUbR8h1sp" "hidecaption" >}}
+   {{< oembed "ig" "tv" "BkQUbR8h1sp" "hidecaption" >}}
