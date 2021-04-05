@@ -1,6 +1,6 @@
-{{- $ig := .Site.Params.oembed.Instagram -}}
-{{- $appId := .Site.Params.Oembed.Instagram.AppId -}}
-{{- $clientToken := .Site.Params.Oembed.Instagram.ClientToken -}}
+{{- $ig := .Site.Params.oembed.instagram -}}
+{{- $appId := .Site.Params.oembed.instagram.appId -}}
+{{- $clientToken := .Site.Params.oembed.instagram.clientToken -}}
 {{- if not $ig.privacy -}}
 {{ $type := .Get 0 }}
 {{ $id := .Get 1 }}
