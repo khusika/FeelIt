@@ -67,6 +67,36 @@
 }
 
 @media only screen and (max-width: 680px) {
+  .wrapper {
+    main {
+      .container {
+        padding: 0 .5rem;
+      }
+    }
+  }
+
+  .home[data-home=posts] {
+    .summary {
+      .single-title {
+        margin: 0.4rem .5rem;
+      }
+      .post-meta {
+        margin: 0 .5rem .5rem;
+      }
+      .content {
+        margin: 0 .5rem 0 .5rem;
+      }
+      .post-footer {
+        margin: .4rem .5rem 0 .5rem;
+      }
+    }
+  }
+
+  .single-card {
+    padding: .5rem;
+    margin: .5rem 0 0;
+  }
+
   #header-desktop {
     display: none;
   }
