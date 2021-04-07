@@ -559,6 +559,8 @@ googleAnalytics = ""
     # whether to show link to Raw Markdown content of the content
     # 是否显示原始 Markdown 文档内容的链接
     linkToMarkdown = true
+    # whether to show link to improve the article
+    improveArticle = "https://github.com/khusika/FeelIt/edit/main/exampleSite/content/"
     # whether to show the full text content in RSS
     # 是否在 RSS 中显示全文内容
     rssFullText = false

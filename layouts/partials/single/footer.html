@@ -37,6 +37,14 @@
                         </span>
                     {{- end -}}
                 {{- end -}}
+                {{- if $params.improvearticle -}}
+                    <span>
+                        &nbsp;|&nbsp;
+                        <a class="link-to-markdown" href="{{$params.improvearticle}}/{{.File.Path}}" target="_blank">
+                            {{- T "improveArticle" -}}
+                        </a>
+                    </span>
+                {{- end -}}
             </div>
         </div>
         <div class="post-info-share">

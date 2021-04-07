@@ -128,6 +128,9 @@ other = "Ажурирано {{ .Date }}"
 [readMarkdown]
 other = "Читај Markdown"
 
+[improveArticle]
+other = "Improve Article"
+
 [back]
 other = "Назад"
 

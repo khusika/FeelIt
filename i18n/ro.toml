@@ -131,6 +131,9 @@ other = "Actualizat la {{ .Date }}"
 [readMarkdown]
 other = "Citire Markdown"
 
+[improveArticle]
+other = "Improve Article"
+
 [back]
 other = "Înapoi"
 

@@ -130,6 +130,9 @@ other = "Cập nhật ngày {{ .Date }}"
 [readMarkdown]
 other = "Đọc với định dạng Markdown"
 
+[improveArticle]
+other = "Improve Article"
+
 [back]
 other = "Quay lại"
 

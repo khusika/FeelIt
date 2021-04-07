@@ -131,6 +131,9 @@ other = "Mis à jour le {{ .Date }}"
 [readMarkdown]
 other = "Lire Markdown"
 
+[improveArticle]
+other = "Improve Article"
+
 [back]
 other = "Retour"
 

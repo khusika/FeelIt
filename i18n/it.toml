@@ -131,6 +131,9 @@ other = "Aggiornato il {{ .Date }}"
 [readMarkdown]
 other = "Leggi Markdown"
 
+[improveArticle]
+other = "Improve Article"
+
 [back]
 other = "Indietro"
 
