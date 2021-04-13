@@ -14,7 +14,7 @@
     "babelify": "^10.0.0",
     "browserify": "^16.5.2",
     "core-js": "^3.8.3",
-    "husky": "^4.3.8",
+    "husky": "^6.0.0",
     "minimist": "^1.2.5",
     "segmentit": "^2.0.3"
   },
@@ -26,15 +26,11 @@
     "start": "npm run babel && hugo server --source=exampleSite --themesDir ../.. -D --disableFastRender",
     "start-production": "npm run babel && hugo server --source=exampleSite --themesDir ../.. -D --disableFastRender -e production",
     "copy": "rm -rf resources && cp -rf exampleSite/resources resources",
-    "reinstall": "rm -rf node_modules && npm install"
+    "reinstall": "rm -rf node_modules && npm install",
+    "prepare": "husky install"
   },
   "resolutions": {
     "minimist": "^1.2.5"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run build && npm run copy && git add resources assets/js"
-    }
   },
   "repository": {
     "type": "git",
