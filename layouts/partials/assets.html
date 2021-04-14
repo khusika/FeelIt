@@ -4,9 +4,15 @@
 {{- $config := (.Scratch.Get "this").config -}}
 
 {{- /* Font Awesome */ -}}
+{{- if $params.cdnfontawesome -}}
 {{- $source := $cdn.fontawesomeFreeCSS | default "lib/fontawesome-free/all.min.css" -}}
 {{- $style := dict "Source" $source "Fingerprint" $fingerprint -}}
 {{- partial "plugin/style.html" $style -}}
+{{- else -}}
+{{- $source := "lib/fontawesome-free/all.min.css" -}}
+{{- $style := dict "Source" $source "Fingerprint" $fingerprint -}}
+{{- partial "plugin/style.html" $style -}}
+{{- end -}}
 
 {{- /* Animate.css */ -}}
 {{- $source := $cdn.animateCSS | default "lib/animate/animate.min.css" -}}

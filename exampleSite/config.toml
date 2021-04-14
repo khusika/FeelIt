@@ -556,6 +556,8 @@ googleAnalytics = ""
     # whether to enable the fontawesome extended syntax
     # 是否使用 fontawesome 扩展语法
     fontawesome = true
+    # whether to use the fontawesome as cdn source
+    cdnfontawesome = true
     # whether to show link to Raw Markdown content of the content
     # 是否显示原始 Markdown 文档内容的链接
     linkToMarkdown = true
