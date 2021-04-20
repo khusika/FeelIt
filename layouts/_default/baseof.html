@@ -44,9 +44,11 @@
             </a>
 
             {{- /* comment button */ -}}
+            {{- if .Site.Params.page.comment.enable -}}
             <a href="#" id="view-comments" class="fixed-button" title="{{ T `viewComments` }}">
                 <i class="fas fa-comment fa-fw"></i>
             </a>
+            {{- end -}}
         </div>
 
         {{- /* Load JavaScript scripts and CSS */ -}}
