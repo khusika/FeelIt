@@ -1,7 +1,7 @@
 prefix:
   libFiles: https://cdn.jsdelivr.net/npm/
-  # simple-icons@4.13.0 https://github.com/simple-icons/simple-icons
-  simpleIcons: https://cdn.jsdelivr.net/npm/simple-icons@4.13.0/icons/
+  # simple-icons@4.20.0 https://github.com/simple-icons/simple-icons
+  simpleIcons: https://cdn.jsdelivr.net/npm/simple-icons@4.20.0/icons/
 libFiles:
   # fontawesome-free@5.15.3 https://fontawesome.com/
   fontawesomeFreeCSS: '@fortawesome/fontawesome-free@5.15.3/css/all.min.css'
