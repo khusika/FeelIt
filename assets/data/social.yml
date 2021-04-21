@@ -491,7 +491,7 @@ bilibili:
   Prefix: https://space.bilibili.com/
   Title: bilibili
   Icon:
-    Src: svg/icons/bilibili.svg
+    Simpleicons: bilibili
 
 # 063: Email
 email:
