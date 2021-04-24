@@ -1,26 +1,5 @@
 @import "../_partial/_single/toc";
 
-.page-post {
-  position: relative;
-  max-width: 100%;
-  width: 70%;
-  margin: 0 auto;
-
-  &[data-toc=disable] {
-    margin: 0 auto;
-  }
-
-  [data-header-desktop] & {
-    padding-top: $header-height;
-  }
-
-  [data-header-desktop=normal] & {
-    padding-top: 0;
-  }
-
-  @include blur;
-}
-
 .single-card {
   padding: 1rem;
   margin: 1rem 0 0;

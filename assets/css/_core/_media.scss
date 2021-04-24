@@ -3,6 +3,10 @@
     width: 80%;
   }
 
+  .single {
+    width: 70%;
+  }
+
   .archive {
     width: 60%;
   }
@@ -45,7 +49,7 @@
     width: 52%;
   }
 
-  .page-post {
+  .single {
     width: 64%;
   }
 
@@ -75,7 +79,7 @@
     display: block;
   }
 
-  .page, .page-post {
+  .page, .single {
     width: 85%;
 
     .categories-card {
@@ -146,7 +150,7 @@
     overflow: hidden;
   }
 
-  .page, .page-post {
+  .page, .single {
     width: 100%;
 
     [data-header-mobile] & {

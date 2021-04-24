@@ -410,7 +410,7 @@ class Theme {
                 $tocContentAuto.appendChild($tocCore);
             }
             const $toc = document.getElementById('toc-auto');
-            const $page = document.getElementsByClassName('page-post')[0];
+            const $page = document.getElementsByClassName('page')[0];
             const rect = $page.getBoundingClientRect();
             $toc.style.left = `${rect.left + rect.width + 10}px`;
             $toc.style.maxWidth = `${$page.getBoundingClientRect().left - 10}px`;
