@@ -1,5 +1,9 @@
 @media only screen and (max-width: 2560px) {
   .page {
+    width: 80%;
+  }
+
+  .archive {
     width: 60%;
   }
 
@@ -7,10 +11,18 @@
     padding: 0 1rem;
   }
 
+  .home[data-home=posts] {
+    .summary-card {
+      .summary{
+        min-height: 31rem;
+      }
+    }
+  }
+
 }
 
 @media only screen and (max-width: 1440px) {
-  .page {
+  .archive {
     width: 56%;
   }
 
@@ -18,10 +30,18 @@
     padding: 0 1rem;
   }
 
+  .home[data-home=posts] {
+    .summary-card {
+      .summary{
+        min-height: 24rem;
+      }
+    }
+  }
+
 }
 
 @media only screen and (max-width: 1200px) {
-  .page {
+  .archive {
     width: 52%;
   }
 
@@ -31,6 +51,14 @@
 
   #header-desktop .header-wrapper {
     padding: 0 1rem;
+  }
+
+  .home[data-home=posts] {
+    .summary-card {
+      .summary{
+        min-height: 21rem;
+      }
+    }
   }
 
   .search-dropdown.desktop {
@@ -57,6 +85,15 @@
         .card-item-wrapper {
           padding-bottom: 1rem;
         }
+      }
+    }
+  }
+
+  .home[data-home=posts] {
+    .summary-card {
+      .summary{
+        width: 100%;
+        min-height: 0;
       }
     }
   }

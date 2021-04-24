@@ -81,154 +81,165 @@
     width: 6rem;
   }
 
-  .summary {
-    background-color: $global-background-card-color;
-    margin-bottom: 1rem;
-    padding-bottom: 1rem;
-    @include border-radius(.5rem);
-    color: $global-font-color;
-    @include transition(transform 0.4s ease);
-    @include box-shadow(0 2px 4px -1px rgba(0, 0, 0, 0.2));
+  .summary-card {
+    margin: 0 auto;
+    display: flex;
+    list-style: none;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
 
-    &:hover {
-      @include transform(scale(1.01));
-    }
+    .summary {
+      background-color: $global-background-card-color;
+      margin-bottom: 1rem;
+      padding-bottom: 1rem;
+      @include border-radius(.5rem);
+      color: $global-font-color;
+      width: 49%;
+      @include transition(transform 0.4s ease);
+      @include box-shadow(0 2px 4px -1px rgba(0, 0, 0, 0.2));
 
-    [theme=dark] & {
-      background-color: $global-background-card-color-dark;
-      color: $global-font-color-dark;
-    }
+      &:hover {
+        @include transform(scale(1.01));
+      }
 
-    .featured-image-preview {
-      width: 100%;
-      padding: 30% 0 0;
-      position: relative;
-      margin: 0 auto;
+      [theme=dark] & {
+        background-color: $global-background-card-color-dark;
+        color: $global-font-color-dark;
+      }
 
-      img {
-        position: absolute;
+      .featured-image-preview {
         width: 100%;
-        height: 100%;
-        left: 0;
-        top: 0;
-        @include object-fit(none);
-        @include border-radius(.5rem .5rem 0 0);
-      }
+        padding: 30% 0 0;
+        position: relative;
+        margin: 0 auto;
 
-      img.lazyloaded {
-        @include object-fit(cover);
-      }
-    }
+        img {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          left: 0;
+          top: 0;
+          @include object-fit(none);
+          @include border-radius(.5rem .5rem 0 0);
+        }
 
-    .single-title {
-      font-size: 1.25rem;
-      line-height: 140%;
-      margin: 0.4rem 1rem;
-      padding-top: 1rem;
-    }
-
-    .post-meta {
-      font-size: .875rem;
-      margin: 0 1rem .5rem;
-      color: $global-font-secondary-color;
-
-      span {
-        display: inline-block;
-      }
-
-      [theme=dark] & {
-        color: $global-font-secondary-color-dark;
-      }
-
-      @include link(false, true);
-
-      .author {
-        font-size: 1.05rem;
-      }
-    }
-
-    p {
-      margin: .5rem 0;
-    }
-
-    .content {
-      @include box(vertical);
-      -webkit-line-clamp: 3;
-      margin: 0 1rem 0 1rem;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      @include overflow-wrap(break-word);
-      color: $global-font-secondary-color;
-
-      [theme=dark] & {
-        color: $global-font-secondary-color-dark;
-      }
-
-      h2,
-      h3,
-      h4,
-      h5,
-      h6,
-      p {
-        font-size: 1rem;
-        line-height: 1.5;
-        display: inline;
-
-        &::after {
-          content: "\A";
-          white-space: pre;
+        img.lazyloaded {
+          @include object-fit(cover);
         }
       }
 
-      h2 {
-        font-size: 1.125rem;
+      .single-title {
+        font-size: 1.25rem;
+        line-height: 140%;
+        margin: 0.4rem 1rem;
+        padding-top: 1rem;
       }
 
-      @include link(false, true);
+      .post-meta {
+        font-size: .875rem;
+        margin: 0 1rem .5rem;
+        color: $global-font-secondary-color;
 
-      b, strong {
+        span {
+          display: inline-block;
+        }
+
+        [theme=dark] & {
+          color: $global-font-secondary-color-dark;
+        }
+
+        @include link(false, true);
+
+        .author {
+          font-size: 1.05rem;
+        }
+      }
+
+      p {
+        margin: .5rem 0;
+      }
+
+      .content {
+        @include box(vertical);
+        -webkit-line-clamp: 3;
+        margin: 0 1rem 0 1rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        @include overflow-wrap(break-word);
         color: $global-font-secondary-color;
 
         [theme=dark] & {
           color: $global-font-secondary-color-dark;
         }
-      }
-    }
 
-    .post-footer {
-      margin: .4rem 1rem 0 1rem;
-      font-size: .875rem;
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p {
+          font-size: 1rem;
+          line-height: 1.5;
+          display: inline;
 
-      .post-tags {
-        list-style: none;
-        margin: 0;
-        overflow: hidden;
-        padding: 0;
-        li {
-          float: left;
+          &::after {
+            content: "\A";
+            white-space: pre;
+          }
         }
 
-        a {
+        h2 {
+          font-size: 1.125rem;
+        }
+
+        @include link(false, true);
+
+        b, strong {
           color: $global-font-secondary-color;
-          display: inline-block;
-          height: 26px;
-          line-height: 26px;
-          padding: 0 10px;
-          position: relative;
-          margin: 0 5px 5px 0;
-          text-decoration: none;
-          -webkit-transition: color 0.2s;
-          @include border-radius(.25rem);
-          border: 1px solid;
-          &:hover {
-            background-color: $global-background-color;
-            color: $global-link-hover-color;
-          }
+
           [theme=dark] & {
             color: $global-font-secondary-color-dark;
+          }
+        }
+      }
+
+      .post-footer {
+        margin: .4rem 1rem 0 1rem;
+        font-size: .875rem;
+
+        .post-tags {
+          list-style: none;
+          margin: 0;
+          overflow: hidden;
+          padding: 0;
+          li {
+            float: left;
+          }
+
+          a {
+            color: $global-font-secondary-color;
+            display: inline-block;
+            height: 26px;
+            line-height: 26px;
+            padding: 0 10px;
+            position: relative;
+            margin: 0 5px 5px 0;
+            text-decoration: none;
+            -webkit-transition: color 0.2s;
+            @include border-radius(.25rem);
+            border: 1px solid;
             &:hover {
-              background-color: $global-background-color-dark;
-              color: $global-link-hover-color-dark;
+              background-color: $global-background-color;
+              color: $global-link-hover-color;
+            }
+            [theme=dark] & {
+              color: $global-font-secondary-color-dark;
+              &:hover {
+                background-color: $global-background-color-dark;
+                color: $global-link-hover-color-dark;
+              }
             }
           }
         }
