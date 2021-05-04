@@ -4,6 +4,7 @@ html {
   font-size: $global-font-size;
   line-height: $global-line-height;
   width:100%;
+  scroll-behavior: smooth;
 }
 
 /* scrollbar, only support webkit */

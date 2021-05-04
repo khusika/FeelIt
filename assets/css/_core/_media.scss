@@ -1,3 +1,9 @@
+@media screen and (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
 @media only screen and (max-width: 2560px) {
   .page {
     width: 80%;
