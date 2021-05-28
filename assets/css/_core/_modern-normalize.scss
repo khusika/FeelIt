@@ -1,24 +1,18 @@
 *,
-*::before,
-*::after {
+::before,
+::after {
 	box-sizing: border-box;
-}
-
-:root {
-	-moz-tab-size: 4;
-	tab-size: 4;
 }
 
 html {
 	line-height: 1.15;
 	-webkit-text-size-adjust: 100%;
+	-moz-tab-size: 4;
+	tab-size: 4;
 }
 
 body {
 	margin: 0;
-}
-
-body {
 	font-family:
 		system-ui,
 		-apple-system,
