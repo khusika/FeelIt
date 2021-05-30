@@ -5,7 +5,7 @@ name = "FeelIt"
 license = "MIT"
 licenselink = "https://github.com/khusika/FeelIt/blob/master/LICENSE"
 description = "A Clean, Elegant but Advanced Hugo Theme for Hugo."
-homepage = "https://github.com/khusika/FeelIt"
+homepage = "https://feelit.khusika.com"
 tags = [
   "blog",
   "clean",
@@ -25,7 +25,7 @@ features = [
 min_version = "0.62.0"
 
 [author]
-  name = "khusika"
+  name = "Khusika"
   homepage = "https://khusika.com/"
 
 [original]
