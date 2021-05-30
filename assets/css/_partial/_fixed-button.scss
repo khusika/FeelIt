@@ -8,11 +8,12 @@
   position: fixed;
   right: 1.5rem;
   font-size: 1rem;
-  line-height: 1.3rem;
-  padding: .6rem .6rem;
+  line-height: 1rem;
+  padding: .5rem;
   color: $global-font-secondary-color;
   background: $header-background-color;
-  @include border-radius(2rem);
+  @include border-radius(.25rem);
+  @include box-shadow(0 2px 4px -1px rgba(0, 0, 0, 0.2));
   @include transition(color 0.4s ease);
 
   @include blur;
