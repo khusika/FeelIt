@@ -2,31 +2,31 @@
 
 <div class="post-footer" id="post-footer">
     <div class="post-info">
+        {{- with .Params.tags -}}
         <div class="post-info-tag">
-            {{- with .Params.tags -}}
-                {{- range $index, $value := . -}}
-                    <span>
-                    {{- $tag := partialCached "function/path.html" $value $value | printf "/tags/%v" | $.Site.GetPage -}}
-                    <a href="{{ $tag.RelPermalink }}">{{ $tag.Title }}</a>
-                    </span>
-                {{- end -}}
+            {{- range $index, $value := . -}}
+                <span>
+                {{- $tag := partialCached "function/path.html" $value $value | printf "/tags/%v" | $.Site.GetPage -}}
+                <a href="{{ $tag.RelPermalink }}">{{ $tag.Title }}</a>
+                </span>
             {{- end -}}
         </div>
+        {{- end -}}
         <div class="post-info-line">
+            {{- with .Site.Params.dateformat | default "2006-01-02" | .Lastmod.Format -}}
             <div class="post-info-mod">
                 <span>
-                    {{- with .Site.Params.dateformat | default "2006-01-02" | .Lastmod.Format -}}
-                        {{- dict "Date" . | T "updatedOnDate" -}}
-                        {{- if $.Site.Params.gitRepo -}}
-                            {{- with $.GitInfo -}}
-                                &nbsp;<a class="git-hash" href="{{ printf `%v/commit/%v` $.Site.Params.gitRepo .Hash }}" target="_blank" title="committed&nbsp;by&nbsp;{{ .AuthorName }}({{ .AuthorEmail }})&nbsp;{{- .AbbreviatedHash -}}:&nbsp;{{ .Subject }}">
-                                    <i class="fas fa-hashtag fa-fw"></i>{{- .AbbreviatedHash -}}
-                                </a>
-                            {{- end -}}
-                        {{- end -}}
+                {{- dict "Date" . | T "updatedOnDate" -}}
+                {{- if $.Site.Params.gitRepo -}}
+                    {{- with $.GitInfo -}}
+                        &nbsp;<a class="git-hash" href="{{ printf `%v/commit/%v` $.Site.Params.gitRepo .Hash }}" target="_blank" title="committed&nbsp;by&nbsp;{{ .AuthorName }}({{ .AuthorEmail }})&nbsp;{{- .AbbreviatedHash -}}:&nbsp;{{ .Subject }}">
+                            <i class="fas fa-hashtag fa-fw"></i>{{- .AbbreviatedHash -}}
+                        </a>
                     {{- end -}}
+                {{- end -}}
                 </span>
             </div>
+            {{- end -}}
             <div class="post-info-mod">
                 {{- if $params.linktomarkdown -}}
                     {{- with .OutputFormats.Get "markdown" -}}
@@ -47,13 +47,16 @@
                 {{- end -}}
             </div>
         </div>
+        {{- if .Site.Params.page.share.enable -}}
         <div class="post-info-share">
             <span>
                 {{- partial "plugin/share.html" . -}}
             </span>
         </div>
+        {{- end -}}
     </div>
 
+    {{- if .Section -}}
     <div class="post-nav">
         {{- if .PrevInSection -}}
             <a href="{{ .PrevInSection.RelPermalink }}" class="prev" rel="prev" title="{{ .PrevInSection.Title }}"><i class="fas fa-angle-left fa-fw"></i>Previous Post</a>
@@ -62,4 +65,5 @@
             <a href="{{ .NextInSection.RelPermalink }}" class="next" rel="next" title="{{ .NextInSection.Title }}">Next Post<i class="fas fa-angle-right fa-fw"></i></a>
         {{- end -}}
     </div>
+    {{- end -}}
 </div>
