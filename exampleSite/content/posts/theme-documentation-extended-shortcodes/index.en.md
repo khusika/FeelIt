@@ -9,9 +9,9 @@ authorLink: "https://dillonzq.com"
 description: "FeelIt theme provides multiple shortcodes on top of built-in ones in Hugo."
 resources:
 - name: "featured-image"
-  src: "featured-image.jpg"
+  src: "featured-image.webp"
 - name: "featured-image-preview"
-  src: "featured-image-preview.jpg"
+  src: "featured-image-preview.webp"
 
 tags: ["shortcodes"]
 categories: ["documentation"]

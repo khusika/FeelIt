@@ -9,9 +9,9 @@ authorLink: "https://dillonzq.com"
 description: "Le thème FeelIt fournit plusieurs shortcodes en plus de ceux intégrés dans Hugo."
 resources:
 - name: "featured-image"
-  src: "featured-image.jpg"
+  src: "featured-image.webp"
 - name: "featured-image-preview"
-  src: "featured-image-preview.jpg"
+  src: "featured-image-preview.webp"
 
 tags: ["shortcodes"]
 categories: ["documentation"]

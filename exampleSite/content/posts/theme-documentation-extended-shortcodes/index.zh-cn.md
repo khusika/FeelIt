@@ -9,9 +9,9 @@ authorLink: "https://dillonzq.com"
 description: "FeelIt 主题在 Hugo 内置的 shortcode 的基础上提供多个扩展的 shortcode."
 resources:
 - name: "featured-image"
-  src: "featured-image.jpg"
+  src: "featured-image.webp"
 - name: "featured-image-preview"
-  src: "featured-image-preview.jpg"
+  src: "featured-image-preview.webp"
 
 tags: ["shortcodes"]
 categories: ["documentation"]

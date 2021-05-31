@@ -9,7 +9,7 @@ authorLink: "https://dillonzq.com"
 description: "Find out how to create and organize your content quickly and intuitively in FeelIt theme."
 resources:
 - name: "featured-image"
-  src: "featured-image.jpg"
+  src: "featured-image.webp"
 
 tags: ["content", "Markdown"]
 categories: ["documentation"]
@@ -176,7 +176,7 @@ it is not necessary to set the parameter `featuredImage` or `featuredImagePrevie
 ```yaml
 resources:
 - name: featured-image
-  src: featured-image.jpg
+  src: featured-image.webp
 - name: featured-image-preview
   src: featured-image-preview.jpg
 ```

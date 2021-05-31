@@ -9,7 +9,7 @@ authorLink: "https://dillonzq.com"
 description: "了解如何在 FeelIt 主题中快速, 直观地创建和组织内容."
 resources:
 - name: "featured-image"
-  src: "featured-image.jpg"
+  src: "featured-image.webp"
 
 tags: ["content", "Markdown"]
 categories: ["documentation"]
@@ -175,7 +175,7 @@ seo:
 ```yaml
 resources:
 - name: featured-image
-  src: featured-image.jpg
+  src: featured-image.webp
 - name: featured-image-preview
   src: featured-image-preview.jpg
 ```

@@ -9,7 +9,7 @@ authorLink: "https://dillonzq.com"
 description: "探索 Hugo - FeelIt 主题的全部内容和背后的核心概念."
 resources:
 - name: "featured-image"
-  src: "featured-image.jpg"
+  src: "featured-image.webp"
 
 tags: ["installation", "configuration"]
 categories: ["documentation"]
