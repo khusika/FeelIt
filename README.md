@@ -1,4 +1,5 @@
-# FeelIt Theme
+# FeelIt Theme | Hugo [![Netlify Status](https://api.netlify.com/api/v1/badges/6c8cd9a1-4916-4705-b286-dce0930b9217/deploy-status)](https://app.netlify.com/sites/hugofeelit/deploys)
+
 
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/khusika/FeelIt?style=flat-square)](https://github.com/khusika/FeelIt/releases)
 [![Hugo](https://img.shields.io/badge/Hugo-%5E0.83.0-ff4088?style=flat-square&logo=hugo)](https://gohugo.io/)
