@@ -9,7 +9,7 @@ authorLink: "https://dillonzq.com"
 description: "Hugo fournit plusieurs shortcodes intégrés pour la commodité de l'auteur et pour garder votre contenu de démarque propre."
 resources:
 - name: "featured-image"
-  src: "featured-image.png"
+  src: "featured-image.webp"
 
 tags: ["shortcodes"]
 categories: ["documentation"]

@@ -6,12 +6,12 @@ lastmod: 2020-03-03T16:29:59+08:00
 draft: false
 author: "Dillon"
 authorLink: "https://dillonzq.com"
-description: "LoveIt 主题在 Hugo 内置的 shortcode 的基础上提供多个扩展的 shortcode."
+description: "FeelIt 主题在 Hugo 内置的 shortcode 的基础上提供多个扩展的 shortcode."
 resources:
 - name: "featured-image"
-  src: "featured-image.jpg"
+  src: "featured-image.webp"
 - name: "featured-image-preview"
-  src: "featured-image-preview.jpg"
+  src: "featured-image-preview.webp"
 
 tags: ["shortcodes"]
 categories: ["documentation"]
@@ -22,7 +22,7 @@ mapbox:
   darkStyle: mapbox://styles/mapbox/dark-zh-v1?optimize=true
 ---
 
-**LoveIt** 主题在 Hugo 内置的 shortcode 的基础上提供多个扩展的 shortcode.
+**FeelIt** 主题在 Hugo 内置的 shortcode 的基础上提供多个扩展的 shortcode.
 
 <!--more-->
 
@@ -1286,12 +1286,37 @@ public class HelloWorld {
 
 ```markdown
 {{</* script */>}}
-console.log('Hello LoveIt!');
+console.log('Hello FeelIt!');
 {{</* /script */>}}
 ```
 
 你可以在开发者工具的控制台中看到输出.
 
 {{< script >}}
-console.log('Hello LoveIt!');
+console.log('Hello FeelIt!');
 {{< /script >}}
+
+## 12 Instagram oEmbed
+### 12.1 Embed Instagram Post
+
+   12.1.1 Sample input of Instagram Post
+   
+   ```markdown
+   {{</* instagram "p" "BWNjjyYFxVx" "hidecaption" */>}}
+   ```
+
+   12.1.2 Sample output of Instagram Post
+   
+   {{< instagram "p" "BWNjjyYFxVx" "hidecaption" >}}
+
+### 12.2 Embed Instagram TV
+
+   12.2.1 Sample input of Instagram TV
+   
+   ```markdown
+   {{</* instagram "tv" "BkQUbR8h1sp" "hidecaption" */>}}
+   ```
+
+   12.2.2 Sample output of Instagram TV
+   
+   {{< instagram "tv" "BkQUbR8h1sp" "hidecaption" >}}

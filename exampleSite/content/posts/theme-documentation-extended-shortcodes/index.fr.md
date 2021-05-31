@@ -6,12 +6,12 @@ lastmod: 2020-03-03T16:29:59+08:00
 draft: false
 author: "Dillon"
 authorLink: "https://dillonzq.com"
-description: "Le thème LoveIt fournit plusieurs shortcodes en plus de ceux intégrés dans Hugo."
+description: "Le thème FeelIt fournit plusieurs shortcodes en plus de ceux intégrés dans Hugo."
 resources:
 - name: "featured-image"
-  src: "featured-image.jpg"
+  src: "featured-image.webp"
 - name: "featured-image-preview"
-  src: "featured-image-preview.jpg"
+  src: "featured-image-preview.webp"
 
 tags: ["shortcodes"]
 categories: ["documentation"]
@@ -19,13 +19,13 @@ categories: ["documentation"]
 lightgallery: true
 ---
 
-Le thème **LoveIt** fournit plusieurs shortcodes en plus de ceux intégrés dans Hugo.
+Le thème **FeelIt** fournit plusieurs shortcodes en plus de ceux intégrés dans Hugo.
 
 <!--more-->
 
 {{< admonition warning >}}
 Sorry, this article has not been completely translated into **French**.
-Welcome to take the time to propose a translation by [:(fas fa-code-branch fa-fw): making a PR](https://github.com/dillonzq/LoveIt/pulls) to the theme!
+Welcome to take the time to propose a translation by [:(fas fa-code-branch fa-fw): making a PR](https://github.com/dillonzq/FeelIt/pulls) to the theme!
 {{< /admonition >}}
 
 ## 1 style
@@ -1289,12 +1289,37 @@ Example `script` input:
 
 ```markdown
 {{</* script */>}}
-console.log('Hello LoveIt!');
+console.log('Hello FeelIt!');
 {{</* /script */>}}
 ```
 
 You can see the output in the console of the developer tool.
 
 {{< script >}}
-console.log('Hello LoveIt!');
+console.log('Hello FeelIt!');
 {{< /script >}}
+
+## 12 Instagram oEmbed
+### 12.1 Embed Instagram Post
+
+   12.1.1 Sample input of Instagram Post
+   
+   ```markdown
+   {{</* instagram "p" "BWNjjyYFxVx" "hidecaption" */>}}
+   ```
+
+   12.1.2 Sample output of Instagram Post
+   
+   {{< instagram "p" "BWNjjyYFxVx" "hidecaption" >}}
+
+### 12.2 Embed Instagram TV
+
+   12.2.1 Sample input of Instagram TV
+   
+   ```markdown
+   {{</* instagram "tv" "BkQUbR8h1sp" "hidecaption" */>}}
+   ```
+
+   12.2.2 Sample output of Instagram TV
+   
+   {{< instagram "tv" "BkQUbR8h1sp" "hidecaption" >}}

@@ -6,10 +6,10 @@ lastmod: 2019-10-01T17:55:28+08:00
 draft: false
 author: "Dillon"
 authorLink: "https://dillonzq.com"
-description: "Guide d'utilisation des emoji dans Hugo et LoveIt."
+description: "Guide d'utilisation des emoji dans Hugo et FeelIt."
 resources:
 - name: "featured-image"
-  src: "featured-image.jpg"
+  src: "featured-image.webp"
 
 tags: ["emoji"]
 categories: ["Markdown"]
@@ -23,7 +23,7 @@ Emoji peut être activé dans un projet Hugo de plusieurs façons.
 
 {{< admonition warning >}}
 Sorry, this article has not been completely translated into **French**.
-Welcome to take the time to propose a translation by [:(fas fa-code-branch fa-fw): making a PR](https://github.com/dillonzq/LoveIt/pulls) to the theme!
+Welcome to take the time to propose a translation by [:(fas fa-code-branch fa-fw): making a PR](https://github.com/dillonzq/FeelIt/pulls) to the theme!
 {{< /admonition >}}
 
 The [`emojify`](https://gohugo.io/functions/emojify/) function can be called directly in templates or [Inline Shortcodes](https://gohugo.io/templates/shortcode-templates#inline-shortcodes).

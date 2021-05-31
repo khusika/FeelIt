@@ -6,12 +6,12 @@ lastmod: 2020-03-03T16:29:41+08:00
 draft: false
 author: "Dillon"
 authorLink: "https://dillonzq.com"
-description: "LoveIt theme provides multiple shortcodes on top of built-in ones in Hugo."
+description: "FeelIt theme provides multiple shortcodes on top of built-in ones in Hugo."
 resources:
 - name: "featured-image"
-  src: "featured-image.jpg"
+  src: "featured-image.webp"
 - name: "featured-image-preview"
-  src: "featured-image-preview.jpg"
+  src: "featured-image-preview.webp"
 
 tags: ["shortcodes"]
 categories: ["documentation"]
@@ -19,7 +19,7 @@ categories: ["documentation"]
 lightgallery: true
 ---
 
-**LoveIt** theme provides multiple shortcodes on top of built-in ones in Hugo.
+**FeelIt** theme provides multiple shortcodes on top of built-in ones in Hugo.
 
 <!--more-->
 
@@ -1284,12 +1284,37 @@ Example `script` input:
 
 ```markdown
 {{</* script */>}}
-console.log('Hello LoveIt!');
+console.log('Hello FeelIt!');
 {{</* /script */>}}
 ```
 
 You can see the output in the console of the developer tool.
 
 {{< script >}}
-console.log('Hello LoveIt!');
+console.log('Hello FeelIt!');
 {{< /script >}}
+
+## 12 Instagram oEmbed
+### 12.1 Embed Instagram Post
+
+   12.1.1 Sample input of Instagram Post
+   
+   ```markdown
+   {{</* instagram "p" "BWNjjyYFxVx" "hidecaption" */>}}
+   ```
+
+   12.1.2 Sample output of Instagram Post
+   
+   {{< instagram "p" "BWNjjyYFxVx" "hidecaption" >}}
+
+### 12.2 Embed Instagram TV
+
+   12.2.1 Sample input of Instagram TV
+   
+   ```markdown
+   {{</* instagram "tv" "BkQUbR8h1sp" "hidecaption" */>}}
+   ```
+
+   12.2.2 Sample output of Instagram TV
+   
+   {{< instagram "tv" "BkQUbR8h1sp" "hidecaption" >}}
