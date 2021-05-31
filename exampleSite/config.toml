@@ -526,9 +526,9 @@ googleAnalytics = ""
     # Instagram config
     [params.oembed.instagram]
       # Facebook Aplication Identity
-      appId = ""
+      appId = "450796413028489"
       # Facebook Aplication Client Token
-      clientToken = ""
+      clientToken = "5d9f4f095e5b441333e9877b02b709f2"
       # Privacy config (https://gohugo.io/about/hugo-and-gdpr/)
       privacy = false
 
@@ -674,14 +674,14 @@ googleAnalytics = ""
       # Vssue comment config (https://github.com/meteorlxy/vssue)
       # Vssue 评论系统设置 (https://github.com/meteorlxy/vssue)
       [params.page.comment.vssue]
-        enable = false
+        enable = true
         # Vssue platform API ("bitbucket", "gitea", "gitee", "github", "github-v4", "gitlab")
         # Vssue 平台 API ("bitbucket", "gitea", "gitee", "github", "github-v4", "gitlab")
-        platform = ""
-        owner = ""
-        repo = ""
-        clientId = ""
-        clientSecret = ""
+        platform = "github"
+        owner = "khusika"
+        repo = "FeelIt"
+        clientId = "85f66799bb256a5064be"
+        clientSecret = "2892bb6cf60582910c2e0e192d2587abc881fe47"
       # Gitalk comment config (https://github.com/gitalk/gitalk)
       # Gitalk 评论系统设置 (https://github.com/gitalk/gitalk)
       [params.page.comment.gitalk]
@@ -693,7 +693,7 @@ googleAnalytics = ""
       # Valine comment config (https://github.com/xCss/Valine)
       # Valine 评论系统设置 (https://github.com/xCss/Valine)
       [params.page.comment.valine]
-        enable = true
+        enable = false
         appId = "QGzwQXOqs5JOhN4RGPOkR2mR-MdYXbMMI"
         appKey = "WBmoGyJtbqUswvfLh6L8iEBr"
         placeholder = ""
