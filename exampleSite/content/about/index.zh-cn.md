@@ -1,5 +1,5 @@
 ---
-title: "关于 LoveIt"
+title: "关于 FeelIt"
 date: 2019-08-02T11:04:49+08:00
 draft: false
 
@@ -10,18 +10,18 @@ math:
 ---
 
 {{< style "img { height: 1.25rem; }" >}}
-[![GitHub release (latest by date)](https://img.shields.io/github/v/release/dillonzq/LoveIt?style=flat-square)](https://github.com/dillonzq/LoveIt/releases)
-[![Hugo](https://img.shields.io/badge/Hugo-%5E0.62.0-ff4088?style=flat-square&logo=hugo)](https://gohugo.io/)
-[![License](https://img.shields.io/github/license/dillonzq/LoveIt?style=flat-square)](https://github.com/dillonzq/LoveIt/blob/master/LICENSE)
-[![GitHub stars](https://img.shields.io/github/stars/dillonzq/LoveIt?style=social)](https://github.com/dillonzq/LoveIt)
-[![GitHub forks](https://img.shields.io/github/forks/dillonzq/LoveIt?style=social)](https://github.com/dillonzq/LoveIt/fork)
+[![GitHub release (latest by date)](https://img.shields.io/github/v/release/khusika/FeelIt?style=flat-square)](https://github.com/khusika/FeelIt/releases)
+[![Hugo](https://img.shields.io/badge/Hugo-%5E0.83.0-ff4088?style=flat-square&logo=hugo)](https://gohugo.io/)
+[![License](https://img.shields.io/github/license/khusika/FeelIt?style=flat-square)](https://github.com/khusika/FeelIt/blob/main/LICENSE)
+[![GitHub stars](https://img.shields.io/github/stars/khusika/FeelIt?style=social)](https://github.com/khusika/FeelIt)
+[![GitHub forks](https://img.shields.io/github/forks/khusika/FeelIt?style=social)](https://github.com/khusika/FeelIt/fork)
 {{< /style >}}
 
-> [:(far fa-kiss-wink-heart fa-fw): LoveIt](https://github.com/dillonzq/LoveIt) 是一个由 [Dillon](https://dillonzq.com) 开发的**简洁**、**优雅**且**高效**的 [Hugo](https://gohugo.io/) 博客主题。
+> [:(fas fa-hand-holding-heart fa-fw): FeelIt](https://github.com/khusika/FeelIt) 是一个由 [Khusika](https://khusika.com) 开发的**简洁**、**优雅**且**高效**的 [Hugo](https://gohugo.io/) 博客主题。
 >
-> 它的原型基于 [LeaveIt 主题](https://github.com/liuzc/LeaveIt) 和 [KeepIt 主题](https://github.com/Fastbyte01/KeepIt)。
+> 它的原型基于 [LoveIt 主题](https://github.com/dillonzq/LoveIt), [LeaveIt 主题](https://github.com/liuzc/LeaveIt), 和 [KeepIt 主题](https://github.com/Fastbyte01/KeepIt)。
 
-![Hugo 主题 LoveIt](/images/Apple-Devices-Preview.png "Hugo 主题 LoveIt")
+![Hugo 主题 FeelIt](/images/Apple-Devices-Preview.png "Hugo 主题 FeelIt")
 
 ### 特性
 
@@ -84,11 +84,11 @@ math:
 
 ### 许可协议
 
-LoveIt 根据 **MIT** 许可协议授权。
+FeelIt 根据 **MIT** 许可协议授权。
 
-更多信息请查看 [LICENSE 文件](https://github.com/dillonzq/LoveIt/blob/master/LICENSE)。
+更多信息请查看 [LICENSE 文件](https://github.com/khusika/FeelIt/blob/main/LICENSE)。
 
-LoveIt 主题中用到了以下项目，感谢它们的作者：
+FeelIt 主题中用到了以下项目，感谢它们的作者：
 
 * [modern-normalize](https://github.com/sindresorhus/modern-normalize)
 * [Font Awesome](https://fontawesome.com/)
