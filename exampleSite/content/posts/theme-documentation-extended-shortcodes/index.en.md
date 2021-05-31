@@ -1293,3 +1293,28 @@ You can see the output in the console of the developer tool.
 {{< script >}}
 console.log('Hello FeelIt!');
 {{< /script >}}
+
+## 12 Instagram oEmbed
+### 12.1 Embed Instagram Post
+
+   12.1.1 Sample input of Instagram Post
+   
+   ```markdown
+   {{</* instagram "p" "BWNjjyYFxVx" "hidecaption" */>}}
+   ```
+
+   12.1.2 Sample output of Instagram Post
+   
+   {{< instagram "p" "BWNjjyYFxVx" "hidecaption" >}}
+
+### 12.2 Embed Instagram TV
+
+   12.2.1 Sample input of Instagram TV
+   
+   ```markdown
+   {{</* instagram "tv" "BkQUbR8h1sp" "hidecaption" */>}}
+   ```
+
+   12.2.2 Sample output of Instagram TV
+   
+   {{< instagram "tv" "BkQUbR8h1sp" "hidecaption" >}}
