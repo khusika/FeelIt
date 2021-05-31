@@ -4,7 +4,7 @@ baseURL = "https://example.com"
 defaultContentLanguage = "en"
 # theme
 # 主题
-theme = "FeelIt"
+theme = "./"
 # themes directory
 # 主题目录
 themesDir = "../.."
