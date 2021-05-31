@@ -163,7 +163,7 @@
 
       .content {
         @include box(vertical);
-        -webkit-line-clamp: 3;
+        -webkit-line-clamp: 2;
         margin: 0 1rem 0 1rem;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -221,7 +221,6 @@
           a {
             color: $global-font-secondary-color;
             display: inline-block;
-            height: 26px;
             line-height: 26px;
             padding: 0 10px;
             position: relative;
