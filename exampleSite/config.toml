@@ -436,7 +436,7 @@ googleAnalytics = ""
   # 网站图片, 用于 Open Graph 和 Twitter Cards
   images = ["/logo.png"]
   # whether to enable CSS and JS source mapping
-  SourceMap = true
+  SourceMap = false
 
   # Header config
   # 页面头部导航栏配置
