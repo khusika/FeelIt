@@ -214,6 +214,8 @@ hugo
   dateFormat = "2006-01-02"
   # 网站图片, 用于 Open Graph 和 Twitter Cards
   images = ["/logo.png"]
+  # {{< version 1.0.0 >}} 是否启用 CSS 和 JS 源映射
+  SourceMap = true
 
   # {{< version 0.2.0 >}} 应用图标配置
   [params.app]
@@ -270,6 +272,8 @@ hugo
       post = ""
       # {{< version 0.2.5 >}} 是否为标题显示打字机动画
       typeit = false
+      # {{< version 1.0.0 >}} 是否显示RSS图标
+      rss = true
 
   # 页面底部信息配置
   [params.footer]
@@ -337,6 +341,15 @@ hugo
       # 当你没有在文章前置参数中设置 "hiddenFromHomePage" 时的默认行为
       defaultHiddenFromHomePage = false
 
+  # {{< version 1.0.0 >}} Instagram config
+  [params.oembed.instagram]
+    # Facebook Aplication Identity
+    appId = ""
+    # Facebook Aplication Client Token
+    clientToken = ""
+    # Privacy config (https://gohugo.io/about/hugo-and-gdpr/)
+    privacy = false
+
   # 作者的社交信息设置
   [params.social]
     GitHub = "xxxx"
@@ -402,6 +415,7 @@ hugo
     Matrix = ""
     Bilibili = ""
     Email = "xxxx@xxxx.com"
+    Resume = "" #goo.gl id {{< version 1.0.0 >}}
     RSS = true # {{< version 0.2.0 >}}
 
   # {{< version 0.2.0 changed >}} 文章页面配置
@@ -420,8 +434,12 @@ hugo
     fraction = true
     # {{< version 0.2.0 >}} 是否使用 fontawesome 扩展语法
     fontawesome = true
+    # {{< version 1.0.0 >}} 是否使用 fontawesome 作为CDN源
+    cdnfontawesome = true
     # 是否在文章页面显示原始 Markdown 文档链接
     linkToMarkdown = true
+    # {{< version 1.0.0 >}} 是否显示链接以改善文章
+    improveArticle = ""
     # {{< version 0.2.4 >}} 是否在 RSS 中显示全文内容
     rssFullText = false
     # {{< version 0.2.0 >}} 目录配置
@@ -497,7 +515,7 @@ hugo
       Skype = false
       Trello = false
       Mix = false
-    # {{< version 0.2.0 changed >}} 评论系统设置
+    # {{< version 1.0.0 changed >}} 评论系统设置
     [params.page.comment]
       enable = true
       # {{< link "https://disqus.com/" Disqus >}} 评论系统设置
@@ -506,6 +524,16 @@ hugo
         enable = false
         # Disqus 的 shortname，用来在文章中启用 Disqus 评论系统
         shortname = ""
+      # Vssue 评论系统设置 (https://github.com/meteorlxy/vssue)
+      [params.page.comment.vssue]
+        # {{< version 1.0.0 >}}
+        enable = false
+        # Vssue 平台 API ("bitbucket", "gitea", "gitee", "github", "github-v4", "gitlab")
+        platform = ""
+        owner = ""
+        repo = ""
+        clientId = ""
+        clientSecret = ""
       # {{< link "https://github.com/gitalk/gitalk" Gitalk >}} 评论系统设置
       [params.page.comment.gitalk]
         # {{< version 0.1.1 >}}
@@ -614,7 +642,7 @@ hugo
   # {{< version 0.2.0 >}} 网站分析配置
   [params.analytics]
     enable = false
-    # Google Analytics
+    # {{< version 1.0.0 deleted >}} Google Analytics 相关隐私 (被 privacy.googleAnalytics 替代)
     [params.analytics.google]
       id = ""
       # 是否匿名化用户 IP
@@ -698,8 +726,14 @@ hugo
 
 # {{< link "https://gohugo.io/about/hugo-and-gdpr/" "隐私信息配置" >}}
 [privacy]
-  # {{< version 0.2.0 deleted >}} Google Analytics 相关隐私 (被 params.analytics.google 替代)
+  # {{< version 0.2.0 changed >}} Google Analytics 相关隐私
   [privacy.googleAnalytics]
+    anonymizeIP = false
+    disable = false
+    respectDoNotTrack = false
+    useSessionStorage = false
+  # {{< version 1.0.0 deleted >}} Intagram 的隐私（由 params.oembed.instagram 代替）
+  [privacy.instagram]
     # ...
   [privacy.twitter]
     enableDNT = true

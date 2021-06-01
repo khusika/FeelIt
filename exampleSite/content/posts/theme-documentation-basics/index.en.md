@@ -211,6 +211,8 @@ Please open the code block below to view the complete sample configuration :(far
   dateFormat = "2006-01-02"
   # website images for Open Graph and Twitter Cards
   images = ["/logo.png"]
+  # {{< version 1.0.0 >}} whether to enable CSS and JS source mapping
+  SourceMap = true
 
   # {{< version 0.2.0 >}} App icon config
   [params.app]
@@ -267,6 +269,8 @@ Please open the code block below to view the complete sample configuration :(far
       post = ""
       # {{< version 0.2.5 >}} whether to use typeit animation for title name
       typeit = false
+      # {{< version 1.0.0 >}} whether to show RSS icon
+      rss = true
 
   # Footer config
   [params.footer]
@@ -334,6 +338,15 @@ Please open the code block below to view the complete sample configuration :(far
       # default behavior when you don't set "hiddenFromHomePage" in front matter
       defaultHiddenFromHomePage = false
 
+  # {{< version 1.0.0 >}} Instagram config
+  [params.oembed.instagram]
+    # Facebook Aplication Identity
+    appId = ""
+    # Facebook Aplication Client Token
+    clientToken = ""
+    # Privacy config (https://gohugo.io/about/hugo-and-gdpr/)
+    privacy = false
+
   # Social config about the author
   [params.social]
     GitHub = "xxxx"
@@ -399,6 +412,7 @@ Please open the code block below to view the complete sample configuration :(far
     Matrix = ""
     Bilibili = ""
     Email = "xxxx@xxxx.com"
+    Resume = "" #goo.gl id {{< version 1.0.0 >}}
     RSS = true # {{< version 0.2.0 >}}
 
   # {{< version 0.2.0 changed >}} Page config
@@ -417,8 +431,12 @@ Please open the code block below to view the complete sample configuration :(far
     fraction = true
     # {{< version 0.2.0 >}} whether to enable the fontawesome extended syntax
     fontawesome = true
+    # {{< version 1.0.0 >}} whether to use the fontawesome as cdn source
+    cdnfontawesome = true
     # whether to show link to Raw Markdown content of the content
     linkToMarkdown = true
+    # {{< version 1.0.0 >}} whether to show link to improve the article
+    improveArticle = ""
     # {{< version 0.2.4 >}} whether to show the full text content in RSS
     rssFullText = false
     # {{< version 0.2.0 >}} Table of the contents config
@@ -494,7 +512,7 @@ Please open the code block below to view the complete sample configuration :(far
       Skype = false
       Trello = false
       Mix = false
-    # {{< version 0.2.0 changed >}} Comment config
+    # {{< version 1.0.0 changed >}} Comment config
     [params.page.comment]
       enable = true
       # {{< link "https://disqus.com/" Disqus >}} comment config
@@ -503,6 +521,16 @@ Please open the code block below to view the complete sample configuration :(far
         enable = false
         # Disqus shortname to use Disqus in posts
         shortname = ""
+      # Vssue comment config (https://github.com/meteorlxy/vssue)
+      [params.page.comment.vssue]
+        # {{< version 1.0.0 >}}
+        enable = false
+        # Vssue platform API ("bitbucket", "gitea", "gitee", "github", "github-v4", "gitlab")
+        platform = ""
+        owner = ""
+        repo = ""
+        clientId = ""
+        clientSecret = ""
       # {{< link "https://github.com/gitalk/gitalk" Gitalk >}} comment config
       [params.page.comment.gitalk]
         # {{< version 0.1.1 >}}
@@ -611,11 +639,9 @@ Please open the code block below to view the complete sample configuration :(far
   # {{< version 0.2.0 >}} Analytics config
   [params.analytics]
     enable = false
-    # Google Analytics
+    # {{< version 1.0.0 deleted >}} privacy of the Google Analytics (replaced by privacy.googleAnalytics)
     [params.analytics.google]
-      id = ""
-      # whether to anonymize IP
-      anonymizeIP = true
+      # ...
     # Fathom Analytics
     [params.analytics.fathom]
       id = ""
@@ -695,8 +721,14 @@ Please open the code block below to view the complete sample configuration :(far
 
 # {{< link "https://gohugo.io/about/hugo-and-gdpr/" "Privacy config" >}}
 [privacy]
-  # {{< version 0.2.0 deleted >}} privacy of the Google Analytics (replaced by params.analytics.google)
+  # {{< version 0.2.0 changed >}} privacy of the Google Analytics
   [privacy.googleAnalytics]
+    anonymizeIP = false
+    disable = false
+    respectDoNotTrack = false
+    useSessionStorage = false
+  # {{< version 1.0.0 deleted >}} privacy of the Intagram (replaced by params.oembed.instagram)
+  [privacy.instagram]
     # ...
   [privacy.twitter]
     enableDNT = true
