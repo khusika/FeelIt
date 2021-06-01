@@ -54,6 +54,7 @@ math:
 * :(far fa-comment fa-fw): **Disqus** comment system supported by [Disqus](https://disqus.com)
 * :(far fa-comment-dots fa-fw): **Gitalk** comment system supported by [Gitalk](https://github.com/gitalk/gitalk)
 * :(far fa-comment-alt fa-fw): **Valine** comment system supported by [Valine](https://valine.js.org/)
+* :(fas fa-comments fa-fw): **Vssue** comment system supported by [Vssue](https://vssue.js.org/)
 * :(far fa-comments fa-fw): **Facebook comments** system supported by [Facebook](https://developers.facebook.com/docs/plugins/comments/)
 * :(fas fa-comment fa-fw): **Telegram comments** system supported by [Comments](https://comments.app/)
 * :(fas fa-comment-dots fa-fw): **Commento** comment system supported by [Commento](https://commento.io/)
@@ -112,4 +113,5 @@ Thanks to the authors of following resources included in the theme:
 * [MetingJS](https://github.com/metowolf/MetingJS)
 * [Gitalk](https://github.com/gitalk/gitalk)
 * [Valine](https://valine.js.org/)
+* [Vssue](https://vssue.js.org/)
 * [cookieconsent](https://github.com/osano/cookieconsent)
