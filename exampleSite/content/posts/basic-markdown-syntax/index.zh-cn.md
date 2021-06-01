@@ -4,8 +4,8 @@ title: "Markdown 基本语法"
 date: 2019-12-01T21:57:40+08:00
 lastmod: 2020-01-01T16:45:40+08:00
 draft: false
-author: "Dillon"
-authorLink: "https://dillonzq.com"
+author: "FeelIt"
+authorLink: "https://feelit.khusika.com"
 description: "这篇文章展示了基本的 Markdown 语法和格式."
 resources:
 - name: "featured-image"

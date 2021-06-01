@@ -4,8 +4,8 @@ title: "Thème Documentation - Extended Shortcodes"
 date: 2020-03-03T16:29:59+08:00
 lastmod: 2020-03-03T16:29:59+08:00
 draft: false
-author: "Dillon"
-authorLink: "https://dillonzq.com"
+author: "FeelIt"
+authorLink: "https://feelit.khusika.com"
 description: "Le thème FeelIt fournit plusieurs shortcodes en plus de ceux intégrés dans Hugo."
 resources:
 - name: "featured-image"

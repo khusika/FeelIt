@@ -4,8 +4,8 @@ title: "Thème Documentation - Built-in Shortcodes"
 date: 2020-03-04T16:29:59+08:00
 lastmod: 2020-03-04T16:29:59+08:00
 draft: false
-author: "Dillon"
-authorLink: "https://dillonzq.com"
+author: "FeelIt"
+authorLink: "https://feelit.khusika.com"
 description: "Hugo fournit plusieurs shortcodes intégrés pour la commodité de l'auteur et pour garder votre contenu de démarque propre."
 resources:
 - name: "featured-image"

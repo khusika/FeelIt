@@ -4,8 +4,8 @@ title: "Thème Documentation - Contenu"
 date: 2020-03-05T16:30:05+08:00
 lastmod: 2020-03-05T16:30:05+08:00
 draft: false
-author: "Dillon"
-authorLink: "https://dillonzq.com"
+author: "FeelIt"
+authorLink: "https://feelit.khusika.com"
 description: "Découvrez comment créer et organiser votre contenu rapidement et intuitivement dans le thème FeelIt."
 resources:
 - name: "featured-image"
