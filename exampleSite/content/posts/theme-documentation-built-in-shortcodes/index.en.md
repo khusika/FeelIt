@@ -107,7 +107,13 @@ The rendered output looks like this:
 </section>
 {{< /highlight >}}
 
-## 4 param
+## 4 instagram
+
+{{< version 1.0.0 changed >}}
+
+At the moment, Hugo using deprecated [oEmbed-legacy](https://developers.facebook.com/docs/instagram/oembed-legacy) linked API endpoint. Those deprecated API causes an error when Hugo retrieving the data. The newest API has been included in the [extended shortcode](https://feelit.khusika.com/theme-documentation-extended-shortcodes/#12-instagram-oembed).
+
+## 5 param
 
 [Documentation of `param`](https://gohugo.io/content-management/shortcodes#param)
 
@@ -121,11 +127,11 @@ The rendered output looks like this:
 
 {{< param description >}}
 
-## 5 ref and relref {#ref-and-relref}
+## 6 ref and relref {#ref-and-relref}
 
 [Documentation of `ref` and `relref`](https://gohugo.io/content-management/shortcodes#ref-and-relref)
 
-## 6 tweet
+## 7 tweet
 
 [Documentation of `tweet`](https://gohugo.io/content-management/shortcodes#tweet)
 
@@ -139,7 +145,7 @@ The rendered output looks like this:
 
 {{< tweet 877500564405444608 >}}
 
-## 7 vimeo
+## 8 vimeo
 
 [Documentation of `vimeo`](https://gohugo.io/content-management/shortcodes#vimeo)
 
@@ -153,7 +159,7 @@ The rendered output looks like this:
 
 {{< vimeo 146022717 >}}
 
-## 8 youtube
+## 9 youtube
 
 [Documentation of `youtube`](https://gohugo.io/content-management/shortcodes#youtube)
 

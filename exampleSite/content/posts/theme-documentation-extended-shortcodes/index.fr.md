@@ -1300,6 +1300,9 @@ console.log('Hello FeelIt!');
 {{< /script >}}
 
 ## 12 Instagram oEmbed
+
+{{< version 1.0.0 changed >}}
+
 ### 12.1 Embed Instagram Post
 
    12.1.1 Sample input of Instagram Post
