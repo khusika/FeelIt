@@ -341,8 +341,8 @@ hugo
       # 当你没有在文章前置参数中设置 "hiddenFromHomePage" 时的默认行为
       defaultHiddenFromHomePage = false
 
-  # {{< version 1.0.0 >}} Instagram config
-  [params.oembed.instagram]
+  # {{< version 1.0.1 changed >}} oEmbed config for Facebook and Instagram
+  [params.oembed]
     # Facebook Aplication Identity
     appId = ""
     # Facebook Aplication Client Token

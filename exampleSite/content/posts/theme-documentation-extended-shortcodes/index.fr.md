@@ -1299,30 +1299,103 @@ You can see the output in the console of the developer tool.
 console.log('Hello FeelIt!');
 {{< /script >}}
 
-## 12 Instagram oEmbed
+## 12 oEmbed
 
-{{< version 1.0.0 changed >}}
+{{< version 1.0.1 changed >}}
 
-### 12.1 Embed Instagram Post
+oEmbed endpoints allow you to get embed HTML and basic metadata for pages, posts, and videos in order to display them in another website or app. The oEmbed endpoints require either an App Access Token or Client Access Token.
 
-   12.1.1 Sample input of Instagram Post
-   
-   ```markdown
-   {{</* oembed "ig" "p" "BWNjjyYFxVx" "hidecaption" */>}}
-   ```
+### 12.1 oEmbed Facebook
+{{< version 1.0.1 >}}
 
-   12.1.2 Sample output of Instagram Post
-   
-   {{< oembed "ig" "p" "BWNjjyYFxVx" "hidecaption" >}}
+**a. oEmbed Facebook Pages**
 
-### 12.2 Embed Instagram TV
+Sample input of Facebook Pages
+```markdown
+{{</* oembed "fb" "page" "https://www.facebook.com/FacebookforDevelopers" */>}}
+```
 
-   12.2.1 Sample input of Instagram TV
-   
-   ```markdown
-   {{</* oembed "ig" "tv" "BkQUbR8h1sp" "hidecaption" */>}}
-   ```
+Sample output of Facebook Pages
 
-   12.2.2 Sample output of Instagram TV
-   
-   {{< oembed "ig" "tv" "BkQUbR8h1sp" "hidecaption" >}}
+{{< oembed "fb" "page" "https://www.facebook.com/FacebookforDevelopers" >}}
+
+URL Formats
+
+```html
+https://www.facebook.com/{page-name}
+https://www.facebook.com/{page-id}
+```
+
+**b. oEmbed Facebook Posts**
+
+Sample input of Facebook Posts
+
+```markdown
+{{</* oembed "fb" "post" "https://www.facebook.com/FacebookforDevelopers/photos/a.441861428552/10151617410093553" */>}}
+```
+
+Sample output of Facebook Posts
+
+{{< oembed "fb" "post" "https://www.facebook.com/FacebookforDevelopers/photos/a.441861428552/10151617410093553" >}}
+
+URL Formats
+
+```html
+https://www.facebook.com/{page-name}/posts/{post-id}
+https://www.facebook.com/{username}/posts/{post-id}
+https://www.facebook.com/{username}/activity/{activity-id}
+https://www.facebook.com/photo.php?fbid={photo-id}
+https://www.facebook.com/photos/{photo-id}
+https://www.facebook.com/permalink.php?story_fbid={post-id}&id={page-or-user-id}
+https://www.facebook.com/media/set?set={set-id}
+https://www.facebook.com/questions/{question-id}
+https://www.facebook.com/notes/{username}/{note-url}/{note-id}
+```
+
+**c. oEmbed Facebook Videos**
+
+Sample input of Facebook Videos
+
+```markdown
+{{</* oembed "fb" "video" "https://www.facebook.com/FacebookforDevelopers/videos/2201055573317594" */>}}
+```
+
+Sample output of Facebook Videos
+
+{{< oembed "fb" "video" "https://www.facebook.com/FacebookforDevelopers/videos/2201055573317594" >}}
+
+URL Formats
+
+```html
+https://www.facebook.com/{page-name}/videos/{video-id}/
+https://www.facebook.com/{username}/videos/{video-id}/
+https://www.facebook.com/video.php?id={video-id}
+https://www.facebook.com/video.php?v={video-id}
+```
+
+### 12.2 oEmbed Instagram
+{{< version 1.0.0 >}}
+
+**a. oEmbed Instagram Post**
+
+Sample input of Instagram Post
+
+```markdown
+{{</* oembed "ig" "p" "BWNjjyYFxVx" "hidecaption" */>}}
+```
+
+Sample output of Instagram Post
+
+{{< oembed "ig" "p" "BWNjjyYFxVx" "hidecaption" >}}
+
+**b. oEmbed Instagram TV**
+
+Sample input of Instagram TV
+
+```markdown
+{{</* oembed "ig" "tv" "BkQUbR8h1sp" "hidecaption" */>}}
+```
+
+Sample output of Instagram TV
+
+{{< oembed "ig" "tv" "BkQUbR8h1sp" "hidecaption" >}}
