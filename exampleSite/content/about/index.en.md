@@ -21,7 +21,7 @@ math:
 >
 > It is based on the original [LoveIt Theme](https://github.com/dillonzq/LoveIt), [LeaveIt Theme](https://github.com/liuzc/LeaveIt), and [KeepIt Theme](https://github.com/Fastbyte01/KeepIt).
 
-![Hugo Theme FeelIt](/images/Apple-Devices-Preview.png "Hugo Theme FeelIt")
+![Hugo Theme FeelIt](/images/Apple-Devices-Preview.webp "Hugo Theme FeelIt")
 
 ### Features
 
