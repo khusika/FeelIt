@@ -343,8 +343,8 @@ Please open the code block below to view the complete sample configuration :(far
       # default behavior when you don't set "hiddenFromHomePage" in front matter
       defaultHiddenFromHomePage = false
 
-  # {{< version 1.0.0 >}} Instagram config
-  [params.oembed.instagram]
+  # {{< version 1.0.1 changed >}} oEmbed config for Facebook and Instagram
+  [params.oembed]
     # Facebook Aplication Identity
     appId = ""
     # Facebook Aplication Client Token
