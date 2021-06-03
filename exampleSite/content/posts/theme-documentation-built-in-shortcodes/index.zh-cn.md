@@ -10,6 +10,8 @@ description: "Hugo 提供了多个内置的 Shortcodes, 以方便作者保持 Ma
 resources:
 - name: "featured-image"
   src: "featured-image.webp"
+- name: "featured-image-preview"
+  src: "featured-image-preview.webp"
 
 tags: ["shortcodes"]
 categories: ["documentation"]

@@ -10,6 +10,8 @@ description: "This article shows the basic Markdown syntax and format."
 resources:
 - name: "featured-image"
   src: "featured-image.webp"
+- name: "featured-image-preview"
+  src: "featured-image-preview.webp"
 
 tags: ["Markdown", "HTML"]
 categories: ["Markdown"]

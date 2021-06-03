@@ -10,6 +10,8 @@ description: "这篇文章展示了基本的 Markdown 语法和格式."
 resources:
 - name: "featured-image"
   src: "featured-image.webp"
+- name: "featured-image-preview"
+  src: "featured-image-preview.webp"
 
 tags: ["Markdown", "HTML"]
 categories: ["Markdown"]
