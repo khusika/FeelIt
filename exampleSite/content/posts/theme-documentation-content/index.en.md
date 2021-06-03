@@ -10,6 +10,8 @@ description: "Find out how to create and organize your content quickly and intui
 resources:
 - name: "featured-image"
   src: "featured-image.webp"
+- name: "featured-image-preview"
+  src: "featured-image-preview.webp"
 
 tags: ["content", "Markdown"]
 categories: ["documentation"]

@@ -10,6 +10,8 @@ description: "Discover what the Hugo - FeelIt theme is all about and the core-co
 resources:
 - name: "featured-image"
   src: "featured-image.webp"
+- name: "featured-image-preview"
+  src: "featured-image-preview.webp"
 
 tags: ["installation", "configuration"]
 categories: ["documentation"]

@@ -10,6 +10,8 @@ description: "了解如何在 FeelIt 主题中快速, 直观地创建和组织�
 resources:
 - name: "featured-image"
   src: "featured-image.webp"
+- name: "featured-image-preview"
+  src: "featured-image-preview.webp"
 
 tags: ["content", "Markdown"]
 categories: ["documentation"]

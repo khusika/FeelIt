@@ -10,6 +10,8 @@ description: "Découvrez comment créer et organiser votre contenu rapidement et
 resources:
 - name: "featured-image"
   src: "featured-image.webp"
+- name: "featured-image-preview"
+  src: "featured-image-preview.webp"
 
 tags: ["content", "Markdown"]
 categories: ["documentation"]

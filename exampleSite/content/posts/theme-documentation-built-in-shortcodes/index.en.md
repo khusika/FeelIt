@@ -10,6 +10,8 @@ description: "Hugo provides multiple built-in shortcodes for author convenience 
 resources:
 - name: "featured-image"
   src: "featured-image.webp"
+- name: "featured-image-preview"
+  src: "featured-image-preview.webp"
 
 tags: ["shortcodes"]
 categories: ["documentation"]

@@ -10,6 +10,8 @@ description: "Découvrez en quoi consiste le thème Hugo - FeelIt et les concept
 resources:
 - name: "featured-image"
   src: "featured-image.webp"
+- name: "featured-image-preview"
+  src: "featured-image-preview.webp"
 
 tags: ["installation", "configuration"]
 categories: ["documentation"]

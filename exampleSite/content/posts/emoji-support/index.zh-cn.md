@@ -10,6 +10,8 @@ description: "Hugo 和 FeelIt 中的 Emoji 的用法指南."
 resources:
 - name: "featured-image"
   src: "featured-image.webp"
+- name: "featured-image-preview"
+  src: "featured-image-preview.webp"
 
 tags: ["emoji"]
 categories: ["Markdown"]

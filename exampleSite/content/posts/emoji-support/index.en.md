@@ -10,6 +10,8 @@ description: "Guide to emoji usage in Hugo and FeelIt."
 resources:
 - name: "featured-image"
   src: "featured-image.webp"
+- name: "featured-image-preview"
+  src: "featured-image-preview.webp"
 
 tags: ["emoji"]
 categories: ["Markdown"]
