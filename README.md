@@ -14,7 +14,7 @@ read [Why choose FeelIt](#why-choose-feelit) so that you can choose the one that
 
 ![Hugo Theme FeelIt](https://github.com/khusika/FeelIt/raw/main/images/Apple-Devices-Preview.webp)
 
-## [Demo Site](https://feelit.khusika.com/)
+## Demo Site
 
 To see this theme in action, here is a live [demo site](https://feelit.khusika.com/) which is rendered with **FeelIt** theme.
 
@@ -113,12 +113,35 @@ I hope you will FeelIt ❤️!
 * **Cookie consent banner** supported by [cookieconsent](https://github.com/osano/cookieconsent)
 * ...
 
-## [Documentation](https://feelit.khusika.com/categories/documentation/)
+## Documentation
 
-Build Documentation Locally:
+* ### [Theme Documentation - Basics](https://feelit.khusika.com/theme-documentation-basics/)
 
+* ### [Theme Documentation - Content](https://feelit.khusika.com/theme-documentation-content/)
+
+* ### [Theme Documentation - Built in Shortcodes](https://feelit.khusika.com/theme-documentation-built-in-shortcodes/)
+
+* ### [Theme Documentation - Extended Shortocodes](https://feelit.khusika.com/theme-documentation-extended-shortcodes/)
+
+* ### [Basic Markdown Syntax](https://feelit.khusika.com/basic-markdown-syntax/)
+
+* ### [Emoji Support](https://feelit.khusika.com/emoji-support/)
+
+## Getting Started
+
+* Install required packages
 ```bash
-hugo server --source=exampleSite
+npm run preinstall
+```
+
+* Debug theme documentation
+```bash
+npm run start-production
+```
+
+* Build theme documentation
+```bash
+npm run build
 ```
 
 ## Multilingual and i18n
@@ -140,8 +163,6 @@ FeelIt supports the following languages:
 * [Contribute with a new language](https://github.com/khusika/FeelIt/pulls)
 
 [Languages Compatibility](https://feelit.khusika.com/theme-documentation-basics/#language-compatibility)
-
-## [Roadmap](https://github.com/khusika/FeelIt/projects/1)
 
 ## Questions, ideas, bugs, pull requests
 
@@ -179,6 +200,6 @@ Thanks to the authors of following resources included in the theme:
 
 ## Author
 
-[Khusika](https://khusika.com)
+[Khusika](https://khusika.com) and [all contributors](https://github.com/khusika/FeelIt/graphs/contributors)
 
 Thanks! ❤️
