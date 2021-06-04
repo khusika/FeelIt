@@ -18,7 +18,7 @@
         </div>
     {{- end -}}
 
-    <div class="page single special" data-toc="{{ if ne $toc.enable true }}disable{{ else }}enable{{ end }}">
+    <article class="page single special" data-toc="{{ if ne $toc.enable true }}disable{{ else }}enable{{ end }}">
 
         {{- /* Title */ -}}
         <h2 class="single-title animated fadeInDown faster">
@@ -67,5 +67,5 @@
 
         {{- /* Comment */ -}}
         {{- partial "comment.html" . -}}
-    </div>
+    </article>
 {{- end -}}
