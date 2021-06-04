@@ -148,18 +148,19 @@ npm run build
 
 FeelIt supports the following languages:
 
+* German
 * English
-* Simplified Chinese
+* Spanish
 * French
+* Indonesian
+* Italian
 * Polish
 * Brazilian Portuguese
-* Italian
-* Spanish
-* German
-* Serbian
-* Russian
 * Romanian
+* Russian
+* Serbian
 * Vietnamese
+* Simplified Chinese
 * [Contribute with a new language](https://github.com/khusika/FeelIt/pulls)
 
 [Languages Compatibility](https://feelit.khusika.com/theme-documentation-basics/#language-compatibility)
