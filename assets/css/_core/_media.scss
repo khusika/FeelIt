@@ -55,28 +55,6 @@
     width: 52%;
   }
 
-  .single {
-    width: 64%;
-  }
-
-  #header-desktop .header-wrapper {
-    padding: 0 1rem;
-  }
-
-  .home[data-home=posts] {
-    .summary-card {
-      .summary{
-        min-height: 20.5rem;
-      }
-    }
-  }
-
-  .search-dropdown.desktop {
-    right: 1rem;
-  }
-}
-
-@media only screen and (max-width: 960px) {
   #toc-auto {
     display: none;
   }
@@ -99,6 +77,24 @@
     }
   }
 
+  #header-desktop .header-wrapper {
+    padding: 0 1rem;
+  }
+
+  .home[data-home=posts] {
+    .summary-card {
+      .summary{
+        min-height: 20.5rem;
+      }
+    }
+  }
+
+  .search-dropdown.desktop {
+    right: 1rem;
+  }
+}
+
+@media only screen and (max-width: 960px) {
   .home[data-home=posts] {
     .summary-card {
       .summary{
