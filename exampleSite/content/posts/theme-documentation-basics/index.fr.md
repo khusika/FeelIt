@@ -869,23 +869,23 @@ In `assets/css/_custom.scss`, you can add some css style code to customize the s
 
 ### 4.1 Compatibility {#language-compatibility}
 
-{{< version 0.2.10 changed >}}
+{{< version 1.0.1 changed >}}
 
 | Language             | Hugo Code | HTML `lang` Attribute | Theme Docs                    | Lunr.js Support               |
 |:-------------------- |:---------:|:---------------------:|:-----------------------------:|:-----------------------------:|
+| German               | `de`      | `de`                  | :(far fa-square fa-fw):       | :(far fa-check-square fa-fw): |
 | English              | `en`      | `en`                  | :(far fa-check-square fa-fw): | :(far fa-check-square fa-fw): |
-| Simplified Chinese   | `zh-cn`   | `zh-CN`               | :(far fa-check-square fa-fw): | :(far fa-check-square fa-fw): |
+| Spanish              | `es`      | `es`                  | :(far fa-square fa-fw):       | :(far fa-check-square fa-fw): |
 | French               | `fr`      | `fr`                  | :(far fa-square fa-fw):       | :(far fa-check-square fa-fw): |
+| Indonesian           | `id`      | `id`                  | :(far fa-square fa-fw):       | :(far fa-check-square fa-fw): |
+| Italian              | `it`      | `it`                  | :(far fa-square fa-fw):       | :(far fa-check-square fa-fw): |
 | Polish               | `pl`      | `pl`                  | :(far fa-square fa-fw):       | :(far fa-square fa-fw):       |
 | Brazilian Portuguese | `pt-br`   | `pt-BR`               | :(far fa-square fa-fw):       | :(far fa-check-square fa-fw): |
-| Italian              | `it`      | `it`                  | :(far fa-square fa-fw):       | :(far fa-check-square fa-fw): |
-| Spanish              | `es`      | `es`                  | :(far fa-square fa-fw):       | :(far fa-check-square fa-fw): |
-| German               | `de`      | `de`                  | :(far fa-square fa-fw):       | :(far fa-check-square fa-fw): |
-| German               | `de`      | `de`                  | :(far fa-square fa-fw):       | :(far fa-check-square fa-fw): |
-| Serbian              | `sr`      | `sr`                  | :(far fa-square fa-fw):       | :(far fa-square fa-fw):       |
-| Russian              | `ru`      | `ru`                  | :(far fa-square fa-fw):       | :(far fa-check-square fa-fw): |
 | Romanian             | `ro`      | `ro`                  | :(far fa-square fa-fw):       | :(far fa-check-square fa-fw): |
+| Russian              | `ru`      | `ru`                  | :(far fa-square fa-fw):       | :(far fa-check-square fa-fw): |
+| Serbian              | `sr`      | `sr`                  | :(far fa-square fa-fw):       | :(far fa-square fa-fw):       |
 | Vietnamese           | `vi`      | `vi`                  | :(far fa-square fa-fw):       | :(far fa-check-square fa-fw): |
+| Simplified Chinese   | `zh-cn`   | `zh-CN`               | :(far fa-check-square fa-fw): | :(far fa-check-square fa-fw): |
 
 ### 4.2 Basic Configuration
 
