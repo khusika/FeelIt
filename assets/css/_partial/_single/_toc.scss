@@ -50,13 +50,11 @@
 #toc-auto {
   display: block;
   position: absolute;
-  width: 14.5%;
   max-width: 100%;
   padding: 0 .8rem;
   border-left: 4px solid $global-font-secondary-color;
   @include overflow-wrap(break-word);
   box-sizing: border-box;
-  top: 10rem;
   left: 0;
   visibility: hidden;
 
