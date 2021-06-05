@@ -118,7 +118,7 @@ The rendered output looks like this:
 
 {{< version 1.0.0 changed >}}
 
-At the moment, Hugo using deprecated [oEmbed-legacy](https://developers.facebook.com/docs/instagram/oembed-legacy) linked API endpoint. Those deprecated API causes an error when Hugo retrieving the data. The newest API has been included in the [extended shortcode](https://feelit.khusika.com/theme-documentation-extended-shortcodes/#12-instagram-oembed).
+At the moment, Hugo using deprecated [oEmbed-legacy](https://developers.facebook.com/docs/instagram/oembed-legacy) linked API endpoint. Those deprecated API causes an error when Hugo retrieving the data. The newest API has been included in the [extended shortcode](https://feelit.khusika.com/theme-documentation-extended-shortcodes/#122-oembed-instagram).
 
 ## 5 param
 
