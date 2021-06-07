@@ -677,7 +677,7 @@ googleAnalytics = ""
         # Vssue 平台 API ("bitbucket", "gitea", "gitee", "github", "github-v4", "gitlab")
         platform = "github"
         owner = "khusika"
-        repo = "FeelIt"
+        repo = "comments"
         clientId = "85f66799bb256a5064be"
         clientSecret = "2892bb6cf60582910c2e0e192d2587abc881fe47"
       # Gitalk comment config (https://github.com/gitalk/gitalk)
