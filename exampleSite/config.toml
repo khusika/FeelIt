@@ -523,10 +523,8 @@ googleAnalytics = ""
 
   # oEmbed config for Facebook and Instagram
   [params.oembed]
-    # Facebook Aplication Identity
-    appId = "450796413028489"
-    # Facebook Aplication Client Token
-    clientToken = "5d9f4f095e5b441333e9877b02b709f2"
+    # Facebook Aplication Identity and Client Token (<APPID>|<CLIENTTOKEN>)
+    accessToken = "450796413028489|5d9f4f095e5b441333e9877b02b709f2"
     # Privacy config (https://gohugo.io/about/hugo-and-gdpr/)
     privacy = false
 

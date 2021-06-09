@@ -1,18 +1,28 @@
 {{- $oe := .Site.Params.oembed -}}
-{{- $appId := $oe.appId -}}
-{{- $clientToken := $oe.clientToken -}}
-{{- if not $oe.privacy -}}
-{{ $host := .Get 0 }}
-{{ $type := .Get 1 }}
-{{ $id := .Get 2 }}
-{{- if eq $host "ig" -}}
-{{ $hideCaption := cond (eq (.Get 3) "hidecaption") "1" "0" }}
-{{ with getJSON "https://graph.facebook.com/v11.0/instagram_oembed/?url=https://instagram.com/" $type "/" $id "/&hidecaption=" $hideCaption "&access_token=" $appId "|" $clientToken }}{{ .html | safeHTML }}{{ end }}
-{{- else if eq $host "fb" -}}
-{{- if eq $type "page" -}}
-{{ with getJSON "https://graph.facebook.com/v11.0/oembed_" $type "?url=" $id "&show_posts=false" "&access_token=" $appId "|" $clientToken }}{{ .html | safeHTML }}{{ end }}
+{{- $accessToken := getenv "HUGO_OEMBED_ACCESSTOKEN" | default $oe.accessToken -}}
+
+{{- if not $accessToken -}}
+  {{- warnf "oembed shortcode: Missing config value for .Site.Params.oembed.accessToken. This can be set in config.toml, but it is recommended to configure this via the HUGO_OEMBED_ACCESSTOKEN OS environment variable. If you are using a Client Access Token, remember that you must combine it with your App ID using a pipe symbol (<APPID>|<CLIENTTOKEN>) otherwise the request will fail." -}}
 {{- else -}}
-{{ with getJSON "https://graph.facebook.com/v11.0/oembed_" $type "?url=" $id "&access_token=" $appId "|" $clientToken }}{{ .html | safeHTML }}{{ end }}
-{{- end -}}
-{{- end -}}
+  {{- if not $oe.privacy -}}
+    {{ $host := .Get 0 }}
+    {{ $type := .Get 1 }}
+    {{ $id := .Get 2 }}
+    {{- if eq $host "ig" -}}
+      {{ $hideCaption := cond (eq (.Get 3) "hidecaption") "1" "0" }}
+      {{ with getJSON "https://graph.facebook.com/v11.0/instagram_oembed/?url=https://instagram.com/" $type "/" $id "/&hidecaption=" $hideCaption "&access_token=" $accessToken }}
+        {{ .html | safeHTML }}
+      {{ end }}
+    {{- else if eq $host "fb" -}}
+      {{- if eq $type "page" -}}
+        {{ with getJSON "https://graph.facebook.com/v11.0/oembed_" $type "?url=" $id "&show_posts=false" "&access_token=" $accessToken }}
+          {{ .html | safeHTML }}
+        {{ end }}
+      {{- else -}}
+        {{ with getJSON "https://graph.facebook.com/v11.0/oembed_" $type "?url=" $id "&access_token=" $accessToken }}
+          {{ .html | safeHTML }}
+        {{ end }}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
 {{- end -}}
