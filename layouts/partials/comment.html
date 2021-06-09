@@ -18,7 +18,11 @@
 
         {{- /* Vssue Comment System */ -}}
         {{- $vssue := $comment.vssue | default dict -}}
+        {{- $vssueSecret := getenv "HUGO_VSSUE_CLIENTSECRET" | default $vssue.clientSecret -}}
         {{- if $vssue.enable -}}
+        {{- if not $vssueSecret -}}
+            {{- warnf "comment system: Missing config value for .params.page.comment.vssue.clientSecret. This can be set in config.toml, but it is recommended to configure this via the HUGO_VSSUE_CLIENTSECRET OS environment variable." -}}
+        {{- else -}}
             <div id="vssue"></div>
             {{- $source := $cdn.vssueCSS | default "lib/vue/vssue/vssue.css" -}}
             {{- dict "Source" $source "Minify" true "Fingerprint" $fingerprint | dict "Scratch" .Scratch "Data" | partial "scratch/style.html" -}}
@@ -43,35 +47,45 @@
                 {{- $source := $cdn.vssueGitlab | default "lib/vue/vssue/vssue.gitlab.min.js" -}}
                 {{- dict "Source" $source "Fingerprint" $fingerprint | dict "Scratch" .Scratch "Data" | partial "scratch/script.html" -}}
             {{- end -}}
-            {{- $commentConfig = dict "title" .Title "clientID" $vssue.clientId "clientSecret" $vssue.clientSecret "repo" $vssue.repo "owner" $vssue.owner | dict "vssue" | merge $commentConfig -}}
+            {{- $commentConfig = dict "title" .Title "clientID" $vssue.clientId "clientSecret" $vssueSecret "repo" $vssue.repo "owner" $vssue.owner | dict "vssue" | merge $commentConfig -}}
             <noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://github.com/meteorlxy/vssue">Vssue</a>.
             </noscript>
         {{- end -}}
+        {{- end -}}
 
         {{- /* Gitalk Comment System */ -}}
         {{- $gitalk := $comment.gitalk | default dict -}}
+        {{- $gitalkSecret := getenv "HUGO_GITALK_CLIENTSECRET" | default $gitalk.clientSecret -}}
         {{- if $gitalk.enable -}}
+        {{- if not $gitalkSecret -}}
+            {{- warnf "comment system: Missing config value for .params.page.comment.gitalk.clientSecret. This can be set in config.toml, but it is recommended to configure this via the HUGO_GITALK_CLIENTSECRET OS environment variable." -}}
+        {{- else -}}
             <div id="gitalk"></div>
             {{- $source := $cdn.gitalkCSS | default "lib/gitalk/gitalk.css" -}}
             {{- dict "Source" $source "Minify" true "Fingerprint" $fingerprint | dict "Scratch" .Scratch "Data" | partial "scratch/style.html" -}}
             {{- $source := $cdn.gitalkJS | default "lib/gitalk/gitalk.min.js" -}}
             {{- dict "Source" $source "Fingerprint" $fingerprint | dict "Scratch" .Scratch "Data" | partial "scratch/script.html" -}}
-            {{- $commentConfig = dict "id" .Date "title" .Title "clientID" $gitalk.clientId "clientSecret" $gitalk.clientSecret "repo" $gitalk.repo "owner" $gitalk.owner "admin" (slice $gitalk.owner) | dict "gitalk" | merge $commentConfig -}}
+            {{- $commentConfig = dict "id" .Date "title" .Title "clientID" $gitalk.clientId "clientSecret" $gitalkSecret "repo" $gitalk.repo "owner" $gitalk.owner "admin" (slice $gitalk.owner) | dict "gitalk" | merge $commentConfig -}}
             <noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://github.com/gitalk/gitalk"></a>Gitalk</a>.
             </noscript>
         {{- end -}}
+        {{- end -}}
 
         {{- /* Valine Comment System */ -}}
         {{- $valine := $comment.valine | default dict -}}
+        {{- $valineSecret := getenv "HUGO_VALINE_CLIENTSECRET" | default $valine.appKey -}}
         {{- if $valine.enable -}}
+        {{- if not $valineSecret -}}
+            {{- warnf "comment system: Missing config value for .params.page.comment.valine.appKey. This can be set in config.toml, but it is recommended to configure this via the HUGO_VALINE_CLIENTSECRET OS environment variable." -}}
+        {{- else -}}
             <div id="valine"></div>
             {{- $options := dict "targetPath" "lib/valine/valine.min.css" -}}
             {{- dict "Source" "lib/valine/valine.scss" "ToCSS" $options | dict "Scratch" .Scratch "Data" | partial "scratch/style.html" -}}
             {{- $source := $cdn.valineJS | default "lib/valine/Valine.min.js" -}}
             {{- dict "Source" $source "Fingerprint" $fingerprint | dict "Scratch" .Scratch "Data" | partial "scratch/script.html" -}}
-            {{- $commentConfig = dict "el" "#valine" "appId" $valine.appId "appKey" $valine.appKey "lang" ($valine.lang | default (T "valineLang")) "visitor" $valine.visitor "recordIP" $valine.recordIP "placeholder" ($valine.placeholder | default (T "valinePlaceholder")) "highlight" (ne $valine.highlight false) "enableQQ" $valine.enableQQ | dict "valine" | merge $commentConfig -}}
+            {{- $commentConfig = dict "el" "#valine" "appId" $valine.appId "appKey" $valineSecret "lang" ($valine.lang | default (T "valineLang")) "visitor" $valine.visitor "recordIP" $valine.recordIP "placeholder" ($valine.placeholder | default (T "valinePlaceholder")) "highlight" (ne $valine.highlight false) "enableQQ" $valine.enableQQ | dict "valine" | merge $commentConfig -}}
             {{- with $valine.avatar -}}
                 {{- $commentConfig = dict "avatar" . | dict "valine" | merge $commentConfig -}}
             {{- end -}}
@@ -88,6 +102,7 @@
             <noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
             </noscript>
+        {{- end -}}
         {{- end -}}
 
         {{- /* Facebook Comment System */ -}}
