@@ -1242,7 +1242,7 @@ public class HelloWorld {
 }
 {{< /typeit >}}
 
-### 10.3 分组内容 {#code-content}
+### 10.3 分组内容 {#group-content}
 
 默认情况下, 所有打字动画都是同时开始的.
 但是有时你可能需要按顺序开始一组 `typeit` 内容的打字动画.
