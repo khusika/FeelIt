@@ -347,10 +347,8 @@ Please open the code block below to view the complete sample configuration :(far
 
   # {{< version 1.0.1 changed >}} oEmbed config for Facebook and Instagram
   [params.oembed]
-    # Facebook Aplication Identity
-    appId = ""
-    # Facebook Aplication Client Token
-    clientToken = ""
+    # Facebook Aplication Identity and Client Token (<APPID>|<CLIENTTOKEN>)
+    accessToken = ""
     # Privacy config (https://gohugo.io/about/hugo-and-gdpr/)
     privacy = false
 
