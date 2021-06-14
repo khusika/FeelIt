@@ -18,6 +18,9 @@
             {{- $options := . | merge (dict "outputStyle" "compressed") -}}
             {{- $resource = $resource | toCSS $options -}}
         {{- end -}}
+        {{- with .PostCSS -}}
+            {{- $resource = $resource | postCSS -}}
+        {{- end -}}
         {{- if .Minify -}}
             {{- $resource = $resource | minify -}}
         {{- end -}}

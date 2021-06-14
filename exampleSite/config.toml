@@ -436,7 +436,11 @@ googleAnalytics = ""
   # 网站图片, 用于 Open Graph 和 Twitter Cards
   images = ["/logo.png"]
   # whether to enable CSS and JS source mapping
+  # 是否启用 CSS 和 JS 源映射
   SourceMap = false
+  # whether to enable PurgeCSS
+  # 是否启用 PurgeCSS
+  PurgeCSS = false
 
   # Header config
   # 页面头部导航栏配置

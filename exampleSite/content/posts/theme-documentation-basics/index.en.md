@@ -215,6 +215,8 @@ Please open the code block below to view the complete sample configuration :(far
   images = ["/logo.png"]
   # {{< version 1.0.0 >}} whether to enable CSS and JS source mapping
   SourceMap = true
+  # {{< version 1.0.1 >}} whether to enable PurgeCSS
+  PurgeCSS = false
 
   # {{< version 0.2.0 >}} App icon config
   [params.app]

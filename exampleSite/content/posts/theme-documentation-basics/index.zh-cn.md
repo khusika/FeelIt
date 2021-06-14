@@ -218,6 +218,8 @@ hugo
   images = ["/logo.png"]
   # {{< version 1.0.0 >}} 是否启用 CSS 和 JS 源映射
   SourceMap = true
+  # {{< version 1.0.1 >}} 是否启用 PurgeCSS
+  PurgeCSS = true
 
   # {{< version 0.2.0 >}} 应用图标配置
   [params.app]
