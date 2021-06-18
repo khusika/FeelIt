@@ -22,7 +22,7 @@ If applicable, add screenshots to help explain your problem.
 
 - OS: [e.g. Windows 10, macOS, Ubuntu]
 - Theme version/commit [e.g. 0.2.0, 2ccba79]
-- Hugo version [e.g. 0.83.0]
+- Hugo version [e.g. 0.84.0]
 
 Please try to use Hugo **extended** version before opening the issue.
 

@@ -2,7 +2,7 @@
 
 
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/khusika/FeelIt?style=flat-square)](https://github.com/khusika/FeelIt/releases)
-[![Hugo](https://img.shields.io/badge/Hugo-%5E0.83.0-ff4088?style=flat-square&logo=hugo)](https://gohugo.io/)
+[![Hugo](https://img.shields.io/badge/Hugo-%5E0.84.0-ff4088?style=flat-square&logo=hugo)](https://gohugo.io/)
 [![License](https://img.shields.io/github/license/khusika/FeelIt?style=flat-square)](https://github.com/khusika/FeelIt/blob/main/LICENSE)
 
 > **FeelIt** is a **clean**, **elegant** but **advanced** blog theme for [Hugo](https://gohugo.io/).
