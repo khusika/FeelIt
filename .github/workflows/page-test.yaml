@@ -1,0 +1,41 @@
+name: Page Test
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          submodules: true
+          fetch-depth: 0
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: 'latest'
+          extended: true
+
+      - name: Build Page
+        env:
+          HUGO_OEMBED_ACCESSTOKEN: ${{ secrets.HUGO_OEMBED_ACCESSTOKEN }}
+          HUGO_VSSUE_CLIENTSECRET: ${{ secrets.HUGO_VSSUE_CLIENTSECRET }}
+        run: |
+            npm install
+            npm run deploy
+
+      - name: Validate HTML
+        uses: Cyb3r-Jak3/html5validator-action@master
+        with:
+          root: ./exampleSite/public
+          log_level: INFO
+          css: true
+          blacklist: mermaid.min.css
+
+#      - name: LightHouse CI
+#        uses: treosh/lighthouse-ci-action@v7
+#        with:
+#          configPath: './lighthouserc.json'
+#          uploadArtifacts: true
+#          temporaryPublicStorage: true
