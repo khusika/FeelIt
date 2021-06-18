@@ -21,7 +21,7 @@
         {{- $vssueSecret := getenv "HUGO_VSSUE_CLIENTSECRET" | default $vssue.clientSecret -}}
         {{- if $vssue.enable -}}
         {{- if not $vssueSecret -}}
-            {{- warnf "comment system: Missing config value for .params.page.comment.vssue.clientSecret. This can be set in config.toml, but it is recommended to configure this via the HUGO_VSSUE_CLIENTSECRET OS environment variable." -}}
+            {{- erroridf "err-missing-comment-accesstoken" "comment system: Missing config value for .params.page.comment.vssue.clientSecret. This can be set in config.toml, but it is recommended to configure this via the HUGO_VSSUE_CLIENTSECRET OS environment variable." -}}
         {{- else -}}
             <div id="vssue"></div>
             {{- $source := $cdn.vssueCSS | default "lib/vue/vssue/vssue.css" -}}
@@ -59,7 +59,7 @@
         {{- $gitalkSecret := getenv "HUGO_GITALK_CLIENTSECRET" | default $gitalk.clientSecret -}}
         {{- if $gitalk.enable -}}
         {{- if not $gitalkSecret -}}
-            {{- warnf "comment system: Missing config value for .params.page.comment.gitalk.clientSecret. This can be set in config.toml, but it is recommended to configure this via the HUGO_GITALK_CLIENTSECRET OS environment variable." -}}
+            {{- erroridf "err-missing-comment-accesstoken" "comment system: Missing config value for .params.page.comment.gitalk.clientSecret. This can be set in config.toml, but it is recommended to configure this via the HUGO_GITALK_CLIENTSECRET OS environment variable." -}}
         {{- else -}}
             <div id="gitalk"></div>
             {{- $source := $cdn.gitalkCSS | default "lib/gitalk/gitalk.css" -}}
@@ -78,7 +78,7 @@
         {{- $valineSecret := getenv "HUGO_VALINE_CLIENTSECRET" | default $valine.appKey -}}
         {{- if $valine.enable -}}
         {{- if not $valineSecret -}}
-            {{- warnf "comment system: Missing config value for .params.page.comment.valine.appKey. This can be set in config.toml, but it is recommended to configure this via the HUGO_VALINE_CLIENTSECRET OS environment variable." -}}
+            {{- erroridf "err-missing-comment-accesstoken" "comment system: Missing config value for .params.page.comment.valine.appKey. This can be set in config.toml, but it is recommended to configure this via the HUGO_VALINE_CLIENTSECRET OS environment variable." -}}
         {{- else -}}
             <div id="valine"></div>
             {{- $options := dict "targetPath" "lib/valine/valine.min.css" -}}
