@@ -25,6 +25,8 @@ enableEmoji = true
 # UA-PROPERTY_ID or G-MEASUREMENT_ID google analytics code
 googleAnalytics = ""
 
+ignoreErrors = ["err-missing-comment-accesstoken", "err-missing-oembed-accesstoken"]
+
 [languages]
   [languages.en]
     weight = 1
