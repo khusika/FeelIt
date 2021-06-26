@@ -343,12 +343,15 @@ hugo
       # 当你没有在文章前置参数中设置 "hiddenFromHomePage" 时的默认行为
       defaultHiddenFromHomePage = false
 
-  # {{< version 1.0.1 changed >}} oEmbed config for Facebook and Instagram
+  # {{< version 1.0.1 changed >}} oEmbed config
   [params.oembed]
-    # Facebook Aplication Identity and Client Token (<APPID>|<CLIENTTOKEN>)
-    accessToken = ""
     # Privacy config (https://gohugo.io/about/hugo-and-gdpr/)
     privacy = false
+    [params.oembed.facebook]
+      # Facebook Aplication Identity and Client Token (<APPID>|<CLIENTTOKEN>)
+      accessToken = ""
+    [params.oembed.twitter]
+      enableDNT = false
 
   # 作者的社交信息设置
   [params.social]
