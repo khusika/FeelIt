@@ -1,11 +1,11 @@
 {{- $oe := .Site.Params.oembed -}}
-{{- $accessToken := getenv "HUGO_OEMBED_ACCESSTOKEN" | default $oe.accessToken -}}
-
-{{- if not $accessToken -}}
-  {{- erroridf "err-missing-oembed-accesstoken" "oembed shortcode: Missing config value for .Site.Params.oembed.accessToken. This can be set in config.toml, but it is recommended to configure this via the HUGO_OEMBED_ACCESSTOKEN OS environment variable. If you are using a Client Access Token, remember that you must combine it with your App ID using a pipe symbol (<APPID>|<CLIENTTOKEN>) otherwise the request will fail." -}}
-{{- else -}}
-  {{- if not $oe.privacy -}}
-    {{ $host := .Get 0 }}
+{{ $host := .Get 0 }}
+{{- if not $oe.privacy -}}
+{{- if or (eq $host "ig") (eq $host "fb") -}}
+{{- $accessToken := getenv "HUGO_OEMBED_ACCESSTOKEN" | default $oe.facebook.accessToken -}}
+  {{- if not $accessToken -}}
+    {{- erroridf "err-missing-oembed-accesstoken" "oembed shortcode: Missing config value for .Site.Params.oembed.accessToken. This can be set in config.toml, but it is recommended to configure this via the HUGO_OEMBED_ACCESSTOKEN OS environment variable. If you are using a Client Access Token, remember that you must combine it with your App ID using a pipe symbol (<APPID>|<CLIENTTOKEN>) otherwise the request will fail." -}}
+  {{- else -}}
     {{ $type := .Get 1 }}
     {{ $id := .Get 2 }}
     {{- if eq $host "ig" -}}
@@ -25,4 +25,11 @@
       {{- end -}}
     {{- end -}}
   {{- end -}}
+{{- else if (eq $host "tweet") -}}
+  {{ $url := .Get 1 }}
+  {{- $dnt := $oe.twitter.enableDNT | default false -}}
+  {{ with getJSON "https://publish.twitter.com/oembed" "?url=" $url "&dnt=" $dnt }}
+    {{ .html | safeHTML }}
+  {{ end }}
+{{- end -}}
 {{- end -}}

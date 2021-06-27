@@ -140,17 +140,9 @@ The rendered output looks like this:
 
 ## 7 tweet
 
-[Documentation of `tweet`](https://gohugo.io/content-management/shortcodes#tweet)
+{{< version 1.0.1 changed >}}
 
-Example `tweet` input:
-
-```markdown
-{{</* tweet 877500564405444608 */>}}
-```
-
-The rendered output looks like this:
-
-{{< tweet 877500564405444608 >}}
+This method was moved with the newest API in the [extended shortcode documentation](https://feelit.khusika.com/theme-documentation-extended-shortcodes/#123-oembed-twitter).
 
 ## 8 vimeo
 
