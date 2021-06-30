@@ -892,6 +892,10 @@ ignoreErrors = ["err-missing-comment-accesstoken", "err-missing-oembed-accesstok
       # server url for your tracker if you're self hosting
       # 自行托管追踪器时的主机路径
       server = ""
+    # GoatCounter Analytics
+    [params.analytics.goatcounter]
+      # GoatCounter code
+      code = ""
 
   # Cookie consent config
   # Cookie 许可配置
