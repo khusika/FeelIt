@@ -642,7 +642,7 @@ hugo
     # 缩略图 URL
     thumbnailUrl = ""
 
-  # {{< version 0.2.0 >}} 网站分析配置
+  # {{< version 1.0.1 changed >}} 网站分析配置
   [params.analytics]
     enable = false
     # {{< version 1.0.0 deleted >}} Google Analytics 相关隐私 (被 privacy.googleAnalytics 替代)
@@ -655,6 +655,10 @@ hugo
       id = ""
       # 自行托管追踪器时的主机路径
       server = ""
+    # {{< version 1.0.1 >}} GoatCounter Analytics
+    [params.analytics.goatcounter]
+      # GoatCounter code
+      code = ""
 
   # {{< version 0.2.7 >}} Cookie 许可配置
   [params.cookieconsent]

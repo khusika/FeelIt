@@ -644,7 +644,7 @@ Please open the code block below to view the complete sample configuration :(far
     # thumbnail URL
     thumbnailUrl = ""
 
-  # {{< version 0.2.0 >}} Analytics config
+  # {{< version 1.0.1 changed >}} Analytics config
   [params.analytics]
     enable = false
     # {{< version 1.0.0 deleted >}} privacy of the Google Analytics (replaced by privacy.googleAnalytics)
@@ -655,6 +655,10 @@ Please open the code block below to view the complete sample configuration :(far
       id = ""
       # server url for your tracker if you're self hosting
       server = ""
+    # {{< version 1.0.1 >}} GoatCounter Analytics
+    [params.analytics.goatcounter]
+      # GoatCounter code
+      code = ""
 
   # {{< version 0.2.7 >}} Cookie consent config
   [params.cookieconsent]
