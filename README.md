@@ -132,7 +132,7 @@ I hope you will FeelIt ❤️!
 
 * Install required packages
 ```bash
-npm run preinstall
+npm run reinstall
 ```
 
 * Debug theme documentation
