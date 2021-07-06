@@ -339,6 +339,8 @@ hugo
       enable = true
       # 主页每页显示文章数量
       paginate = 6
+      # {{< version 1.0.1 changed >}} display image-preview
+      imagePreview = true
       # {{< version 0.2.0 deleted >}} 被 params.page 中的 hiddenFromHomePage 替代
       # 当你没有在文章前置参数中设置 "hiddenFromHomePage" 时的默认行为
       defaultHiddenFromHomePage = false

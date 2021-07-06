@@ -336,6 +336,8 @@ Please open the code block below to view the complete sample configuration :(far
       enable = true
       # special amount of posts in each home posts page
       paginate = 6
+      # {{< version 1.0.1 changed >}} display image-preview
+      imagePreview = true
       # {{< version 0.2.0 deleted >}} replaced with hiddenFromHomePage in params.page
       # default behavior when you don't set "hiddenFromHomePage" in front matter
       defaultHiddenFromHomePage = false
