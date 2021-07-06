@@ -159,6 +159,8 @@ ignoreErrors = ["err-missing-comment-accesstoken", "err-missing-oembed-accesstok
           enable = true
           # special amount of posts in each home posts page
           paginate = 6
+          # display image-preview
+          imagePreview = true
 
   [languages.zh-cn]
     weight = 2
@@ -289,6 +291,8 @@ ignoreErrors = ["err-missing-comment-accesstoken", "err-missing-oembed-accesstok
           enable = true
           # 主页每页显示文章数量
           paginate = 6
+          # display image-preview
+          imagePreview = true
 
   [languages.fr]
     weight = 3
@@ -417,6 +421,8 @@ ignoreErrors = ["err-missing-comment-accesstoken", "err-missing-oembed-accesstok
           enable = true
           # special amount of posts in each home posts page
           paginate = 6
+          # display image-preview
+          imagePreview = true
 
 [params]
   # FeelIt theme version

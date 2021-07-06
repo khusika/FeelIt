@@ -100,6 +100,10 @@
       @include transition(transform 0.4s ease);
       @include box-shadow(0 2px 4px -1px rgba(0, 0, 0, 0.2));
 
+      &[data-image=hide] {
+        min-height: 13rem;
+      }
+
       &:hover {
         @include transform(scale(1.01));
       }
