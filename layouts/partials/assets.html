@@ -182,6 +182,10 @@
 {{- end -}}
 {{- end -}}
 
+{{- if eq $.Site.Params.enablePWA true -}}
+{{- dict "Source" "sw.js" "Minify" true "Fingerprint" $fingerprint | dict "Scratch" .Scratch "Data" | partial "scratch/script.html" -}}
+{{- end -}}
+
 {{- /* Cookie Consent */ -}}
 {{- if .Site.Params.cookieconsent | and .Site.Params.cookieconsent.enable -}}
     {{- $source := $cdn.cookieconsentCSS | default "lib/cookieconsent/cookieconsent.min.css" -}}
