@@ -94,7 +94,7 @@ theme = "FeelIt"
 
 [params]
   # FeelIt theme version
-  version = "0.2.X"
+  version = "1.0.X"
 
 [menu]
   [[menu.main]]
@@ -202,7 +202,7 @@ Please open the code block below to view the complete sample configuration :(far
 ```toml
 [params]
   # {{< version 0.2.0 changed >}} FeelIt theme version
-  version = "0.2.X"
+  version = "1.0.X"
   # site description
   description = "This is My New Hugo Site"
   # site keywords
