@@ -89,7 +89,7 @@ theme = "FeelIt"
 
 [params]
   # FeelIt theme version
-  version = "0.2.X"
+  version = "1.0.X"
 
 [menu]
   [[menu.main]]
