@@ -92,7 +92,7 @@ theme = "FeelIt"
 
 [params]
   # FeelIt 主题版本
-  version = "0.2.X"
+  version = "1.0.X"
 
 [menu]
   [[menu.main]]
@@ -200,7 +200,7 @@ hugo
 ```toml
 [params]
   # {{< version 0.2.0 changed >}} FeelIt 主题版本
-  version = "0.2.X"
+  version = "1.0.X"
   # 网站描述
   description = "这是我的全新 Hugo 网站"
   # 网站关键词
