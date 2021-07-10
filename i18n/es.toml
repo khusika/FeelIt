@@ -149,6 +149,11 @@ other = "Página no encontrada"
 other = "La página que estás buscando no existe. Lo siento."
 # === 404.html ===
 
+# === Offline Page ===
+[pageOffline]
+other = "Estás desconectado. Comprueba tu conexión a Internet."
+# === Offline Page ===
+
 # === shortcodes/admonition.html ===
 [note]
 other = "Nota"
