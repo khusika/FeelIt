@@ -1,7 +1,7 @@
 <script>
 if ('serviceWorker' in navigator) {
     navigator.serviceWorker
-        .register('/sw.min.js', { scope: '/' })
+        .register('/sw.min.js?version={{.Site.Params.pwa.version}}', { scope: '/' })
         .then(() => {
             console.info('{{- .Site.Title -}}\u00A0Service Worker Registered');
         }, err => console.error('{{- .Site.Title -}}\u00A0Service Worker registration failed: ', err));

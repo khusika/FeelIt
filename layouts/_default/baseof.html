@@ -38,7 +38,7 @@
             {{- if ne .Site.Params.footer.enable false -}}
             {{- partial "footer.html" . -}}
             {{- end -}}
-            {{- if eq .Site.Params.enablePWA true -}}
+            {{- if eq .Site.Params.pwa.enable true -}}
             {{- partial "pwa.html" . -}}
             {{- end -}}
             </footer>

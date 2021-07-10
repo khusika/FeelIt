@@ -445,8 +445,13 @@ ignoreErrors = ["err-missing-comment-accesstoken", "err-missing-oembed-accesstok
   images = ["/logo.png"]
   # whether to enable CSS and JS source mapping
   SourceMap = false
-  # whether to enable PWA support
-  enablePWA = true
+
+  # PWA config
+  [params.pwa]
+    # whether to enable PWA support
+    enable = true
+    # service-worker version
+    version = "1.0.0"
 
   # Header config
   # 页面头部导航栏配置

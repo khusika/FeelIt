@@ -182,7 +182,7 @@
 {{- end -}}
 {{- end -}}
 
-{{- if eq $.Site.Params.enablePWA true -}}
+{{- if eq $.Site.Params.pwa.enable true -}}
 {{- dict "Source" "sw.js" "Minify" true "Fingerprint" $fingerprint | dict "Scratch" .Scratch "Data" | partial "scratch/script.html" -}}
 {{- end -}}
 
