@@ -107,6 +107,15 @@
   #header-desktop .header-wrapper {
     padding-left: 1rem;
   }
+  #content-404 {
+    h2 {
+      font-size: 4rem;
+      margin-bottom: 2rem;
+    }
+    p {
+      font-size: .9rem;
+    }
+  }
 }
 
 @media only screen and (max-width: 680px) {
@@ -178,16 +187,6 @@
       .icp-br {
         display: block;
       }
-    }
-  }
-  #content-404 {
-    h2 {
-      font-size: 5rem;
-      margin-bottom: 2rem;
-    }
-    p {
-      font-size: .9rem;
-      margin-bottom: 1rem;
     }
   }
 }
