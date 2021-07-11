@@ -219,6 +219,13 @@ hugo
   # {{< version 1.0.0 >}} 是否启用 CSS 和 JS 源映射
   SourceMap = true
 
+  # {{< version 1.0.1 >}}PWA config
+  [params.pwa]
+    # whether to enable PWA support
+    enable = true
+    # service-worker version
+    version = "1.0.0"
+
   # {{< version 0.2.0 >}} 应用图标配置
   [params.app]
     # 当添加到 iOS 主屏幕或者 Android 启动器时的标题, 覆盖默认标题

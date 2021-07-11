@@ -216,6 +216,13 @@ Please open the code block below to view the complete sample configuration :(far
   # {{< version 1.0.0 >}} whether to enable CSS and JS source mapping
   SourceMap = true
 
+  # {{< version 1.0.1 >}}PWA config
+  [params.pwa]
+    # whether to enable PWA support
+    enable = true
+    # service-worker version
+    version = "1.0.0"
+
   # {{< version 0.2.0 >}} App icon config
   [params.app]
     # optional site title override for the app when added to an iOS home screen or Android launcher
