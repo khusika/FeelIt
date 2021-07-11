@@ -149,6 +149,11 @@ other = "Pagina nu a fost găsită"
 other = "Pagina pe care o căutați nu există. Ne cerem scuze."
 # === 404.html ===
 
+# === Offline Page ===
+[pageOffline]
+other = "Ești offline. Verificați conexiunea la internet."
+# === Offline Page ===
+
 # === shortcodes/admonition.html ===
 [note]
 other = "Notă"

@@ -34,7 +34,14 @@
                     {{- block "content" . }}{{ end -}}
                 </div>
             </main>
+            <footer class="footer">
+            {{- if ne .Site.Params.footer.enable false -}}
             {{- partial "footer.html" . -}}
+            {{- end -}}
+            {{- if eq .Site.Params.pwa.enable true -}}
+            {{- partial "pwa.html" . -}}
+            {{- end -}}
+            </footer>
         </div>
 
         <div id="fixed-buttons">

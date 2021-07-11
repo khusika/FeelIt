@@ -146,6 +146,11 @@ other = "Страница није пронађена"
 other = "Страница коју тражите не постоји. Жао нам је."
 # === 404.html ===
 
+# === Offline Page ===
+[pageOffline]
+other = "Ван мреже сте. Проверите интернет везу."
+# === Offline Page ===
+
 # === shortcodes/admonition.html ===
 [note]
 other = "Напомена"

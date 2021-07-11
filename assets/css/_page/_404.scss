@@ -12,6 +12,7 @@
     font-weight: 900;
     color: $global-font-color;
     letter-spacing: 1rem;
+    text-transform: uppercase;
     margin-bottom: 5rem;
     [theme=dark] & {
       color: $global-font-color-dark;

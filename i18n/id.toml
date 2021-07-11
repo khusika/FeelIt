@@ -148,6 +148,11 @@ other = "Halaman tidak ditemukan"
 other = "Maaf, halaman yang Anda cari tidak ada."
 # === 404.html ===
 
+# === Offline Page ===
+[pageOffline]
+other = "Anda sedang offline. Periksa koneksi internet Anda."
+# === Offline Page ===
+
 # === shortcodes/admonition.html ===
 [note]
 other = "Catatan"
