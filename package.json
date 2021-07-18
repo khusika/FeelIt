@@ -35,7 +35,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/khusika/PrivateIt.git"
+    "url": "git+https://github.com/khusika/FeelIt.git"
   },
   "keywords": [
     "hugo",
@@ -44,7 +44,7 @@
   "author": "Khusika",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/khusika/PrivateIt/issues"
+    "url": "https://github.com/khusika/FeelIt/issues"
   },
-  "homepage": "https://github.com/khusika/PrivateIt#readme"
+  "homepage": "https://github.com/khusika/FeelIt#readme"
 }
