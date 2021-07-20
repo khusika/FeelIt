@@ -59,6 +59,6 @@
         </div>
 
         {{- /* Load JavaScript scripts and CSS */ -}}
-        {{- partial "assets.html" . -}}
+        {{- partial "assets.html" . | replaceRE `<script src="/sw.min.js"></script>` `` | safeHTML -}}
     </body>
 </html>
