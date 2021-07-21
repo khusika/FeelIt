@@ -1039,3 +1039,10 @@ ignoreErrors = ["err-missing-comment-accesstoken", "err-missing-oembed-accesstok
   section = ["HTML", "RSS"]
   taxonomy = ["HTML", "RSS"]
   taxonomyTerm = ["HTML"]
+
+# Minify config
+[minify]
+  [minify.tdewolff]
+    [minify.tdewolff.html]
+      # ignore the whitespace as we don't have text around the span tag (https://github.com/khusika/FeelIt/issues/40)
+      keepWhitespace = false
