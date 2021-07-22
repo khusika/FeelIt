@@ -5,24 +5,10 @@ name = "FeelIt"
 license = "MIT"
 licenselink = "https://github.com/khusika/FeelIt/blob/main/LICENSE"
 description = "A Clean, Elegant but Advanced Hugo Theme for Hugo."
-homepage = "https://feelit.khusika.com"
-tags = [
-  "blog",
-  "clean",
-  "responsive",
-  "dark",
-  "theme"
-]
-features = [
-  "cover-image",
-  "favicon",
-  "multilingual",
-  "pagination",
-  "social-menu",
-  "syntax-highlighting",
-  "SEO Optimized"
-]
-min_version = "0.84.0"
+homepage = "https://github.com/khusika/FeelIt"
+demosite = "https://feelit.khusika.com/"
+tags = ["blog", "dark", "light", "multilangual", "responsive"]
+features = ["cover-image", "favicon", "multilingual", "pagination", "social-menu", "syntax-highlighting", "SEO Optimized", "HTML and CSS Optimized", "PWA Support"]
 
 [author]
   name = "Khusika"
@@ -32,3 +18,8 @@ min_version = "0.84.0"
   name = "Dillon"
   homepage = "https://dillonzq.com/"
   repo = "https://github.com/dillonzq/LoveIt"
+
+[module]
+  [module.hugoVersion]
+    extended = true
+    min = "0.84.0"
