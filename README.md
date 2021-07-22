@@ -12,7 +12,7 @@ It is based on the original [LoveIt Theme](https://github.com/dillonzq/LoveIt), 
 Since the three themes have a similar look, if you have questions about their differences,
 read [Why choose FeelIt](#why-choose-feelit) so that you can choose the one that works best for you.
 
-![Hugo Theme FeelIt](https://github.com/khusika/FeelIt/raw/main/images/Apple-Devices-Preview.webp)
+![Hugo Theme FeelIt](https://github.com/khusika/FeelIt/raw/main/images/screenshot.png)
 
 ## Demo Site
 
