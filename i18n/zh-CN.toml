@@ -112,7 +112,10 @@ other = "目录"
 other = "发布于 {{ .Date }}"
 
 [publishedInCategories]
-other = "收录于 {{ .Categories }}"
+other = "出版于  {{ .Categories }}"
+
+[includedInCategories]
+other = "包括在 {{ .Categories }}"
 
 [wordCount]
 other = "约 {{ .Count }} 字"

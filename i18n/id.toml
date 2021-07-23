@@ -107,6 +107,9 @@ other = "diterbitkan pada {{ .Date }}"
 [publishedInCategories]
 other = "diterbitkan di {{ .Categories }}"
 
+[includedInCategories]
+other = "termasuk dalam {{ .Categories }}"
+
 [wordCount]
 one = "Satu kata"
 other = "{{ .Count }} kata"

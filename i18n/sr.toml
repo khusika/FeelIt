@@ -106,7 +106,10 @@ other = "Садржаји"
 other = "објављено {{ .Date }}"
 
 [publishedInCategories]
-other = "укључено {{ .Categories }}"
+other = "објављена у {{ .Categories }}"
+
+[includedInCategories]
+other = "укључен у {{ .Categories }}"
 
 [wordCount]
 one = "Једна реч"

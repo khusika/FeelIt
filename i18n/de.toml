@@ -109,6 +109,9 @@ other = "Inhalt"
 other = "veröffentlicht auf {{ .Date }}"
 
 [publishedInCategories]
+other = "veröffentlicht in {{ .Categories }}"
+
+[includedInCategories]
 other = "enthalten in {{ .Categories }}"
 
 [wordCount]

@@ -97,7 +97,10 @@ other = "Spis treści"
 other = "opublikowano {{ .Date }}"
 
 [publishedInCategories]
-other = "zawarty w {{ .Categories }}"
+other = "opublikowane w {{ .Categories }}"
+
+[includedInCategories]
+other = "zawarte w {{ .Categories }}"
 
 [wordCount]
 one = "Jedno słowo"

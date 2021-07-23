@@ -109,6 +109,9 @@ other = "Cuprins"
 other = "publicat la {{ .Date }}"
 
 [publishedInCategories]
+other = "publicat în {{ .Categories }}"
+
+[includedInCategories]
 other = "inclus în {{ .Categories }}"
 
 [wordCount]
