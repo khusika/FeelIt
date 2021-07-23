@@ -1,5 +1,8 @@
 {{- partial "init.html" . -}}
 
+{{- $params := .Scratch.Get "params" -}}
+{{- $offline := $params.offline -}}
+
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode }}">
     <head>
@@ -19,6 +22,7 @@
             {{ template "_internal/google_analytics.html" . }}
         {{- end -}}{{ end -}}
     </head>
+    {{- if ne $offline true -}}
     <body data-header-desktop="{{ .Site.Params.header.desktopMode }}" data-header-mobile="{{ .Site.Params.header.mobileMode }}">
         {{- /* Check theme isDark before body rendering */ -}}
         {{- $theme := .Site.Params.defaulttheme -}}
@@ -61,4 +65,20 @@
         {{- /* Load JavaScript scripts and CSS */ -}}
         {{- partial "assets.html" . | replaceRE `<script src="/sw.min.js"></script>` `` | safeHTML -}}
     </body>
+    {{- else if eq $offline true -}}
+    <body>
+        {{- /* Check theme isDark before body rendering */ -}}
+        {{- $theme := .Site.Params.defaulttheme -}}
+        <script>(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('{{ $theme }}' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : '{{ $theme }}' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        {{- /* Body wrapper */ -}}
+        <div class="wrapper">
+            <main class="main">
+                <div class="container">
+                    {{- block "content" . }}{{ end -}}
+                </div>
+            </main>
+        </div>
+    </body>
+    {{- end -}}
 </html>

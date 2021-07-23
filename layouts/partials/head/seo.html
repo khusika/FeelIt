@@ -1,4 +1,5 @@
 {{- $params := .Scratch.Get "params" -}}
+{{- $offline := $params.offline -}}
 
 {{- with .Site.Params.verification.google -}}
     <meta name="google-site-verification" content="{{ . }}" />
@@ -16,6 +17,7 @@
     <meta name="baidu-site-verification" content="{{ . }}" />
 {{- end -}}
 
+{{- if ne $offline true -}}
 {{- /* Home SEO */ -}}
 {{- if .IsHome -}}
     <script type="application/ld+json">
@@ -150,4 +152,5 @@
         "description": {{ .Description | safeHTML }}
     }
     </script>
+{{- end -}}
 {{- end -}}

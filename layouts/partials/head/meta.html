@@ -1,9 +1,12 @@
 {{- $params := .Scratch.Get "params" -}}
+{{- $offline := $params.offline -}}
 
 <meta name="description" content="{{ $params.description | default .Site.Params.description }}">
 
+{{- if ne $offline true -}}
 {{- template "_internal/opengraph.html" . -}}
 {{- template "_internal/twitter_cards.html" . -}}
+{{- end -}}
 
 <meta name="application-name" content="{{ .Site.Params.app.title | default .Site.Title }}">
 <meta name="apple-mobile-web-app-title" content="{{ .Site.Params.app.title | default .Site.Title }}">

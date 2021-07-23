@@ -1,5 +1,7 @@
 {{- $cdn := .Scratch.Get "cdn" | default dict -}}
 {{- $fingerprint := .Scratch.Get "fingerprint" -}}
+{{- $params := .Scratch.Get "params" -}}
+{{- $offline := $params.offline -}}
 
 {{- if not .Site.Params.app.noFavicon -}}
     {{- with .Site.Params.app.svgFavicon -}}
@@ -17,6 +19,7 @@
 {{- end -}}
 
 <link rel="canonical" href="{{ .Permalink }}" />
+{{- if ne $offline true -}}
 {{- if .PrevInSection -}}
     <link rel="prev" href="{{ .PrevInSection.Permalink }}" />
 {{- end -}}
@@ -43,6 +46,7 @@
 {{- partial "plugin/style.html" $style -}}
 {{- end -}}
 {{- end -}}
+{{- end -}}
 
 {{- /* home.min.css */ -}}
 {{- if .Site.Params.SourceMap -}}
@@ -57,6 +61,7 @@
 {{- partial "plugin/style.html" $style -}}
 {{- end -}}
 
+{{- if ne $offline true -}}
 {{- $analytics := .Site.Config.Privacy.GoogleAnalytics -}}
 {{- if not $analytics.Disable }}{{ with .Site.GoogleAnalytics -}}
     {{ if hasPrefix . "G-"}}
@@ -67,3 +72,4 @@
         <link rel="dns-prefetch" href="https://www.google-analytics.com">
     {{- end -}}
 {{- end -}}{{ end -}}
+{{- end -}}

@@ -72,7 +72,7 @@
         {{- partial "comment.html" . -}}
     </article>
     {{- else if eq $offline true -}}
-    <article class="page" id="content-404">
+    <article id="content-404">
         <h2>{{ .Title }}</h2>
         <p>
             {{- T "pageOffline" -}}
