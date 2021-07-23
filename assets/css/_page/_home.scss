@@ -211,16 +211,17 @@
       }
 
       .post-footer {
-        margin: .4rem 1rem 0 1rem;
+        margin: .5rem 1rem 0 1rem;
         font-size: .875rem;
 
         .post-tags {
           list-style: none;
           margin: 0;
-          overflow: hidden;
           padding: 0;
+          overflow: auto;
+          white-space: nowrap;
           li {
-            float: left;
+            display: inline-block;
           }
 
           a {
