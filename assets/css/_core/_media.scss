@@ -22,30 +22,24 @@
   }
 
   .home[data-home=posts] {
-    .summary-card {
-      .summary{
-        min-height: 30.5rem;
-      }
+    .summary{
+      min-height: 30.5rem;
     }
   }
 }
 
 @media only screen and (max-width: 1920px) {
   .home[data-home=posts] {
-    .summary-card {
-      .summary{
-        min-height: 27rem;
-      }
+    .summary{
+      min-height: 27rem;
     }
   }
 }
 
 @media only screen and (max-width: 1600px) {
   .home[data-home=posts] {
-    .summary-card {
-      .summary{
-        min-height: 24rem;
-      }
+    .summary{
+      min-height: 24rem;
     }
   }
 }
@@ -56,10 +50,8 @@
   }
 
   .home[data-home=posts] {
-    .summary-card {
-      .summary{
-        min-height: 23rem;
-      }
+    .summary{
+      min-height: 23rem;
     }
   }
 }
@@ -92,10 +84,8 @@
   }
 
   .home[data-home=posts] {
-    .summary-card {
-      .summary{
-        min-height: 22rem;
-      }
+    .summary{
+      min-height: 22rem;
     }
   }
 
@@ -106,11 +96,9 @@
 
 @media only screen and (max-width: 960px) {
   .home[data-home=posts] {
-    .summary-card {
-      .summary{
-        width: 100%;
-        min-height: 0;
-      }
+    .summary{
+      width: 100%;
+      min-height: 0;
     }
   }
 
