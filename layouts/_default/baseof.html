@@ -42,8 +42,10 @@
             {{- if ne .Site.Params.footer.enable false -}}
             {{- partial "footer.html" . -}}
             {{- end -}}
-            {{- if eq .Site.Params.pwa.enable true -}}
+            {{- if eq hugo.Environment "production" -}}
+            {{- with (eq $.Site.Params.pwa.enable "true") -}}
             {{- partial "pwa.html" . -}}
+            {{- end -}}
             {{- end -}}
             </footer>
         </div>
