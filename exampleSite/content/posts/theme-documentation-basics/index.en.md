@@ -780,7 +780,7 @@ Note that some of these parameters are explained in details in other sections of
 Default environments are `development` with `hugo serve` and `production` with `hugo`.
 
 Due to limitations in the local `development` environment,
-the **comment system**, **CDN** and **fingerprint** will not be enabled in the `development` environment.
+the **comment system**, **CDN**, **fingerprint** and **PWA** will not be enabled in the `development` environment.
 
 You could enable these features with `hugo serve -e production`.
 {{< /admonition >}}

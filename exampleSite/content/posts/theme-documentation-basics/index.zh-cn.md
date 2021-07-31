@@ -786,7 +786,7 @@ hugo
 而 `hugo` 的默认运行环境是 `production`.
 
 由于本地 `development` 环境的限制,
-**评论系统**, **CDN** 和 **fingerprint** 不会在 `development` 环境下启用.
+**评论系统**, **CDN**, **fingerprint** 和 **PWA** 不会在 `development` 环境下启用.
 
 你可以使用 `hugo serve -e production` 命令来开启这些特性.
 {{< /admonition >}}
