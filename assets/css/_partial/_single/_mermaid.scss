@@ -1,16 +1,12 @@
-.page .mermaid {
+.mermaid {
   width: 100%;
   margin: 3% auto;
   text-align: center;
+  background-color: $code-background-color;
+  padding: 1rem;
 
   & > svg {
     max-width: 100%;
-  }
-
-  @import "themes/neutral/index";
-
-  [theme=dark] & {
-    @import "themes/dark/index";
   }
 
   div.mermaidTooltip {
