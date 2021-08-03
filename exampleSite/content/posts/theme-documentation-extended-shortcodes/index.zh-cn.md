@@ -504,7 +504,63 @@ end
     merge newbranch
 {{< /mermaid >}}
 
-### 5.7 饼图 {#pie}
+### 5.7 实体关系图 {#erd}
+
+一个 **erDiagram** `mermaid` 示例:
+
+```markdown
+{{</* mermaid */>}}
+erDiagram
+    CUSTOMER ||--o{ ORDER : places
+    ORDER ||--|{ LINE-ITEM : contains
+    CUSTOMER }|..|{ DELIVERY-ADDRESS : uses
+{{</* /mermaid */>}}
+```
+
+呈现的输出效果如下:
+
+{{< mermaid >}}
+erDiagram
+    CUSTOMER ||--o{ ORDER : places
+    ORDER ||--|{ LINE-ITEM : contains
+    CUSTOMER }|..|{ DELIVERY-ADDRESS : uses
+{{< /mermaid >}}
+
+### 5.8 用户旅程图 {#ujd}
+
+一个 **旅行** `mermaid` 示例:
+
+```markdown
+{{</* mermaid */>}}
+journey
+    title My working day
+    section Go to work
+      Make tea: 5: Me
+      Go upstairs: 3: Me
+      Do work: 1: Me, Cat
+    section Go home
+      Go downstairs: 5: Me
+      Sit down: 5: Me
+
+{{</* /mermaid */>}}
+```
+
+呈现的输出效果如下:
+
+{{< mermaid >}}
+journey
+    title My working day
+    section Go to work
+      Make tea: 5: Me
+      Go upstairs: 3: Me
+      Do work: 1: Me, Cat
+    section Go home
+      Go downstairs: 5: Me
+      Sit down: 5: Me
+
+{{< /mermaid >}}
+
+### 5.9 饼图 {#pie}
 
 一个 **饼图** `mermaid` 示例:
 
