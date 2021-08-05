@@ -2,6 +2,7 @@
 {{- $cdn := .Scratch.Get "cdn" | default dict -}}
 {{- $fingerprint := .Scratch.Get "fingerprint" -}}
 {{- $config := (.Scratch.Get "this").config -}}
+{{- $pwa := .Scratch.Get "pwa" -}}
 
 {{- /* Font Awesome */ -}}
 {{- if $params.cdnfontawesome -}}
@@ -175,10 +176,8 @@
 {{- end -}}
 {{- end -}}
 
-{{- if eq hugo.Environment "production" -}}
-{{- with (eq $.Site.Params.pwa.enable "true") -}}
+{{- if and (eq hugo.Environment "production") ($pwa.enable) -}}
 {{- dict "Source" "sw.js" "Minify" true "Fingerprint" $fingerprint | dict "Scratch" .Scratch "Data" | partial "scratch/script.html" -}}
-{{- end -}}
 {{- end -}}
 
 {{- /* Cookie Consent */ -}}

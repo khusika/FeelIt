@@ -1,6 +1,7 @@
 {{- partial "init.html" . -}}
 
 {{- $params := .Scratch.Get "params" -}}
+{{- $pwa := .Scratch.Get "pwa" -}}
 {{- $offline := $params.offline -}}
 
 <!DOCTYPE html>
@@ -42,10 +43,8 @@
             {{- if ne .Site.Params.footer.enable false -}}
             {{- partial "footer.html" . -}}
             {{- end -}}
-            {{- if eq hugo.Environment "production" -}}
-            {{- with (eq $.Site.Params.pwa.enable "true") -}}
+            {{- if and (eq hugo.Environment "production") ($pwa.enable) -}}
             {{- partial "pwa.html" . -}}
-            {{- end -}}
             {{- end -}}
             </footer>
         </div>
