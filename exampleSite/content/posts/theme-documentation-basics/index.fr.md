@@ -322,6 +322,42 @@ Please open the code block below to view the complete sample configuration :(far
     # amount of RSS pages
     rss = 10
 
+  # {{< version 1.0.2 >}}
+  [params.about]
+    # whether to enable profile on about page
+    # depends on .Site.Params.home.profile.enable
+    enable = true
+    # whether to enable param layout
+    param = true
+    # title for param layout
+    paramTitle = "Informations Personnelles"
+    # general description of your site
+    # can be write with markdown style
+    description = "[FeelIt](https://github.com/khusika/FeelIt) is a **clean**, **elegant** but **advanced** blog theme for [Hugo](https://gohugo.io/) developed by [Khusika](https://khusika.com). It is based on the original [LoveIt Theme](https://github.com/dillonzq/LoveIt), [LeaveIt Theme](https://github.com/liuzc/LeaveIt), and [KeepIt Theme](https://github.com/Fastbyte01/KeepIt)."
+    # description of your status
+    [[params.about.status]]
+      faIcon = "fas fa-building"
+      title = "Compagnie"
+      desc = "FeelIt"
+    [[params.about.status]]
+      faIcon = "fas fa-briefcase fa-fw"
+      title = "Occupation"
+      desc = "Indépendant"
+    [[params.about.status]]
+      title = "Lieu"
+      faIcon = "fas fa-map-marker-alt"
+      desc = "Terre"
+    # description of your parameter
+    [[params.about.parameter]]
+      language = "UI/UX"
+      level = "80"
+    [[params.about.parameter]]
+      language = "HTML"
+      level = "70"
+    [[params.about.parameter]]
+      language = "Go"
+      level = "60"
+
   # Home page config
   [params.home]
     # {{< version 0.2.0 >}} amount of RSS pages
