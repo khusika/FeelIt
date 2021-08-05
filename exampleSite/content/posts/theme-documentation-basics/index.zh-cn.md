@@ -320,6 +320,43 @@ hugo
     # RSS 文章数目
     rss = 10
 
+  # {{< version 1.0.2 >}}
+  # 关于页面配置
+  [params.about]
+    # 是否启用关于页面的配置文件
+    # 依赖于取决于 .Site.Params.home.profile.enable
+    enable = true
+    # 是否启用参数布局
+    param = true
+    # 参数布局的标题
+    paramTitle = "个人信息"
+    # 您网站的一般描述
+    # 可以用markdown样式写
+    description = "[FeelIt](https://github.com/khusika/FeelIt) 是一个由 [Khusika](https://khusika.com) 开发的**简洁**、**优雅**且**高效**的 [Hugo](https://gohugo.io/) 博客主题。 它的原型基于 [LoveIt 主题](https://github.com/dillonzq/LoveIt), [LeaveIt 主题](https://github.com/liuzc/LeaveIt), 和 [KeepIt 主题](https://github.com/Fastbyte01/KeepIt)。"
+    # 你的状态描述
+    [[params.about.status]]
+      faIcon = "fas fa-building"
+      title = "公司"
+      desc = "FeelIt"
+    [[params.about.status]]
+      faIcon = "fas fa-briefcase fa-fw"
+      title = "职业"
+      desc = "自由职业者"
+    [[params.about.status]]
+      title = "地点"
+      faIcon = "fas fa-map-marker-alt"
+      desc = "地球"
+    # 参数说明
+    [[params.about.parameter]]
+      language = "UI/UX"
+      level = "80"
+    [[params.about.parameter]]
+      language = "HTML"
+      level = "70"
+    [[params.about.parameter]]
+      language = "Go"
+      level = "60"
+
   # 主页配置
   [params.home]
     # {{< version 0.2.0 >}} RSS 文章数目

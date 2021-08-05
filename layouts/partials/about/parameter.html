@@ -1,0 +1,18 @@
+<div class="param">
+    <div class="skill">
+        <h2>{{ .Site.Params.about.paramTitle }}</h2>
+        {{- range .Site.Params.about.parameter -}}
+        <div class="box">
+            <p>{{ .language }}</p>
+            <p>{{ .level }}%</p>
+            <div class="bar">
+                <div class="level" style="width: {{ .level }}%"></div>
+            </div>
+        </div>
+        {{- end -}}
+    </div>
+    <div class="content exp">
+        <p>{{ .Site.Params.about.description | markdownify }}</p>
+    </div>
+</div>
+

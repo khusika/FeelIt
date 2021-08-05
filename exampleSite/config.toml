@@ -133,6 +133,43 @@ ignoreErrors = ["err-missing-comment-accesstoken", "err-missing-oembed-accesstok
           index = "index.en"
           appID = "PASDMWALPK"
           searchKey = "b42948e51daaa93df92381c8e2ac0f93"
+
+      # About page config
+      [languages.en.params.about]
+        # whether to enable profile on about page
+        # depends on .Site.Params.home.profile.enable
+        enable = true
+        # whether to enable param layout
+        param = true
+        # title for param layout
+        paramTitle = "Personal Information"
+        # general description of your site
+        # can be write with markdown style
+        description = "[FeelIt](https://github.com/khusika/FeelIt) is a **clean**, **elegant** but **advanced** blog theme for [Hugo](https://gohugo.io/) developed by [Khusika](https://khusika.com). It is based on the original [LoveIt Theme](https://github.com/dillonzq/LoveIt), [LeaveIt Theme](https://github.com/liuzc/LeaveIt), and [KeepIt Theme](https://github.com/Fastbyte01/KeepIt)."
+        # description of your status
+        [[languages.en.params.about.status]]
+          faIcon = "fas fa-building"
+          title = "Company"
+          desc = "FeelIt"
+        [[languages.en.params.about.status]]
+          faIcon = "fas fa-briefcase fa-fw"
+          title = "Occupation"
+          desc = "Freelancer"
+        [[languages.en.params.about.status]]
+          title = "Location"
+          faIcon = "fas fa-map-marker-alt"
+          desc = "Earth"
+        # description of your parameter
+        [[languages.en.params.about.parameter]]
+          language = "UI/UX"
+          level = "80"
+        [[languages.en.params.about.parameter]]
+          language = "HTML"
+          level = "70"
+        [[languages.en.params.about.parameter]]
+          language = "Go"
+          level = "60"
+
       # Home page config
       [languages.en.params.home]
         # amount of RSS pages
@@ -265,6 +302,43 @@ ignoreErrors = ["err-missing-comment-accesstoken", "err-missing-oembed-accesstok
           index = "index.zh-cn"
           appID = "PASDMWALPK"
           searchKey = "b42948e51daaa93df92381c8e2ac0f93"
+
+      # 关于页面配置
+      [languages.zh-cn.params.about]
+        # 是否启用关于页面的配置文件
+        # 依赖于取决于 .Site.Params.home.profile.enable
+        enable = true
+        # 是否启用参数布局
+        param = true
+        # 参数布局的标题
+        paramTitle = "个人信息"
+        # 您网站的一般描述
+        # 可以用markdown样式写
+        description = "[FeelIt](https://github.com/khusika/FeelIt) 是一个由 [Khusika](https://khusika.com) 开发的**简洁**、**优雅**且**高效**的 [Hugo](https://gohugo.io/) 博客主题。 它的原型基于 [LoveIt 主题](https://github.com/dillonzq/LoveIt), [LeaveIt 主题](https://github.com/liuzc/LeaveIt), 和 [KeepIt 主题](https://github.com/Fastbyte01/KeepIt)。"
+        # 你的状态描述
+        [[languages.zh-cn.params.about.status]]
+          faIcon = "fas fa-building"
+          title = "公司"
+          desc = "FeelIt"
+        [[languages.zh-cn.params.about.status]]
+          faIcon = "fas fa-briefcase fa-fw"
+          title = "职业"
+          desc = "自由职业者"
+        [[languages.zh-cn.params.about.status]]
+          title = "地点"
+          faIcon = "fas fa-map-marker-alt"
+          desc = "地球"
+        # 参数说明
+        [[languages.zh-cn.params.about.parameter]]
+          language = "UI/UX"
+          level = "80"
+        [[languages.zh-cn.params.about.parameter]]
+          language = "HTML"
+          level = "70"
+        [[languages.zh-cn.params.about.parameter]]
+          language = "Go"
+          level = "60"
+
       # 主页信息设置
       [languages.zh-cn.params.home]
         # RSS 文章数目
@@ -395,6 +469,43 @@ ignoreErrors = ["err-missing-comment-accesstoken", "err-missing-oembed-accesstok
           index = "index.fr"
           appID = "PASDMWALPK"
           searchKey = "b42948e51daaa93df92381c8e2ac0f93"
+
+      # About page config
+      [languages.fr.params.about]
+        # whether to enable profile on about page
+        # depends on .Site.Params.home.profile.enable
+        enable = true
+        # whether to enable param layout
+        param = true
+        # title for param layout
+        paramTitle = "Informations Personnelles"
+        # general description of your site
+        # can be write with markdown style
+        description = "[FeelIt](https://github.com/khusika/FeelIt) is a **clean**, **elegant** but **advanced** blog theme for [Hugo](https://gohugo.io/) developed by [Khusika](https://khusika.com). It is based on the original [LoveIt Theme](https://github.com/dillonzq/LoveIt), [LeaveIt Theme](https://github.com/liuzc/LeaveIt), and [KeepIt Theme](https://github.com/Fastbyte01/KeepIt)."
+        # description of your status
+        [[languages.fr.params.about.status]]
+          faIcon = "fas fa-building"
+          title = "Compagnie"
+          desc = "FeelIt"
+        [[languages.fr.params.about.status]]
+          faIcon = "fas fa-briefcase fa-fw"
+          title = "Occupation"
+          desc = "Indépendant"
+        [[languages.fr.params.about.status]]
+          title = "Lieu"
+          faIcon = "fas fa-map-marker-alt"
+          desc = "Terre"
+        # description of your parameter
+        [[languages.fr.params.about.parameter]]
+          language = "UI/UX"
+          level = "80"
+        [[languages.fr.params.about.parameter]]
+          language = "HTML"
+          level = "70"
+        [[languages.fr.params.about.parameter]]
+          language = "Go"
+          level = "60"
+
       # Home page config
       [languages.fr.params.home]
         # amount of RSS pages

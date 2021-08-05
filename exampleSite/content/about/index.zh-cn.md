@@ -17,10 +17,6 @@ math:
 [![GitHub forks](https://img.shields.io/github/forks/khusika/FeelIt?style=social)](https://github.com/khusika/FeelIt/fork)
 {{< /style >}}
 
-> [:(fas fa-hand-holding-heart fa-fw): FeelIt](https://github.com/khusika/FeelIt) 是一个由 [Khusika](https://khusika.com) 开发的**简洁**、**优雅**且**高效**的 [Hugo](https://gohugo.io/) 博客主题。
->
-> 它的原型基于 [LoveIt 主题](https://github.com/dillonzq/LoveIt), [LeaveIt 主题](https://github.com/liuzc/LeaveIt), 和 [KeepIt 主题](https://github.com/Fastbyte01/KeepIt)。
-
 ![Hugo 主题 FeelIt](/images/Apple-Devices-Preview.webp "Hugo 主题 FeelIt")
 
 ### 特性

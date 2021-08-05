@@ -32,7 +32,24 @@
     <link rel="feed" href="{{ .RelPermalink }}" type="application/rss+xml" title="{{ $.Site.Title }}">
 {{- end -}}
 
+
 {{- if not .IsHome -}}
+
+{{ with .Site.GetPage "/about" }}
+{{- /* about.min.css */ -}}
+{{- if .Site.Params.SourceMap -}}
+{{- $style := dict "Source" "css/about.scss" "Fingerprint" $fingerprint -}}
+{{- $options := dict "targetPath" "css/about.min.css" "enableSourceMap" true -}}
+{{- $style = dict "Context" . "ToCSS" $options | merge $style -}}
+{{- partial "plugin/style.html" $style -}}
+{{- else -}}
+{{- $style := dict "Source" "css/about.scss" "Fingerprint" $fingerprint -}}
+{{- $options := dict "targetPath" "css/about.min.css" "enableSourceMap" false -}}
+{{- $style = dict "Context" . "ToCSS" $options | merge $style -}}
+{{- partial "plugin/style.html" $style -}}
+{{- end -}}
+{{ end }}
+
 {{- /* page.min.css */ -}}
 {{- if .Site.Params.SourceMap -}}
 {{- $style := dict "Source" "css/page.scss" "Fingerprint" $fingerprint -}}
