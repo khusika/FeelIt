@@ -35,7 +35,8 @@
 
 {{- if not .IsHome -}}
 
-{{ with .Site.GetPage "/about" }}
+{{- $aboutPage := site.GetPage "/about" -}}
+{{- if eq .Page $aboutPage -}}
 {{- /* about.min.css */ -}}
 {{- if .Site.Params.SourceMap -}}
 {{- $style := dict "Source" "css/about.scss" "Fingerprint" $fingerprint -}}

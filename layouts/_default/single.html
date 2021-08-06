@@ -8,22 +8,24 @@
 
     {{- $about := .Site.Params.about -}}
     {{- $profile := .Site.Params.home.profile -}}
+    {{- $aboutPage := site.GetPage "/about" -}}
 
-    {{- if and (eq $about.enable true) (eq $profile.enable true) -}}
-    {{- with .Site.GetPage "/about" -}}
-    <article class="page single">
+    {{- if eq .Page $aboutPage -}}
+    <article class="{{- if or (eq $about.enable false) (eq $profile.enable false) -}}page single special{{- else -}}page single{{- end -}}">
 
         {{- /* Title */ -}}
-        <h2 class="single-title animated fadeInDown faster">
+        <h2 class="single-title animated fadeInDown faster" data-about="true">
             {{- .Title -}}
         </h2>
 
+        {{- if and (eq $about.enable true) (eq $profile.enable true) -}}
         <div class="single-card" data-param="{{- if eq $about.param true -}}on{{- else -}}off{{- end -}}" data-about="true">
         {{- partial "about/profile.html" . -}}
         {{- if eq $about.param true -}}
         {{- partial "about/parameter.html" . -}}
         {{- end -}}
         </div>
+        {{- end -}}
 
         <div class="single-card">
             {{- /* Content */ -}}
@@ -34,8 +36,7 @@
             </div>
         </div>
     </article>
-    {{- end -}}
-    {{- else -}}
+    {{- else if ne .Page $aboutPage -}}
     {{- $toc := $params.toc -}}
     {{- if eq $toc true -}}
         {{- $toc = .Site.Params.page.toc | default dict -}}

@@ -3,7 +3,7 @@
 @import "_variables";
 @import "_mixin/index";
 
-.single-title {
+.single-title[data-about=true] {
   text-align: right;
 }
 
