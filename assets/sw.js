@@ -1,5 +1,5 @@
 const CACHE_VERSION = new URL(location).searchParams.get("version");
-const BASE_CACHE_FILES = ["/css/home.min.css", "/css/page.min.css", "/js/theme.min.js", "/site.webmanifest", "/offline/index.html", "/404.html"];
+const BASE_CACHE_FILES = ["/css/home.min.css", "/css/page.min.css", "/css/about.min.css", "/js/theme.min.js", "/site.webmanifest", "/offline/index.html", "/404.html"];
 const OFFLINE_CACHE_FILES = ["/css/home.min.css", "/js/theme.min.js", "/offline/index.html"];
 const NOT_FOUND_CACHE_FILES = ["/css/home.min.css", "/css/page.min.css", "/js/theme.min.js", "/404.html"];
 const OFFLINE_PAGE = "/offline/index.html";
