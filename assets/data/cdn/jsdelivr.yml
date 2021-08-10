@@ -52,8 +52,8 @@ libFiles:
   aplayerJS: aplayer@1.10.1/dist/APlayer.min.js
   # meting@2.0.1 https://github.com/metowolf/MetingJS
   metingJS: meting@2.0.1/dist/Meting.min.js
-  # vue@2.6.12 https://github.com/vuejs/vue
-  vueJS: vue@2.6.12/dist/vue.runtime.js
+  # vue@2.6.14 https://github.com/vuejs/vue
+  vueJS: vue@2.6.14/dist/vue.runtime.min.js
   # vssue@1.4.8 https://github.com/meteorlxy/vssue
   vssueCSS: vssue@1.4.8/dist/vssue.min.css
   vssueBitbucket: vssue@1.4.8/dist/vssue.bitbucket.min.js

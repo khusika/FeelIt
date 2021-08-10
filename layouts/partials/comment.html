@@ -26,7 +26,7 @@
             <div id="vssue"></div>
             {{- $source := $cdn.vssueCSS | default "lib/vue/vssue/vssue.css" -}}
             {{- dict "Source" $source "Minify" true "Fingerprint" $fingerprint | dict "Scratch" .Scratch "Data" | partial "scratch/style.html" -}}
-            {{- $source := $cdn.vueJS | default "lib/vue/vue.runtime.js" -}}
+            {{- $source := $cdn.vueJS | default "lib/vue/vue.runtime.min.js" -}}
             {{- dict "Source" $source "Fingerprint" $fingerprint | dict "Scratch" .Scratch "Data" | partial "scratch/script.html" -}}
             {{- if eq $vssue.platform "bitbucket" -}}
                 {{- $source := $cdn.vssueBitbucket | default "lib/vue/vssue/vssue.bitbucket.min.js" -}}
