@@ -19,7 +19,7 @@
         {{- partial "head/seo.html" . -}}
 
         {{- $analytics := .Site.Config.Privacy.GoogleAnalytics -}}
-        {{- if not $analytics.Disable }}{{ with .Site.GoogleAnalytics -}}
+        {{- if not $analytics.Disable }}{{ if .Site.GoogleAnalytics -}}
             {{ template "_internal/google_analytics.html" . }}
         {{- end -}}{{ end -}}
     </head>
