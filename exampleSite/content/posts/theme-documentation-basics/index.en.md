@@ -461,6 +461,7 @@ Please open the code block below to view the complete sample configuration :(far
     Bilibili = ""
     Email = "xxxx@xxxx.com"
     Resume = "" #goo.gl id {{< version 1.0.0 >}}
+    xda = "" {{< version 1.0.2 >}}
     RSS = true # {{< version 0.2.0 >}}
 
   # {{< version 0.2.0 changed >}} Page config
