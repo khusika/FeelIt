@@ -7,6 +7,13 @@ html {
   scroll-behavior: smooth;
 }
 
+:target:before {
+    content: "";
+    display: block;
+    height: 70px;
+    margin-top: -70px;
+}
+
 /* scrollbar, only support webkit */
 ::-webkit-scrollbar {
   width: .5rem;
