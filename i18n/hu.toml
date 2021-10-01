@@ -1,0 +1,198 @@
+# Translations for Hungarian
+# https://gohugo.io/content-management/multilingual/#translation-of-strings
+
+# === baseof ==
+[backToTop]
+other = "Vissza a tetejére"
+
+[viewComments]
+other = "Kommentek megtekintése"
+# === baseof ==
+
+# === Post ===
+[posts]
+other = "Posztok"
+# === Post ===
+
+# === Taxonomy ===
+[allSome]
+other = "Minden {{ .Some }}"
+
+[tag]
+other = "Tag"
+
+[tags]
+other = "Tagek"
+
+[category]
+other = "Kategória"
+
+[categories]
+other = "Kategóriák"
+# === Taxonomy ===
+
+# === Pagination ===
+[more]
+other = "Több"
+# === Pagination ===
+
+# === partials/header.html ===
+[selectLanguage]
+other = "Nyelv választása"
+
+[switchTheme]
+other = "Téma választása"
+# === partials/header.html ===
+
+# === partials/footer.html ===
+[poweredBySome]
+other = "Powered by {{ .Hugo }} | Téma - {{ .Theme }}"
+# === partials/footer.html ===
+
+# === partials/comment.html ===
+[valineLang]
+other = "hu"
+
+[valinePlaceholder]
+other = "A kommented ..."
+
+[facebookLanguageCode]
+other = "hu_HU"
+# === partials/comment.html ===
+
+# === partials/assets.html ===
+[search]
+other = "Keresés"
+
+[searchPlaceholder]
+other = "Keresés a címekben és szövegekben..."
+
+[clear]
+other = "Törlés"
+
+[cancel]
+other = "Mégse"
+
+[noResultsFound]
+other = "Nincs találat"
+
+[lunrLanguageCode]
+other = "hu"
+
+[copyToClipboard]
+other = "Másolás a vágólapra"
+
+[cookieconsentMessage]
+other = "A weboldal sütiket használ, hogy javítsa a felhasználói élményt."
+
+[cookieconsentDismiss]
+other = "Megvan!"
+
+[cookieconsentLink]
+other = "Tudj meg többet"
+# === partials/assets.html ===
+
+# === partials/plugin/share.html ===
+[shareOn]
+other = "Megosztás be"
+# === partials/plugin/share.html ===
+
+# === posts/single.html ===
+[contents]
+other = "Tartalom"
+
+[publishedOnDate]
+other = "közzétéve: {{ .Date }}"
+
+[includedInCategories]
+other = "tartalmazza a {{ .Categories }}"
+
+[wordCount]
+one = "Egy szó"
+other = "{{ .Count }} szó"
+
+[readingTime]
+one = "Egy perc"
+other = "{{ .Count }} perc"
+
+[views]
+other = "nézetek"
+
+[author]
+other = "Szerző"
+
+[updatedOnDate]
+other = "Frissítve {{ .Date }}"
+
+[readMarkdown]
+other = "Markdown megtekintése"
+
+[improveArticle]
+other = "Cikk javítása"
+
+[back]
+other = "Vissza"
+
+[home]
+other = "Kezdőoldal"
+
+[readMore]
+other = "Olvass tovább"
+# === posts/single.html ===
+
+# === 404.html ===
+[pageNotFound]
+other = "Oldal nem található"
+
+[pageNotFoundText]
+other = "A keresett oldal nem található."
+# === 404.html ===
+
+# === shortcodes/admonition.html ===
+[note]
+other = "Jegyzet"
+
+[abstract]
+other = "Absztrakt"
+
+[info]
+other = "Infó"
+
+[tip]
+other = "Tipp"
+
+[success]
+other = "Siker"
+
+[question]
+other = "Kérdés"
+
+[warning]
+other = "Figyelmeztetés"
+
+[failure]
+other = "Kudarc"
+
+[danger]
+other = "Veszély"
+
+[bug]
+other = "Hiba"
+
+[example]
+other = "Példa"
+
+[quote]
+other = "Idézet"
+# === shortcodes/admonition.html ===
+
+# === shortcodes/version.html ===
+[new]
+other = "ÚJ"
+
+[changed]
+other = "VÁLTOZOTT"
+
+[deleted]
+other = "TÖRÖLT"
+# === shortcodes/version.html ===
