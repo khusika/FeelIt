@@ -162,6 +162,7 @@ FeelIt supports the following languages:
 * Serbian
 * Vietnamese
 * Simplified Chinese
+* Hungarian
 * [Contribute with a new language](https://github.com/khusika/FeelIt/pulls)
 
 [Languages Compatibility](https://feelit.khusika.com/theme-documentation-basics/#language-compatibility)
