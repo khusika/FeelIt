@@ -1,0 +1,203 @@
+# Translations for Czech
+# https://gohugo.io/content-management/multilingual/#translation-of-strings
+
+# === baseof ==
+[backToTop]
+other = "Zpátky na začátek"
+
+[viewComments]
+other = "Zobrazit komentáře"
+# === baseof ==
+
+# === Post ===
+[posts]
+other = "Příspěvky"
+# === Post ===
+
+# === Taxonomy ===
+[allSome]
+other = "Všechny {{ .Some }}"
+
+[tag]
+other = "Značka"
+
+[tags]
+other = "Značky"
+
+[category]
+other = "Kategorie"
+
+[categories]
+other = "Kategorie"
+# === Taxonomy ===
+
+# === Pagination ===
+[more]
+other = "Více"
+# === Pagination ===
+
+# === partials/header.html ===
+[selectLanguage]
+other = "Vybrat jazyk"
+
+[switchTheme]
+other = "Přepnout motiv"
+# === partials/header.html ===
+
+# === partials/footer.html ===
+[poweredBySome]
+other = "Pohání {{ .Hugo }} | Motiv - {{ .Theme }}"
+# === partials/footer.html ===
+
+# === partials/comment.html ===
+[valineLang]
+other = "cs"
+
+[valinePlaceholder]
+other = "Váš komentář…"
+
+[facebookLanguageCode]
+other = "cs_CZ"
+# === partials/comment.html ===
+
+# === partials/assets.html ===
+[search]
+other = "Hledat"
+
+[searchPlaceholder]
+other = "Hledat podle titulku nebo obsahu…"
+
+[clear]
+other = "Vymazat"
+
+[cancel]
+other = "Zrušit"
+
+[noResultsFound]
+other = "Nenalezeny žádné výsledky"
+
+[lunrLanguageCode]
+other = "cs"
+
+[copyToClipboard]
+other = "Zkopírovat do schránky"
+
+[cookieconsentMessage]
+other = "Tato webová stránka využívá Cookies za účelem vylepšení vašeho zážitku."
+
+[cookieconsentDismiss]
+other = "Chápu!"
+
+[cookieconsentLink]
+other = "Zjistit více"
+# === partials/assets.html ===
+
+# === partials/plugin/share.html ===
+[shareOn]
+other = "Sdílet na"
+# === partials/plugin/share.html ===
+
+# === posts/single.html ===
+[contents]
+other = "Obsah"
+
+[publishedOnDate]
+other = "zveřejněno: {{ .Date }}"
+
+[publishedInCategories]
+other = "zveřejněno v {{ .Categories }}"
+
+[includedInCategories]
+other = "zahrnuto v {{ .Categories }}"
+
+[wordCount]
+one = "Jedno slovo"
+other = "{{ .Count }} slov"
+
+[readingTime]
+one = "Jedna minuta"
+other = "{{ .Count }} minut"
+
+[views]
+other = "zobrazení"
+
+[author]
+other = "Autor"
+
+[updatedOnDate]
+other = "Aktualizováno {{ .Date }}"
+
+[readMarkdown]
+other = "Číst Markdown"
+
+[improveArticle]
+other = "Vylepšit článek"
+
+[back]
+other = "Zpět"
+
+[home]
+other = "Domů"
+# === posts/single.html ===
+
+# === 404.html ===
+[pageNotFound]
+other = "Stránka nebyla nalezena"
+
+[pageNotFoundText]
+other = "Stránka, kterou hledáte, neexistuje. Omlouváme se."
+# === 404.html ===
+
+# === Offline Page ===
+[pageOffline]
+other = "Jste offline. Zkontrolujte své internetové připojení."
+# === Offline Page ===
+
+# === shortcodes/admonition.html ===
+[note]
+other = "Poznámka"
+
+[abstract]
+other = "Abstrakt"
+
+[info]
+other = "Informace"
+
+[tip]
+other = "Tip"
+
+[success]
+other = "Úspěch"
+
+[question]
+other = "Otázka"
+
+[warning]
+other = "Upozornění"
+
+[failure]
+other = "Neúspěch"
+
+[danger]
+other = "Výstraha"
+
+[bug]
+other = "Chyba"
+
+[example]
+other = "Příklad"
+
+[quote]
+other = "Citát"
+# === shortcodes/admonition.html ===
+
+# === shortcodes/version.html ===
+[new]
+other = "NOVÝ"
+
+[changed]
+other = "POZMĚNĚNÝ"
+
+[deleted]
+other = "SMAZANÝ"
+# === shortcodes/version.html ===
