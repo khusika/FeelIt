@@ -939,6 +939,7 @@ $code-font-family: Fira Mono, Source Code Pro, Menlo, Consolas, Monaco, monospac
 | 塞尔维亚语 | `sr` | `sr` | :(far fa-square fa-fw): | :(far fa-square fa-fw): |
 | 越南语 | `vi` | `vi` | :(far fa-square fa-fw): | :(far fa-check-square fa-fw): |
 | 简体中文 | `zh-cn` | `zh-CN` | :(far fa-check-square fa-fw): | :(far fa-check-square fa-fw): |
+| 波斯语 | `fa` | `fa` | :(far fa-square fa-fw): | :(far fa-square fa-fw): |
 
 ### 4.2 基本配置
 

@@ -939,6 +939,7 @@ In `assets/css/_custom.scss`, you can add some css style code to customize the s
 | Simplified Chinese   | `zh-cn`   | `zh-CN`               | :(far fa-check-square fa-fw): | :(far fa-check-square fa-fw): |
 | Hungarian            | `hu`      | `hu`                  | :(far fa-square fa-fw):       | :(far fa-square fa-fw):       |
 | Czech                | `cs`      | `cs`                  | :(far fa-square fa-fw):       | :(far fa-square fa-fw):       |
+| Persian              | `fa`      | `fa`                  | :(far fa-square fa-fw):       | :(far fa-square fa-fw):       |
 
 ### 4.2 Basic Configuration
 
