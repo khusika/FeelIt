@@ -1,0 +1,203 @@
+# Translations for Persian
+# https://gohugo.io/content-management/multilingual/#translation-of-strings
+
+# === baseof ==
+[backToTop]
+other = "برو بالا"
+
+[viewComments]
+other = "مشاهده نظرات"
+# === baseof ==
+
+# === Post ===
+[posts]
+other = "مطالب"
+# === Post ===
+
+# === Taxonomy ===
+[allSome]
+other = "همه ی {{ .Some }}"
+
+[tag]
+other = "برچسب"
+
+[tags]
+other = "برچسب ها"
+
+[category]
+other = "دسته بندی ها"
+
+[categories]
+other = "دسته بندی ها"
+# === Taxonomy ===
+
+# === Pagination ===
+[more]
+other = "مطالب بیشتر"
+# === Pagination ===
+
+# === partials/header.html ===
+[selectLanguage]
+other = "انتخاب زبان"
+
+[switchTheme]
+other = "تغییر پوسته"
+# === partials/header.html ===
+
+# === partials/footer.html ===
+[poweredBySome]
+other = "قدرت گرفته از {{ .Hugo }} | پوسته - {{ .Theme }}"
+# === partials/footer.html ===
+
+# === partials/comment.html ===
+[valineLang]
+other = "fa"
+
+[valinePlaceholder]
+other = "نظری بنویسید ..."
+
+[facebookLanguageCode]
+other = "fa_IR"
+# === partials/comment.html ===
+
+# === partials/assets.html ===
+[search]
+other = "جستجو"
+
+[searchPlaceholder]
+other = "جستجو برای..."
+
+[clear]
+other = "پاک کن"
+
+[cancel]
+other = "انصراف"
+
+[noResultsFound]
+other = "نتیجه ای پیدا نشد"
+
+[lunrLanguageCode]
+other = "fa"
+
+[copyToClipboard]
+other = "انتقال به کلیپ بورد"
+
+[cookieconsentMessage]
+other = "این وب سایت از کوکی ها برای بهبود تجربه شما استفاده می کند."
+
+[cookieconsentDismiss]
+other = "باشه!"
+
+[cookieconsentLink]
+other = "مطالعه بیشتر"
+# === partials/assets.html ===
+
+# === partials/plugin/share.html ===
+[shareOn]
+other = "اشتراک گذاری در"
+# === partials/plugin/share.html ===
+
+# === posts/single.html ===
+[contents]
+other = "مطالب"
+
+[publishedOnDate]
+other = "تاریخ انتشار {{ .Date }}"
+
+[publishedInCategories]
+other = "منتشر شده در {{ .Categories }}"
+
+[includedInCategories]
+other = "در دسته‌ی: {{ .Categories }}"
+
+[wordCount]
+one = "یک کلمه"
+other = "{{ .Count }} کلمه"
+
+[readingTime]
+one = "یک دقیقه"
+other = "{{ .Count }} دقیقه"
+
+[views]
+other = "بازدید"
+
+[author]
+other = "نویسنده"
+
+[updatedOnDate]
+other = "آپدیت شده در {{ .Date }}"
+
+[readMarkdown]
+other = "مشاهده مارک داون"
+
+[improveArticle]
+other = "بهبود این مطلب"
+
+[back]
+other = "برگرد"
+
+[home]
+other = "خانه"
+# === posts/single.html ===
+
+# === 404.html ===
+[pageNotFound]
+other = "پیدا نشد"
+
+[pageNotFoundText]
+other = "با عرض پوزش، صفحه‌ای که شما به دنبال آن هستید وجود ندارد."
+# === 404.html ===
+
+# === Offline Page ===
+[pageOffline]
+other = "آفلاین هستید اتصال اینترنت خود را بررسی نمایید."
+# === Offline Page ===
+
+# === shortcodes/admonition.html ===
+[note]
+other = "یادداشت"
+
+[abstract]
+other = "خلاصه"
+
+[info]
+other = "اطلاعات"
+
+[tip]
+other = "یادداشت"
+
+[success]
+other = "موفقیت"
+
+[question]
+other = "سوال"
+
+[warning]
+other = "هشدار"
+
+[failure]
+other = "اخطار"
+
+[danger]
+other = "اخطار"
+
+[bug]
+other = "باگ"
+
+[example]
+other = "مثال"
+
+[quote]
+other = "نقل قول"
+# === shortcodes/admonition.html ===
+
+# === shortcodes/version.html ===
+[new]
+other = "جدید"
+
+[changed]
+other = "تغییر"
+
+[deleted]
+other = "حذف شده"
+# === shortcodes/version.html ===
