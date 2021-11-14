@@ -526,3 +526,11 @@ rss:
   Newtab: true
   Icon:
     Class: fas fa-rss fa-fw
+
+# 067: Kaggle
+kaggle:
+  Weight: 67
+  Prefix: https://www.kaggle.com/
+  Title: Kaggle
+  Icon:
+    Class: fab fa-kaggle fa-fw
