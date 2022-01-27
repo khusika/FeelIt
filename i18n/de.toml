@@ -106,7 +106,7 @@ other = "Teilen auf"
 other = "Inhalt"
 
 [publishedOnDate]
-other = "veröffentlicht auf {{ .Date }}"
+other = "veröffentlicht am {{ .Date }}"
 
 [publishedInCategories]
 other = "veröffentlicht in {{ .Categories }}"
@@ -115,15 +115,15 @@ other = "veröffentlicht in {{ .Categories }}"
 other = "enthalten in {{ .Categories }}"
 
 [wordCount]
-one = "Ein wort"
-other = "{{ .Count }} wörter"
+one = "Ein Wort"
+other = "{{ .Count }} Wörter"
 
 [readingTime]
-one = "Eine minute"
-other = "{{ .Count }} minuten"
+one = "Eine Minute"
+other = "{{ .Count }} Minuten"
 
 [views]
-other = "aufrufe"
+other = "Aufrufe"
 
 [author]
 other = "Autor"
@@ -135,7 +135,7 @@ other = "Aktualisiert am {{ .Date }}"
 other = "Markdown anzeigen"
 
 [improveArticle]
-other = "Improve Article"
+other = "Artikel verbessern"
 
 [back]
 other = "Zurück"
@@ -154,7 +154,7 @@ other = "Leider konnte die von Ihnen angeforderte Seite nicht aufgerufen werden.
 
 # === Offline Page ===
 [pageOffline]
-other = "Sie sind offline. Prüfe deine Internetverbindung."
+other = "Sie sind offline. Überprüfen Sie Ihre Internetverbindung."
 # === Offline Page ===
 
 # === shortcodes/admonition.html ===
