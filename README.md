@@ -122,7 +122,7 @@ I hope you will FeelIt ❤️!
 
 * ### [Theme Documentation - Built in Shortcodes](https://feelit.khusika.com/theme-documentation-built-in-shortcodes/)
 
-* ### [Theme Documentation - Extended Shortocodes](https://feelit.khusika.com/theme-documentation-extended-shortcodes/)
+* ### [Theme Documentation - Extended Shortcodes](https://feelit.khusika.com/theme-documentation-extended-shortcodes/)
 
 * ### [Basic Markdown Syntax](https://feelit.khusika.com/basic-markdown-syntax/)
 
