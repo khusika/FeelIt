@@ -35,10 +35,10 @@ Welcome to take the time to propose a translation by [:(fas fa-code-branch fa-fw
 
 Thanks to the simplicity of Hugo, [Hugo](https://gohugo.io/) is the only dependency of this theme.
 
-Just install latest version of [:(far fa-file-archive fa-fw): Hugo (> 0.84.0)](https://gohugo.io/getting-started/installing/) for your OS (**Windows**, **Linux**, **macOS**).
+Just install latest version of [:(far fa-file-archive fa-fw): Hugo (> 0.94.0)](https://gohugo.io/getting-started/installing/) for your OS (**Windows**, **Linux**, **macOS**).
 
 {{< admonition note "Why not support earlier versions of Hugo?" >}}
-Since [Markdown Render Hooks](https://gohugo.io/getting-started/configuration-markup#markdown-render-hooks) was introduced in the [Hugo Christmas Edition](https://gohugo.io/news/0.62.0-relnotes/) and some of image resources are using webp which was introduced in [0.84.0](https://github.com/gohugoio/hugo/releases/tag/v0.84.0), this theme only supports Hugo versions above **0.84.0**.
+Since [Markdown Render Hooks](https://gohugo.io/getting-started/configuration-markup#markdown-render-hooks) was introduced in the [Hugo Christmas Edition](https://gohugo.io/news/0.62.0-relnotes/) and some of image resources are using webp which was introduced in [0.94.0](https://github.com/gohugoio/hugo/releases/tag/v0.94.0), this theme only supports Hugo versions above **0.94.0**.
 {{< /admonition >}}
 
 {{< admonition tip "Hugo extended version is recommended" >}}
