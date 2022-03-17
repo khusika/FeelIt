@@ -351,7 +351,7 @@ The rendered output looks like this:
 **FeelIt** theme uses [Font Awesome](https://fontawesome.com/) as the icon library.
 You can easily use these icons in your articles.
 
-Get the `class` of icons you wanted from the [Font Awesome website](https://fontawesome.com/icons?d=gallery).
+Get the `class` of icons you wanted from the [Font Awesome website](https://fontawesome.com/v5/search).
 
 ```markdown
 Gone camping! {?:}(fas fa-campground fa-fw): Be back soon.
