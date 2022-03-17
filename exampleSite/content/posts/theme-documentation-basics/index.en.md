@@ -90,6 +90,10 @@ theme = "FeelIt"
 [params]
   # FeelIt theme version
   version = "1.0.X"
+  
+[taxonomies]
+  tag = "tags"
+  category = "categories"
 
 [menu]
   [[menu.main]]
