@@ -22,7 +22,7 @@ If applicable, add screenshots to help explain your problem.
 
 - OS: [e.g. Windows 10, macOS, Ubuntu]
 - Theme version/commit: [e.g. 1.0.0, [0548952](https://github.com/khusika/FeelIt/commits/0548952d216928c072948a91beb6279842bbf783)]
-- Hugo version: [e.g. 0.84.0]
+- Hugo version: [e.g. 0.94.0]
 
 Please try to use Hugo **extended** version before opening the issue.
 
