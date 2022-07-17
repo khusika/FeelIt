@@ -5,7 +5,7 @@ date: 2020-03-03T16:29:59+08:00
 lastmod: 2020-03-03T16:29:59+08:00
 draft: false
 author: "FeelIt"
-authorLink: "https://feelit.khusika.com"
+authorLink: "https://feelit.khusika.dev"
 description: "FeelIt 主题在 Hugo 内置的 shortcode 的基础上提供多个扩展的 shortcode."
 resources:
 - name: "featured-image"

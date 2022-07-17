@@ -16,7 +16,7 @@ read [Why choose FeelIt](#why-choose-feelit) so that you can choose the one that
 
 ## Demo Site
 
-To see this theme in action, here is a live [demo site](https://feelit.khusika.com/) which is rendered with **FeelIt** theme.
+To see this theme in action, here is a live [demo site](https://feelit.khusika.dev/) which is rendered with **FeelIt** theme.
 
 ## Why choose FeelIt
 
@@ -116,17 +116,17 @@ I hope you will FeelIt ❤️!
 
 ## Documentation
 
-* ### [Theme Documentation - Basics](https://feelit.khusika.com/theme-documentation-basics/)
+* ### [Theme Documentation - Basics](https://feelit.khusika.dev/theme-documentation-basics/)
 
-* ### [Theme Documentation - Content](https://feelit.khusika.com/theme-documentation-content/)
+* ### [Theme Documentation - Content](https://feelit.khusika.dev/theme-documentation-content/)
 
-* ### [Theme Documentation - Built in Shortcodes](https://feelit.khusika.com/theme-documentation-built-in-shortcodes/)
+* ### [Theme Documentation - Built in Shortcodes](https://feelit.khusika.dev/theme-documentation-built-in-shortcodes/)
 
-* ### [Theme Documentation - Extended Shortcodes](https://feelit.khusika.com/theme-documentation-extended-shortcodes/)
+* ### [Theme Documentation - Extended Shortcodes](https://feelit.khusika.dev/theme-documentation-extended-shortcodes/)
 
-* ### [Basic Markdown Syntax](https://feelit.khusika.com/basic-markdown-syntax/)
+* ### [Basic Markdown Syntax](https://feelit.khusika.dev/basic-markdown-syntax/)
 
-* ### [Emoji Support](https://feelit.khusika.com/emoji-support/)
+* ### [Emoji Support](https://feelit.khusika.dev/emoji-support/)
 
 ## Getting Started
 
@@ -167,7 +167,7 @@ FeelIt supports the following languages:
 * Persian
 * [Contribute with a new language](https://github.com/khusika/FeelIt/pulls)
 
-[Languages Compatibility](https://feelit.khusika.com/theme-documentation-basics/#language-compatibility)
+[Languages Compatibility](https://feelit.khusika.dev/theme-documentation-basics/#language-compatibility)
 
 ## Questions, ideas, bugs, pull requests
 
@@ -205,6 +205,6 @@ Thanks to the authors of following resources included in the theme:
 
 ## Author
 
-[Khusika](https://khusika.com) and [all contributors](https://github.com/khusika/FeelIt/graphs/contributors)
+[Khusika](https://khusika.dev) and [all contributors](https://github.com/khusika/FeelIt/graphs/contributors)
 
 Thanks! ❤️

@@ -5,7 +5,7 @@ date: 2020-03-05T16:30:05+08:00
 lastmod: 2020-03-05T16:30:05+08:00
 draft: false
 author: "FeelIt"
-authorLink: "https://feelit.khusika.com"
+authorLink: "https://feelit.khusika.dev"
 description: "了解如何在 FeelIt 主题中快速, 直观地创建和组织内容."
 resources:
 - name: "featured-image"

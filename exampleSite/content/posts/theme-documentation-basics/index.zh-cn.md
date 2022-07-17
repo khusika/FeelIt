@@ -5,7 +5,7 @@ date: 2020-03-06T21:40:32+08:00
 lastmod: 2020-03-06T21:40:32+08:00
 draft: false
 author: "FeelIt"
-authorLink: "https://feelit.khusika.com"
+authorLink: "https://feelit.khusika.dev"
 description: "探索 Hugo - FeelIt 主题的全部内容和背后的核心概念."
 resources:
 - name: "featured-image"
@@ -332,7 +332,7 @@ hugo
     paramTitle = "个人信息"
     # 您网站的一般描述
     # 可以用markdown样式写
-    description = "[FeelIt](https://github.com/khusika/FeelIt) 是一个由 [Khusika](https://khusika.com) 开发的**简洁**、**优雅**且**高效**的 [Hugo](https://gohugo.io/) 博客主题。 它的原型基于 [LoveIt 主题](https://github.com/dillonzq/LoveIt), [LeaveIt 主题](https://github.com/liuzc/LeaveIt), 和 [KeepIt 主题](https://github.com/Fastbyte01/KeepIt)。"
+    description = "[FeelIt](https://github.com/khusika/FeelIt) 是一个由 [Khusika](https://khusika.dev) 开发的**简洁**、**优雅**且**高效**的 [Hugo](https://gohugo.io/) 博客主题。 它的原型基于 [LoveIt 主题](https://github.com/dillonzq/LoveIt), [LeaveIt 主题](https://github.com/liuzc/LeaveIt), 和 [KeepIt 主题](https://github.com/Fastbyte01/KeepIt)。"
     # 你的状态描述
     [[params.about.status]]
       faIcon = "fas fa-building"
