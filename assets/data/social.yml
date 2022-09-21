@@ -24,7 +24,7 @@ twitter:
 
 # 004: Instagram
 instagram:
-  Weight: 4
+  Weight: 2
   Prefix: https://www.instagram.com/
   Title: Instagram
   Icon:
@@ -32,9 +32,9 @@ instagram:
 
 # 005: facebook
 facebook:
-  Weight: 5
+  Weight: 1
   Prefix: https://facebook.com/
-  Title: facebook
+  Title: Facebook
   Icon:
     Class: fab fa-facebook fa-fw
 
@@ -526,3 +526,12 @@ rss:
   Newtab: true
   Icon:
     Class: fas fa-rss fa-fw
+
+# 067: Discord
+discord:
+  Weight: 5
+  Url: https://discord.link/wipdiscord
+  Title: Discord
+  Newtab: true
+  Icon:
+    Class: fab fa-discord
