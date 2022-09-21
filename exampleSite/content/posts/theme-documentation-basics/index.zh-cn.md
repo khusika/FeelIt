@@ -5,7 +5,7 @@ date: 2020-03-06T21:40:32+08:00
 lastmod: 2020-03-06T21:40:32+08:00
 draft: false
 author: "FeelIt"
-authorLink: "https://feelit.khusika.com"
+authorLink: "https://feelit.khusika.dev"
 description: "探索 Hugo - FeelIt 主题的全部内容和背后的核心概念."
 resources:
 - name: "featured-image"
@@ -30,10 +30,10 @@ toc:
 
 由于 Hugo 提供的便利性, [Hugo](https://gohugo.io/) 本身是这个主题唯一的依赖.
 
-直接安装满足你操作系统 (**Windows**, **Linux**, **macOS**) 的最新版本 [:(far fa-file-archive fa-fw): Hugo (> 0.84.0)](https://gohugo.io/getting-started/installing/).
+直接安装满足你操作系统 (**Windows**, **Linux**, **macOS**) 的最新版本 [:(far fa-file-archive fa-fw): Hugo (> 0.94.0)](https://gohugo.io/getting-started/installing/).
 
 {{< admonition note "为什么不支持早期版本的 Hugo?" >}}
-由于 [Markdown 渲染钩子函数](https://gohugo.io/getting-started/configuration-markup#markdown-render-hooks) 在 [Hugo 圣诞节版本](https://gohugo.io/news/0.62.0-relnotes/) 中被引入 一些图像资源使用的是[0.84.0](https://github.com/gohugoio/hugo/releases/tag/v0.84.0)中引入的webp, 本主题只支持高于 **0.84.0** 的 Hugo 版本.
+由于 [Markdown 渲染钩子函数](https://gohugo.io/getting-started/configuration-markup#markdown-render-hooks) 在 [Hugo 圣诞节版本](https://gohugo.io/news/0.62.0-relnotes/) 中被引入 一些图像资源使用的是[0.94.0](https://github.com/gohugoio/hugo/releases/tag/v0.94.0)中引入的webp, 本主题只支持高于 **0.94.0** 的 Hugo 版本.
 {{< /admonition >}}
 
 {{< admonition tip "推荐使用 Hugo extended 版本" >}}
@@ -332,7 +332,7 @@ hugo
     paramTitle = "个人信息"
     # 您网站的一般描述
     # 可以用markdown样式写
-    description = "[FeelIt](https://github.com/khusika/FeelIt) 是一个由 [Khusika](https://khusika.com) 开发的**简洁**、**优雅**且**高效**的 [Hugo](https://gohugo.io/) 博客主题。 它的原型基于 [LoveIt 主题](https://github.com/dillonzq/LoveIt), [LeaveIt 主题](https://github.com/liuzc/LeaveIt), 和 [KeepIt 主题](https://github.com/Fastbyte01/KeepIt)。"
+    description = "[FeelIt](https://github.com/khusika/FeelIt) 是一个由 [Khusika](https://khusika.dev) 开发的**简洁**、**优雅**且**高效**的 [Hugo](https://gohugo.io/) 博客主题。 它的原型基于 [LoveIt 主题](https://github.com/dillonzq/LoveIt), [LeaveIt 主题](https://github.com/liuzc/LeaveIt), 和 [KeepIt 主题](https://github.com/Fastbyte01/KeepIt)。"
     # 你的状态描述
     [[params.about.status]]
       faIcon = "fas fa-building"
