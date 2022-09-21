@@ -16,13 +16,14 @@
     "core-js": "^3.15.2",
     "husky": "^7.0.0",
     "minimist": "^1.2.5",
+    "mkdirp": "^1.0.4",
     "segmentit": "^2.0.3"
   },
   "scripts": {
     "preinstall": "npx npm-force-resolutions",
     "build": "rm -f -r exampleSite/public && hugo -v --source=exampleSite --themesDir ../ --gc",
     "build-lunr-segmentit": "browserify src/lib/lunr.segmentit.js -o assets/lib/lunr/lunr.segmentit.js -t babelify --presets @babel/preset-env --presets minify",
-    "purgejs": "mkdir -p exampleSite/assets/js && sed '593,597d;615,636d;639,642d;727d' assets/js/theme.js > exampleSite/assets/js/theme.js",
+    "purgejs": "npx mkdirp exampleSite/assets/js && sed '593,597d;615,636d;639,642d;727d' assets/js/theme.js > exampleSite/assets/js/theme.js",
     "deploy": "npm run purgejs && hugo -v --source=exampleSite --themesDir ../ --gc --minify",
     "start": "hugo server --source=exampleSite --themesDir ../ -D --disableFastRender",
     "start-production": "hugo server --source=exampleSite --themesDir ../ -D --disableFastRender -e production",

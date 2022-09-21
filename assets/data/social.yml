@@ -527,6 +527,7 @@ rss:
   Icon:
     Class: fas fa-rss fa-fw
 
+<<<<<<< HEAD
 # 067: Discord
 discord:
   Weight: 5
@@ -535,3 +536,12 @@ discord:
   Newtab: true
   Icon:
     Class: fab fa-discord
+=======
+# 067: Kaggle
+kaggle:
+  Weight: 67
+  Prefix: https://www.kaggle.com/
+  Title: Kaggle
+  Icon:
+    Class: fab fa-kaggle fa-fw
+>>>>>>> 247553cc24c86ca7369b4e29ebad7b01c9c504c8

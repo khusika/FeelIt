@@ -2,6 +2,7 @@
 public/
 /exampleSite/resources/
 /exampleSite/assets/js/
+/exampleSite/.hugo_build.lock
 
 node_modules/
 build/

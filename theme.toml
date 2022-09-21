@@ -6,13 +6,13 @@ license = "MIT"
 licenselink = "https://github.com/khusika/FeelIt/blob/main/LICENSE"
 description = "A Clean, Elegant but Advanced Hugo Theme for Hugo."
 homepage = "https://github.com/khusika/FeelIt"
-demosite = "https://feelit.khusika.com/"
+demosite = "https://feelit.khusika.dev/"
 tags = ["blog", "dark", "light", "multilangual", "responsive"]
 features = ["cover-image", "favicon", "multilingual", "pagination", "social-menu", "syntax-highlighting", "SEO Optimized", "HTML and CSS Optimized", "PWA Support"]
 
 [author]
   name = "Khusika"
-  homepage = "https://khusika.com/"
+  homepage = "https://khusika.dev/"
 
 [original]
   name = "Dillon"
@@ -22,4 +22,4 @@ features = ["cover-image", "favicon", "multilingual", "pagination", "social-menu
 [module]
   [module.hugoVersion]
     extended = true
-    min = "0.84.0"
+    min = "0.94.0"

@@ -5,7 +5,7 @@ date: 2020-03-04T16:29:59+08:00
 lastmod: 2020-03-04T16:29:59+08:00
 draft: false
 author: "FeelIt"
-authorLink: "https://feelit.khusika.com"
+authorLink: "https://feelit.khusika.dev"
 description: "Hugo fournit plusieurs shortcodes intégrés pour la commodité de l'auteur et pour garder votre contenu de démarque propre."
 resources:
 - name: "featured-image"
@@ -118,7 +118,7 @@ The rendered output looks like this:
 
 {{< version 1.0.0 changed >}}
 
-At the moment, Hugo using deprecated [oEmbed-legacy](https://developers.facebook.com/docs/instagram/oembed-legacy) linked API endpoint. Those deprecated API causes an error when Hugo retrieving the data. The newest API has been included in the [extended shortcode](https://feelit.khusika.com/theme-documentation-extended-shortcodes/#122-oembed-instagram).
+At the moment, Hugo using deprecated [oEmbed-legacy](https://developers.facebook.com/docs/instagram/oembed-legacy) linked API endpoint. Those deprecated API causes an error when Hugo retrieving the data. The newest API has been included in the [extended shortcode](https://feelit.khusika.dev/theme-documentation-extended-shortcodes/#122-oembed-instagram).
 
 ## 5 param
 
@@ -142,7 +142,7 @@ The rendered output looks like this:
 
 {{< version 1.0.1 changed >}}
 
-This method was moved with the newest API in the [extended shortcode documentation](https://feelit.khusika.com/theme-documentation-extended-shortcodes/#123-oembed-twitter).
+This method was moved with the newest API in the [extended shortcode documentation](https://feelit.khusika.dev/theme-documentation-extended-shortcodes/#123-oembed-twitter).
 
 ## 8 vimeo
 

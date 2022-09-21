@@ -5,7 +5,7 @@ date: 2020-03-06T21:29:01+08:00
 lastmod: 2020-03-06T21:29:01+08:00
 draft: false
 author: "FeelIt"
-authorLink: "https://feelit.khusika.com"
+authorLink: "https://feelit.khusika.dev"
 description: "Discover what the Hugo - FeelIt theme is all about and the core-concepts behind it."
 resources:
 - name: "featured-image"
@@ -30,10 +30,10 @@ Discover what the Hugo - **FeelIt** theme is all about and the core-concepts beh
 
 Thanks to the simplicity of Hugo, [Hugo](https://gohugo.io/) is the only dependency of this theme.
 
-Just install latest version of [:(far fa-file-archive fa-fw): Hugo (> 0.84.0)](https://gohugo.io/getting-started/installing/) for your OS (**Windows**, **Linux**, **macOS**).
+Just install latest version of [:(far fa-file-archive fa-fw): Hugo (> 0.94.0)](https://gohugo.io/getting-started/installing/) for your OS (**Windows**, **Linux**, **macOS**).
 
 {{< admonition note "Why not support earlier versions of Hugo?" >}}
-Since [Markdown Render Hooks](https://gohugo.io/getting-started/configuration-markup#markdown-render-hooks) was introduced in the [Hugo Christmas Edition](https://gohugo.io/news/0.62.0-relnotes/) and some of image resources are using webp which was introduced in [0.84.0](https://github.com/gohugoio/hugo/releases/tag/v0.84.0), this theme only supports Hugo versions above **0.84.0**.
+Since [Markdown Render Hooks](https://gohugo.io/getting-started/configuration-markup#markdown-render-hooks) was introduced in the [Hugo Christmas Edition](https://gohugo.io/news/0.62.0-relnotes/) and some of image resources are using webp which was introduced in [0.94.0](https://github.com/gohugoio/hugo/releases/tag/v0.94.0), this theme only supports Hugo versions above **0.94.0**.
 {{< /admonition >}}
 
 {{< admonition tip "Hugo extended version is recommended" >}}
@@ -328,7 +328,7 @@ Please open the code block below to view the complete sample configuration :(far
     paramTitle = "Personal Information"
     # general description of your site
     # can be write with markdown style
-    description = "[FeelIt](https://github.com/khusika/FeelIt) is a **clean**, **elegant** but **advanced** blog theme for [Hugo](https://gohugo.io/) developed by [Khusika](https://khusika.com). It is based on the original [LoveIt Theme](https://github.com/dillonzq/LoveIt), [LeaveIt Theme](https://github.com/liuzc/LeaveIt), and [KeepIt Theme](https://github.com/Fastbyte01/KeepIt)."
+    description = "[FeelIt](https://github.com/khusika/FeelIt) is a **clean**, **elegant** but **advanced** blog theme for [Hugo](https://gohugo.io/) developed by [Khusika](https://khusika.dev). It is based on the original [LoveIt Theme](https://github.com/dillonzq/LoveIt), [LeaveIt Theme](https://github.com/liuzc/LeaveIt), and [KeepIt Theme](https://github.com/Fastbyte01/KeepIt)."
     # description of your status
     [[params.about.status]]
       faIcon = "fas fa-building"
