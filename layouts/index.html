@@ -2,6 +2,7 @@
     {{- $params := .Scratch.Get "params" -}}
     {{- $profile := .Site.Params.home.profile -}}
     {{- $posts := .Site.Params.home.posts -}}
+    {{- $howtoreport := .Site.Params.home.howtoreport -}}
 
     <div class="page home"{{ if ne $posts.enable false }} data-home="posts"{{ end }}>
         {{- /* Profile */ -}}
@@ -16,6 +17,15 @@
                     {{- dict "Content" .Content "Ruby" $params.ruby "Fraction" $params.fraction "Fontawesome" $params.fontawesome | partial "function/content.html" | safeHTML -}}
                 </div>
             </div>
+        {{- end -}}
+
+        {{- /* Pinned */ -}}
+        {{- if ne $howtoreport.enable false -}}
+          <div class="summary-card">
+            {{- range where .Site.Pages "Params.pinnedCardFor" "howtoreport" -}}
+              {{- .Render "summary-pinned" -}}
+            {{- end -}}
+          </div>
         {{- end -}}
 
         {{- /* Posts */ -}}

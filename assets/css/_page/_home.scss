@@ -253,5 +253,130 @@
     }
   }
 
+  .summary-pinned {
+    background-color: $global-background-color-dark;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    @include border-radius(.5rem);
+    color: $global-font-color-dark;
+    width: 49%;
+    @include transition(transform 0.4s ease);
+    @include box-shadow(0 2px 4px -1px rgba(0, 0, 0, 0.2));
+
+    &[data-image=hide] {
+      min-height: 13rem;
+    }
+
+    &:hover {
+      @include transform(scale(1.01));
+    }
+
+    [theme=dark] & {
+      background-color: $global-background-color;
+      color: $global-font-color;
+    }
+
+    .featured-image-preview {
+      width: 100%;
+      padding: 30% 0 0;
+      position: relative;
+      margin: 0 auto;
+
+      img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        @include object-fit(none);
+        @include border-radius(.5rem .5rem 0 0);
+      }
+
+      img.lazyloaded {
+        @include object-fit(cover);
+      }
+    }
+
+    .single-title {
+      font-size: 1.25rem;
+      line-height: 140%;
+      margin: 0.4rem 1rem;
+      padding-top: 1rem;
+      text-align: center;
+      color: $global-font-secondary-color;
+      @include linkpinnedcard(false, true);
+    }
+
+    .post-meta {
+      font-size: .875rem;
+      margin: 0 1rem .5rem;
+      color: $global-font-secondary-color-dark;
+
+      span {
+        display: inline-block;
+      }
+
+      [theme=dark] & {
+        color: $global-font-secondary-color;
+      }
+
+      @include link(false, true);
+
+      .author {
+        font-size: 1.05rem;
+      }
+    }
+
+    p {
+      margin: .5rem 0;
+    }
+
+    .content {
+      @include box(vertical);
+      // -webkit-line-clamp: 2;
+      margin: 0 1rem 0 1rem;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      @include overflow-wrap(break-word);
+      color: $global-background-color;
+      text-align: center;
+
+      [theme=dark] & {
+        color: $global-background-color-dark;
+      }
+
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p {
+        font-size: 1rem;
+        line-height: 2.5;
+        display: inline;
+
+        &::after {
+          content: "\A";
+          white-space: pre;
+        }
+      }
+
+      h2 {
+        font-size: 1.125rem;
+      }
+
+      b, strong {
+        color: $global-background-color;
+
+        [theme=dark] & {
+          color: $global-background-color-dark;
+        }
+      }
+
+      @include link(false, true);
+    }
+
+  }
+
 
 }

@@ -1,0 +1,17 @@
+{{- $params := .Params | merge .Site.Params.page -}}
+
+<article class="summary-pinned" itemscope itemtype="http://schema.org/Article" {{ if ne .Site.Params.home.posts.imagePreview true }}data-image="hide"{{ end }}>
+
+    {{- $linksto := $params.pinLinksTo | default .Site.Home.RelPermalink -}}
+
+    {{- /* Title */ -}}
+    <h2 class="single-title" itemprop="name headline">
+        <a href="{{ $linksto }}"><i class="fas fa-info-circle"></i>&nbsp;&nbsp;{{ .Title }}</a>
+    </h2>
+
+    {{- /* Summary content */ -}}
+    <a class="content" href="{{ $linksto }}">
+        {{- .Content -}}
+    </a>
+
+</article>

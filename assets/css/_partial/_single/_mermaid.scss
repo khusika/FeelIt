@@ -2,8 +2,13 @@
   width: 100%;
   margin: 3% auto;
   text-align: center;
-  background-color: $code-background-color;
   padding: 1rem;
+
+  background-color: $global-background-card-color;
+
+  [theme=dark] & {
+    background-color: $global-background-card-color-dark;
+  }
 
   & > svg {
     max-width: 100%;
