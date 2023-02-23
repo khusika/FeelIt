@@ -22,4 +22,4 @@ features = ["cover-image", "favicon", "multilingual", "pagination", "social-menu
 [module]
   [module.hugoVersion]
     extended = true
-    min = "0.94.0"
+    min = "0.110.0"
