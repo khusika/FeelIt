@@ -10,7 +10,7 @@
     "@babel/cli": "^7.21.5",
     "@babel/core": "^7.21.8",
     "@babel/preset-env": "^7.21.5",
-    "babel-preset-minify": "^0.5.1",
+    "babel-preset-minify": "^0.5.2",
     "babelify": "^10.0.0",
     "browserify": "^17.0.0",
     "core-js": "^3.15.2",
