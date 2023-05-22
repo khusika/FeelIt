@@ -14,7 +14,7 @@
     "babelify": "^10.0.0",
     "browserify": "^17.0.0",
     "core-js": "^3.30.2",
-    "husky": "^7.0.0",
+    "husky": "^8.0.3",
     "minimist": "^1.2.5",
     "mkdirp": "^1.0.4",
     "segmentit": "^2.0.3"
