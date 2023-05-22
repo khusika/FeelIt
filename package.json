@@ -15,7 +15,7 @@
     "browserify": "^17.0.0",
     "core-js": "^3.30.2",
     "husky": "^8.0.3",
-    "minimist": "^1.2.5",
+    "minimist": "^1.2.8",
     "mkdirp": "^1.0.4",
     "segmentit": "^2.0.3"
   },
