@@ -22,7 +22,7 @@ jobs:
           HUGO_OEMBED_ACCESSTOKEN: ${{ secrets.HUGO_OEMBED_ACCESSTOKEN }}
           HUGO_VSSUE_CLIENTSECRET: ${{ secrets.HUGO_VSSUE_CLIENTSECRET }}
         run: |
-            npm install
+            npm ci
             npm run deploy
 
       - name: Validate HTML
