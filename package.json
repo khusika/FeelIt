@@ -3,24 +3,20 @@
   "version": "1.0.1",
   "description": "FeelIt theme source file",
   "private": true,
-  "dependencies": {
-    "source-map-resolve": "^0.6.0"
-  },
   "devDependencies": {
-    "@babel/cli": "^7.14.5",
-    "@babel/core": "^7.14.6",
-    "@babel/preset-env": "^7.14.7",
-    "babel-preset-minify": "^0.5.1",
+    "@babel/cli": "^7.21.5",
+    "@babel/core": "^7.21.8",
+    "@babel/preset-env": "^7.21.5",
+    "babel-preset-minify": "^0.5.2",
     "babelify": "^10.0.0",
     "browserify": "^17.0.0",
-    "core-js": "^3.15.2",
-    "husky": "^7.0.0",
-    "minimist": "^1.2.5",
-    "mkdirp": "^1.0.4",
+    "core-js": "^3.30.2",
+    "husky": "^8.0.3",
+    "minimist": "^1.2.8",
+    "mkdirp": "^3.0.1",
     "segmentit": "^2.0.3"
   },
   "scripts": {
-    "preinstall": "npx npm-force-resolutions",
     "build": "rm -f -r exampleSite/public && hugo -v --source=exampleSite --themesDir ../ --gc",
     "build-lunr-segmentit": "browserify src/lib/lunr.segmentit.js -o assets/lib/lunr/lunr.segmentit.js -t babelify --presets @babel/preset-env --presets minify",
     "purgejs": "npx mkdirp exampleSite/assets/js && sed '593,597d;615,636d;639,642d;727d' assets/js/theme.js > exampleSite/assets/js/theme.js",
@@ -28,11 +24,8 @@
     "start": "hugo server --source=exampleSite --themesDir ../ -D --disableFastRender",
     "start-production": "hugo server --source=exampleSite --themesDir ../ -D --disableFastRender -e production",
     "copy": "rm -rf resources && mv -f exampleSite/resources resources",
-    "reinstall": "rm -rf node_modules && npm install",
+    "reinstall": "rm -rf node_modules && npm ci",
     "prepare": "husky install"
-  },
-  "resolutions": {
-    "minimist": "^1.2.5"
   },
   "repository": {
     "type": "git",

@@ -22,7 +22,7 @@ jobs:
           HUGO_OEMBED_ACCESSTOKEN: ${{ secrets.HUGO_OEMBED_ACCESSTOKEN }}
           HUGO_VSSUE_CLIENTSECRET: ${{ secrets.HUGO_VSSUE_CLIENTSECRET }}
         run: |
-            npm install
+            npm ci
             npm run deploy
 
       - name: Validate HTML
@@ -32,10 +32,3 @@ jobs:
           log_level: INFO
           css: true
           blacklist: mermaid.min.css
-
-#      - name: LightHouse CI
-#        uses: treosh/lighthouse-ci-action@v7
-#        with:
-#          configPath: './lighthouserc.json'
-#          uploadArtifacts: true
-#          temporaryPublicStorage: true
