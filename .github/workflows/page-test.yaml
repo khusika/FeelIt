@@ -32,10 +32,3 @@ jobs:
           log_level: INFO
           css: true
           blacklist: mermaid.min.css
-
-#      - name: LightHouse CI
-#        uses: treosh/lighthouse-ci-action@v7
-#        with:
-#          configPath: './lighthouserc.json'
-#          uploadArtifacts: true
-#          temporaryPublicStorage: true
