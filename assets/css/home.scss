@@ -1,21 +1,21 @@
 @charset "utf-8";
 
-@import "_core/modern-normalize";
+@use "_core/modern-normalize";
 
-@import "_variables";
-@import "_mixin/index";
+@use "_variables";
+@use "_mixin/index";
 
-@import "_core/base";
-@import "_core/layout";
+@use "_core/base";
+@use "_core/layout";
 
-@import "_page/index";
-@import "_page/404";
+@use "_page/index";
+@use "_page/404";
 
-@import "_partial/header";
-@import "_partial/footer";
-@import "_partial/pagination";
+@use "_partial/header";
+@use "_partial/footer";
+@use "_partial/pagination";
 
-@import "_core/media";
+@use "_core/media";
 
-@import "_override";
-@import "_custom";
+@use "_override";
+@use "_custom";

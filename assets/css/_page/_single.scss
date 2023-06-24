@@ -1,4 +1,4 @@
-@import "../_partial/_single/toc";
+@use "../_partial/_single/toc";
 
 .single-card {
   padding: 1rem;
@@ -282,16 +282,16 @@
       }
     }
 
-    @import "../_partial/_single/code";
-    @import "../_partial/_single/oembed";
-    @import "../_partial/_single/video";
-    @import "../_partial/_single/admonition";
-    @import "../_partial/_single/echarts";
-    @import "../_partial/_single/katex";
-    @import "../_partial/_single/mapbox";
-    @import "../_partial/_single/mermaid";
-    @import "../_partial/_single/music";
-    @import "../_partial/_single/bilibili";
+    @use "../_partial/_single/code";
+    @use "../_partial/_single/oembed";
+    @use "../_partial/_single/video";
+    @use "../_partial/_single/admonition";
+    @use "../_partial/_single/echarts";
+    @use "../_partial/_single/katex";
+    @use "../_partial/_single/mapbox";
+    @use "../_partial/_single/mermaid";
+    @use "../_partial/_single/music";
+    @use "../_partial/_single/bilibili";
 
     hr {
       margin: 1rem 0;
@@ -341,8 +341,8 @@
     }
   }
 
-  @import "../_partial/_single/footer";
-  @import "../_partial/_single/comment";
+  @use "../_partial/_single/footer";
+  @use "../_partial/_single/comment";
 }
 
 .lg-toolbar .lg-icon::after {

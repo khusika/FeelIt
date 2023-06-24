@@ -1,7 +1,7 @@
 @charset "utf-8";
 
-@import "_variables";
-@import "_mixin/index";
+@use "_variables";
+@use "_mixin/index";
 
 .single-title[data-about=true] {
   text-align: right;

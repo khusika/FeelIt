@@ -1,8 +1,8 @@
 @charset "utf-8";
 
-@import "_variables";
-@import "_mixin/index";
+@use "_variables";
+@use "_mixin/index";
 
-@import "_page/single";
-@import "_page/special";
-@import "_page/archive";
+@use "_page/single";
+@use "_page/special";
+@use "_page/archive";

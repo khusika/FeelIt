@@ -40,12 +40,12 @@
 {{- /* about.min.css */ -}}
 {{- if .Site.Params.SourceMap -}}
 {{- $style := dict "Source" "css/about.scss" "Fingerprint" $fingerprint -}}
-{{- $options := dict "targetPath" "css/about.min.css" "enableSourceMap" true -}}
+{{- $options := dict "transpiler" "dartsass" "targetPath" "css/about.min.css" "enableSourceMap" true -}}
 {{- $style = dict "Context" . "ToCSS" $options | merge $style -}}
 {{- partial "plugin/style.html" $style -}}
 {{- else -}}
 {{- $style := dict "Source" "css/about.scss" "Fingerprint" $fingerprint -}}
-{{- $options := dict "targetPath" "css/about.min.css" "enableSourceMap" false -}}
+{{- $options := dict "transpiler" "dartsass" "targetPath" "css/about.min.css" "enableSourceMap" false -}}
 {{- $style = dict "Context" . "ToCSS" $options | merge $style -}}
 {{- partial "plugin/style.html" $style -}}
 {{- end -}}
@@ -54,12 +54,12 @@
 {{- /* page.min.css */ -}}
 {{- if .Site.Params.SourceMap -}}
 {{- $style := dict "Source" "css/page.scss" "Fingerprint" $fingerprint -}}
-{{- $options := dict "targetPath" "css/page.min.css" "enableSourceMap" true -}}
+{{- $options := dict "transpiler" "dartsass" "targetPath" "css/page.min.css" "enableSourceMap" true -}}
 {{- $style = dict "Context" . "ToCSS" $options | merge $style -}}
 {{- partial "plugin/style.html" $style -}}
 {{- else -}}
 {{- $style := dict "Source" "css/page.scss" "Fingerprint" $fingerprint -}}
-{{- $options := dict "targetPath" "css/page.min.css" "enableSourceMap" false -}}
+{{- $options := dict "transpiler" "dartsass" "targetPath" "css/page.min.css" "enableSourceMap" false -}}
 {{- $style = dict "Context" . "ToCSS" $options | merge $style -}}
 {{- partial "plugin/style.html" $style -}}
 {{- end -}}
@@ -69,12 +69,12 @@
 {{- /* home.min.css */ -}}
 {{- if .Site.Params.SourceMap -}}
 {{- $style := dict "Source" "css/home.scss" "Fingerprint" $fingerprint -}}
-{{- $options := dict "targetPath" "css/home.min.css" "enableSourceMap" true -}}
+{{- $options := dict "transpiler" "dartsass" "targetPath" "css/home.min.css" "enableSourceMap" true -}}
 {{- $style = dict "Context" . "ToCSS" $options | merge $style -}}
 {{- partial "plugin/style.html" $style -}}
 {{- else -}}
 {{- $style := dict "Source" "css/home.scss" "Fingerprint" $fingerprint -}}
-{{- $options := dict "targetPath" "css/home.min.css" "enableSourceMap" false -}}
+{{- $options := dict "transpiler" "dartsass" "targetPath" "css/home.min.css" "enableSourceMap" false -}}
 {{- $style = dict "Context" . "ToCSS" $options | merge $style -}}
 {{- partial "plugin/style.html" $style -}}
 {{- end -}}
