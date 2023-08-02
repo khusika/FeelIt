@@ -811,8 +811,8 @@ hugo
   home = ["HTML", "RSS", "JSON"]
   page = ["HTML", "MarkDown"]
   section = ["HTML", "RSS"]
-  taxonomy = ["HTML", "RSS"]
-  taxonomyTerm = ["HTML"]
+  term = ["HTML", "RSS"]
+  taxonomy = ["HTML"]
 ```
 
 {{< admonition >}}

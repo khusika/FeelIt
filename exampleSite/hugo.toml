@@ -1149,5 +1149,5 @@ ignoreErrors = ["err-missing-comment-accesstoken", "err-missing-oembed-accesstok
   home = ["HTML", "RSS", "JSON"]
   page = ["HTML", "MarkDown"]
   section = ["HTML", "RSS"]
-  taxonomy = ["HTML", "RSS"]
-  taxonomyTerm = ["HTML"]
+  term = ["HTML", "RSS"]
+  taxonomy = ["HTML"]

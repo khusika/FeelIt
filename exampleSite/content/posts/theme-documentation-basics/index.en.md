@@ -805,8 +805,8 @@ Please open the code block below to view the complete sample configuration :(far
   home = ["HTML", "RSS", "JSON"]
   page = ["HTML", "MarkDown"]
   section = ["HTML", "RSS"]
-  taxonomy = ["HTML", "RSS"]
-  taxonomyTerm = ["HTML"]
+  term = ["HTML", "RSS"]
+  taxonomy = ["HTML"]
 ```
 
 {{< admonition >}}
