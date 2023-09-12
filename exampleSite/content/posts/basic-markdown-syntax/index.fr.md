@@ -25,7 +25,7 @@ Cet article propose un exemple de syntaxe Markdown de base qui peut être utilis
 
 {{< admonition warning >}}
 Sorry, this article has not been completely translated into **French**.
-Welcome to take the time to propose a translation by [:(fas fa-code-branch fa-fw): making a PR](https://github.com/dillonzq/FeelIt/pulls) to the theme!
+Welcome to take the time to propose a translation by [:(fa-solid fa-code-branch fa-fw): making a PR](https://github.com/dillonzq/FeelIt/pulls) to the theme!
 {{< /admonition >}}
 
 {{< admonition >}}
@@ -60,7 +60,7 @@ John Gruber, the author of Markdown, puts it like this:
 Without further delay, let us go over the main elements of Markdown and what the resulting HTML looks like!
 
 {{< admonition tip >}}
-:(far fa-bookmark fa-fw): Bookmark this page for easy future reference!
+:(fa-regular fa-bookmark fa-fw): Bookmark this page for easy future reference!
 {{< /admonition >}}
 
 ## 1 Headings

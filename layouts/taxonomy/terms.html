@@ -30,14 +30,14 @@
                             {{- range first 5 $pages -}}
                                 <div class="categories-item">
                                     <a href="{{ .RelPermalink }}" class="categories-item-link">
-                                        <i class="fas fa-angle-right fa-fw"></i>&nbsp;{{- .Title -}}
+                                        <i class="fa-solid fa-angle-right fa-fw"></i>&nbsp;{{- .Title -}}
                                     </a>
                                 </div>
                             {{- end -}}
                             {{- if gt (len $pages) 5 -}}
                                 <span class="more-post">
                                     <a href="{{ .RelPermalink }}" class="more-single-link">
-                                        {{ T "more" }}<i class="fas fa-angle-double-right fa-fw"></i>
+                                        {{ T "more" }}<i class="fa-solid fa-angle-double-right fa-fw"></i>
                                     </a>
                                 </span>
                             {{- end -}}

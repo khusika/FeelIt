@@ -30,7 +30,7 @@ Découvrez comment créer et organiser votre contenu rapidement et intuitivement
 
 {{< admonition warning >}}
 Sorry, this article has not been completely translated into **French**.
-Welcome to take the time to propose a translation by [:(fas fa-code-branch fa-fw): making a PR](https://github.com/dillonzq/FeelIt/pulls) to the theme!
+Welcome to take the time to propose a translation by [:(fa-solid fa-code-branch fa-fw): making a PR](https://github.com/dillonzq/FeelIt/pulls) to the theme!
 {{< /admonition >}}
 
 ## 1 Contents Organization {#contents-organization}
@@ -359,14 +359,14 @@ You can easily use these icons in your articles.
 Get the `class` of icons you wanted from the [Font Awesome website](https://fontawesome.com/icons?d=gallery).
 
 ```markdown
-Gone camping! {?:}(fas fa-campground fa-fw): Be back soon.
+Gone camping! {?:}(fa-solid fa-campground fa-fw): Be back soon.
 
 That is so funny! {?:}(far fa-grin-tears):
 ```
 
 The rendered output looks like this:
 
-Gone camping! :(fas fa-campground fa-fw): Be back soon.
+Gone camping! :(fa-solid fa-campground fa-fw): Be back soon.
 
 That is so funny! :(far fa-grin-tears):
 

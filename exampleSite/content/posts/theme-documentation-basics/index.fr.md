@@ -28,21 +28,21 @@ Découvrez en quoi consiste le thème Hugo - **FeelIt** et les concepts fondamen
 
 {{< admonition warning >}}
 Sorry, this article has not been completely translated into **French**.
-Welcome to take the time to propose a translation by [:(fas fa-code-branch fa-fw): making a PR](https://github.com/khusika/FeelIt/pulls) to the theme!
+Welcome to take the time to propose a translation by [:(fa-solid fa-code-branch fa-fw): making a PR](https://github.com/khusika/FeelIt/pulls) to the theme!
 {{< /admonition >}}
 
 ## 1 Requirements
 
 Thanks to the simplicity of Hugo, [Hugo](https://gohugo.io/) is the only dependency of this theme.
 
-Just install latest version of [:(far fa-file-archive fa-fw): Hugo (> 0.110.0)](https://gohugo.io/getting-started/installing/) for your OS (**Windows**, **Linux**, **macOS**).
+Just install latest version of [:(fa-regular fa-file-archive fa-fw): Hugo (> 0.110.0)](https://gohugo.io/getting-started/installing/) for your OS (**Windows**, **Linux**, **macOS**).
 
 {{< admonition note "Why not support earlier versions of Hugo?" >}}
 Since [Markdown Render Hooks](https://gohugo.io/getting-started/configuration-markup#markdown-render-hooks) were introduced in [Hugo Christmas Edition](https://gohugo.io/news/0.62.0-relnotes/), and some image sources are using webp which was introduced in [0.84.0](https://github.com/gohugoio/hugo/releases/tag/v0.84.0) and also we changed [config.toml to hugo.toml](https://github.com/khusika/FeelIt/commit/f965cb91df2b2e90e667e3cf152fffd73d885906), this theme only supports Hugo versions above **0.110.0**.
 {{< /admonition >}}
 
 {{< admonition tip "Hugo extended version is recommended" >}}
-Since some features of this theme need to processes :(fab fa-sass fa-fw): SCSS to :(fab fa-css3 fa-fw): CSS, it is recommended to use Hugo **extended** version for better experience.
+Since some features of this theme need to processes :(fa-brands fa-sass fa-fw): SCSS to :(fa-brands fa-css3 fa-fw): CSS, it is recommended to use Hugo **extended** version for better experience.
 {{< /admonition >}}
 
 ## 2 Installation
@@ -62,7 +62,7 @@ cd my_website
 
 The **FeelIt** theme’s repository is: [https://github.com/khusika/FeelIt](https://github.com/khusika/FeelIt).
 
-You can download the [latest release :(far fa-file-archive fa-fw): .zip file](https://github.com/khusika/FeelIt/releases) of the theme and extract it in the `themes` directory.
+You can download the [latest release :(fa-regular fa-file-archive fa-fw): .zip file](https://github.com/khusika/FeelIt/releases) of the theme and extract it in the `themes` directory.
 
 Alternatively, clone this repository to the `themes` directory:
 
@@ -197,7 +197,7 @@ Alternatively, you can use [AWS Amplify](https://gohugo.io/hosting-and-deploymen
 
 In addition to [Hugo global configuration](https://gohugo.io/overview/configuration/) and [menu configuration](#basic-configuration), **FeelIt** lets you define the following parameters in your site configuration (here is a `hugo.toml`, whose values are default).
 
-Please open the code block below to view the complete sample configuration :(far fa-hand-point-down fa-fw)::
+Please open the code block below to view the complete sample configuration :(fa-regular fa-hand-point-down fa-fw)::
 
 ```toml
 [params]
@@ -336,16 +336,16 @@ Please open the code block below to view the complete sample configuration :(far
     description = "[FeelIt](https://github.com/khusika/FeelIt) is a **clean**, **elegant** but **advanced** blog theme for [Hugo](https://gohugo.io/) developed by [Khusika](https://khusika.dev). It is based on the original [LoveIt Theme](https://github.com/dillonzq/LoveIt), [LeaveIt Theme](https://github.com/liuzc/LeaveIt), and [KeepIt Theme](https://github.com/Fastbyte01/KeepIt)."
     # description of your status
     [[params.about.status]]
-      faIcon = "fas fa-building"
+      faIcon = "fa-solid fa-building"
       title = "Compagnie"
       desc = "FeelIt"
     [[params.about.status]]
-      faIcon = "fas fa-briefcase fa-fw"
+      faIcon = "fa-solid fa-briefcase fa-fw"
       title = "Occupation"
       desc = "Indépendant"
     [[params.about.status]]
       title = "Lieu"
-      faIcon = "fas fa-map-marker-alt"
+      faIcon = "fa-solid fa-map-marker-alt"
       desc = "Terre"
     # description of your parameter
     [[params.about.parameter]]
@@ -924,22 +924,22 @@ In `assets/css/_custom.scss`, you can add some css style code to customize the s
 
 | Language             | Hugo Code | HTML `lang` Attribute | Theme Docs                    | Lunr.js Support               |
 |:-------------------- |:---------:|:---------------------:|:-----------------------------:|:-----------------------------:|
-| German               | `de`      | `de`                  | :(far fa-square fa-fw):       | :(far fa-check-square fa-fw): |
-| English              | `en`      | `en`                  | :(far fa-check-square fa-fw): | :(far fa-check-square fa-fw): |
-| Spanish              | `es`      | `es`                  | :(far fa-square fa-fw):       | :(far fa-check-square fa-fw): |
-| French               | `fr`      | `fr`                  | :(far fa-square fa-fw):       | :(far fa-check-square fa-fw): |
-| Indonesian           | `id`      | `id`                  | :(far fa-square fa-fw):       | :(far fa-check-square fa-fw): |
-| Italian              | `it`      | `it`                  | :(far fa-square fa-fw):       | :(far fa-check-square fa-fw): |
-| Polish               | `pl`      | `pl`                  | :(far fa-square fa-fw):       | :(far fa-square fa-fw):       |
-| Brazilian Portuguese | `pt-br`   | `pt-BR`               | :(far fa-square fa-fw):       | :(far fa-check-square fa-fw): |
-| Romanian             | `ro`      | `ro`                  | :(far fa-square fa-fw):       | :(far fa-check-square fa-fw): |
-| Russian              | `ru`      | `ru`                  | :(far fa-square fa-fw):       | :(far fa-check-square fa-fw): |
-| Serbian              | `sr`      | `sr`                  | :(far fa-square fa-fw):       | :(far fa-square fa-fw):       |
-| Vietnamese           | `vi`      | `vi`                  | :(far fa-square fa-fw):       | :(far fa-check-square fa-fw): |
-| Simplified Chinese   | `zh-cn`   | `zh-CN`               | :(far fa-check-square fa-fw): | :(far fa-check-square fa-fw): |
-| Hungarian            | `hu`      | `hu`                  | :(far fa-square fa-fw):       | :(far fa-square fa-fw):       |
-| Czech                | `cs`      | `cs`                  | :(far fa-square fa-fw):       | :(far fa-square fa-fw):       |
-| Persian              | `fa`      | `fa`                  | :(far fa-square fa-fw):       | :(far fa-square fa-fw):       |
+| German               | `de`      | `de`                  | :(fa-regular fa-square fa-fw):       | :(fa-regular fa-check-square fa-fw): |
+| English              | `en`      | `en`                  | :(fa-regular fa-check-square fa-fw): | :(fa-regular fa-check-square fa-fw): |
+| Spanish              | `es`      | `es`                  | :(fa-regular fa-square fa-fw):       | :(fa-regular fa-check-square fa-fw): |
+| French               | `fr`      | `fr`                  | :(fa-regular fa-square fa-fw):       | :(fa-regular fa-check-square fa-fw): |
+| Indonesian           | `id`      | `id`                  | :(fa-regular fa-square fa-fw):       | :(fa-regular fa-check-square fa-fw): |
+| Italian              | `it`      | `it`                  | :(fa-regular fa-square fa-fw):       | :(fa-regular fa-check-square fa-fw): |
+| Polish               | `pl`      | `pl`                  | :(fa-regular fa-square fa-fw):       | :(fa-regular fa-square fa-fw):       |
+| Brazilian Portuguese | `pt-br`   | `pt-BR`               | :(fa-regular fa-square fa-fw):       | :(fa-regular fa-check-square fa-fw): |
+| Romanian             | `ro`      | `ro`                  | :(fa-regular fa-square fa-fw):       | :(fa-regular fa-check-square fa-fw): |
+| Russian              | `ru`      | `ru`                  | :(fa-regular fa-square fa-fw):       | :(fa-regular fa-check-square fa-fw): |
+| Serbian              | `sr`      | `sr`                  | :(fa-regular fa-square fa-fw):       | :(fa-regular fa-square fa-fw):       |
+| Vietnamese           | `vi`      | `vi`                  | :(fa-regular fa-square fa-fw):       | :(fa-regular fa-check-square fa-fw): |
+| Simplified Chinese   | `zh-cn`   | `zh-CN`               | :(fa-regular fa-check-square fa-fw): | :(fa-regular fa-check-square fa-fw): |
+| Hungarian            | `hu`      | `hu`                  | :(fa-regular fa-square fa-fw):       | :(fa-regular fa-square fa-fw):       |
+| Czech                | `cs`      | `cs`                  | :(fa-regular fa-square fa-fw):       | :(fa-regular fa-square fa-fw):       |
+| Persian              | `fa`      | `fa`                  | :(fa-regular fa-square fa-fw):       | :(fa-regular fa-square fa-fw):       |
 
 ### 4.2 Basic Configuration
 
@@ -1068,7 +1068,7 @@ Translations strings are used for common default values used in the theme. Trans
 
 To override these values, create a new file in your local i18n folder `i18n/<languageCode>.toml` and inspire yourself from `themes/FeelIt/i18n/en.toml`.
 
-By the way, as these translations could be used by other people, please take the time to propose a translation by [:(fas fa-code-branch fa-fw): making a PR](https://github.com/khusika/FeelIt/pulls) to the theme!
+By the way, as these translations could be used by other people, please take the time to propose a translation by [:(fa-solid fa-code-branch fa-fw): making a PR](https://github.com/khusika/FeelIt/pulls) to the theme!
 
 ## 5 Search
 

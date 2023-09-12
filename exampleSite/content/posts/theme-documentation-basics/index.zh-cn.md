@@ -30,14 +30,14 @@ toc:
 
 由于 Hugo 提供的便利性, [Hugo](https://gohugo.io/) 本身是这个主题唯一的依赖.
 
-直接安装满足你操作系统 (**Windows**, **Linux**, **macOS**) 的最新版本 [:(far fa-file-archive fa-fw): Hugo (> 0.110.0)](https://gohugo.io/getting-started/installing/).
+直接安装满足你操作系统 (**Windows**, **Linux**, **macOS**) 的最新版本 [:(fa-regular fa-file-archive fa-fw): Hugo (> 0.110.0)](https://gohugo.io/getting-started/installing/).
 
 {{< admonition note "为什么不支持早期版本的 Hugo?" >}}
 Since [Markdown Render Hooks](https://gohugo.io/getting-started/configuration-markup#markdown-render-hooks) were introduced in [Hugo Christmas Edition](https://gohugo.io/news/0.62.0-relnotes/), and some image sources are using webp which was introduced in [0.84.0](https://github.com/gohugoio/hugo/releases/tag/v0.84.0) and also we changed config.toml to hugo.toml, this theme only supports Hugo versions above **0.110.0**.
 {{< /admonition >}}
 
 {{< admonition tip "推荐使用 Hugo extended 版本" >}}
-由于这个主题的一些特性需要将 :(fab fa-sass fa-fw): SCSS 转换为 :(fab fa-css3 fa-fw): CSS, 推荐使用 Hugo **extended** 版本来获得更好的使用体验.
+由于这个主题的一些特性需要将 :(fa-brands fa-sass fa-fw): SCSS 转换为 :(fa-brands fa-css3 fa-fw): CSS, 推荐使用 Hugo **extended** 版本来获得更好的使用体验.
 {{< /admonition >}}
 
 ## 2 安装
@@ -57,7 +57,7 @@ cd my_website
 
 **FeelIt** 主题的仓库是: [https://github.com/khusika/FeelIt](https://github.com/khusika/FeelIt).
 
-你可以下载主题的 [最新版本 :(far fa-file-archive fa-fw): .zip 文件](https://github.com/khusika/FeelIt/releases) 并且解压放到 `themes` 目录.
+你可以下载主题的 [最新版本 :(fa-regular fa-file-archive fa-fw): .zip 文件](https://github.com/khusika/FeelIt/releases) 并且解压放到 `themes` 目录.
 
 另外, 也可以直接把这个主题克隆到 `themes` 目录:
 
@@ -195,7 +195,7 @@ hugo
 
 除了 [Hugo 全局配置](https://gohugo.io/overview/configuration/) 和 [菜单配置](#basic-configuration) 之外, **FeelIt** 主题还允许您在网站配置中定义以下参数 (这是一个示例 `hugo.toml`, 其内容为默认值).
 
-请打开下面的代码块查看完整的示例配置 :(far fa-hand-point-down fa-fw)::
+请打开下面的代码块查看完整的示例配置 :(fa-regular fa-hand-point-down fa-fw)::
 
 ```toml
 [params]
@@ -335,16 +335,16 @@ hugo
     description = "[FeelIt](https://github.com/khusika/FeelIt) 是一个由 [Khusika](https://khusika.dev) 开发的**简洁**、**优雅**且**高效**的 [Hugo](https://gohugo.io/) 博客主题。 它的原型基于 [LoveIt 主题](https://github.com/dillonzq/LoveIt), [LeaveIt 主题](https://github.com/liuzc/LeaveIt), 和 [KeepIt 主题](https://github.com/Fastbyte01/KeepIt)。"
     # 你的状态描述
     [[params.about.status]]
-      faIcon = "fas fa-building"
+      faIcon = "fa-solid fa-building"
       title = "公司"
       desc = "FeelIt"
     [[params.about.status]]
-      faIcon = "fas fa-briefcase fa-fw"
+      faIcon = "fa-solid fa-briefcase fa-fw"
       title = "职业"
       desc = "自由职业者"
     [[params.about.status]]
       title = "地点"
-      faIcon = "fas fa-map-marker-alt"
+      faIcon = "fa-solid fa-map-marker-alt"
       desc = "地球"
     # 参数说明
     [[params.about.parameter]]
@@ -926,20 +926,20 @@ $code-font-family: Fira Mono, Source Code Pro, Menlo, Consolas, Monaco, monospac
 
 | 语言 | Hugo 代码 | HTML `lang` 属性 | 主题文档 | Lunr.js 支持 |
 |:---- |:----:|:----:|:----:|:----:|
-| 德语 | `de` | `de` | :(far fa-square fa-fw): | :(far fa-check-square fa-fw): |
-| 英语 | `en` | `en` | :(far fa-check-square fa-fw): | :(far fa-check-square fa-fw): |
-| 西班牙语 | `es` | `es` | :(far fa-square fa-fw): | :(far fa-check-square fa-fw): |
-| 法语 | `fr` | `fr` | :(far fa-square fa-fw): | :(far fa-check-square fa-fw): |
-| 印度尼西亚 | `id` | `id` | :(far fa-square fa-fw): | :(far fa-check-square fa-fw): |
-| 意大利语 | `it` | `it` | :(far fa-square fa-fw): | :(far fa-check-square fa-fw): |
-| 波兰语 | `pl` | `pl` | :(far fa-square fa-fw): | :(far fa-square fa-fw): |
-| 巴西葡萄牙语 | `pt-br` | `pt-BR` | :(far fa-square fa-fw): | :(far fa-check-square fa-fw): |
-| 罗马尼亚语 | `ro` | `ro` | :(far fa-square fa-fw): | :(far fa-check-square fa-fw): |
-| 俄语 | `ru` | `ru` | :(far fa-square fa-fw): | :(far fa-check-square fa-fw): |
-| 塞尔维亚语 | `sr` | `sr` | :(far fa-square fa-fw): | :(far fa-square fa-fw): |
-| 越南语 | `vi` | `vi` | :(far fa-square fa-fw): | :(far fa-check-square fa-fw): |
-| 简体中文 | `zh-cn` | `zh-CN` | :(far fa-check-square fa-fw): | :(far fa-check-square fa-fw): |
-| 波斯语 | `fa` | `fa` | :(far fa-square fa-fw): | :(far fa-square fa-fw): |
+| 德语 | `de` | `de` | :(fa-regular fa-square fa-fw): | :(fa-regular fa-check-square fa-fw): |
+| 英语 | `en` | `en` | :(fa-regular fa-check-square fa-fw): | :(fa-regular fa-check-square fa-fw): |
+| 西班牙语 | `es` | `es` | :(fa-regular fa-square fa-fw): | :(fa-regular fa-check-square fa-fw): |
+| 法语 | `fr` | `fr` | :(fa-regular fa-square fa-fw): | :(fa-regular fa-check-square fa-fw): |
+| 印度尼西亚 | `id` | `id` | :(fa-regular fa-square fa-fw): | :(fa-regular fa-check-square fa-fw): |
+| 意大利语 | `it` | `it` | :(fa-regular fa-square fa-fw): | :(fa-regular fa-check-square fa-fw): |
+| 波兰语 | `pl` | `pl` | :(fa-regular fa-square fa-fw): | :(fa-regular fa-square fa-fw): |
+| 巴西葡萄牙语 | `pt-br` | `pt-BR` | :(fa-regular fa-square fa-fw): | :(fa-regular fa-check-square fa-fw): |
+| 罗马尼亚语 | `ro` | `ro` | :(fa-regular fa-square fa-fw): | :(fa-regular fa-check-square fa-fw): |
+| 俄语 | `ru` | `ru` | :(fa-regular fa-square fa-fw): | :(fa-regular fa-check-square fa-fw): |
+| 塞尔维亚语 | `sr` | `sr` | :(fa-regular fa-square fa-fw): | :(fa-regular fa-square fa-fw): |
+| 越南语 | `vi` | `vi` | :(fa-regular fa-square fa-fw): | :(fa-regular fa-check-square fa-fw): |
+| 简体中文 | `zh-cn` | `zh-CN` | :(fa-regular fa-check-square fa-fw): | :(fa-regular fa-check-square fa-fw): |
+| 波斯语 | `fa` | `fa` | :(fa-regular fa-square fa-fw): | :(fa-regular fa-square fa-fw): |
 
 ### 4.2 基本配置
 
@@ -1069,7 +1069,7 @@ defaultContentLanguage = "zh-cn"
 
 要覆盖默认值, 请在你项目的 i18n 目录 `i18n/<languageCode>.toml` 中创建一个新文件，并从 `themes/FeelIt/i18n/en.toml` 中获得提示.
 
-另外, 由于你的翻译可能会帮助到其他人, 请花点时间通过 [:(fas fa-code-branch fa-fw): 创建一个 PR](https://github.com/khusika/FeelIt/pulls) 来贡献主题翻译, 谢谢!
+另外, 由于你的翻译可能会帮助到其他人, 请花点时间通过 [:(fa-solid fa-code-branch fa-fw): 创建一个 PR](https://github.com/khusika/FeelIt/pulls) 来贡献主题翻译, 谢谢!
 
 ## 5 搜索
 

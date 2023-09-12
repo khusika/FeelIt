@@ -80,7 +80,7 @@
                 <div class="details toc" id="toc-static"  data-kept="{{ if $toc.keepStatic }}true{{ end }}">
                     <div class="details-summary toc-title">
                         <span>{{ T "contents" }}</span>
-                        <span><i class="details-icon fas fa-angle-right"></i></span>
+                        <span><i class="details-icon fa-solid fa-angle-right"></i></span>
                     </div>
                     <div class="details-content toc-content" id="toc-content-static">
                         {{- dict "Content" .TableOfContents "Ruby" $params.ruby "Fraction" $params.fraction "Fontawesome" $params.fontawesome | partial "function/content.html" | safeHTML -}}

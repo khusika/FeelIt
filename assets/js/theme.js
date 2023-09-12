@@ -271,7 +271,7 @@ class Theme {
                     footer: ({}) => {
                         const { searchType, icon, href } = searchConfig.type === 'algolia' ? {
                             searchType: 'algolia',
-                            icon: '<i class="fab fa-algolia fa-fw"></i>',
+                            icon: '<i class="fa-brands fa-algolia fa-fw"></i>',
                             href: 'https://www.algolia.com/',
                         } : {
                             searchType: 'Lunr.js',
@@ -344,20 +344,20 @@ class Theme {
                 $header.className = 'code-header ' + $code.className.toLowerCase();
                 const $title = document.createElement('span');
                 $title.classList.add('code-title');
-                $title.insertAdjacentHTML('afterbegin', '<i class="arrow fas fa-chevron-right fa-fw"></i>');
+                $title.insertAdjacentHTML('afterbegin', '<i class="arrow fa-solid fa-chevron-right fa-fw"></i>');
                 $title.addEventListener('click', () => {
                     $chroma.classList.toggle('open');
                 }, false);
                 $header.appendChild($title);
                 const $ellipses = document.createElement('span');
-                $ellipses.insertAdjacentHTML('afterbegin', '<i class="fas fa-ellipsis-h fa-fw"></i>');
+                $ellipses.insertAdjacentHTML('afterbegin', '<i class="fa-solid fa-ellipsis-h fa-fw"></i>');
                 $ellipses.classList.add('ellipses');
                 $ellipses.addEventListener('click', () => {
                     $chroma.classList.add('open');
                 }, false);
                 $header.appendChild($ellipses);
                 const $copy = document.createElement('span');
-                $copy.insertAdjacentHTML('afterbegin', '<i class="far fa-copy fa-fw"></i>');
+                $copy.insertAdjacentHTML('afterbegin', '<i class="fa-regular fa-copy fa-fw"></i>');
                 $copy.classList.add('copy');
                 const code = $code.innerText;
                 if (this.config.code.maxShownLines < 0 || code.split('\n').length < this.config.code.maxShownLines + 2) $chroma.classList.add('open');
