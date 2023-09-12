@@ -967,6 +967,8 @@ ignoreErrors = ["err-missing-comment-accesstoken", "err-missing-oembed-accesstok
     Email = "xxxx@xxxx.com"
     Resume = "" #goo.gl id
     xda = ""
+    kaggle = ""
+    discord = ""
     RSS = true
     [params.social.Mastodon]
       id = "@xxxx"
