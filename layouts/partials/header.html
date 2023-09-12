@@ -42,7 +42,7 @@
                 {{- if .Site.IsMultiLingual -}}
                     <span class="menu-item language" title="{{ T "selectLanguage" }}">
                         {{- .Language.LanguageName -}}
-                        <i class="fas fa-chevron-right fa-fw"></i>
+                        <i class="fa-solid fa-chevron-right fa-fw"></i>
                         <select class="language-select" id="language-select-desktop" onchange="location = this.value;">
                             {{- if eq .Kind "404" -}}
                                 {{- /* https://github.com/dillonzq/LoveIt/issues/378 */ -}}
@@ -66,21 +66,21 @@
                     <span class="menu-item search" id="search-desktop">
                         <input type="text" placeholder="{{ .Site.Params.search.placeholder | default (T `searchPlaceholder`) }}" id="search-input-desktop">
                         <a href="#" class="search-button search-toggle" id="search-toggle-desktop" title="{{ T `search` }}">
-                            <i class="fas fa-search fa-fw"></i>
+                            <i class="fa-solid fa-search fa-fw"></i>
                         </a>
                         <a href="#" class="search-button search-clear" id="search-clear-desktop" title="{{ T `clear` }}">
-                            <i class="fas fa-times-circle fa-fw"></i>
+                            <i class="fa-solid fa-times-circle fa-fw"></i>
                         </a>
                         <span class="search-button search-loading" id="search-loading-desktop">
-                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                            <i class="fa-solid fa-spinner fa-fw fa-spin"></i>
                         </span>
                     </span>
                 {{- end -}}
                 {{- with .Site.Params.header.title.rss -}}
-                <a class="menu-item" href="/index.xml" title="RSS"><i class="fas fa-rss fa-fw" title="RSS"></i> </a>
+                <a class="menu-item" href="/index.xml" title="RSS"><i class="fa-solid fa-rss fa-fw" title="RSS"></i> </a>
                 {{- end -}}
                 <a href="#" onclick="return false;" class="menu-item theme-switch" title="{{ T "switchTheme" }}">
-                    <i class="fas fa-adjust fa-fw"></i>
+                    <i class="fa-solid fa-adjust fa-fw"></i>
                 </a>
             </div>
         </div>
@@ -125,13 +125,13 @@
                     <div class="search mobile" id="search-mobile">
                         <input type="text" placeholder="{{ .Site.Params.search.placeholder | default (T `searchPlaceholder`) }}" id="search-input-mobile">
                         <a href="#" class="search-button search-toggle" id="search-toggle-mobile" title="{{ T `search` }}">
-                            <i class="fas fa-search fa-fw"></i>
+                            <i class="fa-solid fa-search fa-fw"></i>
                         </a>
                         <a href="#" class="search-button search-clear" id="search-clear-mobile" title="{{ T `clear` }}">
-                            <i class="fas fa-times-circle fa-fw"></i>
+                            <i class="fa-solid fa-times-circle fa-fw"></i>
                         </a>
                         <span class="search-button search-loading" id="search-loading-mobile">
-                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                            <i class="fa-solid fa-spinner fa-fw fa-spin"></i>
                         </span>
                     </div>
                     <a href="#" class="search-cancel" id="search-cancel-mobile">
@@ -151,17 +151,17 @@
             {{- end -}}
             <div class="menu-item">
                 {{- with .Site.Params.header.title.rss -}}
-                <a href="/index.xml" title="RSS"><i class="fas fa-rss fa-fw" title="RSS"></i> </a>
+                <a href="/index.xml" title="RSS"><i class="fa-solid fa-rss fa-fw" title="RSS"></i> </a>
                 <span>&nbsp;|&nbsp;</span>
                 {{- end -}}
                 <a href="#" onclick="return false;" class="theme-switch" title="{{ T "switchTheme" }}">
-                    <i class="fas fa-adjust fa-fw"></i>
+                    <i class="fa-solid fa-adjust fa-fw"></i>
                 </a>
             </div>
             {{- if .Site.IsMultiLingual -}}
                 <span class="menu-item language" title="{{ T "selectLanguage" }}">
                     {{- .Language.LanguageName -}}
-                    <i class="fas fa-chevron-right fa-fw"></i>
+                    <i class="fa-solid fa-chevron-right fa-fw"></i>
                     <select class="language-select" onchange="location = this.value;">
                         {{- if eq .Kind "404" -}}
                             {{- /* https://github.com/dillonzq/LoveIt/issues/378 */ -}}

@@ -20,7 +20,7 @@
                 {{- if $.Site.Params.gitRepo -}}
                     {{- with $.GitInfo -}}
                         &nbsp;<a class="git-hash" href="{{ printf `%v/commit/%v` $.Site.Params.gitRepo .Hash }}" target="_blank" title="committed&nbsp;by&nbsp;{{ .AuthorName }}({{ .AuthorEmail }})&nbsp;{{- .AbbreviatedHash -}}:&nbsp;{{ .Subject }}">
-                            <i class="fas fa-hashtag fa-fw"></i>{{- .AbbreviatedHash -}}
+                            <i class="fa-solid fa-hashtag fa-fw"></i>{{- .AbbreviatedHash -}}
                         </a>
                     {{- end -}}
                 {{- end -}}
@@ -59,10 +59,10 @@
     {{- if .Section -}}
     <div class="post-nav">
         {{- if .PrevInSection -}}
-            <a href="{{ .PrevInSection.RelPermalink }}" class="prev" rel="prev" title="{{ .PrevInSection.Title }}"><i class="fas fa-angle-left fa-fw"></i>Previous Post</a>
+            <a href="{{ .PrevInSection.RelPermalink }}" class="prev" rel="prev" title="{{ .PrevInSection.Title }}"><i class="fa-solid fa-angle-left fa-fw"></i>Previous Post</a>
         {{- end -}}
         {{ if .NextInSection }}
-            <a href="{{ .NextInSection.RelPermalink }}" class="next" rel="next" title="{{ .NextInSection.Title }}">Next Post<i class="fas fa-angle-right fa-fw"></i></a>
+            <a href="{{ .NextInSection.RelPermalink }}" class="next" rel="next" title="{{ .NextInSection.Title }}">Next Post<i class="fa-solid fa-angle-right fa-fw"></i></a>
         {{- end -}}
     </div>
     {{- end -}}
