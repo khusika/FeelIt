@@ -4,7 +4,7 @@
     {{- /* 001: Twitter */ -}}
     {{- if $share.Twitter -}}
         <a href="#" onclick="return false;" title="{{ T `shareOn` }} Twitter" data-sharer="twitter" data-url="{{ .Permalink }}" data-title="{{ .Title }}"{{ with .Site.Params.Social.Twitter }} data-via="{{ . }}"{{ end }}{{ with .Params.tags }} data-hashtags="{{ delimit . `,` }}"{{ end }}>
-            {{- dict "Class" "fa-brands fa-twitter fa-fw" | partial "plugin/icon.html" -}}
+            {{- dict "Class" "fa-brands fa-square-x-twitter fa-fw" | partial "plugin/icon.html" -}}
         </a>
     {{- end -}}
 
