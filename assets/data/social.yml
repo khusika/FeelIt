@@ -518,19 +518,27 @@ xda:
   Icon:
     Simpleicons: xdadevelopers
 
-# 066: RSS
-rss:
+# 066: Kaggle
+kaggle:
   Weight: 66
+  Prefix: https://www.kaggle.com/
+  Title: Kaggle
+  Icon:
+    Class: fa-brands fa-kaggle fa-fw
+
+# 067: Discord
+discord:
+  Weight: 67
+  Prefix: https://discordapp.com/users/
+  Title: Discord
+  Icon:
+    Class: fa-brands fa-discord fa-fw
+
+# 068: RSS
+rss:
+  Weight: 68
   Url: /index.xml
   Title: RSS
   Newtab: true
   Icon:
     Class: fa-solid fa-rss fa-fw
-
-# 067: Kaggle
-kaggle:
-  Weight: 67
-  Prefix: https://www.kaggle.com/
-  Title: Kaggle
-  Icon:
-    Class: fa-brands fa-kaggle fa-fw
