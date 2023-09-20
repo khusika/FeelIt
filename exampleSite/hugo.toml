@@ -562,7 +562,7 @@ ignoreErrors = ["err-missing-comment-accesstoken", "err-missing-oembed-accesstok
     # whether to enable PWA support
     enable = true
     # service-worker version
-    version = "1.0.1"
+    version = "1.0.2"
 
   # Header config
   # 页面头部导航栏配置

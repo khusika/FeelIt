@@ -226,7 +226,7 @@ Please open the code block below to view the complete sample configuration :(fa-
     # whether to enable PWA support
     enable = true
     # service-worker version
-    version = "1.0.1"
+    version = "1.0.2"
 
   # {{< version 0.2.0 >}} App icon config
   [params.app]

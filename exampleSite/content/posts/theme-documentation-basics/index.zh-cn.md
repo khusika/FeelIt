@@ -224,7 +224,7 @@ hugo
     # whether to enable PWA support
     enable = true
     # service-worker version
-    version = "1.0.1"
+    version = "1.0.2"
 
   # {{< version 0.2.0 >}} 应用图标配置
   [params.app]
