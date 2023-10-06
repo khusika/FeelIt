@@ -512,7 +512,7 @@ resume:
 # 065: XDA-Developers
 xda:
   Weight: 65
-  Prefix: https://forum.xda-developers.com/m/
+  Prefix: https://xdaforums.com/m/
   Title: XDA-Developers
   Newtab: true
   Icon:
