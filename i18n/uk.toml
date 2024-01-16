@@ -1,0 +1,207 @@
+# Translations for Ukrainian
+# Переклад на українську мову
+# https://gohugo.io/content-management/multilingual/#translation-of-strings
+
+# === baseof ==
+[backToTop]
+other = "Вгору"
+
+[viewComments]
+other = "Переглянути коментарі"
+# === baseof ==
+
+# === Post ===
+[posts]
+other = "Дописи"
+# === Post ===
+
+# === Taxonomy ===
+[allSome]
+other = "Всі {{ .Some }}"
+
+[tag]
+other = "Теґ"
+
+[tags]
+other = "Теги"
+
+[category]
+other = "Категорія"
+
+[categories]
+other = "Категорії"
+# === Taxonomy ===
+
+# === Pagination ===
+[more]
+other = "Більше"
+# === Pagination ===
+
+# === partials/header.html ===
+[selectLanguage]
+other = "Вибір мови"
+
+[switchTheme]
+other = "Змінити Тему"
+# === partials/header.html ===
+
+# === partials/footer.html ===
+[poweredBySome]
+other = "Працює на {{ .Hugo }} | Тема - {{ .Theme }}"
+# === partials/footer.html ===
+
+# === partials/comment.html ===
+[valineLang]
+other = "en"
+
+[valinePlaceholder]
+other = "Ваш коментар ..."
+
+[facebookLanguageCode]
+other = "uk_UA"
+# === partials/comment.html ===
+
+# === partials/assets.html ===
+[search]
+other = "Пошук"
+
+[searchPlaceholder]
+other = "Пошук заголовків та вмісту ..."
+
+[clear]
+other = "Очистити"
+
+[cancel]
+other = "Скасувати"
+
+[noResultsFound]
+other = "Результатів що відповідають запиту не знайдено"
+
+[lunrLanguageCode]
+other = "uk"
+
+[lunrLanguageLib]
+other = "lib/lunr/lunr.uk.js"
+
+[copyToClipboard]
+other = "Копіювати в буфер обміну"
+
+[cookieconsentMessage]
+other = "Цей сайт використовує Cookies для покращення вашого досвіду."
+
+[cookieconsentDismiss]
+other = "Згоден"
+
+[cookieconsentLink]
+other = "Вчити більше"
+# === partials/assets.html ===
+
+# === partials/plugin/share.html ===
+[shareOn]
+other = "Поділитися у"
+# === partials/plugin/share.html ===
+
+# === posts/single.html ===
+[contents]
+other = "Зміст"
+
+[publishedOnDate]
+other = "Опубліковано {{ .Date }}"
+
+[publishedInCategories]
+other = "опубліковано в {{ .Categories }}"
+
+[includedInCategories]
+other = "доданий у категорію {{ .Categories }}"
+
+[wordCount]
+one = "Одне слово"
+other = "{{ .Count }} слів"
+
+[readingTime]
+one = "Одна хвилина"
+other = "{{ .Count }} хвилин"
+
+[views]
+other = "переглядів"
+
+[author]
+other = "Автор"
+
+[updatedOnDate]
+other = "Оновлена {{ .Date }}"
+
+[readMarkdown]
+other = "Читати Markdown"
+
+[improveArticle]
+other = "Improve Article"
+
+[back]
+other = "Назад"
+
+[home]
+other = "На головну"
+# === posts/single.html ===
+
+# === 404.html ===
+[pageNotFound]
+other = "Сторінку не знайдено"
+
+[pageNotFoundText]
+other = "Сторінка, яку Ви шукаєте, не існує. Вибачте."
+# === 404.html ===
+
+# === Offline Page ===
+[pageOffline]
+other = "Ви не в мережі. Перевірте інтернет з'єднання."
+# === Offline Page ===
+
+# === shortcodes/admonition.html ===
+[note]
+other = "Зауваження"
+
+[abstract]
+other = "Короткий опис"
+
+[info]
+other = "Інфо"
+
+[tip]
+other = "Порада"
+
+[success]
+other = "Вдало"
+
+[question]
+other = "Питання"
+
+[warning]
+other = "Попередження"
+
+[failure]
+other = "Відмова"
+
+[danger]
+other = "Небезпека"
+
+[bug]
+other = "Помилка"
+
+[example]
+other = "Приклад"
+
+[quote]
+other = "Цитата"
+# === shortcodes/admonition.html ===
+
+# === shortcodes/version.html ===
+[new]
+other = "НОВИЙ"
+
+[changed]
+other = "ЗМІНЕНИЙ"
+
+[deleted]
+other = "ВИДАЛЕНИЙ"
+# === shortcodes/version.html ===

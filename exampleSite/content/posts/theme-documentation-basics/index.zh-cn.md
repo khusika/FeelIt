@@ -942,6 +942,7 @@ $code-font-family: Fira Mono, Source Code Pro, Menlo, Consolas, Monaco, monospac
 | 越南语 | `vi` | `vi` | :(fa-regular fa-square fa-fw): | :(fa-regular fa-check-square fa-fw): |
 | 简体中文 | `zh-cn` | `zh-CN` | :(fa-regular fa-check-square fa-fw): | :(fa-regular fa-check-square fa-fw): |
 | 波斯语 | `fa` | `fa` | :(fa-regular fa-square fa-fw): | :(fa-regular fa-square fa-fw): |
+| 乌克兰语 | `uk` | `uk` | :(fa-regular fa-square fa-fw):       | :(fa-regular fa-check-square fa-fw): |
 
 ### 4.2 基本配置
 
@@ -1055,6 +1056,7 @@ defaultContentLanguage = "zh-cn"
 * 英语: `my-page.en.md`
 * 中文: `my-page.zh-cn.md`
 * 法语: `my-page.fr.md`
+* 乌克兰语: `my-page.uk.md`
 
 {{< admonition >}}
 请注意, 菜单中仅显示翻译的页面. 它不会替换为默认语言内容.
