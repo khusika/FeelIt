@@ -165,6 +165,7 @@ FeelIt supports the following languages:
 * Hungarian
 * Czech
 * Persian
+* Ukrainian
 * [Contribute with a new language](https://github.com/khusika/FeelIt/pulls)
 
 [Languages Compatibility](https://feelit.khusika.dev/theme-documentation-basics/#language-compatibility)

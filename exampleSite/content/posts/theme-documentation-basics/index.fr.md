@@ -942,6 +942,7 @@ In `assets/css/_custom.scss`, you can add some css style code to customize the s
 | Hungarian            | `hu`      | `hu`                  | :(fa-regular fa-square fa-fw):       | :(fa-regular fa-square fa-fw):       |
 | Czech                | `cs`      | `cs`                  | :(fa-regular fa-square fa-fw):       | :(fa-regular fa-square fa-fw):       |
 | Persian              | `fa`      | `fa`                  | :(fa-regular fa-square fa-fw):       | :(fa-regular fa-square fa-fw):       |
+| Ukrainian            | `uk`      | `uk`                  | :(fa-regular fa-square fa-fw):       | :(fa-regular fa-check-square fa-fw): |
 
 ### 4.2 Basic Configuration
 
@@ -1055,6 +1056,7 @@ Single file `my-page.md` is split in three files:
 * in English: `my-page.en.md`
 * in Chinese: `my-page.zh-cn.md`
 * in French: `my-page.fr.md`
+* in Ukrainian: `my-page.uk.md`
 
 {{< admonition >}}
 Be aware that only translated pages are displayed in menu. It’s not replaced with default language content.
