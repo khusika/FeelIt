@@ -23,6 +23,7 @@ enableGitInfo = true
 # 是否使用 emoji 代码
 enableEmoji = true
 # UA-PROPERTY_ID or G-MEASUREMENT_ID google analytics code
+# UA-PROPERTY_ID 或者是 G-MEASUREMENT_ID 的 google analytics 代码
 googleAnalytics = ""
 
 ignoreErrors = ["err-missing-comment-accesstoken", "err-missing-oembed-accesstoken", "error-remote-getjson"]
@@ -555,13 +556,17 @@ ignoreErrors = ["err-missing-comment-accesstoken", "err-missing-oembed-accesstok
   # 网站图片, 用于 Open Graph 和 Twitter Cards
   images = ["/logo.png"]
   # whether to enable CSS and JS source mapping
+  # 是否要开启 CSS 和 JS 资源映射
   SourceMap = false
 
   # PWA config
+  # PWA 配置
   [params.pwa]
     # whether to enable PWA support
+    # 是否要启用 PWA
     enable = true
     # service-worker version
+    # service-worker 版本
     version = "1.0.2"
 
   # Header config
@@ -648,11 +653,14 @@ ignoreErrors = ["err-missing-comment-accesstoken", "err-missing-oembed-accesstok
     rss = 10
 
   # oEmbed config for Facebook and Instagram
+  # oEmbed 配置，用于 Facebook 和 Instagram
   [params.oembed]
     # Privacy config (https://gohugo.io/about/hugo-and-gdpr/)
+    # 隐私设置 (https://gohugo.io/about/hugo-and-gdpr/)
     privacy = false
     [params.oembed.facebook]
-      # Facebook Aplication Identity and Client Token (<APPID>|<CLIENTTOKEN>)
+      # Facebook Application Identity and Client Token (<APPID>|<CLIENTTOKEN>)
+      # Facebook 的 Application Identity 和 Client Token (<APPID>|<CLIENTTOKEN>)
       accessToken = ""
     [params.oembed.twitter]
       enableDNT = false
@@ -1014,14 +1022,17 @@ ignoreErrors = ["err-missing-comment-accesstoken", "err-missing-oembed-accesstok
   [params.analytics]
     enable = false
     # Fathom Analytics
+    # Fathom 分析
     [params.analytics.fathom]
       id = ""
       # server url for your tracker if you're self hosting
       # 自行托管追踪器时的主机路径
       server = ""
     # GoatCounter Analytics
+    # GoatCounter 分析
     [params.analytics.goatcounter]
       # GoatCounter code
+      # GoatCounter 代码
       code = ""
 
   # Cookie consent config
@@ -1125,6 +1136,7 @@ ignoreErrors = ["err-missing-comment-accesstoken", "err-missing-oembed-accesstok
     respectDoNotTrack = false
     useSessionStorage = false
   # privacy of the Intagram (replaced by params.oembed.instagram)
+  # Instagram 相关隐私 (被替换为 params.oembed.instagram)
   [privacy.instagram]
     # ...
   [privacy.twitter]

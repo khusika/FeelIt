@@ -1356,23 +1356,23 @@ console.log('Hello FeelIt!');
 
 {{< version 1.0.1 changed >}}
 
-oEmbed endpoints allow you to get embed HTML and basic metadata for pages, posts, and videos in order to display them in another website or app. The oEmbed endpoints require either an App Access Token or Client Access Token.
+oEmbed 端点允许你获得页面、文章和视频的嵌入 HTML 和基本的元数据，这样就可以在其他的网站或者 App 上使用. 要使用 oEmbed 端点需要 App Access Token 或者是 Client Access Token.
 
 ### 12.1 oEmbed Facebook
 {{< version 1.0.1 >}}
 
 **a. oEmbed Facebook Pages**
 
-Sample input of Facebook Pages
+以 Facebook Pages 为例，输入为
 ```markdown
 {{</* oembed "fb" "page" "https://www.facebook.com/FacebookforDevelopers" */>}}
 ```
 
-Sample output of Facebook Pages
+以 Facebook Pages 为例，输出为
 
 {{< oembed "fb" "page" "https://www.facebook.com/FacebookforDevelopers" >}}
 
-URL Formats
+URL 格式
 
 ```html
 https://www.facebook.com/{page-name}
@@ -1381,17 +1381,17 @@ https://www.facebook.com/{page-id}
 
 **b. oEmbed Facebook Posts**
 
-Sample input of Facebook Posts
+以 Facebook Posts 为例，输入为
 
 ```markdown
 {{</* oembed "fb" "post" "https://www.facebook.com/FacebookforDevelopers/photos/a.441861428552/10151617410093553" */>}}
 ```
 
-Sample output of Facebook Posts
+以 Facebook Posts 为例，输出为
 
 {{< oembed "fb" "post" "https://www.facebook.com/FacebookforDevelopers/photos/a.441861428552/10151617410093553" >}}
 
-URL Formats
+URL 格式
 
 ```html
 https://www.facebook.com/{page-name}/posts/{post-id}
@@ -1407,17 +1407,17 @@ https://www.facebook.com/notes/{username}/{note-url}/{note-id}
 
 **c. oEmbed Facebook Videos**
 
-Sample input of Facebook Videos
+以 Facebook Videos 为例，输入为
 
 ```markdown
 {{</* oembed "fb" "video" "https://www.facebook.com/FacebookforDevelopers/videos/2201055573317594" */>}}
 ```
 
-Sample output of Facebook Videos
+以 Facebook Videos 为例，输出为
 
 {{< oembed "fb" "video" "https://www.facebook.com/FacebookforDevelopers/videos/2201055573317594" >}}
 
-URL Formats
+URL 格式
 
 ```html
 https://www.facebook.com/{page-name}/videos/{video-id}/
@@ -1431,37 +1431,37 @@ https://www.facebook.com/video.php?v={video-id}
 
 **a. oEmbed Instagram Post**
 
-Sample input of Instagram Post
+以 Instagram Post 为例，输入为
 
 ```markdown
 {{</* oembed "ig" "p" "BWNjjyYFxVx" "hidecaption" */>}}
 ```
 
-Sample output of Instagram Post
+以 Instagram Post 为例，输出为
 
 {{< oembed "ig" "p" "BWNjjyYFxVx" "hidecaption" >}}
 
 **b. oEmbed Instagram TV**
 
-Sample input of Instagram TV
+以 Instagram TV 为例，输入为
 
 ```markdown
 {{</* oembed "ig" "tv" "BkQUbR8h1sp" "hidecaption" */>}}
 ```
 
-Sample output of Instagram TV
+以 Instagram TV 为例，输出为
 
 {{< oembed "ig" "tv" "BkQUbR8h1sp" "hidecaption" >}}
 
 ### 12.3 oEmbed Twitter
 {{< version 1.0.1 >}}
 
-Sample input of 'oembed tweet'
+以 'oembed tweet' 为例，输入为
 
 ```markdown
 {{</* oembed "tweet" "https://twitter.com/GoHugoIO/status/877500564405444608" */>}}
 ```
 
-Sample output of 'oembed tweet'
+以 'oembed tweet' 为例，输出为
 
 {{< oembed "tweet" "https://twitter.com/GoHugoIO/status/877500564405444608" >}}
