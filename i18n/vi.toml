@@ -51,12 +51,15 @@ other = "Cung cấp bởi {{ .Hugo }} | Chủ đề - {{ .Theme }}"
 
 # === partials/comment.html ===
 [valineLang]
-other = "en"
+other = "vi"
 
 [valinePlaceholder]
 other = "Bình luận của bạn ..."
 
 [facebookLanguageCode]
+other = "vi"
+
+[giscusLang]
 other = "vi"
 # === partials/comment.html ===
 
