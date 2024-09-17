@@ -10,17 +10,17 @@
     {{ $id := .Get 2 }}
     {{- if eq $host "ig" -}}
       {{ $hideCaption := cond (eq (.Get 3) "hidecaption") "1" "0" }}
-      {{ with getJSON "https://graph.facebook.com/v15.0/instagram_oembed/?url=https://instagram.com/" $type "/" $id "/&hidecaption=" $hideCaption "&access_token=" $accessToken }}
-        {{ .html | safeHTML }}
+      {{ with resources.GetRemote "https://graph.facebook.com/v15.0/instagram_oembed/?url=https://instagram.com/" $type "/" $id "/&hidecaption=" $hideCaption "&access_token=" $accessToken }}
+        {{ (. | transform.Unmarshal).html | safeHTML }}
       {{ end }}
     {{- else if eq $host "fb" -}}
       {{- if eq $type "page" -}}
-        {{ with getJSON "https://graph.facebook.com/v15.0/oembed_" $type "?url=" $id "&show_posts=false" "&access_token=" $accessToken }}
-          {{ .html | safeHTML }}
+        {{ with resources.GetRemote "https://graph.facebook.com/v15.0/oembed_" $type "?url=" $id "&show_posts=false" "&access_token=" $accessToken }}
+          {{ (. | transform.Unmarshal).html | safeHTML }}
         {{ end }}
       {{- else -}}
-        {{ with getJSON "https://graph.facebook.com/v15.0/oembed_" $type "?url=" $id "&access_token=" $accessToken }}
-          {{ .html | safeHTML }}
+        {{ with resources.GetRemote "https://graph.facebook.com/v15.0/oembed_" $type "?url=" $id "&access_token=" $accessToken }}
+          {{ (. | transform.Unmarshal).html | safeHTML }}
         {{ end }}
       {{- end -}}
     {{- end -}}
@@ -28,8 +28,8 @@
 {{- else if (eq $host "tweet") -}}
   {{ $url := .Get 1 }}
   {{- $dnt := $oe.twitter.enableDNT | default false -}}
-  {{ with getJSON "https://publish.twitter.com/oembed" "?url=" $url "&dnt=" $dnt }}
-    {{ .html | safeHTML }}
+  {{ with resources.GetRemote "https://publish.twitter.com/oembed" "?url=" $url "&dnt=" $dnt }}
+    {{ (. | transform.Unmarshal).html | safeHTML }}
   {{ end }}
 {{- end -}}
 {{- end -}}
