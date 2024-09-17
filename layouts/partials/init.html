@@ -2,7 +2,7 @@
 
 {{- /* FeelIt theme version detection */ -}}
 {{- $VERSION := "1.0.X" -}}
-{{- if eq .Site .Sites.First -}}
+{{- if eq .Site .Sites.Default -}}
     {{- if not .Site.Params.version -}}
         {{- errorf "Configuration Error 配置文件错误\n\nYou haven't configured the FeelIt version param correctly yet. See https://feelit.khusika.dev/theme-documentation-basics/#basic-configuration\n你还没有正确配置 FeelIt 的版本参数. 参考 https://feelit.khusika.dev/zh-cn/theme-documentation-basics/#basic-configuration\n" -}}
     {{- else if ne .Site.Params.version $VERSION -}}
@@ -32,7 +32,7 @@
     {{- else if eq .Params.comment false -}}
         {{- .Scratch.Set "comment" dict -}}
     {{- end -}}
-{{- else if eq .Site .Sites.First -}}
+{{- else if eq .Site .Sites.Default -}}
     {{- warnf "\n\nCurrent environment is \"development\". The \"comment system\", \"CDN\", \"fingerprint\" and \"PWA\" will be disabled.\n当前运行环境是 \"development\". \"评论系统\", \"CDN\", \"fingerprint\" 和 \"PWA\" 不会启用.\n" -}}
 {{- end -}}
 
