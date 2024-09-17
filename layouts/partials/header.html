@@ -39,7 +39,7 @@
                 {{- if .Site.Menus.main -}}
                     <span class="menu-item delimiter"></span>
                 {{- end -}}
-                {{- if .Site.IsMultiLingual -}}
+                {{- if hugo.IsMultilingual -}}
                     <span class="menu-item language" title="{{ T "selectLanguage" }}">
                         {{- .Language.LanguageName -}}
                         <i class="fa-solid fa-chevron-right fa-fw"></i>
@@ -158,7 +158,7 @@
                     <i class="fa-solid fa-adjust fa-fw"></i>
                 </a>
             </div>
-            {{- if .Site.IsMultiLingual -}}
+            {{- if hugo.IsMultilingual -}}
                 <span class="menu-item language" title="{{ T "selectLanguage" }}">
                     {{- .Language.LanguageName -}}
                     <i class="fa-solid fa-chevron-right fa-fw"></i>
