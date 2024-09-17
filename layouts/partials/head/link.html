@@ -81,7 +81,7 @@
 
 {{- if ne $offline true -}}
 {{- $analytics := .Site.Config.Privacy.GoogleAnalytics -}}
-{{- if not $analytics.Disable }}{{ with .Site.GoogleAnalytics -}}
+{{- if not $analytics.Disable }}{{ with .Site.Config.Services.GoogleAnalytics.ID -}}
     {{ if hasPrefix . "G-"}}
         <link href="https://www.googletagmanager.com" rel="preconnect" crossorigin>
         <link rel="dns-prefetch" href="https://www.googletagmanager.com">

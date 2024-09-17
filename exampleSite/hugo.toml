@@ -1125,6 +1125,11 @@ ignoreErrors = ["err-missing-comment-accesstoken", "err-missing-oembed-accesstok
   # posts = ":year/:month/:filename"
   posts = ":filename"
 
+[services.googleAnalytics]
+  # UA-PROPERTY_ID or G-MEASUREMENT_ID google analytics code
+  # UA-PROPERTY_ID 或者是 G-MEASUREMENT_ID 的 google analytics 代码
+  ID = ""
+
 # Privacy config (https://gohugo.io/about/hugo-and-gdpr/)
 # 隐私信息配置 (https://gohugo.io/about/hugo-and-gdpr/)
 [privacy]
