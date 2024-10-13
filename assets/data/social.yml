@@ -495,7 +495,7 @@ bilibili:
 
 # 063: Email
 email:
-  Weight: 63
+  Weight: 98
   Template: mailto:%v
   Title: Email
   Icon:
@@ -529,16 +529,82 @@ kaggle:
 # 067: Discord
 discord:
   Weight: 67
-  Prefix: https://discordapp.com/users/
+  Prefix: https://discord.gg/
   Title: Discord
   Icon:
     Class: fa-brands fa-discord fa-fw
 
 # 068: RSS
 rss:
-  Weight: 68
+  Weight: 99
   Url: /index.xml
   Title: RSS
   Newtab: true
   Icon:
     Class: fa-solid fa-rss fa-fw
+
+bluesky:
+  Weight: 68
+  Prefix: https://bsky.app/profile/
+  Title: BlueSky
+  Icon:
+    Class: fa-brands fa-bluesky fa-fw
+
+threads:
+  Weight: 69
+  Prefix: https://threads.net/
+  Title: Threads
+  Icon:
+    Class: fa-brands fa-square-threads fa-fw
+
+signal:
+  Weight: 70
+  Prefix: https://signal.me/#eu/
+  Title: Signal
+  Icon:
+    Class: fa-brands fa-signal-messenger fa-fw
+
+tiktok:
+  Weight: 71
+  Prefix: https://www.tiktok.com/
+  Title: Tiktok
+  Icon:
+    Class: fab fa-tiktok fa-fw
+
+keyoxide:
+  Weight: 72
+  Prefix: https://keyoxide.org/
+  Title: Keyoxide
+  Icon:
+    Class: fas fa-key fa-fw
+
+pixelfed:
+  Weight: 73
+  Prefix: https://pixelfed.social/
+  Title: Pixelfed
+  Icon:
+    Src: svg/icons/pixelfed.svg
+
+# lemmy user profile
+lemmy:
+  Weight: 74
+  Prefix: https://lemmynsfw.com/u/
+  Title: Lemmy User
+  Icon:
+    Src: svg/icons/lemmy.svg
+
+# lemmy community page
+lemmyc:
+  Weight: 75
+  Prefix: https://lemmynsfw.com/c/
+  Title: Lemmy Community
+  Icon:
+    Src: svg/icons/lemmy.svg
+
+allmylinks:
+  Weight: 97
+  Url: https://allmylinks.com/
+  Title: Links
+  Newtab: true
+  Icon:
+    Class: fas fa-link fa-fw  
