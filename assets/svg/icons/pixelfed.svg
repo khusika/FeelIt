@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   id="svg12"
+   version="1.1"
+   viewBox="0 0 75 75"
+   height="75"
+   width="75">
+  <metadata
+     id="metadata16">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>icon/black/svg/pixelfed-icon-black</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+  <title
+     id="title2">icon/black/svg/pixelfed-icon-black</title>
+  <desc
+     id="desc4">Created with Sketch.</desc>
+  <defs
+     id="defs6" />
+  <g
+     transform="translate(12.5,12.5)"
+     style="fill:none;fill-rule:evenodd;stroke:none;stroke-width:1"
+     id="Page-1">
+    <g
+       style="fill:#000000"
+       id="icon-copy-11">
+      <g
+         id="Group-12">
+        <path
+           id="Combined-Shape"
+           d="M 25,50 C 11.192881,50 0,38.807119 0,25 0,11.192881 11.192881,0 25,0 38.807119,0 50,11.192881 50,25 50,38.807119 38.807119,50 25,50 Z M 23.015316,30.458015 h 4.586148 c 4.320335,0 7.822658,-3.409518 7.822658,-7.615371 0,-4.205853 -3.502323,-7.615371 -7.822658,-7.615371 h -6.619172 c -2.492501,0 -4.513072,1.967029 -4.513072,4.393483 v 17.100022 z" />
+      </g>
+    </g>
+  </g>
+</svg>
