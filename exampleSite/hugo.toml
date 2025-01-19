@@ -669,7 +669,7 @@ ignoreErrors = ["err-missing-comment-accesstoken", "err-missing-oembed-accesstok
       # Facebook Application Identity and Client Token (<APPID>|<CLIENTTOKEN>)
       # Facebook 的 Application Identity 和 Client Token (<APPID>|<CLIENTTOKEN>)
       accessToken = ""
-    [params.oembed.twitter]
+    [params.oembed.x]
       enableDNT = false
 
   # Page config
@@ -1144,7 +1144,7 @@ ignoreErrors = ["err-missing-comment-accesstoken", "err-missing-oembed-accesstok
   # Instagram 相关隐私 (被替换为 params.oembed.instagram)
   [privacy.instagram]
     # ...
-  [privacy.twitter]
+  [privacy.x]
     enableDNT = true
   [privacy.youtube]
     privacyEnhanced = true

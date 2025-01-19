@@ -392,7 +392,7 @@ Please open the code block below to view the complete sample configuration :(fa-
     [params.oembed.facebook]
       # Facebook Aplication Identity and Client Token (<APPID>|<CLIENTTOKEN>)
       accessToken = ""
-    [params.oembed.twitter]
+    [params.oembed.x]
       enableDNT = false
 
   # Social config about the author
