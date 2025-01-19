@@ -396,7 +396,7 @@ hugo
     [params.oembed.facebook]
       # Facebook Aplication Identity and Client Token (<APPID>|<CLIENTTOKEN>)
       accessToken = ""
-    [params.oembed.twitter]
+    [params.oembed.x]
       enableDNT = false
 
   # 作者的社交信息设置
