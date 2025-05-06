@@ -1122,8 +1122,8 @@ ignoreErrors = ["err-missing-comment-accesstoken", "err-missing-oembed-accesstok
 # Permalinks config (https://gohugo.io/content-management/urls/#permalinks)
 # Permalinks 配置 (https://gohugo.io/content-management/urls/#permalinks)
 [Permalinks]
-  # posts = ":year/:month/:filename"
-  posts = ":filename"
+  # posts = ":year/:month/:contentbasename"
+  posts = ":contentbasename"
 
 [services.googleAnalytics]
   # UA-PROPERTY_ID or G-MEASUREMENT_ID google analytics code
