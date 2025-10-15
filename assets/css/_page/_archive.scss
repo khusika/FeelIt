@@ -48,6 +48,28 @@
     text-overflow: ellipsis;
   }
 
+  .item-link-wrapper {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+    transition: transform 0.2s ease-in-out;
+    &:hover {
+      transform: scale(1.02);
+      .item-title {
+        color: $global-link-hover-color;
+        [theme=dark] & {
+          color: $global-link-hover-color-dark;
+        }
+      }
+    }
+  }
+
+  .item-title {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
   .item-link {
     min-width: 10%;
 
@@ -66,9 +88,61 @@
     font-size: .875rem;
     text-align: left;
     color: $global-font-secondary-color;
-
     [theme=dark] & {
       color: $global-font-secondary-color-dark;
+    }
+  }
+
+  .item-with-image {
+    display: flex;
+    align-items: center;
+    margin-left: 1.5rem;
+  }
+
+  .item-image {
+    flex-shrink: 0;
+    margin-right: 1rem;
+    width: 68px;
+    height: 68px;
+    overflow: hidden;
+    @include border-radius(4px);
+    background: $global-background-card-color;
+    @include box-shadow(0 2px 10px rgba(0, 0, 0, 0.1));
+    [theme=dark] & {
+      background: $global-background-card-color-dark;
+      @include box-shadow(0 2px 10px rgba(0, 0, 0, 0.4));
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .item-image-placeholder {
+    flex-shrink: 0;
+    margin-right: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 68px;
+    height: 68px;
+    @include border-radius(4px);
+    background: $global-background-card-color;
+    font-size: 2rem;
+    color: #495057;
+    @include box-shadow(0 2px 10px rgba(0, 0, 0, 0.1));
+    [theme=dark] & {
+      background: $global-background-card-color-dark;
+      color: #adb5bd;
+      @include box-shadow(0 2px 10px rgba(0, 0, 0, 0.4));
+    }
+  }
+
+  .item-content {
+    overflow: hidden;
+    .item {
+      margin-left: 0;
     }
   }
 
@@ -92,22 +166,32 @@
   }
 
   .circle {
-    margin: 5px 0;
+    margin: 10px 0;
     &::before {
       content: '';
       background: $global-font-secondary-color;
       display: inline-block;
       position: absolute;
-      top: 42.5%;
+      top: 50%;
+      transform: translateY(-50%);
       border: 2px solid $global-background-color;
-      border-radius: 50%;
+      @include border-radius(50%);
       left: 1px;
       width: 10px;
       height: 10px;
       z-index: 2;
+      transition: transform 0.2s ease-in-out;
       [theme=dark] & {
         background: $global-font-secondary-color-dark;
         border-color: $global-background-color-dark;
+      }
+    }
+    &:hover {
+      .item-link-wrapper {
+        transform: scale(1.02);
+      }
+      &::before {
+        transform: translateY(-50%) scale(1.5);
       }
     }
   }

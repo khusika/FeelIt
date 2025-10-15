@@ -29,16 +29,31 @@
                 {{- range .Pages -}}
                 <div class="timeline">
                     <div class="circle">
-                        <div class="item">
-                            <a href="{{ .RelPermalink }}" class="item-link">
-                                {{- .Title -}}
-                            </a>
-                        </div>
-                        <div class="item">
-                            <span class="item-date">
-                                Published&nbsp;on&nbsp;{{- $.Site.Params.list.dateFormat | default "01-02" | .Date.Format -}}
-                            </span>
-                        </div>
+                        {{- $featured := .Resources.Get "featured-image" -}}
+                        <a href="{{ .RelPermalink }}" class="item-link-wrapper">
+                            <div class="item-with-image">
+                                {{- if $featured -}}
+                                    {{- $image := $featured.Fill "68x68 Center q100 Lanczos" -}}
+                                    <div class="item-image">
+                                        {{- dict "Src" $image.RelPermalink "Title" .Title "Loading" "lazy" | partial "plugin/image.html" -}}
+                                    </div>
+                                {{- else -}}
+                                    <div class="item-image-placeholder">
+                                        <i class="fa-solid fa-newspaper"></i>
+                                    </div>
+                                {{- end -}}
+                                <div class="item-content">
+                                    <div class="item-title">
+                                        {{- .Title -}}
+                                    </div>
+                                    <div class="item">
+                                        <span class="item-date">
+                                            Published&nbsp;on&nbsp;{{- $.Site.Params.list.dateFormat | default "January 2" | .Date.Format -}}
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
                     </div>
                 </div>
                 {{- end -}}
