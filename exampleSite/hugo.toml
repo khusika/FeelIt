@@ -37,8 +37,6 @@ ignoreErrors = ["err-missing-comment-accesstoken", "err-missing-oembed-accesstok
     languageName = "English"
     # whether to include Chinese/Japanese/Korean
     hasCJKLanguage = false
-    # default amount of posts in each pages
-    paginate = 12
     # copyright description used only for seo schema
     copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License."
     # Menu config
@@ -94,6 +92,9 @@ ignoreErrors = ["err-missing-comment-accesstoken", "err-missing-oembed-accesstok
         url = "https://github.com/khusika/FeelIt"
         title = "GitHub"
         weight = 6
+    [languages.en.pagination]
+      # default amount of posts in each pages
+      pagerSize = 12
     [languages.en.params]
       # site description
       description = "About FeelIt Theme"
@@ -208,8 +209,6 @@ ignoreErrors = ["err-missing-comment-accesstoken", "err-missing-oembed-accesstok
     languageName = "简体中文"
     # 是否包括中日韩文字
     hasCJKLanguage = true
-    # 默认每页列表显示的文章数目
-    paginate = 12
     # 版权描述，仅仅用于 SEO
     copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License."
     # 菜单配置
@@ -263,6 +262,9 @@ ignoreErrors = ["err-missing-comment-accesstoken", "err-missing-oembed-accesstok
         url = "https://github.com/khusika/FeelIt"
         title = "GitHub"
         weight = 6
+    [languages.zh-cn.pagination]
+      # 默认每页列表显示的文章数目
+      pagerSize = 12
     [languages.zh-cn.params]
       # 网站描述
       description = "关于 FeelIt 主题"
@@ -377,8 +379,6 @@ ignoreErrors = ["err-missing-comment-accesstoken", "err-missing-oembed-accesstok
     languageName = "Français"
     # whether to include Chinese/Japanese/Korean
     hasCJKLanguage = false
-    # default amount of posts in each pages
-    paginate = 12
     # copyright description used only for seo schema
     copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License."
     # Menu config
@@ -430,6 +430,9 @@ ignoreErrors = ["err-missing-comment-accesstoken", "err-missing-oembed-accesstok
         url = "https://github.com/khusika/FeelIt"
         title = "GitHub"
         weight = 6
+    [languages.fr.pagination]
+      # default amount of posts in each pages
+      pagerSize = 12
     [languages.fr.params]
       # site description
       description = "À propos du thème FeelIt"
