@@ -1,27 +1,53 @@
 .tag-cloud-tags {
-  text-align: center;
-  margin: 1rem 0 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin: 1.5rem 0 10px;
 
   @include link(true, true);
 
   a {
+    font-weight: bold;
     display: inline-block;
     position: relative;
-    margin: 5px 15px;
+    padding: 0.5em 1em;
+    background-color: $global-background-card-color;
+    @include border-radius(4px);
+    @include box-shadow(0 1px 3px rgba(0, 0, 0, 0.1));
     @include overflow-wrap(break-word);
-    @include transition(all ease-out 0.3s);
+
+    [theme=dark] & {
+      background-color: $global-background-card-color-dark;
+      @include box-shadow(0 1px 3px rgba(0, 0, 0, 0.4));
+    }
 
     &:active,
     &:focus,
     &:hover {
-      @include transform(scale(1.2));
+      @include transform(scale(1.1));
+      z-index: 1;
     }
 
     sup {
-      color: $global-font-secondary-color;
+      position: absolute;
+      top: -8px;
+      right: -8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 20px;
+      height: 20px;
+      font-size: 0.75em;
+      font-weight: bold;
+      line-height: 1;
+      color: #fff;  
+      background-color: $global-link-hover-color;
+      @include border-radius(50%);
 
       [theme=dark] & {
-        color: $global-font-secondary-color-dark;
+        background-color: $global-link-hover-color-dark;
+        color: #000;
       }
     }
   }
