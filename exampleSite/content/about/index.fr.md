@@ -55,6 +55,7 @@ Welcome to take the time to propose a translation by [:(fa-solid fa-code-branch 
 * :(fa-solid fa-share-square fa-fw): Up to **28** share sites supported
 * :(fa-regular fa-comment fa-fw): **Disqus** comment system supported by [Disqus](https://disqus.com)
 * :(fa-regular fa-comment-dots fa-fw): **Gitalk** comment system supported by [Gitalk](https://github.com/gitalk/gitalk)
+* :(fa-solid fa-comment-dots fa-fw): **Giscus** comment system supported by [Giscus](https://giscus.app/)
 * :(fa-regular fa-comment-alt fa-fw): **Valine** comment system supported by [Valine](https://valine.js.org/)
 * :(fa-regular fa-comments fa-fw): **Facebook comments** system supported by [Facebook](https://developers.facebook.com/docs/plugins/comments/)
 * :(fa-solid fa-comment fa-fw): **Telegram comments** system supported by [Comments](https://comments.app/)
