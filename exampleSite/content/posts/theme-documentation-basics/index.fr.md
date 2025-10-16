@@ -645,6 +645,20 @@ Please open the code block below to view the complete sample configuration :(fa-
         label = ""
         lightTheme = "github-light"
         darkTheme = "github-dark"
+      # {{< version 1.0.3 >}} {{< link "https://giscus.app/" "Giscus" >}} comment config
+      # Giscus comment config (https://giscus.app/)
+      [params.page.comment.giscus]
+        enable = false
+        repo = ""
+        repoId = ""
+        category = ""
+        categoryId = ""
+        mapping = ""
+        reactionsEnabled = "1"
+        emitMetadata = "0"
+        inputPosition = "bottom"
+        lightTheme = "light"
+        darkTheme = "dark"
     # {{< version 0.2.7 >}} Third-party library config
     [params.page.library]
       [params.page.library.css]

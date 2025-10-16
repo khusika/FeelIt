@@ -644,6 +644,20 @@ hugo
         label = ""
         lightTheme = "github-light"
         darkTheme = "github-dark"
+      # {{< version 1.0.3 >}} {{< link "https://giscus.app/" "Giscus" >}} 评论系统设置
+      # Giscus 评论系统设置 (https://giscus.app/)
+      [params.page.comment.giscus]
+        enable = false
+        repo = ""
+        repoId = ""
+        category = ""
+        categoryId = ""
+        mapping = ""
+        reactionsEnabled = "1"
+        emitMetadata = "0"
+        inputPosition = "bottom"
+        lightTheme = "light"
+        darkTheme = "dark"
     # {{< version 0.2.7 >}} 第三方库配置
     [params.page.library]
       [params.page.library.css]

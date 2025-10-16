@@ -50,6 +50,7 @@ math:
 * :(fa-solid fa-share-square fa-fw): 支持多达 **28** 种网站分享
 * :(fa-regular fa-comment fa-fw): 支持 **[Disqus](https://disqus.com)** 评论系统
 * :(fa-regular fa-comment-dots fa-fw): 支持 **[Gitalk](https://github.com/gitalk/gitalk)** 评论系统
+* :(fa-solid fa-comment-dots fa-fw): 支持 **[Giscus](https://giscus.app/)** 评论系统
 * :(fa-regular fa-comment-alt fa-fw): 支持 **[Valine](https://valine.js.org/)** 评论系统
 * :(fa-solid fa-comments fa-fw): 支持 **[Vssue](https://vssue.js.org/)** 评论系统
 * :(fa-regular fa-comments fa-fw): 支持 **[Facebook](https://developers.facebook.com/docs/plugins/comments/) 评论**系统
