@@ -133,8 +133,8 @@ ignoreErrors = ["err-missing-comment-accesstoken", "err-missing-oembed-accesstok
         absoluteURL = false
         [languages.en.params.search.algolia]
           index = "index.en"
-          appID = "UAL0NNJWXE"
-          searchKey = "7b7fbdfb7ee82ee61901f2c6b09b05be"
+          appID = "5B8WK81970"
+          searchKey = "8e34155b33dee72726c906c5efba0d71"
 
       # About page config
       [languages.en.params.about]
@@ -303,8 +303,8 @@ ignoreErrors = ["err-missing-comment-accesstoken", "err-missing-oembed-accesstok
         absoluteURL = false
         [languages.zh-cn.params.search.algolia]
           index = "index.zh-cn"
-          appID = "UAL0NNJWXE"
-          searchKey = "7b7fbdfb7ee82ee61901f2c6b09b05be"
+          appID = "5B8WK81970"
+          searchKey = "8e34155b33dee72726c906c5efba0d71"
 
       # 关于页面配置
       [languages.zh-cn.params.about]
@@ -471,8 +471,8 @@ ignoreErrors = ["err-missing-comment-accesstoken", "err-missing-oembed-accesstok
         absoluteURL = false
         [languages.fr.params.search.algolia]
           index = "index.fr"
-          appID = "UAL0NNJWXE"
-          searchKey = "7b7fbdfb7ee82ee61901f2c6b09b05be"
+          appID = "5B8WK81970"
+          searchKey = "8e34155b33dee72726c906c5efba0d71"
 
       # About page config
       [languages.fr.params.about]
