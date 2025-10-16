@@ -50,6 +50,20 @@
     }
   }
 
+  .post-author {
+    vertical-align: middle;
+    .author {
+      display: inline-flex;
+      align-items: center;
+    }
+    .avatar {
+      width: 1.5rem;
+      height: 1.5rem;
+      border-radius: 50%;
+      margin-right: .5rem;
+    }
+  }
+
   .featured-image {
     margin: 1rem 0 0;
 
