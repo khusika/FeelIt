@@ -634,6 +634,34 @@ class Theme {
                 });
                 this.switchThemeEventSet.add(this._utterancesOnSwitchTheme);
             }
+            if (this.config.comment.giscus) {
+                const giscusConfig = this.config.comment.giscus;
+                const script = document.createElement('script');
+                script.src = 'https://giscus.app/client.js';
+                script.setAttribute('data-repo', giscusConfig.repo);
+                script.setAttribute('data-repo-id', giscusConfig.repoId);
+                script.setAttribute('data-category', giscusConfig.category);
+                script.setAttribute('data-category-id', giscusConfig.categoryId);
+                script.setAttribute('data-mapping', giscusConfig.mapping);
+                script.setAttribute('data-reactions-enabled', giscusConfig.reactionsEnabled);
+                script.setAttribute('data-emit-metadata', giscusConfig.emitMetadata);
+                script.setAttribute('data-input-position', giscusConfig.inputPosition);
+                script.setAttribute('data-theme', this.isDark ? giscusConfig.darkTheme : giscusConfig.lightTheme);
+                script.setAttribute('data-lang', document.documentElement.lang);
+                script.crossOrigin = 'anonymous';
+                script.async = true;
+                document.getElementById('giscus').appendChild(script);
+                this._giscusOnSwitchTheme = this._giscusOnSwitchTheme || (() => {
+                    const message = {
+                        setConfig: {
+                            theme: this.isDark ? giscusConfig.darkTheme : giscusConfig.lightTheme,
+                        }
+                    };
+                    const iframe = document.querySelector('.giscus-frame');
+                    if (iframe) iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+                });
+                this.switchThemeEventSet.add(this._giscusOnSwitchTheme);
+            }
         }
     }
 

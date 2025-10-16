@@ -173,6 +173,23 @@
                 Please enable JavaScript to view the comments powered by <a href="https://utteranc.es/">Utterances</a>.
             </noscript>
         {{- end -}}
+
+        {{- /* Giscus Comment System */ -}}
+        {{- $giscus := $comment.giscus | default dict -}}
+        {{- if $giscus.enable -}}
+            <div id="giscus"></div>
+            {{- $giscusConfig := dict "repo" $giscus.repo "repoId" $giscus.repoId "category" $giscus.category "categoryId" $giscus.categoryId -}}
+            {{- $giscusConfig = $giscus.mapping | default "pathname" | dict "mapping" | merge $giscusConfig -}}
+            {{- $giscusConfig = $giscus.reactionsEnabled | default "1" | dict "reactionsEnabled" | merge $giscusConfig -}}
+            {{- $giscusConfig = $giscus.emitMetadata | default "0" | dict "emitMetadata" | merge $giscusConfig -}}
+            {{- $giscusConfig = $giscus.inputPosition | default "bottom" | dict "inputPosition" | merge $giscusConfig -}}
+            {{- $giscusConfig = $giscus.lightTheme | default "light" | dict "lightTheme" | merge $giscusConfig -}}
+            {{- $giscusConfig = $giscus.darkTheme | default "dark" | dict "darkTheme" | merge $giscusConfig -}}
+            {{- $commentConfig = $giscusConfig | dict "giscus" | merge $commentConfig -}}
+            <noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://giscus.app/">Giscus</a>.
+            </noscript>
+        {{- end -}}
     </div>
 {{- end -}}
 
