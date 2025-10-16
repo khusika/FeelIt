@@ -5,7 +5,7 @@ date: 2020-03-04T16:29:59+08:00
 lastmod: 2020-03-04T16:29:59+08:00
 draft: false
 author: "FeelIt"
-authorLink: "https://feelit.khusika.dev"
+authorLink: "https://feelit.khusika.id"
 description: "Hugo 提供了多个内置的 Shortcodes, 以方便作者保持 Markdown 内容的整洁."
 resources:
 - name: "featured-image"
@@ -114,7 +114,7 @@ Hugo 附带了一组预定义的 shortcodes, 它们实现了一些非常常见�
 
 {{< version 1.0.0 changed >}}
 
-当下 Hugo 使用已被弃用的 [oEmbed-legacy](https://developers.facebook.com/docs/instagram/oembed-legacy) 链接 API 端点. 这些被弃用的 API 会导致 Hugo 在获取数据时发生错误. 最新的 API 已经被包括在了 [extended shortcode](https://feelit.khusika.dev/theme-documentation-extended-shortcodes/#122-oembed-instagram) 里.
+当下 Hugo 使用已被弃用的 [oEmbed-legacy](https://developers.facebook.com/docs/instagram/oembed-legacy) 链接 API 端点. 这些被弃用的 API 会导致 Hugo 在获取数据时发生错误. 最新的 API 已经被包括在了 [extended shortcode](https://feelit.khusika.id/theme-documentation-extended-shortcodes/#122-oembed-instagram) 里.
 
 ## 5 param
 
@@ -138,7 +138,7 @@ Hugo 附带了一组预定义的 shortcodes, 它们实现了一些非常常见�
 
 {{< version 1.0.1 changed >}}
 
-随着 [extended shortcode documentation](https://feelit.khusika.dev/theme-documentation-extended-shortcodes/#123-oembed-twitter) 里最新 API 的发布, 该方法已经被移除.
+随着 [extended shortcode documentation](https://feelit.khusika.id/theme-documentation-extended-shortcodes/#123-oembed-twitter) 里最新 API 的发布, 该方法已经被移除.
 
 
 ## 8 vimeo

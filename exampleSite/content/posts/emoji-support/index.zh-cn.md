@@ -5,7 +5,7 @@ date: 2019-10-01T17:55:28+08:00
 lastmod: 2019-10-01T17:55:28+08:00
 draft: false
 author: "FeelIt"
-authorLink: "https://feelit.khusika.dev"
+authorLink: "https://feelit.khusika.id"
 description: "Hugo 和 FeelIt 中的 Emoji 的用法指南."
 resources:
 - name: "featured-image"

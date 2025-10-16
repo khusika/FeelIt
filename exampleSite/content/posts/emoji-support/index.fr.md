@@ -5,7 +5,7 @@ date: 2019-10-01T17:55:28+08:00
 lastmod: 2019-10-01T17:55:28+08:00
 draft: false
 author: "FeelIt"
-authorLink: "https://feelit.khusika.dev"
+authorLink: "https://feelit.khusika.id"
 description: "Guide d'utilisation des emoji dans Hugo et FeelIt."
 resources:
 - name: "featured-image"
