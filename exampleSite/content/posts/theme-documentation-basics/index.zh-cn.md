@@ -30,10 +30,10 @@ toc:
 
 由于 Hugo 提供的便利性, [Hugo](https://gohugo.io/) 本身是这个主题唯一的依赖.
 
-直接安装满足你操作系统 (**Windows**, **Linux**, **macOS**) 的最新版本 [:(fa-regular fa-file-archive fa-fw): Hugo (> 0.110.0)](https://gohugo.io/getting-started/installing/).
+直接安装满足你操作系统 (**Windows**, **Linux**, **macOS**) 的最新版本 [:(fa-regular fa-file-archive fa-fw): Hugo (> 0.151.1)](https://gohugo.io/getting-started/installing/).
 
 {{< admonition note "为什么不支持早期版本的 Hugo?" >}}
-因为 [Hugo Christmas Edition](https://gohugo.io/news/0.62.0-relnotes/) 版本引入了 [Markdown Render Hooks](https://gohugo.io/getting-started/configuration-markup#markdown-render-hooks), 而且一些图片资源用到了 [0.84.0](https://github.com/gohugoio/hugo/releases/tag/v0.84.0) 版本引入的 webp 格式，并且我们将配置文件改成了 hugo.toml 而不是 config.toml. 所以这一个主题只支持大于 0.110.0 版本的 Hugo.
+因为 [Hugo Christmas Edition](https://gohugo.io/news/0.62.0-relnotes/) 版本引入了 [Markdown Render Hooks](https://gohugo.io/getting-started/configuration-markup#markdown-render-hooks), 而且一些图片资源用到了 [0.84.0](https://github.com/gohugoio/hugo/releases/tag/v0.84.0) 版本引入的 webp 格式，并且我们将配置文件改成了 [hugo.toml 而不是 config.toml](https://github.com/khusika/FeelIt/commit/f965cb91df2b2e90e667e3cf152fffd73d885906). 所以这一个主题只支持大于 **0.151.1** 版本的 Hugo.
 {{< /admonition >}}
 
 {{< admonition tip "推荐使用 Hugo extended 版本" >}}
