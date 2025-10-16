@@ -6,6 +6,9 @@ lastmod: {{ .Date }}
 draft: true
 author: ""
 authorLink: ""
+# Author's avatar (choose one, gravatarEmail has priority)
+gravatarEmail: ""
+# avatarURL: ""
 description: ""
 
 tags: []
