@@ -99,6 +99,9 @@ other = "Apprendre encore plus"
 # === partials/plugin/share.html ===
 [shareOn]
 other = "Partager sur"
+
+[relatedContent]
+other = "Voir Aussi"
 # === partials/plugin/share.html ===
 
 # === posts/single.html ===

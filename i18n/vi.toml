@@ -98,6 +98,9 @@ other = "Tìm hiểu thêm"
 # === partials/plugin/share.html ===
 [shareOn]
 other = "Chia sẻ trên"
+
+[relatedContent]
+other = "Xem Thêm"
 # === partials/plugin/share.html ===
 
 # === posts/single.html ===

@@ -1187,3 +1187,32 @@ ignoreErrors = ["err-missing-comment-accesstoken", "err-missing-oembed-accesstok
   section = ["HTML", "RSS"]
   term = ["HTML", "RSS"]
   taxonomy = ["HTML"]
+
+# Related content config (https://gohugo.io/content-management/related-content)
+# 相关内容配置 (https://gohugo.io/content-management/related-content)
+[related]
+  # whether to include newer articles in related articles
+  # 是否在相关文章中包含较新的文章
+  includeNewer = true
+  # a value between 0 and 100. Lower value will give more but less relevant results.
+  # 一个介于 0 和 100 之间的值。较低的值会给出更多但相关性较低的结果。
+  threshold = 80
+  # whether to lowercase keywords in search
+  # 是否在搜索中将关键字小写
+  toLower = false
+
+  [[related.indices]]
+    # name of the index
+    # 索引名称
+    name = "tags"
+    # weight of the index
+    # 索引权重
+    weight = 100
+
+  [[related.indices]]
+    # name of the index
+    # 索引名称
+    name = "categories"
+    # weight of the index
+    # 索引权重
+    weight = 80

@@ -99,6 +99,9 @@ other = "Aflați mai multe"
 # === partials/plugin/share.html ===
 [shareOn]
 other = "Distribuie pe"
+
+[relatedContent]
+other = "Vezi Si"
 # === partials/plugin/share.html ===
 
 # === posts/single.html ===

@@ -87,6 +87,9 @@ other = "Skopiuj do schowka"
 # === partials/plugin/share.html ===
 [shareOn]
 other = "Udostępnij na"
+
+[relatedContent]
+other = "Zobacz Też"
 # === partials/plugin/share.html ===
 
 # === posts/single.html ===

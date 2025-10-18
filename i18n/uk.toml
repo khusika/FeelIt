@@ -99,6 +99,9 @@ other = "Вчити більше"
 # === partials/plugin/share.html ===
 [shareOn]
 other = "Поділитися у"
+
+[relatedContent]
+other = "Дивіться Також"
 # === partials/plugin/share.html ===
 
 # === posts/single.html ===
