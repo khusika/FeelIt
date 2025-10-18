@@ -102,6 +102,9 @@ other = "了解更多"
 # === partials/plugin/share.html ===
 [shareOn]
 other = "分享到"
+
+[relatedContent]
+other = "另请参阅"
 # === partials/plugin/share.html ===
 
 # === posts/single.html ===

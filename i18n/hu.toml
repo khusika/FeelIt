@@ -95,6 +95,9 @@ other = "Tudj meg többet"
 # === partials/plugin/share.html ===
 [shareOn]
 other = "Megosztás be"
+
+[relatedContent]
+other = "Lásd Még"
 # === partials/plugin/share.html ===
 
 # === posts/single.html ===

@@ -95,6 +95,9 @@ other = "مطالعه بیشتر"
 # === partials/plugin/share.html ===
 [shareOn]
 other = "اشتراک گذاری در"
+
+[relatedContent]
+other = "همچنین ببینید"
 # === partials/plugin/share.html ===
 
 # === posts/single.html ===

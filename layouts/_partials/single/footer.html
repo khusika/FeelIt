@@ -56,6 +56,34 @@
         {{- end -}}
     </div>
 
+    {{- /* Related Content */ -}}
+    {{- $related := .Site.RegularPages.Related . | first 5 -}}
+    {{- with $related -}}
+        <div class="related-content">
+            <h3 class="related-title">{{ T "relatedContent" | default "See Also" }}</h3>
+            <div class="related-posts">
+                {{- range . -}}
+                    <a class="related-post" href="{{ .RelPermalink }}">
+                        {{- $featured := .Resources.Get "featured-image" -}}
+                        {{- if $featured -}}
+                            {{- $image := $featured.Fill "68x68 Center q100 Lanczos" -}}
+                            <div class="related-post-image">
+                                <img src="{{ $image.RelPermalink }}" alt="{{ .Title }}" loading="lazy">
+                            </div>
+                        {{- else -}}
+                            <div class="related-post-image-placeholder">
+                                <i class="fa-solid fa-newspaper"></i>
+                            </div>
+                        {{- end -}}
+                        <div class="related-post-content">
+                            <span class="related-post-title">{{ .Title }}</span>
+                        </div>
+                    </a>
+                {{- end -}}
+            </div>
+        </div>
+    {{- end -}}
+
     {{- if .Section -}}
     <div class="post-nav">
         {{- if .PrevInSection -}}

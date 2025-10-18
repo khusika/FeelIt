@@ -95,6 +95,9 @@ other = "Pelajari lebih lanjut"
 # === partials/plugin/share.html ===
 [shareOn]
 other = "Bagikan ke"
+
+[relatedContent]
+other = "Lihat Juga"
 # === partials/plugin/share.html ===
 
 # === posts/single.html ===
