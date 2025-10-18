@@ -95,6 +95,9 @@ other = "Zjistit více"
 # === partials/plugin/share.html ===
 [shareOn]
 other = "Sdílet na"
+
+[relatedContent]
+other = "Viz Také"
 # === partials/plugin/share.html ===
 
 # === posts/single.html ===

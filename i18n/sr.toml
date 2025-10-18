@@ -96,6 +96,9 @@ other = "Сазнајте више"
 # === partials/plugin/share.html ===
 [shareOn]
 other = "Подели на"
+
+[relatedContent]
+other = "Погледајте И"
 # === partials/plugin/share.html ===
 
 # === posts/single.html ===
