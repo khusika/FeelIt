@@ -1,244 +1,101 @@
 const CACHE_VERSION = new URL(location).searchParams.get("version");
-const BASE_CACHE_FILES = ["/css/home.min.css", "/css/page.min.css", "/css/about.min.css", "/js/theme.min.js", "/site.webmanifest", "/offline/index.html", "/404.html"];
-const OFFLINE_CACHE_FILES = ["/css/home.min.css", "/js/theme.min.js", "/offline/index.html"];
-const NOT_FOUND_CACHE_FILES = ["/css/home.min.css", "/css/page.min.css", "/js/theme.min.js", "/404.html"];
+const STATIC_CACHE_NAME = `static-v${CACHE_VERSION}`;
+const DYNAMIC_CACHE_NAME = `dynamic-v${CACHE_VERSION}`;
+
+const APP_SHELL_FILES = [
+    "/css/home.min.css",
+    "/css/page.min.css",
+    "/css/about.min.css",
+    "/js/theme.min.js",
+    "/site.webmanifest",
+    "/offline/index.html",
+    "/404.html",
+];
+
 const OFFLINE_PAGE = "/offline/index.html";
 const NOT_FOUND_PAGE = "/404.html";
 
-const CACHE_VERSIONS = {
-    assets: "assets-v" + CACHE_VERSION,
-    content: "content-v" + CACHE_VERSION,
-    offline: "offline-v" + CACHE_VERSION,
-    notFound: "404-v" + CACHE_VERSION,
-};
-
-const MAX_TTL = {
-    "/": 3600,
-    html: 3600,
-    json: 86400,
-    js: 86400,
-    css: 86400,
-};
-
 const CACHE_BLACKLIST = [
-    (str) => {
-        return !str.startsWith("http://localhost");
-    },
+    (url) => url.protocol !== "http:" && url.protocol !== "https:",
+    (url) => url.hostname === "localhost",
 ];
 
 const SUPPORTED_METHODS = ["GET"];
 
 function isBlacklisted(url) {
-    return CACHE_BLACKLIST.length > 0
-        ? !CACHE_BLACKLIST.filter((rule) => {
-              if (typeof rule === "function") {
-                  return !rule(url);
-              } else {
-                  return false;
-              }
-          }).length
-        : false;
-}
-
-function getFileExtension(url) {
-    let extension = url.split(".").reverse()[0].split("?")[0];
-    return extension.endsWith("/") ? "/" : extension;
-}
-
-function getTTL(url) {
-    if (typeof url === "string") {
-        let extension = getFileExtension(url);
-        if (typeof MAX_TTL[extension] === "number") {
-            return MAX_TTL[extension];
-        } else {
-            return null;
-        }
-    } else {
-        return null;
-    }
-}
-
-function installServiceWorker() {
-    return Promise.all([
-        caches.open(CACHE_VERSIONS.assets).then((cache) => {
-            return cache.addAll(BASE_CACHE_FILES);
-        }),
-        caches.open(CACHE_VERSIONS.offline).then((cache) => {
-            return cache.addAll(OFFLINE_CACHE_FILES);
-        }),
-        caches.open(CACHE_VERSIONS.notFound).then((cache) => {
-            return cache.addAll(NOT_FOUND_CACHE_FILES);
-        }),
-    ]).then(() => {
-        return self.skipWaiting();
-    });
-}
-
-function cleanupLegacyCache() {
-    let currentCaches = Object.keys(CACHE_VERSIONS).map((key) => {
-        return CACHE_VERSIONS[key];
-    });
-
-    return new Promise((resolve, reject) => {
-        caches
-            .keys()
-            .then((keys) => {
-                return (legacyKeys = keys.filter((key) => {
-                    return !~currentCaches.indexOf(key);
-                }));
-            })
-            .then((legacy) => {
-                if (legacy.length) {
-                    Promise.all(
-                        legacy.map((legacyKey) => {
-                            return caches.delete(legacyKey);
-                        })
-                    )
-                        .then(() => {
-                            resolve();
-                        })
-                        .catch((err) => {
-                            reject(err);
-                        });
-                } else {
-                    resolve();
-                }
-            })
-            .catch(() => {
-                reject();
-            });
-    });
-}
-
-function precacheUrl(url) {
-    if (!isBlacklisted(url)) {
-        caches.open(CACHE_VERSIONS.content).then((cache) => {
-            cache
-                .match(url)
-                .then((response) => {
-                    if (!response) {
-                        return fetch(url);
-                    } else {
-                        return null;
-                    }
-                })
-                .then((response) => {
-                    if (response) {
-                        return cache.put(url, response.clone());
-                    } else {
-                        return null;
-                    }
-                });
-        });
-    }
+    return CACHE_BLACKLIST.some((rule) => rule(new URL(url)));
 }
 
 self.addEventListener("install", (event) => {
-    event.waitUntil(Promise.all([installServiceWorker(), self.skipWaiting()]));
+    event.waitUntil(
+        caches
+            .open(STATIC_CACHE_NAME)
+            .then((cache) => {
+                console.log("Service Worker: Caching App Shell");
+                return cache.addAll(APP_SHELL_FILES);
+            })
+            .then(() => self.skipWaiting())
+    );
 });
 
 self.addEventListener("activate", (event) => {
     event.waitUntil(
-        Promise.all([cleanupLegacyCache(), self.clients.claim(), self.skipWaiting()]).catch((err) => {
-            event.skipWaiting();
+        caches.keys().then((keyList) => {
+            return Promise.all(
+                keyList.map((key) => {
+                    if (key !== STATIC_CACHE_NAME && key !== DYNAMIC_CACHE_NAME) {
+                        console.log("Service Worker: Removing old cache", key);
+                        return caches.delete(key);
+                    }
+                })
+            );
         })
+        .then(() => self.clients.claim())
     );
 });
 
 self.addEventListener("fetch", (event) => {
+    const { request } = event;
+
+    if (request.method !== "GET" || isBlacklisted(request.url)) {
+        return;
+    }
+
+    if (APP_SHELL_FILES.includes(new URL(request.url).pathname)) {
+        event.respondWith(caches.match(request));
+        return;
+    }
+
     event.respondWith(
-        caches.open(CACHE_VERSIONS.content).then((cache) => {
-            return cache
-                .match(event.request)
-                .then((response) => {
-                    if (response) {
-                        let headers = response.headers.entries();
-                        let date = null;
-
-                        for (let pair of headers) {
-                            if (pair[0] === "date") {
-                                date = new Date(pair[1]);
-                            }
+        caches.open(DYNAMIC_CACHE_NAME).then((cache) => {
+            return cache.match(request).then((cachedResponse) => {
+                const fetchPromise = fetch(request)
+                    .then((networkResponse) => {
+                        if (networkResponse.ok) {
+                            cache.put(request, networkResponse.clone());
                         }
-
-                        if (date) {
-                            let age = parseInt((new Date().getTime() - date.getTime()) / 1000);
-                            let ttl = getTTL(event.request.url);
-
-                            if (ttl && age > ttl) {
-                                return new Promise((resolve) => {
-                                    return fetch(event.request.clone())
-                                        .then((updatedResponse) => {
-                                            if (updatedResponse) {
-                                                cache.put(event.request, updatedResponse.clone());
-                                                resolve(updatedResponse);
-                                            } else {
-                                                resolve(response);
-                                            }
-                                        })
-                                        .catch(() => {
-                                            resolve(response);
-                                        });
-                                }).catch((err) => {
-                                    return response;
-                                });
-                            } else {
-                                return response;
-                            }
-                        } else {
-                            return response;
+                        return networkResponse;
+                    })
+                    .catch(() => {
+                        if (request.mode === "navigate") {
+                            return caches.match(OFFLINE_PAGE);
                         }
-                    } else {
-                        return null;
-                    }
-                })
-                .then((response) => {
-                    if (response) {
-                        return response;
-                    } else {
-                        return fetch(event.request.clone())
-                            .then((response) => {
-                                if (response.status < 400) {
-                                    if (~SUPPORTED_METHODS.indexOf(event.request.method) && !isBlacklisted(event.request.url)) {
-                                        cache.put(event.request, response.clone());
-                                    }
-                                    return response;
-                                } else {
-                                    return caches.open(CACHE_VERSIONS.notFound).then((cache) => {
-                                        return cache.match(NOT_FOUND_PAGE);
-                                    });
-                                }
-                            })
-                            .then((response) => {
-                                if (response) {
-                                    return response;
-                                }
-                            })
-                            .catch(() => {
-                                return caches.open(CACHE_VERSIONS.offline).then((offlineCache) => {
-                                    return offlineCache.match(OFFLINE_PAGE);
-                                });
-                            });
-                    }
-                })
-                .catch((error) => {
-                    console.error("  Error in fetch handler:", error);
-                    throw error;
-                });
+                    });
+
+                return cachedResponse || fetchPromise;
+            });
         })
     );
 });
 
 self.addEventListener("message", (event) => {
-    if (typeof event.data === "object" && typeof event.data.action === "string") {
-        switch (event.data.action) {
-            case "cache":
-                precacheUrl(event.data.url);
-                break;
-            default:
-                console.log("Unknown action: " + event.data.action);
-                break;
-        }
+    if (event.data && event.data.action === "cache" && event.data.url) {
+        caches.open(DYNAMIC_CACHE_NAME).then((cache) => {
+            fetch(event.data.url).then((response) => {
+                if (response.ok) {
+                    cache.put(event.data.url, response);
+                }
+            });
+        });
     }
 });
-
