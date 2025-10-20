@@ -76,8 +76,12 @@
                         </span>
                     </span>
                 {{- end -}}
-                {{- with .Site.Params.header.title.rss -}}
-                <a class="menu-item" href="/index.xml" title="RSS"><i class="fa-solid fa-rss fa-fw" title="RSS"></i> </a>
+                {{- if .Site.Params.header.title.rss -}}
+                    {{- $home := .Site.GetPage "home" -}}
+                    {{- $rss := .OutputFormats.Get "RSS" | default ($home.OutputFormats.Get "RSS") -}}
+                    {{- with $rss -}}
+                        <a class="menu-item" href="{{ .RelPermalink }}" title="RSS" target="_blank"><i class="fa-solid fa-rss fa-fw" title="RSS"></i></a>
+                    {{- end -}}
                 {{- end -}}
                 <a href="#" onclick="return false;" class="menu-item theme-switch" title="{{ T "switchTheme" }}">
                     <i class="fa-solid fa-adjust fa-fw"></i>
@@ -150,9 +154,13 @@
                 </a>
             {{- end -}}
             <div class="menu-item">
-                {{- with .Site.Params.header.title.rss -}}
-                <a href="/index.xml" title="RSS"><i class="fa-solid fa-rss fa-fw" title="RSS"></i> </a>
-                <span>&nbsp;|&nbsp;</span>
+                {{- if .Site.Params.header.title.rss -}}
+                    {{- $home := .Site.GetPage "home" -}}
+                    {{- $rss := .OutputFormats.Get "RSS" | default ($home.OutputFormats.Get "RSS") -}}
+                    {{- with $rss -}}
+                        <a href="{{ .RelPermalink }}" title="RSS" target="_blank"><i class="fa-solid fa-rss fa-fw" title="RSS"></i></a>
+                        <span>&nbsp;|&nbsp;</span>
+                    {{- end -}}
                 {{- end -}}
                 <a href="#" onclick="return false;" class="theme-switch" title="{{ T "switchTheme" }}">
                     <i class="fa-solid fa-adjust fa-fw"></i>
