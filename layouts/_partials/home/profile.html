@@ -21,11 +21,9 @@
         </div>
     {{- end -}}
 
-    {{- with $profile.title -}}
-        <h1 class="home-title">
-            {{- . | safeHTML -}}
-        </h1>
-    {{- end -}}
+    <h1 class="home-title">
+        {{- .Site.Params.home.profile.title | default .Site.Title | safeHTML -}}
+    </h1>
 
     {{- with $profile.subtitle -}}
         <div class="home-subtitle">

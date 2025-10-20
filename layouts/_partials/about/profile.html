@@ -20,9 +20,9 @@
         </div>
     {{- end -}}
 
-        <h2>
-            {{- $profile.title -}}
-        </h2>
+    <h2>
+        {{- .Site.Params.home.profile.title | default .Site.Title | safeHTML -}}
+    </h2>
 
     {{- with $profile.subtitle -}}
         <div class="subtitle">
