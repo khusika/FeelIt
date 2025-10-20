@@ -219,12 +219,13 @@ hugo
   # {{< version 1.0.0 >}} 是否启用 CSS 和 JS 源映射
   SourceMap = true
 
-  # {{< version 1.0.1 >}}PWA config
+ # {{< version 1.0.3 changed >}}PWA config
   [params.pwa]
     # whether to enable PWA support
     enable = true
-    # service-worker version
-    version = "1.0.2"
+    # {{< version 1.0.3 deleted >}}
+    # The PWA version is now automatically generated based on the theme version and build timestamp.
+    # version = ""
 
   # {{< version 0.2.0 >}} 应用图标配置
   [params.app]

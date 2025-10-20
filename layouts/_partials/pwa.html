@@ -1,8 +1,10 @@
 {{- $pwa := .Scratch.Get "pwa" -}}
+{{- if $pwa -}}
+{{- $version := printf "%s-%d" (.Scratch.Get "version") now.Unix -}}
 <script>
 if ('serviceWorker' in navigator) {
     navigator.serviceWorker
-        .register('/sw.min.js?version={{ $pwa.version }}', { scope: '/' })
+        .register('/sw.min.js?version={{ $version }}', { scope: '/' })
         .then(() => {
             console.info('{{- .Site.Title -}}\u00A0Service Worker Registered');
         }, err => console.error('{{- .Site.Title -}}\u00A0Service Worker registration failed: ', err));
@@ -14,3 +16,4 @@ if ('serviceWorker' in navigator) {
         });
 }
 </script>
+{{- end -}}
