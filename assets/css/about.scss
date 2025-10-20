@@ -65,6 +65,11 @@
 
   .top {
     padding-bottom: 1rem;
+    justify-content: center;
+  }
+
+  .bottom {
+    justify-content: center;
   }
 
   .img {
@@ -100,7 +105,7 @@
     font-size: 1rem;
     font-weight: normal;
     text-align: center;
-    margin: 0;
+    margin: .5rem 0;
     padding: .1rem;
   }
 
@@ -122,13 +127,28 @@
     }
   }
 
+  hr {
+    border: none;
+    border-top: 1px solid $global-border-color-dark;
+    margin: 0.5rem 0;
+    [theme=dark] & {
+      border-color: $global-border-color;
+    }
+  }
+
   p {
-    text-align: left;
+    display: flex;
+    align-items: center;
   }
 
   span {
-    float: right;
-    position: relative;
+    margin-left: auto;
+    max-width: 70%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: right;
+    padding-left: 0.5rem;
   }
 }
 

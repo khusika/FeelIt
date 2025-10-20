@@ -80,9 +80,13 @@
     </div>
     <div class="grid bottom">
     <div class="info">
-        {{- range .Site.Params.about.status -}}
+        {{- $status := .Site.Params.about.status -}}
+        {{- $len := len $status -}}
+        {{- range $i, $e := $status -}}
         <p><i class="{{ .faIcon }} fa-fw"></i>&nbsp;{{ .title }}:<span>{{ .desc }}</span></p>
+        {{- if ne (add $i 1) $len -}}
         <hr>
+        {{- end -}}
         {{- end -}}
     </div>
     </div>
