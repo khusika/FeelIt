@@ -19,6 +19,12 @@
                 {{- dict "Src" . "Title" $.Description "Resources" $.Resources | partial "plugin/image.html" -}}
             </a>
         </div>
+    {{- else -}}
+        <div class="featured-image-placeholder">
+            <a href="{{ .RelPermalink }}">
+                <i class="fa-solid fa-newspaper"></i>
+            </a>
+        </div>
     {{- end -}}
     {{- end -}}
 

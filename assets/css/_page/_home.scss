@@ -138,6 +138,33 @@
       }
     }
 
+    .featured-image-placeholder {
+      width: 100%;
+      padding: 30% 0 0;
+      position: relative;
+      margin: 0 auto;
+      background-color: #f2f2f2;
+      @include border-radius(.5rem .5rem 0 0);
+      [theme=dark] & {
+        background-color: #292a2d;
+      }
+      a {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 3rem;
+        color: #495057;
+        [theme=dark] & {
+          color: #adb5bd;
+        }
+      }
+    }
+
     .pin-icon {
       position: absolute;
       top: .5rem;
