@@ -20,7 +20,7 @@
     "build": "rm -f -r exampleSite/public && hugo --source=exampleSite --gc",
     "build-lunr-segmentit": "browserify src/lib/lunr.segmentit.js -o assets/lib/lunr/lunr.segmentit.js -t babelify --presets @babel/preset-env --presets minify",
     "purgejs": "npx mkdirp exampleSite/assets/js && sed '593,597d;615,664d;667,670d;755d' assets/js/theme.js > exampleSite/assets/js/theme.js",
-    "deploy": "npm run purgejs && hugo --source=exampleSite --gc --minify",
+    "deploy": "hugo --source=exampleSite --gc --minify",
     "start": "hugo server --source=exampleSite -D --disableFastRender",
     "start-production": "hugo server --source=exampleSite -D --disableFastRender -e production",
     "copy": "rm -rf resources && mv -f exampleSite/resources resources",
