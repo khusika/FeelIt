@@ -590,78 +590,140 @@ class Theme {
 
     initComment() {
         if (this.config.comment) {
-            if (this.config.comment.gitalk) {
-                this.config.comment.gitalk.body = decodeURI(window.location.href);
-                const gitalk = new Gitalk(this.config.comment.gitalk);
+            const $comments = document.getElementById('comments');
+            if (!$comments) return;
+            const $viewComments = document.getElementById('view-comments');
+            const observer = new IntersectionObserver((entries, observer) => {
+                if (entries[0].isIntersecting) {
+                    this.loadComment();
+                    if ($viewComments) $viewComments.classList.add('is-hidden');
+                    observer.disconnect();
+                }
+            }, {
+                rootMargin: '0px 0px 200px 0px' 
+            });
+            observer.observe($comments);
+            if ($viewComments) {
+                $viewComments.addEventListener('click', () => {
+                    observer.disconnect();
+                    this.loadComment();
+                    $viewComments.classList.add('is-hidden');
+                }, { once: true });
+            }
+        }
+    }
+
+    loadComment() {
+        const $comments = document.getElementById('comments');
+        if (!$comments) return;
+        $comments.classList.add('loaded');
+        const commentConfig = this.config.comment;
+
+        const loadScript = (src, callback) => {
+            const script = document.createElement('script');
+            script.src = src;
+            script.defer = true;
+            script.onload = callback;
+            document.head.appendChild(script);
+        };
+        
+        const loadStyle = (href) => {
+            const link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.href = href;
+            document.head.appendChild(link);
+        };
+
+        if (commentConfig.gitalk) {
+            commentConfig.gitalk.body = decodeURI(window.location.href);
+            loadStyle(this.config.cdn.gitalkCSS);
+            loadScript(this.config.cdn.gitalkJS, () => {
+                const gitalk = new Gitalk(commentConfig.gitalk);
                 gitalk.render('gitalk');
-            }
-            if (this.config.comment.vssue) {
-                const vssueConfig = this.config.comment.vssue;
-                new Vue({
-                    el: '#vssue',
-                    render: h => h('Vssue', {
-                      props: {
-                        title: (vssueConfig.title),
-                        options: {
-                          owner: (vssueConfig.owner),
-                          repo: (vssueConfig.repo),
-                          clientId: (vssueConfig.clientID),
-                          clientSecret: (vssueConfig.clientSecret),
-                        },
-                      }
-                    })
-                })
-            }
-            if (this.config.comment.valine) new Valine(this.config.comment.valine);
-            if (this.config.comment.utterances) {
-                const utterancesConfig = this.config.comment.utterances;
-                const script = document.createElement('script');
-                script.src = 'https://utteranc.es/client.js';
-                script.setAttribute('repo', utterancesConfig.repo);
-                script.setAttribute('issue-term', utterancesConfig.issueTerm);
-                if (utterancesConfig.label) script.setAttribute('label', utterancesConfig.label);
-                script.setAttribute('theme', this.isDark ? utterancesConfig.darkTheme : utterancesConfig.lightTheme);
-                script.crossOrigin = 'anonymous';
-                script.async = true;
-                document.getElementById('utterances').appendChild(script);
-                this._utterancesOnSwitchTheme = this._utterancesOnSwitchTheme || (() => {
-                    const message = {
-                        type: 'set-theme',
-                        theme: this.isDark ? utterancesConfig.darkTheme : utterancesConfig.lightTheme,
-                    };
-                    const iframe = document.querySelector('.utterances-frame');
-                    iframe.contentWindow.postMessage(message, 'https://utteranc.es');
+            });
+        }
+        if (commentConfig.vssue) {
+            loadStyle(this.config.cdn.vssueCSS);
+            loadScript(this.config.cdn.vueJS, () => {
+                const platformAPI = {
+                    'github': this.config.cdn.vssueGithub,
+                    'github-v4': this.config.cdn.vssueGithubv4,
+                    'gitlab': this.config.cdn.vssueGitlab,
+                    'bitbucket': this.config.cdn.vssueBitbucket,
+                    'gitea': this.config.cdn.vssueGitea,
+                    'gitee': this.config.cdn.vssueGitee,
+                };
+                loadScript(platformAPI[commentConfig.vssue.platform], () => {
+                    new Vue({
+                        el: '#vssue',
+                        render: h => h('Vssue', {
+                            props: {
+                                title: commentConfig.vssue.title,
+                                options: {
+                                    owner: commentConfig.vssue.owner,
+                                    repo: commentConfig.vssue.repo,
+                                    clientId: commentConfig.vssue.clientID,
+                                    clientSecret: commentConfig.vssue.clientSecret,
+                                },
+                            }
+                        })
+                    });
                 });
-                this.switchThemeEventSet.add(this._utterancesOnSwitchTheme);
-            }
-            if (this.config.comment.giscus) {
-                const giscusConfig = this.config.comment.giscus;
-                const script = document.createElement('script');
-                script.src = 'https://giscus.app/client.js';
-                script.setAttribute('data-repo', giscusConfig.repo);
-                script.setAttribute('data-repo-id', giscusConfig.repoId);
-                script.setAttribute('data-category', giscusConfig.category);
-                script.setAttribute('data-category-id', giscusConfig.categoryId);
-                script.setAttribute('data-mapping', giscusConfig.mapping);
-                script.setAttribute('data-reactions-enabled', giscusConfig.reactionsEnabled);
-                script.setAttribute('data-emit-metadata', giscusConfig.emitMetadata);
-                script.setAttribute('data-input-position', giscusConfig.inputPosition);
-                script.setAttribute('data-theme', this.isDark ? giscusConfig.darkTheme : giscusConfig.lightTheme);
-                script.setAttribute('data-lang', document.documentElement.lang);
-                script.crossOrigin = 'anonymous';
-                script.async = true;
-                document.getElementById('giscus').appendChild(script);
-                this._giscusOnSwitchTheme = this._giscusOnSwitchTheme || (() => {
-                    const message = {
-                        setConfig: {
-                            theme: this.isDark ? giscusConfig.darkTheme : giscusConfig.lightTheme,
-                        }
-                    };
-                    const iframe = document.querySelector('.giscus-frame');
-                    if (iframe) iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
-                });
-                this.switchThemeEventSet.add(this._giscusOnSwitchTheme);
-            }
+            });
+        }
+        if (commentConfig.valine) {
+            loadScript(this.config.cdn.valineJS, () => {
+                new Valine(commentConfig.valine);
+            });
+        }
+        if (commentConfig.utterances) {
+            const utterancesConfig = commentConfig.utterances;
+            const script = document.createElement('script');
+            script.src = 'https://utteranc.es/client.js';
+            script.setAttribute('repo', utterancesConfig.repo);
+            script.setAttribute('issue-term', utterancesConfig.issueTerm);
+            if (utterancesConfig.label) script.setAttribute('label', utterancesConfig.label);
+            script.setAttribute('theme', this.isDark ? utterancesConfig.darkTheme : utterancesConfig.lightTheme);
+            script.crossOrigin = 'anonymous';
+            script.async = true;
+            document.getElementById('utterances').appendChild(script);
+            this._utterancesOnSwitchTheme = this._utterancesOnSwitchTheme || (() => {
+                const message = {
+                    type: 'set-theme',
+                    theme: this.isDark ? utterancesConfig.darkTheme : utterancesConfig.lightTheme,
+                };
+                const iframe = document.querySelector('.utterances-frame');
+                if (iframe) iframe.contentWindow.postMessage(message, 'https://utteranc.es');
+            });
+            this.switchThemeEventSet.add(this._utterancesOnSwitchTheme);
+        }
+        if (commentConfig.giscus) {
+            const giscusConfig = commentConfig.giscus;
+            const script = document.createElement('script');
+            script.src = 'https://giscus.app/client.js';
+            script.setAttribute('data-repo', giscusConfig.repo);
+            script.setAttribute('data-repo-id', giscusConfig.repoId);
+            script.setAttribute('data-category', giscusConfig.category);
+            script.setAttribute('data-category-id', giscusConfig.categoryId);
+            script.setAttribute('data-mapping', giscusConfig.mapping);
+            script.setAttribute('data-reactions-enabled', giscusConfig.reactionsEnabled);
+            script.setAttribute('data-emit-metadata', giscusConfig.emitMetadata);
+            script.setAttribute('data-input-position', giscusConfig.inputPosition);
+            script.setAttribute('data-theme', this.isDark ? giscusConfig.darkTheme : giscusConfig.lightTheme);
+            script.setAttribute('data-lang', document.documentElement.lang);
+            script.crossOrigin = 'anonymous';
+            script.async = true;
+            document.getElementById('giscus').appendChild(script);
+            this._giscusOnSwitchTheme = this._giscusOnSwitchTheme || (() => {
+                const message = {
+                    setConfig: {
+                        theme: this.isDark ? giscusConfig.darkTheme : giscusConfig.lightTheme,
+                    }
+                };
+                const iframe = document.querySelector('.giscus-frame');
+                if (iframe) iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+            });
+            this.switchThemeEventSet.add(this._giscusOnSwitchTheme);
         }
     }
 
@@ -752,6 +814,7 @@ class Theme {
             this.initEcharts();
             this.initTypeit();
             this.initMapbox();
+            this.initComment();
             this.initCookieconsent();
         } catch (err) {
             console.error(err);
@@ -759,7 +822,6 @@ class Theme {
 
         window.setTimeout(() => {
             this.initToc();
-            this.initComment();
 
             this.onScroll();
             this.onResize();

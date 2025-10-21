@@ -56,3 +56,17 @@
     color: $global-font-color-dark;
   }
 }
+
+.comment-loading {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+#comments.loaded .comment-loading {
+  display: none;
+}
+
+#view-comments.is-hidden {
+  display: none;
+}
