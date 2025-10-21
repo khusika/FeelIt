@@ -1,6 +1,9 @@
 {{- $params := .Params | merge .Site.Params.page -}}
 
 <article class="summary" itemscope itemtype="http://schema.org/Article" {{ if ne .Site.Params.home.posts.imagePreview true }}data-image="hide"{{ end }}>
+    {{- if .Params.pin -}}
+        <div class="pin-icon"><i class="fa-solid fa-thumbtack"></i></div>
+    {{- end -}}
     {{- /* Featured image */ -}}
     {{- if .Site.Params.home.posts.imagePreview -}}
     {{- $image := $params.featuredimagepreview | default $params.featuredimage -}}

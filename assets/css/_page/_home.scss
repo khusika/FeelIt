@@ -102,6 +102,7 @@
     width: 49%;
     @include transition(transform 0.4s ease);
     @include box-shadow(0 2px 4px -1px rgba(0, 0, 0, 0.2));
+    position: relative;
 
     &[data-image=hide] {
       min-height: 13rem;
@@ -135,6 +136,17 @@
       img.lazyloaded {
         @include object-fit(cover);
       }
+    }
+
+    .pin-icon {
+      position: absolute;
+      top: .5rem;
+      right: .5rem;
+      font-size: 1.2rem;
+      color: #fff;
+      text-shadow: 0 0 4px rgba(0,0,0,.8);
+      transform: rotate(25deg);
+      z-index: 1;
     }
 
     .single-title {

@@ -28,12 +28,19 @@
             {{- else -}}
                 {{- $pages = where $pages "Params.hiddenfromhomepage" "!=" true -}}
             {{- end -}}
+
+            {{- $pinnedPages := where $pages "Params.pin" true -}}
+            {{- $regularPages := where $pages "Params.pin" "ne" true -}}
+            {{- $allPages := $pinnedPages | append $regularPages -}}
+
+            {{- $paginator := "" -}}
             {{- with $posts.paginate | default .Site.Params.paginate -}}
-                {{- $pages = $.Paginate $pages . -}}
+                {{- $paginator = $.Paginate $allPages . -}}
             {{- else -}}
-                {{- $pages = .Paginate $pages -}}
+                {{- $paginator = .Paginate $allPages -}}
             {{- end -}}
-            {{- range $pages.Pages -}}
+
+            {{- range $paginator.Pages -}}
                 {{- .Render "summary" -}}
             {{- end -}}
             {{- partial "paginator.html" . -}}

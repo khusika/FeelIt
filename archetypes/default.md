@@ -4,6 +4,7 @@ subtitle: ""
 date: {{ .Date }}
 lastmod: {{ .Date }}
 draft: true
+pin: false
 author: ""
 authorLink: ""
 # Author's avatar (choose one, gravatarEmail has priority)
