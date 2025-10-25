@@ -669,6 +669,9 @@ ignoreErrors = ["err-missing-comment-accesstoken", "err-missing-oembed-accesstok
       # Facebook Application Identity and Client Token (<APPID>|<CLIENTTOKEN>)
       # Facebook 的 Application Identity 和 Client Token (<APPID>|<CLIENTTOKEN>)
       accessToken = ""
+      # Facebook Graph API version
+      # Facebook Graph API 版本
+      apiVersion = ""
     [params.oembed.x]
       enableDNT = false
 

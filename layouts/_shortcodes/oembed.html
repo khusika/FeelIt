@@ -6,22 +6,27 @@
   {{- if not $accessToken -}}
     {{- erroridf "err-missing-oembed-accesstoken" "oembed shortcode: Missing config value for .Site.Params.oembed.accessToken. This can be set in hugo.toml, but it is recommended to configure this via the HUGO_OEMBED_ACCESSTOKEN OS environment variable. If you are using a Client Access Token, remember that you must combine it with your App ID using a pipe symbol (<APPID>|<CLIENTTOKEN>) otherwise the request will fail." -}}
   {{- else -}}
-    {{ $type := .Get 1 }}
-    {{ $id := .Get 2 }}
-    {{- if eq $host "ig" -}}
-      {{ $hideCaption := cond (eq (.Get 3) "hidecaption") "1" "0" }}
-      {{ with resources.GetRemote "https://graph.facebook.com/v15.0/instagram_oembed/?url=https://instagram.com/" $type "/" $id "/&hidecaption=" $hideCaption "&access_token=" $accessToken }}
-        {{ (. | transform.Unmarshal).html | safeHTML }}
-      {{ end }}
-    {{- else if eq $host "fb" -}}
-      {{- if eq $type "page" -}}
-        {{ with resources.GetRemote "https://graph.facebook.com/v15.0/oembed_" $type "?url=" $id "&show_posts=false" "&access_token=" $accessToken }}
+    {{ $apiVersion := getenv "HUGO_OEMBED_APIVERSION" | default $oe.facebook.apiVersion }}
+    {{- if not $apiVersion -}}
+      {{- erroridf "err-missing-oembed-apiversion" "oembed shortcode: Missing config value for .Site.Params.oembed.facebook.apiVersion. This can be set in hugo.toml or via the HUGO_OEMBED_APIVERSION OS environment variable." -}}
+    {{- else -}}
+      {{ $type := .Get 1 }}
+      {{ $id := .Get 2 }}
+      {{- if eq $host "ig" -}}
+        {{ $hideCaption := cond (eq (.Get 3) "hidecaption") "1" "0" }}
+        {{ with resources.GetRemote (printf "https://graph.facebook.com/%s/instagram_oembed/?url=https://instagram.com/%s/%s/&hidecaption=%s&access_token=%s" $apiVersion $type $id $hideCaption $accessToken) }}
           {{ (. | transform.Unmarshal).html | safeHTML }}
         {{ end }}
-      {{- else -}}
-        {{ with resources.GetRemote "https://graph.facebook.com/v15.0/oembed_" $type "?url=" $id "&access_token=" $accessToken }}
-          {{ (. | transform.Unmarshal).html | safeHTML }}
-        {{ end }}
+      {{- else if eq $host "fb" -}}
+        {{- if eq $type "page" -}}
+          {{ with resources.GetRemote (printf "https://graph.facebook.com/%s/oembed_%s?url=%s&show_posts=false&access_token=%s" $apiVersion $type $id $accessToken) }}
+            {{ (. | transform.Unmarshal).html | safeHTML }}
+          {{ end }}
+        {{- else -}}
+          {{ with resources.GetRemote (printf "https://graph.facebook.com/%s/oembed_%s?url=%s&access_token=%s" $apiVersion $type $id $accessToken) }}
+            {{ (. | transform.Unmarshal).html | safeHTML }}
+          {{ end }}
+        {{- end -}}
       {{- end -}}
     {{- end -}}
   {{- end -}}
