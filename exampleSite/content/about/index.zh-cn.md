@@ -9,6 +9,9 @@ math:
   enable: true
 ---
 
+[FeelIt](https://github.com/khusika/FeelIt) 是一个由 [Khusika](https://khusika.id) 开发的**简洁**、**优雅**且**高效**的 [Hugo](https://gohugo.io/) 博客主题。 它的原型基于 [LoveIt 主题](https://github.com/dillonzq/LoveIt), [LeaveIt 主题](https://github.com/liuzc/LeaveIt), 和 [KeepIt 主题](https://github.com/Fastbyte01/KeepIt)。
+
+<!--more-->
 {{< style "img { height: 1.25rem; }" >}}
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/khusika/FeelIt?style=flat-square)](https://github.com/khusika/FeelIt/releases)
 [![Hugo](https://img.shields.io/badge/Hugo-%5E0.151.1-ff4088?style=flat-square&logo=hugo)](https://gohugo.io/)
