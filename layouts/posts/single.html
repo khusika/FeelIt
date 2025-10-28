@@ -22,17 +22,14 @@
 
         {{- /* Featured image */ -}}
         {{- $image := "" -}}
-        {{- with .Params.featuredimage -}}
+        {{- with .Params.featuredimage | default .Params.featuredImage -}}
             {{- $image = . | relURL -}}
         {{- else -}}
-            {{- $imageResource := .Resources.GetMatch "featured-image" -}}
-            {{- with $imageResource -}}
+            {{- with .Resources.GetMatch "featured-image" -}}
                 {{- $image = .RelPermalink -}}
             {{- else -}}
                 {{- range .Params.resources -}}
-                    {{- if eq .name "featured-image" -}}
-                        {{- $image = .src | relURL -}}
-                    {{- end -}}
+                    {{- if eq .name "featured-image" -}}{{- $image = .src | relURL -}}{{- end -}}
                 {{- end -}}
             {{- end -}}
         {{- end -}}

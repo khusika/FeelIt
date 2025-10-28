@@ -64,11 +64,38 @@
             <div class="related-posts">
                 {{- range . -}}
                     <a class="related-post" href="{{ .RelPermalink }}">
-                        {{- $featured := .Resources.Get "featured-image" -}}
-                        {{- if $featured -}}
-                            {{- $image := $featured.Fill "68x68 Center q100 Lanczos" -}}
+                        {{- $image := "" -}}
+                        {{- with .Params.featuredimagepreview | default .Params.featuredImagePreview -}}
+                            {{- $image = . | relURL -}}
+                        {{- else -}}
+                            {{- with .Resources.GetMatch "featured-image-preview" -}}
+                                {{- $image = (.Fill "68x68 Center q100 Lanczos").RelPermalink -}}
+                            {{- else -}}
+                                {{- range .Params.resources -}}
+                                    {{- if eq .name "featured-image-preview" -}}
+                                        {{- $image = .src | relURL -}}
+                                    {{- end -}}
+                                {{- end -}}
+                            {{- end -}}
+                        {{- end -}}
+                        {{- if not $image -}}
+                            {{- with .Params.featuredimage | default .Params.featuredImage -}}
+                                {{- $image = . | relURL -}}
+                            {{- else -}}
+                                {{- with .Resources.GetMatch "featured-image" -}}
+                                    {{- $image = (.Fill "68x68 Center q100 Lanczos").RelPermalink -}}
+                                {{- else -}}
+                                    {{- range .Params.resources -}}
+                                        {{- if eq .name "featured-image" -}}
+                                            {{- $image = .src | relURL -}}
+                                        {{- end -}}
+                                    {{- end -}}
+                                {{- end -}}
+                            {{- end -}}
+                        {{- end -}}
+                        {{- if $image -}}
                             <div class="related-post-image">
-                                <img src="{{ $image.RelPermalink }}" alt="{{ .Title }}" loading="lazy">
+                                <img src="{{ $image }}" alt="{{ .Title }}" loading="lazy">
                             </div>
                         {{- else -}}
                             <div class="related-post-image-placeholder">

@@ -23,16 +23,26 @@
                 <div class="timeline">
                     <div class="circle">
                         {{- $image := "" -}}
-                        {{- with .Params.featuredimage -}}
+                        {{- with .Params.featuredimagepreview | default .Params.featuredImagePreview -}}
                             {{- $image = . | relURL -}}
                         {{- else -}}
-                            {{- $imageResource := .Resources.GetMatch "featured-image" -}}
-                            {{- with $imageResource -}}
+                            {{- with .Resources.GetMatch "featured-image-preview" -}}
                                 {{- $image = (.Fill "68x68 Center q100 Lanczos").RelPermalink -}}
                             {{- else -}}
                                 {{- range .Params.resources -}}
-                                    {{- if eq .name "featured-image" -}}
-                                        {{- $image = .src | relURL -}}
+                                    {{- if eq .name "featured-image-preview" -}}{{- $image = .src | relURL -}}{{- end -}}
+                                {{- end -}}
+                            {{- end -}}
+                        {{- end -}}
+                        {{- if not $image -}}
+                            {{- with .Params.featuredimage | default .Params.featuredImage -}}
+                                {{- $image = . | relURL -}}
+                            {{- else -}}
+                                {{- with .Resources.GetMatch "featured-image" -}}
+                                    {{- $image = (.Fill "68x68 Center q100 Lanczos").RelPermalink -}}
+                                {{- else -}}
+                                    {{- range .Params.resources -}}
+                                        {{- if eq .name "featured-image" -}}{{- $image = .src | relURL -}}{{- end -}}
                                     {{- end -}}
                                 {{- end -}}
                             {{- end -}}

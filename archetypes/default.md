@@ -18,8 +18,15 @@ categories: []
 hiddenFromHomePage: false
 hiddenFromSearch: false
 
-featuredImage: ""
-featuredImagePreview: ""
+# Direct image path (string)
+# featuredImage: ""
+# featuredImagePreview: ""
+# Hugo Page Bundle resource (object), recommended for advanced image processing.
+resources:
+  - name: "featured-image"
+    src: ""
+  - name: "featured-image-preview"
+    src: ""
 
 toc:
   enable: true
