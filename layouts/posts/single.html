@@ -21,13 +21,24 @@
     <article class="page single" data-toc="{{ if ne $toc.enable true }}disable{{ else }}enable{{ end }}">
 
         {{- /* Featured image */ -}}
-        {{- $image := $params.featuredimage -}}
-        {{- with .Resources.GetMatch "featured-image" -}}
-            {{- $image = .RelPermalink -}}
+        {{- $image := "" -}}
+        {{- with .Params.featuredimage -}}
+            {{- $image = . | relURL -}}
+        {{- else -}}
+            {{- $imageResource := .Resources.GetMatch "featured-image" -}}
+            {{- with $imageResource -}}
+                {{- $image = .RelPermalink -}}
+            {{- else -}}
+                {{- range .Params.resources -}}
+                    {{- if eq .name "featured-image" -}}
+                        {{- $image = .src | relURL -}}
+                    {{- end -}}
+                {{- end -}}
+            {{- end -}}
         {{- end -}}
         {{- with $image -}}
             <div class="featured-image">
-                {{- dict "Src" . "Title" $.Description "Resources" $.Resources | partial "plugin/image.html" -}}
+                {{- dict "Src" . "Title" $.Description | partial "plugin/image.html" -}}
             </div>
         {{- end -}}
 

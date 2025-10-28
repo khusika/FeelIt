@@ -6,17 +6,29 @@
     {{- end -}}
     {{- /* Featured image */ -}}
     {{- if .Site.Params.home.posts.imagePreview -}}
-    {{- $image := $params.featuredimagepreview | default $params.featuredimage -}}
-    {{- with .Resources.GetMatch "featured-image" -}}
-        {{- $image = .RelPermalink -}}
-    {{- end -}}
-    {{- with .Resources.GetMatch "featured-image-preview" -}}
-        {{- $image = .RelPermalink -}}
+    {{- $image := "" -}}
+    {{- with .Params.featuredimagepreview -}}
+        {{- $image = . | relURL -}}
+    {{- else -}}
+        {{- with .Params.featuredimage -}}
+            {{- $image = . | relURL -}}
+        {{- else -}}
+            {{- $imageResource := .Resources.GetMatch "featured-image-preview" | default (.Resources.GetMatch "featured-image") -}}
+            {{- with $imageResource -}}
+                {{- $image = .RelPermalink -}}
+            {{- else -}}
+                {{- range .Params.resources -}}
+                    {{- if or (eq .name "featured-image-preview") (eq .name "featured-image") -}}
+                        {{- $image = .src | relURL -}}
+                    {{- end -}}
+                {{- end -}}
+            {{- end -}}
+        {{- end -}}
     {{- end -}}
     {{- with $image -}}
         <div class="featured-image-preview">
             <a href="{{ $.RelPermalink }}">
-                {{- dict "Src" . "Title" $.Description "Resources" $.Resources | partial "plugin/image.html" -}}
+                {{- dict "Src" . "Title" $.Description | partial "plugin/image.html" -}}
             </a>
         </div>
     {{- else -}}

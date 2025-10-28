@@ -22,13 +22,26 @@
                 {{- range .Pages -}}
                 <div class="timeline">
                     <div class="circle">
-                        {{- $featured := .Resources.Get "featured-image" -}}
+                        {{- $image := "" -}}
+                        {{- with .Params.featuredimage -}}
+                            {{- $image = . | relURL -}}
+                        {{- else -}}
+                            {{- $imageResource := .Resources.GetMatch "featured-image" -}}
+                            {{- with $imageResource -}}
+                                {{- $image = (.Fill "68x68 Center q100 Lanczos").RelPermalink -}}
+                            {{- else -}}
+                                {{- range .Params.resources -}}
+                                    {{- if eq .name "featured-image" -}}
+                                        {{- $image = .src | relURL -}}
+                                    {{- end -}}
+                                {{- end -}}
+                            {{- end -}}
+                        {{- end -}}
                         <a href="{{ .RelPermalink }}" class="item-link-wrapper">
                             <div class="item-with-image">
-                                {{- if $featured -}}
-                                    {{- $image := $featured.Fill "68x68 Center q100 Lanczos" -}}
+                                {{- if $image -}}
                                     <div class="item-image">
-                                        {{- dict "Src" $image.RelPermalink "Title" .Title "Loading" "lazy" | partial "plugin/image.html" -}}
+                                        {{- dict "Src" $image "Title" .Title "Loading" "lazy" | partial "plugin/image.html" -}}
                                     </div>
                                 {{- else -}}
                                     <div class="item-image-placeholder">
