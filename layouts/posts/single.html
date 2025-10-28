@@ -74,7 +74,7 @@
                         {{- if $avatar -}}
                             <a href="{{ $authorLink }}" title="Author" rel="author" class="author">
                                 {{- dict "Src" $avatar "Class" "avatar" | partial "plugin/image.html" -}}
-                                <span class="post-author-name">{{ $author }}</span>
+                                <span class="post-author-name">{{ $author }}&nbsp;</span>
                             </a>
                         {{- else -}}
                             {{- $options := dict "Class" "author" "Destination" $authorLink "Title" "Author" "Rel" "author" "Icon" (dict "Class" "fa-solid fa-user-circle fa-fw") "Content" $author -}}
@@ -88,7 +88,7 @@
                         {{- $categories = $categories | append (printf `<a href="%v"><i class="fa-regular fa-folder fa-fw"></i>%v</a>` $category.RelPermalink $category.Title) -}}
                     {{- end -}}
                     {{- with delimit $categories "&nbsp;" -}}
-                        &nbsp;<span class="post-category">
+                        <span class="post-category">
                             {{- dict "Categories" . | T "publishedInCategories" | safeHTML -}}
                         </span>
                     {{- end -}}

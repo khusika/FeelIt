@@ -184,16 +184,48 @@
     }
 
     .post-meta {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
       font-size: .875rem;
       margin: 0 1rem .5rem;
       color: $global-font-secondary-color;
 
-      span {
-        display: inline-block;
-      }
-
       [theme=dark] & {
         color: $global-font-secondary-color-dark;
+      }
+
+      span {
+        display: inline-flex;
+        align-items: center;
+      }
+
+      .post-author {
+        display: flex;
+        align-items: center;
+
+        .author {
+          display: flex;
+          align-items: center;
+        }
+
+        .avatar {
+          width: 1.25rem;
+          height: 1.25rem;
+          border-radius: 50%;
+          object-fit: cover;
+          vertical-align: middle;
+        }
+
+        .post-author-name {
+          vertical-align: middle;
+        }
+      }
+
+      .post-publish,
+      .post-category {
+        display: inline-block;
+        vertical-align: middle;
       }
 
       @include link(false, true);

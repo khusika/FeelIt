@@ -78,7 +78,7 @@
             {{- if $avatar -}}
                 <a href="{{ $authorLink }}" title="Author" rel="author" class="author">
                     {{- dict "Src" $avatar "Class" "avatar" | partial "plugin/image.html" -}}
-                    <span class="post-author-name">{{ $author }}</span>
+                    <span class="post-author-name">{{ $author }}&nbsp;</span>
                 </a>
             {{- else -}}
                 {{- $options := dict "Class" "author" "Destination" $authorLink "Title" "Author" "Rel" "author" "Icon" (dict "Class" "fa-solid fa-user-circle fa-fw") "Content" $author -}}
@@ -87,7 +87,7 @@
         </span>
 
         {{- with .Site.Params.dateFormat | default "2006-01-02" | .PublishDate.Format -}}
-            &nbsp;<span class="post-publish">
+            <span class="post-publish">
                 {{- printf `<time datetime="%v">%v</time>` . . | dict "Date" | T "publishedOnDate" | safeHTML -}}
             </span>
         {{- end -}}
