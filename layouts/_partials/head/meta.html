@@ -4,8 +4,37 @@
 <meta name="description" content="{{ $params.description | default .Site.Params.description }}">
 
 {{- if ne $offline true -}}
-{{ partial "opengraph.html" . }}
-{{- template "_internal/twitter_cards.html" . -}}
+    {{- $og := partial "opengraph.html" . -}}
+    {{- $twitter := partial "twitter_cards.html" . -}}
+    {{- $image := "" -}}
+    {{- with .Params.featuredimage | default .Params.featuredImage -}}
+        {{- $original := resources.Get . -}}
+        {{- with $original }}
+            {{- $processed := .Fit "800x450 Lanczos" -}}
+            {{- $image = $processed.Permalink -}}
+        {{- end -}}
+    {{- else -}}
+        {{- with .Resources.GetMatch "featured-image" -}}
+            {{- $processed := .Fit "800x450 Lanczos" -}}
+            {{- $image = $processed.Permalink -}}
+        {{- else -}}
+            {{- range .Params.resources -}}
+                {{- if eq .name "featured-image" -}}
+                    {{- $original := resources.Get .src -}}
+                    {{- with $original }}
+                        {{- $processed := .Fit "800x450 Lanczos" -}}
+                        {{- $image = $processed.Permalink -}}
+                    {{- end -}}
+                {{- end -}}
+            {{- end -}}
+        {{- end -}}
+    {{- end -}}
+    {{- if $image }}
+        {{- $og = replaceRE `<meta property="og:image" content="[^"]*">` (printf `<meta property="og:image" content="%s">` $image) $og -}}
+        {{- $twitter = replaceRE `<meta name="twitter:image" content="[^"]*">` (printf `<meta name="twitter:image" content="%s">` $image) $twitter -}}
+    {{- end -}}
+    {{- $og | safeHTML -}}
+    {{- $twitter | safeHTML -}}
 {{- end -}}
 
 <meta name="application-name" content="{{ .Site.Params.app.title | default .Site.Title }}">
