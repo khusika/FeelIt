@@ -48,26 +48,38 @@ ignoreErrors = ["err-missing-comment-accesstoken", "err-missing-oembed-accesstok
         # you can add extra information after the name (HTML format is supported), such as icons
         post = ""
         name = "Posts"
+        # the URL is ignored for parent menu items, as they function as dropdown toggles
         url = "/posts/"
         # title will be shown when you hover on this menu link.
         title = ""
         weight = 1
-      [[languages.en.menu.main]]
-        identifier = "tags"
-        pre = ""
-        post = ""
-        name = "Tags"
-        url = "/tags/"
-        title = ""
-        weight = 2
-      [[languages.en.menu.main]]
-        identifier = "categories"
-        pre = ""
-        post = ""
-        name = "Categories"
-        url = "/categories/"
-        title = ""
-        weight = 3
+        [[languages.en.menu.main]]
+          identifier = "allposts"
+          pre = ""
+          post = ""
+          name = "All Posts"
+          url = "/posts/"
+          title = ""
+          weight = 1
+          parent = "posts"
+        [[languages.en.menu.main]]
+          identifier = "tags"
+          pre = ""
+          post = ""
+          name = "Tags"
+          url = "/tags/"
+          title = ""
+          weight = 2
+          parent = "posts"
+        [[languages.en.menu.main]]
+          identifier = "categories"
+          pre = ""
+          post = ""
+          name = "Categories"
+          url = "/categories/"
+          title = ""
+          weight = 3
+          parent = "posts"
       [[languages.en.menu.main]]
         identifier = "documentation"
         pre = ""
@@ -75,7 +87,7 @@ ignoreErrors = ["err-missing-comment-accesstoken", "err-missing-oembed-accesstok
         name = "Docs"
         url = "/categories/documentation/"
         title = ""
-        weight = 4
+        weight = 2
       [[languages.en.menu.main]]
         identifier = "about"
         pre = ""
@@ -83,7 +95,7 @@ ignoreErrors = ["err-missing-comment-accesstoken", "err-missing-oembed-accesstok
         name = "About"
         url = "/about/"
         title = ""
-        weight = 5
+        weight = 3
       [[languages.en.menu.main]]
         identifier = "github"
         pre = "<i class='fa-brands fa-github fa-fw'></i>"
@@ -91,7 +103,7 @@ ignoreErrors = ["err-missing-comment-accesstoken", "err-missing-oembed-accesstok
         name = ""
         url = "https://github.com/khusika/FeelIt"
         title = "GitHub"
-        weight = 6
+        weight = 4
     [languages.en.pagination]
       # default amount of posts in each pages
       pagerSize = 12
@@ -220,22 +232,24 @@ ignoreErrors = ["err-missing-comment-accesstoken", "err-missing-oembed-accesstok
         url = "/posts/"
         title = ""
         weight = 1
-      [[languages.zh-cn.menu.main]]
-        identifier = "tags"
-        pre = ""
-        post = ""
-        name = "标签"
-        url = "/tags/"
-        title = ""
-        weight = 2
-      [[languages.zh-cn.menu.main]]
-        identifier = "categories"
-        pre = ""
-        post = ""
-        name = "分类"
-        url = "/categories/"
-        title = ""
-        weight = 3
+        [[languages.zh-cn.menu.main]]
+          identifier = "tags"
+          pre = ""
+          post = ""
+          name = "标签"
+          url = "/tags/"
+          title = ""
+          weight = 2
+          parent = "posts"
+        [[languages.zh-cn.menu.main]]
+          identifier = "categories"
+          pre = ""
+          post = ""
+          name = "分类"
+          url = "/categories/"
+          title = ""
+          weight = 3
+          parent = "posts"
       [[languages.zh-cn.menu.main]]
         identifier = "documentation"
         pre = ""
@@ -385,22 +399,24 @@ ignoreErrors = ["err-missing-comment-accesstoken", "err-missing-oembed-accesstok
         url = "/posts/"
         title = ""
         weight = 1
-      [[languages.fr.menu.main]]
-        identifier = "tags"
-        pre = ""
-        post = ""
-        name = "Balises"
-        url = "/tags/"
-        title = ""
-        weight = 2
-      [[languages.fr.menu.main]]
-        identifier = "categories"
-        pre = ""
-        post = ""
-        name = "Catégories"
-        url = "/categories/"
-        title = ""
-        weight = 3
+        [[languages.fr.menu.main]]
+          identifier = "tags"
+          pre = ""
+          post = ""
+          name = "Balises"
+          url = "/tags/"
+          title = ""
+          weight = 2
+          parent = "posts"
+        [[languages.fr.menu.main]]
+          identifier = "categories"
+          pre = ""
+          post = ""
+          name = "Catégories"
+          url = "/categories/"
+          title = ""
+          weight = 3
+          parent = "posts"
       [[languages.fr.menu.main]]
         identifier = "documentation"
         pre = ""

@@ -163,15 +163,17 @@ header {
     }
 
     .menu {
-      overflow: hidden;
+      overflow: visible;
       white-space: nowrap;
 
       .menu-inner {
         float: right;
+        overflow: visible;
       }
 
       .menu-item {
-        margin: 0 .5rem;
+        display: inline-block;
+        padding: 0 .5rem;
 
         &.delimiter {
           border-left: 1.5px solid $global-font-color;
@@ -182,7 +184,7 @@ header {
         }
 
         &.language {
-          margin-right: 0;
+          padding-right: 0;
           &:hover {
             color: $global-link-hover-color;
             [theme=dark] & {
@@ -192,7 +194,7 @@ header {
         }
 
         &.search {
-          margin: 0 -.5rem 0 0;
+          padding: 0;
         }
       }
 
@@ -204,11 +206,84 @@ header {
           color: $header-hover-color-dark;
         }
       }
+
+      .menu-item.has-children {
+        padding: 0;
+      }
+
+      .menu-item.has-children {
+        > a {
+          cursor: pointer;
+        }
+
+        .dropdown-toggle {
+          i {
+            display: inline-block;
+            font-size: 0.9em;
+            vertical-align: middle;
+            margin-left: .25rem;
+            @include transition(transform 0.35s ease);
+          }
+        }
+
+        .dropdown-menu {
+          display: none;
+          position: absolute;
+          overflow: hidden;
+          top: 100%;
+          left: 0;
+          background: $header-background-color;
+          z-index: 9999;
+          @include border-radius(.25rem);
+          @include box-shadow(0 0 1.5rem 0 rgba(0, 0, 0, .1));
+
+          [theme=dark] & {
+            background: $header-background-color-dark;
+          }
+        }
+
+        &:hover .dropdown-menu,
+        &:focus-within .dropdown-menu {
+          display: block;
+        }
+        &:hover .dropdown-toggle i {
+          @include transform(rotate(180deg));
+        }
+        &:hover {
+          color: $header-hover-color;
+          [theme=dark] & { color: $header-hover-color-dark; }
+        }
+
+        &.active .dropdown-toggle i {
+          @include transform(rotate(180deg));
+        }
+
+        .dropdown-item {
+          display: block;
+          padding: 0 .5rem !important;
+          color: $global-font-color;
+          white-space: nowrap;
+          @include transition(width 0.2s ease);
+          @include border-radius(.25rem);
+          [theme=dark] & {
+            color: $global-font-color-dark;
+          }
+
+          &:hover {
+            background: darken($header-background-color, 5%);
+            color: darken($global-link-hover-color, 5%);
+            [theme=dark] & {
+              background: lighten($header-background-color-dark, 5%);
+              color: lighten($global-link-hover-color-dark, 5%);
+            }
+          }
+        }
+      }
     }
   }
 
   &.open .header-wrapper .menu .menu-item.search {
-    margin: 0 .25rem 0 .5rem;
+    padding: 0 .25rem 0 .5rem;
 
     input {
       width: 24rem;
@@ -319,12 +394,48 @@ header {
       .menu-item {
         display: block;
         line-height: 2.5rem;
+        padding: 0 .5rem;
         &.language {
           &:hover {
             color: $global-link-hover-color;
             [theme=dark] & {
               color: $global-link-hover-color-dark;
             }
+          }
+        }
+      }
+
+      .menu-item.has-children {
+        .dropdown-toggle i {
+          @include transition(transform 0.35s ease);
+        }
+
+        &.active .dropdown-toggle i {
+          @include transform(rotate(180deg));
+        }
+
+        .dropdown-menu {
+          display: none;
+          position: static;
+          background: darken($header-background-color, 5%);
+          box-shadow: none;
+          min-width: 0;
+          overflow: hidden;
+          padding: 0;
+          @include border-radius(.5rem);
+
+          [theme=dark] & {
+            background: lighten($header-background-color-dark, 5%);
+          }
+        }
+
+        .dropdown-item {
+          display: block;
+          padding: 0 .5rem !important;
+          color: $global-font-color;
+          white-space: nowrap;
+          [theme=dark] & {
+            color: $global-font-color-dark;
           }
         }
       }

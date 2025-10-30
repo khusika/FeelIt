@@ -68,16 +68,75 @@ class Theme {
     initMenuMobile() {
         const $menuToggleMobile = document.getElementById('menu-toggle-mobile');
         const $menuMobile = document.getElementById('menu-mobile');
+        const $menuItemsWithChildren = document.querySelectorAll('#menu-mobile .has-children');
+        const closeAllSubmenus = () => {
+            this.util.forEach($menuItemsWithChildren, $menuItem => {
+                $menuItem.classList.remove('active');
+                const $submenu = $menuItem.querySelector('.dropdown-menu');
+                if ($submenu) {
+                    $submenu.style.display = 'none';
+                    $submenu.style.height = '';
+                }
+            });
+        };
         $menuToggleMobile.addEventListener('click', () => {
             document.body.classList.toggle('blur');
             $menuToggleMobile.classList.toggle('active');
             $menuMobile.classList.toggle('active');
+            if (!$menuMobile.classList.contains('active')) {
+                closeAllSubmenus();
+            }
         }, false);
         this._menuMobileOnClickMask = this._menuMobileOnClickMask || (() => {
             $menuToggleMobile.classList.remove('active');
             $menuMobile.classList.remove('active');
+            closeAllSubmenus();
         });
         this.clickMaskEventSet.add(this._menuMobileOnClickMask);
+
+        this.util.forEach($menuItemsWithChildren, $menuItem => {
+            const $submenu = $menuItem.querySelector('.dropdown-menu');
+            if ($submenu) {
+                $submenu.style.transition = 'height 0.35s ease';
+                $submenu.style.overflow = 'hidden';
+                $submenu.style.display = 'none';
+            }
+        });
+
+        $menuMobile.addEventListener('click', event => {
+            const $clickedItem = event.target.closest('a.dropdown-toggle');
+            if (!$clickedItem) return;
+
+            event.preventDefault();
+            const $menuItem = $clickedItem.parentElement;
+            const $submenu = $menuItem.querySelector('.dropdown-menu');
+            if (!$submenu) return;
+
+            $menuItem.classList.toggle('active');
+            const isSubmenuOpen = $submenu.style.display === 'block';
+
+            if (isSubmenuOpen) {
+                $submenu.style.height = `${$submenu.scrollHeight}px`;
+                window.setTimeout(() => ($submenu.style.height = '0'), 0);
+                $submenu.addEventListener('transitionend', () => ($submenu.style.display = 'none'), { once: true });
+            } else {
+                $submenu.style.display = 'block';
+                $submenu.style.height = '0';
+                window.setTimeout(() => ($submenu.style.height = `${$submenu.scrollHeight}px`), 0);
+                $submenu.addEventListener('transitionend', () => ($submenu.style.height = ''), { once: true });
+            }
+        });
+    }
+
+    initDesktopMenu() {
+        if (this.util.isMobile()) return;
+        this.util.forEach(document.querySelectorAll('#header-desktop .has-children .dropdown-item.active'), $activeChild => {
+            const $parentMenuItem = $activeChild.closest('.has-children');
+            if ($parentMenuItem) {
+                const $parentLink = $parentMenuItem.querySelector('a.dropdown-toggle');
+                if ($parentLink) $parentLink.style.fontWeight = 'bold';
+            }
+        });
     }
 
     initSwitchTheme() {
@@ -742,6 +801,7 @@ class Theme {
             this.initMenuMobile();
             this.initSwitchTheme();
             this.initSearch();
+            this.initDesktopMenu();
             this.initDetails();
             this.initLightGallery();
             this.initHighlight();
