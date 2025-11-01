@@ -137,6 +137,25 @@ class Theme {
                 if ($parentLink) $parentLink.style.fontWeight = 'bold';
             }
         });
+
+        this.util.forEach(document.querySelectorAll('#header-desktop .has-children > a.dropdown-toggle'), $toggle => {
+            $toggle.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelectorAll('#header-desktop .has-children.active').forEach($open => {
+                    if ($open !== $toggle.parentElement) $open.classList.remove('active');
+                });
+                $toggle.parentElement.classList.toggle('active');
+            });
+        });
+
+        document.addEventListener('click', function(e) {
+            const $dropdowns = document.querySelectorAll('#header-desktop .has-children');
+            $dropdowns.forEach($dropdown => {
+                if (!$dropdown.contains(e.target)) {
+                    $dropdown.classList.remove('active');
+                }
+            });
+        });
     }
 
     initSwitchTheme() {
@@ -799,9 +818,9 @@ class Theme {
             this.initSVGIcon();
             this.initTwemoji();
             this.initMenuMobile();
+            this.initDesktopMenu();
             this.initSwitchTheme();
             this.initSearch();
-            this.initDesktopMenu();
             this.initDetails();
             this.initLightGallery();
             this.initHighlight();
