@@ -128,13 +128,25 @@ class Theme {
         });
     }
 
-    initDesktopMenu() {
+    initMenuDesktop() {
         if (this.util.isMobile()) return;
-        this.util.forEach(document.querySelectorAll('#header-desktop .has-children .dropdown-item.active'), $activeChild => {
-            const $parentMenuItem = $activeChild.closest('.has-children');
-            if ($parentMenuItem) {
-                const $parentLink = $parentMenuItem.querySelector('a.dropdown-toggle');
-                if ($parentLink) $parentLink.style.fontWeight = 'bold';
+
+        this.util.forEach(document.querySelectorAll('#header-desktop .dropdown-item.active'), $activeChild => {
+            $activeChild.closest('.has-children')?.querySelector('a.dropdown-toggle')?.classList.add('active');
+        });
+
+        document.addEventListener('click', e => {
+            const $toggle = e.target.closest('a.dropdown-toggle');
+            if ($toggle && $toggle.parentElement.matches('#header-desktop .has-children')) {
+                e.preventDefault();
+                const $menuItem = $toggle.parentElement;
+                const isActive = $menuItem.classList.contains('active');
+                this.util.forEach(document.querySelectorAll('#header-desktop .has-children.active'), el => el.classList.remove('active'));
+                if (!isActive) {
+                    $menuItem.classList.add('active');
+                }
+            } else if (!e.target.closest('#header-desktop .has-children')) {
+                this.util.forEach(document.querySelectorAll('#header-desktop .has-children.active'), el => el.classList.remove('active'));
             }
         });
     }
@@ -799,9 +811,9 @@ class Theme {
             this.initSVGIcon();
             this.initTwemoji();
             this.initMenuMobile();
+            this.initMenuDesktop();
             this.initSwitchTheme();
             this.initSearch();
-            this.initDesktopMenu();
             this.initDetails();
             this.initLightGallery();
             this.initHighlight();

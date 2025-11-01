@@ -242,20 +242,15 @@ header {
           }
         }
 
-        &:hover .dropdown-menu,
-        &:focus-within .dropdown-menu {
+        &.active .dropdown-menu {
           display: block;
         }
-        &:hover .dropdown-toggle i {
-          @include transform(rotate(180deg));
-        }
-        &:hover {
-          color: $header-hover-color;
-          [theme=dark] & { color: $header-hover-color-dark; }
-        }
-
         &.active .dropdown-toggle i {
           @include transform(rotate(180deg));
+        }
+        &.active {
+          color: $header-hover-color;
+          [theme=dark] & { color: $header-hover-color-dark; }
         }
 
         .dropdown-item {

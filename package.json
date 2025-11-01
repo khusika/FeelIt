@@ -19,7 +19,7 @@
   "scripts": {
     "build": "rm -f -r exampleSite/public && hugo --source=exampleSite --gc",
     "build-lunr-segmentit": "browserify src/lib/lunr.segmentit.js -o assets/lib/lunr/lunr.segmentit.js -t babelify --presets @babel/preset-env --presets minify",
-    "purgejs": "npx mkdirp exampleSite/assets/js && sed '652,656d;674,723d;726,729d;815d' assets/js/theme.js > exampleSite/assets/js/theme.js",
+    "purgejs": "npx mkdirp exampleSite/assets/js && sed '664,668d;686,735d;738,741d;827d' assets/js/theme.js > exampleSite/assets/js/theme.js",
     "deploy": "npm run purgejs && hugo --source=exampleSite --gc --minify && rm -rf exampleSite/assets/js",
     "start": "hugo server --source=exampleSite -D --disableFastRender",
     "start-production": "hugo server --source=exampleSite -D --disableFastRender -e production",
