@@ -234,8 +234,8 @@ header {
           left: 0;
           background: $header-background-color;
           z-index: 9999;
-          @include border-radius(.25rem);
-          @include box-shadow(0 0 1.5rem 0 rgba(0, 0, 0, .1));
+          @include border-radius(0 0 .5rem .5rem);
+          @include box-shadow(0 .125rem .25rem rgba(0, 0, 0, .1));
 
           [theme=dark] & {
             background: $header-background-color-dark;
@@ -259,7 +259,6 @@ header {
           color: $global-font-color;
           white-space: nowrap;
           @include transition(width 0.2s ease);
-          @include border-radius(.25rem);
           [theme=dark] & {
             color: $global-font-color-dark;
           }
