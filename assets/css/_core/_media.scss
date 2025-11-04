@@ -17,6 +17,10 @@
     width: 60%;
   }
 
+  .archive-compact {
+    width: 50% !important;
+  }
+
   #header-desktop .header-wrapper {
     padding: 0 1rem;
   }
@@ -49,6 +53,10 @@
     width: 56%;
   }
 
+  .archive-compact {
+    width: 52% !important;
+  }
+
   .home[data-home=posts] {
     .summary{
       min-height: 23rem;
@@ -59,6 +67,10 @@
 @media only screen and (max-width: 1200px) {
   .archive {
     width: 52%;
+  }
+
+  .archive-compact {
+    width: 60% !important;
   }
 
   .single-card {
@@ -118,6 +130,11 @@
 }
 
 @media only screen and (max-width: 680px) {
+
+  .archive-compact {
+    width: 100% !important;
+  }
+
   .wrapper {
     main {
       .container {

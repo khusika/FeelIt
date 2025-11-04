@@ -3,7 +3,7 @@
 {{- end -}}
 
 {{- define "content" -}}
-    <div class="page archive">
+    <div class="page archive archive-compact">
         {{- /* Title */ -}}
         <h2 class="single-title animated fadeInDown faster">
             {{- .Params.Title | default (T .Section) | default .Section | dict "Some" | T "allSome" -}}

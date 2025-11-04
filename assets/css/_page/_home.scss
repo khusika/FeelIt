@@ -143,10 +143,10 @@
       padding: 30% 0 0;
       position: relative;
       margin: 0 auto;
-      background-color: #f2f2f2;
+      background-color: $global-background-color;
       @include border-radius(.5rem .5rem 0 0);
       [theme=dark] & {
-        background-color: #292a2d;
+        background-color: $global-background-color-dark;
       }
       a {
         position: absolute;
