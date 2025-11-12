@@ -2,16 +2,41 @@
 {{- $src := .Src -}}
 {{- with dict "Path" .Src "Resources" .Resources | partial "function/resource.html" -}}
     {{- $src = .RelPermalink -}}
+{{- else -}}
+    {{- $url := urls.Parse .Src -}}
+    {{- if not $url.Host -}}
+        {{- if not (hasPrefix .Src "/") -}}
+            {{- $src = printf "/%s" .Src -}}
+        {{- end -}}
+    {{- end -}}
 {{- end -}}
 
 {{- $small := .SrcSmall | default $src -}}
 {{- with dict "Path" .SrcSmall "Resources" .Resources | partial "function/resource.html" -}}
     {{- $small = .RelPermalink -}}
+{{- else -}}
+    {{- if .SrcSmall -}}
+        {{- $url := urls.Parse .SrcSmall -}}
+        {{- if not $url.Host -}}
+            {{- if not (hasPrefix .SrcSmall "/") -}}
+                {{- $small = printf "/%s" .SrcSmall -}}
+            {{- end -}}
+        {{- end -}}
+    {{- end -}}
 {{- end -}}
 
 {{- $large := .SrcLarge | default $src -}}
 {{- with dict "Path" .SrcLarge "Resources" .Resources | partial "function/resource.html" -}}
     {{- $large = .RelPermalink -}}
+{{- else -}}
+    {{- if .SrcLarge -}}
+        {{- $url := urls.Parse .SrcLarge -}}
+        {{- if not $url.Host -}}
+            {{- if not (hasPrefix .SrcLarge "/") -}}
+                {{- $large = printf "/%s" .SrcLarge -}}
+            {{- end -}}
+        {{- end -}}
+    {{- end -}}
 {{- end -}}
 
 {{- $alt := .Alt | default $src -}}
