@@ -32,9 +32,9 @@ ignoreErrors = ["err-missing-comment-accesstoken", "err-missing-oembed-accesstok
   [languages.en]
     weight = 1
     # language code
-    languageCode = "en"
+    locale = "en"
     # language name
-    languageName = "English"
+    label = "English"
     # whether to include Chinese/Japanese/Korean
     hasCJKLanguage = false
     # copyright description used only for seo schema
@@ -213,9 +213,9 @@ ignoreErrors = ["err-missing-comment-accesstoken", "err-missing-oembed-accesstok
   [languages.zh-cn]
     weight = 2
     # 网站语言, 仅在这里 CN 大写
-    languageCode = "zh-CN"
+    locale = "zh-CN"
     # 语言名称
-    languageName = "简体中文"
+    label = "简体中文"
     # 是否包括中日韩文字
     hasCJKLanguage = true
     # 版权描述，仅仅用于 SEO
@@ -382,9 +382,9 @@ ignoreErrors = ["err-missing-comment-accesstoken", "err-missing-oembed-accesstok
   [languages.fr]
     weight = 3
     # language code
-    languageCode = "fr"
+    locale = "fr"
     # language name
-    languageName = "Français"
+    label = "Français"
     # whether to include Chinese/Japanese/Korean
     hasCJKLanguage = false
     # copyright description used only for seo schema

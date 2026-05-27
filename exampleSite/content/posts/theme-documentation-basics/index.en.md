@@ -80,9 +80,12 @@ The following is a basic configuration for the FeelIt theme:
 baseURL = "http://example.org/"
 # [en, zh-cn, fr, ...] determines default content language
 defaultContentLanguage = "en"
-# language code
-languageCode = "en"
-title = "My New Hugo Site"
+
+[languages.en]
+  title = "My New Hugo Site"
+  # language code
+  locale = "en"
+  label = "English"
 
 # Change the default theme to be use when building the site with Hugo
 theme = "FeelIt"
@@ -968,8 +971,8 @@ defaultContentLanguage = "en"
   [languages.en]
     weight = 1
     title = "My New Hugo Site"
-    languageCode = "en"
-    languageName = "English"
+    locale = "en"
+    label = "English"
     [[languages.en.menu.main]]
       identifier = "posts"
       pre = ""
@@ -999,8 +1002,8 @@ defaultContentLanguage = "en"
     weight = 2
     title = "我的全新 Hugo 网站"
     # language code, CN only here
-    languageCode = "zh-CN"
-    languageName = "简体中文"
+    locale = "zh-CN"
+    label = "简体中文"
     # whether to include Chinese/Japanese/Korean
     hasCJKLanguage = true
     [[languages.zh-cn.menu.main]]
@@ -1031,8 +1034,8 @@ defaultContentLanguage = "en"
   [languages.fr]
     weight = 3
     title = "Mon nouveau site Hugo"
-    languageCode = "fr"
-    languageName = "Français"
+    locale = "fr"
+    label = "Français"
     [[languages.fr.menu.main]]
       identifier = "posts"
       pre = ""

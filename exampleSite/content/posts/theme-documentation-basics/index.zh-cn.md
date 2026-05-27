@@ -80,12 +80,15 @@ git submodule add https://github.com/khusika/FeelIt.git themes/FeelIt
 baseURL = "http://example.org/"
 # [en, zh-cn, fr, ...] 设置默认的语言
 defaultContentLanguage = "zh-cn"
-# 网站语言, 仅在这里 CN 大写
-languageCode = "zh-CN"
-# 是否包括中日韩文字
-hasCJKLanguage = true
-# 网站标题
-title = "我的全新 Hugo 网站"
+
+[languages.zh-cn]
+  # 网站标题
+  title = "我的全新 Hugo 网站"
+  # 网站语言, 仅在这里 CN 大写
+  locale = "zh-CN"
+  label = "简体中文"
+  # 是否包括中日韩文字
+  hasCJKLanguage = true
 
 # 更改使用 Hugo 构建网站时使用的默认主题
 theme = "FeelIt"
@@ -973,8 +976,8 @@ defaultContentLanguage = "zh-cn"
   [languages.en]
     weight = 1
     title = "My New Hugo Site"
-    languageCode = "en"
-    languageName = "English"
+    locale = "en"
+    label = "English"
     [[languages.en.menu.main]]
       identifier = "posts"
       pre = ""
@@ -1004,8 +1007,8 @@ defaultContentLanguage = "zh-cn"
     weight = 2
     title = "我的全新 Hugo 网站"
     # 网站语言, 仅在这里 CN 大写
-    languageCode = "zh-CN"
-    languageName = "简体中文"
+    locale = "zh-CN"
+    label = "简体中文"
     # 是否包括中日韩文字
     hasCJKLanguage = true
     [[languages.zh-cn.menu.main]]
@@ -1036,8 +1039,8 @@ defaultContentLanguage = "zh-cn"
   [languages.fr]
     weight = 3
     title = "Mon nouveau site Hugo"
-    languageCode = "fr"
-    languageName = "Français"
+    locale = "fr"
+    label = "Français"
     [[languages.fr.menu.main]]
       identifier = "posts"
       pre = ""
