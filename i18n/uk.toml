@@ -7,7 +7,7 @@
 other = "Вгору"
 
 [viewComments]
-other = "Переглянути коментарі"
+other = "Коментарі"
 # === baseof ==
 
 # === Post ===
@@ -17,10 +17,10 @@ other = "Дописи"
 
 # === Taxonomy ===
 [allSome]
-other = "Всі {{ .Some }}"
+other = "Усі {{ .Some }}"
 
 [tag]
-other = "Теґ"
+other = "Тег"
 
 [tags]
 other = "Теги"
@@ -42,12 +42,12 @@ other = "Більше"
 other = "Вибір мови"
 
 [switchTheme]
-other = "Змінити Тему"
+other = "Змінити тему"
 # === partials/header.html ===
 
 # === partials/footer.html ===
 [poweredBySome]
-other = "Працює на {{ .Hugo }} | Тема - {{ .Theme }}"
+other = "Працює на {{ .Hugo }} | Тема — {{ .Theme }}"
 # === partials/footer.html ===
 
 # === partials/comment.html ===
@@ -55,7 +55,7 @@ other = "Працює на {{ .Hugo }} | Тема - {{ .Theme }}"
 other = "en"
 
 [valinePlaceholder]
-other = "Ваш коментар ..."
+other = "Залиште коментар..."
 
 [facebookLanguageCode]
 other = "uk_UA"
@@ -66,7 +66,7 @@ other = "uk_UA"
 other = "Пошук"
 
 [searchPlaceholder]
-other = "Пошук заголовків та вмісту ..."
+other = "Пошук за заголовками та вмістом..."
 
 [clear]
 other = "Очистити"
@@ -75,7 +75,7 @@ other = "Очистити"
 other = "Скасувати"
 
 [noResultsFound]
-other = "Результатів що відповідають запиту не знайдено"
+other = "За запитом нічого не знайдено"
 
 [lunrLanguageCode]
 other = "uk"
@@ -87,13 +87,13 @@ other = "lib/lunr/lunr.uk.js"
 other = "Копіювати в буфер обміну"
 
 [cookieconsentMessage]
-other = "Цей сайт використовує Cookies для покращення вашого досвіду."
+other = "Цей сайт використовує файли cookie для покращення вашого досвіду."
 
 [cookieconsentDismiss]
-other = "Згоден"
+other = "Прийняти"
 
 [cookieconsentLink]
-other = "Вчити більше"
+other = "Дізнатися більше"
 # === partials/assets.html ===
 
 # === partials/plugin/share.html ===
@@ -101,7 +101,7 @@ other = "Вчити більше"
 other = "Поділитися у"
 
 [relatedContent]
-other = "Дивіться Також"
+other = "Дивіться також"
 # === partials/plugin/share.html ===
 
 # === posts/single.html ===
@@ -115,7 +115,7 @@ other = "Опубліковано {{ .Date }}"
 other = "опубліковано в {{ .Categories }}"
 
 [includedInCategories]
-other = "доданий у категорію {{ .Categories }}"
+other = "додано в категорію {{ .Categories }}"
 
 [wordCount]
 one = "Одне слово"
@@ -132,13 +132,13 @@ other = "переглядів"
 other = "Автор"
 
 [updatedOnDate]
-other = "Оновлена {{ .Date }}"
+other = "Останнє оновлення: {{ .Date }}"
 
 [readMarkdown]
 other = "Читати Markdown"
 
 [improveArticle]
-other = "Improve Article"
+other = "Покращити статтю"
 
 [back]
 other = "Назад"
@@ -152,7 +152,7 @@ other = "На головну"
 other = "Сторінку не знайдено"
 
 [pageNotFoundText]
-other = "Сторінка, яку Ви шукаєте, не існує. Вибачте."
+other = "Сторінка, яку ви шукаєте, не існує. Вибачте."
 # === 404.html ===
 
 # === Offline Page ===
@@ -168,13 +168,13 @@ other = "Зауваження"
 other = "Короткий опис"
 
 [info]
-other = "Інфо"
+other = "Інформація"
 
 [tip]
 other = "Порада"
 
 [success]
-other = "Вдало"
+other = "Успішно"
 
 [question]
 other = "Питання"
@@ -183,7 +183,7 @@ other = "Питання"
 other = "Попередження"
 
 [failure]
-other = "Відмова"
+other = "Збій"
 
 [danger]
 other = "Небезпека"
