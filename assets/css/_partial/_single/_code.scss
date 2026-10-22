@@ -70,11 +70,11 @@ code, pre, .highlight table, .highlight tr, .highlight td {
       font-family: $global-font-family;
       font-weight: bold;
       color: $code-info-color;
-      background: darken($code-background-color, 8%);
+      background: color.adjust($code-background-color, $lightness: -8%);
 
       [theme=dark] & {
         color: $code-info-color-dark;
-        background: darken($code-background-color-dark, 6%);
+        background: color.adjust($code-background-color-dark, $lightness: -6%);
       }
 
       &:hover {
@@ -117,10 +117,10 @@ code, pre, .highlight table, .highlight tr, .highlight td {
 
     .hl {
       display: block;
-      background-color: darken($code-background-color, 10%);
+      background-color: color.adjust($code-background-color, $lightness: 10%);
 
       [theme=dark] & {
-        background-color: darken($code-background-color-dark, 5%);
+        background-color: color.adjust($code-background-color-dark, $lightness: -5%);
       }
     }
 
@@ -163,10 +163,10 @@ code, pre, .highlight table, .highlight tr, .highlight td {
 
     &.open {
       .code-header {
-        background: darken($code-background-color, 3%);
+        background: color.adjust($code-background-color, $lightness: 3%);
 
         [theme=dark] & {
-          background: darken($code-background-color-dark, 3%);
+          background: color.adjust($code-background-color-dark, $lightness: 3%);
         }
       }
 
@@ -216,12 +216,12 @@ code, pre, .highlight table, .highlight tr, .highlight td {
 
   .gist-meta {
     padding: .4rem .8rem;
-    background-color: darken($code-background-color, 5%);
+    background-color: color.adjust($code-background-color, $lightness: 5%);
 
     @include link(false, false);
 
     [theme=dark] & {
-      background-color: darken($code-background-color-dark, 5%);
+      background-color: color.adjust($code-background-color-dark, $lightness: -5%);
     }
   }
 

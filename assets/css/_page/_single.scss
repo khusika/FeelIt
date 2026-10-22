@@ -1,3 +1,6 @@
+@use "sass:color";
+@use "sass:map";
+
 @import "../_partial/_single/toc";
 
 .single-card {
@@ -250,10 +253,10 @@
 
         th, td {
           padding: .3rem 1rem;
-          border: 1px solid darken($table-thead-color, 2%);
+          border: 1px solid color.adjust($table-thead-color, $lightness: -2%);
 
           [theme=dark] & {
-            border-color: darken($table-thead-color-dark, 2%);
+            border-color: color.adjust($table-thead-color-dark, $lightness: -2%);
           }
         }
       }

@@ -1,20 +1,22 @@
+@use "sass:math";
+
 @mixin link($light, $dark) {
   a, a::before, a::after {
     text-decoration: none;
 
-    color: if($light, $global-link-color, $single-link-color);
+    color: if(sass($light): $global-link-color; else: $single-link-color);
 
     [theme=dark] & {
-      color: if($dark, $global-link-color-dark, $single-link-color-dark);
+      color: if(sass($dark): $global-link-color-dark; else: $single-link-color-dark);
     }
   }
 
   a:active,
   a:hover {
-    color: if($light, $global-link-hover-color, $single-link-hover-color);
+    color: if(sass($light): $global-link-hover-color; else: $single-link-hover-color);
 
     [theme=dark] & {
-      color: if($dark, $global-link-hover-color-dark, $single-link-hover-color-dark);
+      color: if(sass($dark): $global-link-hover-color-dark; else: $single-link-hover-color-dark);
     }
   }
 }
