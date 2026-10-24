@@ -23,7 +23,6 @@
     "deploy": "npm run purgejs && hugo --source=exampleSite --gc --minify && rm -rf exampleSite/assets/js",
     "start": "hugo server --source=exampleSite -D --disableFastRender",
     "start-production": "hugo server --source=exampleSite -D --disableFastRender -e production",
-    "copy": "rm -rf resources && mv -f exampleSite/resources resources",
     "reinstall": "rm -rf node_modules && npm ci",
     "prepare": "husky install"
   },
