@@ -15,6 +15,7 @@ jobs:
         uses: peaceiris/actions-hugo@v3
         with:
           hugo-version: 'latest'
+          dart-sass-version: '1.108.2'
           extended: true
 
       - name: Build Page
